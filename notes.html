@@ -1,0 +1,26 @@
+---
+layout: default
+title: Daily Notes
+---
+<h2>Daily Investment Notes</h2>
+
+<ul class="notes-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="meta">
+      {{ post.date | date: "%Y-%m-%d (%a)" }}
+      {% if post.pnl %} |
+        <span class="{% if post.pnl > 0 %}profit{% elsif post.pnl < 0 %}loss{% endif %}">
+          PnL: {% if post.pnl > 0 %}+{% endif %}{{ post.pnl }}%
+        </span>
+      {% endif %}
+      {% if post.summary %} | {{ post.summary.trades }}건 거래{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+<p style="color: var(--text-dim);">아직 투자 노트가 없습니다.</p>
+{% endif %}

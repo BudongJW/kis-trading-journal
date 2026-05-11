@@ -1,0 +1,22 @@
+title: KIS AutoTrader Journal
+description: 자동매매 봇 투자 일지 & 실시간 현황
+baseurl: ""
+url: "https://budongjw.github.io/kis-trading-journal"
+
+theme: minima
+
+markdown: kramdown
+timezone: Asia/Seoul
+
+permalink: /notes/:year/:month/:day/
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - scripts/
+  - README.md

@@ -1,0 +1,173 @@
+/* KIS Trading Journal — Clean Dark Theme */
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-dim: #8b949e;
+  --accent: #58a6ff;
+  --profit: #3fb950;
+  --loss: #f85149;
+  --neutral: #8b949e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  margin-bottom: 32px;
+}
+nav { display: flex; justify-content: space-between; align-items: center; }
+.site-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+.nav-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9em;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* Dashboard Cards */
+.dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+}
+.card h3 { font-size: 0.8em; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+.card .value { font-size: 1.8em; font-weight: 700; }
+.card .sub { font-size: 0.85em; color: var(--text-dim); margin-top: 4px; }
+
+.profit { color: var(--profit) !important; }
+.loss { color: var(--loss) !important; }
+
+/* Strategy Section */
+.strategies { margin-bottom: 32px; }
+.strategy-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+.strategy-card h4 { color: var(--accent); margin-bottom: 8px; }
+.strategy-card .params { color: var(--text-dim); font-size: 0.85em; }
+
+/* Holdings Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  font-size: 0.8em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Daily Notes List */
+.notes-list { list-style: none; }
+.notes-list li {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+}
+.notes-list li a { color: var(--text); text-decoration: none; font-weight: 600; }
+.notes-list li a:hover { color: var(--accent); }
+.notes-list .meta { color: var(--text-dim); font-size: 0.85em; margin-top: 4px; }
+
+/* Post */
+.daily-note h1 { margin-bottom: 8px; }
+.daily-note .meta { color: var(--text-dim); margin-bottom: 24px; font-size: 0.9em; }
+.daily-note .meta .pnl { margin-left: 12px; font-weight: 700; }
+.daily-note h2 { margin-top: 32px; margin-bottom: 12px; color: var(--accent); font-size: 1.2em; }
+.daily-note h3 { margin-top: 24px; margin-bottom: 8px; font-size: 1em; }
+.daily-note ul, .daily-note ol { margin-left: 20px; margin-bottom: 16px; }
+.daily-note li { margin-bottom: 4px; }
+.daily-note p { margin-bottom: 16px; }
+.daily-note code {
+  background: var(--bg-card);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.daily-note pre {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+}
+
+.day-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+.day-summary table { margin: 0; }
+
+/* Chart placeholder */
+.chart-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+  min-height: 200px;
+}
+
+/* Nav between posts */
+.nav-posts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.nav-posts a { color: var(--accent); text-decoration: none; }
+.nav-posts .next { margin-left: auto; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-top: 40px;
+  color: var(--text-dim);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard { grid-template-columns: 1fr 1fr; }
+  .card .value { font-size: 1.4em; }
+}
