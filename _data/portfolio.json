@@ -1,10 +1,35 @@
 {
-  "updated_at": "2026-05-12T21:28:21.247730",
+  "updated_at": "2026-05-12T21:40:22.129904",
   "initial_capital": 500000,
-  "cash": 0,
-  "holdings": [],
-  "holdings_value": 0,
-  "total_value": 0,
+  "cash": 500080,
+  "holdings": [
+    {
+      "symbol": "034020",
+      "name": "034020",
+      "tag": "급등주",
+      "qty": 1,
+      "current_price": 125600,
+      "value": 125600
+    },
+    {
+      "symbol": "070480",
+      "name": "070480",
+      "tag": "급등주",
+      "qty": 1,
+      "current_price": 0,
+      "value": 0
+    },
+    {
+      "symbol": "152550",
+      "name": "152550",
+      "tag": "급등주",
+      "qty": 3,
+      "current_price": 0,
+      "value": 0
+    }
+  ],
+  "holdings_value": 125600,
+  "total_value": 625680,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "total_trades": 0,
@@ -14,11 +39,11 @@
   "daily_history": [
     {
       "date": "2026-05-12",
-      "total_value": 0,
-      "cash": 0,
-      "holdings_value": 0,
-      "day_pnl": -500000,
-      "cumul_pnl": -500000
+      "total_value": 625680,
+      "cash": 500080,
+      "holdings_value": 125600,
+      "day_pnl": 125680,
+      "cumul_pnl": 125680
     }
   ],
   "strategies": {
