@@ -117,6 +117,38 @@ title: Dashboard
 <p style="color: var(--text-dim);">현재 보유 종목 없음 (현금 100%)</p>
 {% endif %}
 
+<!-- ── Today's Strategy Log ── -->
+<h2>Today's Strategy Log</h2>
+{% if p.decisions.size > 0 %}
+<div class="decisions-list">
+  {% for d in p.decisions %}
+  <div class="decision-card decision-{{ d.action }}">
+    <div class="decision-header">
+      <span class="decision-time">{{ d.time }}</span>
+      <span class="decision-action badge badge-action-{{ d.action }}">{{ d.action | upcase }}</span>
+      <span class="decision-name">{{ d.name }} <span class="dim">({{ d.symbol }})</span></span>
+      <span class="decision-price">{{ d.price }}원</span>
+    </div>
+    <div class="decision-reason">{{ d.reason }}</div>
+    {% if d.fusion_prob %}
+    <div class="decision-details">
+      <span class="detail-chip">융합 {{ d.fusion_prob | times: 100 | round }}%</span>
+      {% if d.fusion_signal %}<span class="detail-chip">{{ d.fusion_signal }}</span>{% endif %}
+      {% if d.ta_total %}<span class="detail-chip">TA={{ d.ta_total }}</span>{% endif %}
+      {% if d.lgbm_prob %}<span class="detail-chip">LGBM={{ d.lgbm_prob | times: 100 | round }}%</span>{% endif %}
+      {% if d.breakout %}<span class="detail-chip chip-green">돌파O</span>{% elsif d.breakout == false %}<span class="detail-chip chip-dim">돌파X</span>{% endif %}
+      {% if d.sizing_ratio %}<span class="detail-chip">투입={{ d.sizing_ratio | times: 100 | round }}%</span>{% endif %}
+      {% if d.atr_at_buy %}<span class="detail-chip">ATR={{ d.atr_at_buy }}</span>{% endif %}
+      {% if d.qty %}<span class="detail-chip">{{ d.qty }}주</span>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p style="color: var(--text-dim);">오늘 전략 결정 없음. 장 시작 후 실시간으로 업데이트됩니다.</p>
+{% endif %}
+
 <!-- ── Strategy & Risk ── -->
 <h2>Strategy & Risk</h2>
 <div class="info-grid">
