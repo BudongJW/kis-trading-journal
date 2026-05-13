@@ -1,25 +1,35 @@
 {
-  "updated_at": "2026-05-13T18:51:27.812155",
+  "updated_at": "2026-05-14T06:00:52.843381",
   "initial_capital": 500000,
   "cash": 500080,
   "holdings": [
     {
       "symbol": "070480",
-      "name": "070480",
+      "name": "#신비앤텍",
       "qty": 1,
-      "current_price": 0,
-      "value": 0
+      "current_price": 650,
+      "value": 650,
+      "buy_price": 916,
+      "pnl": -266,
+      "pnl_pct": -29.03,
+      "manual": true,
+      "stop_price": 889
     },
     {
       "symbol": "152550",
-      "name": "152550",
+      "name": "*한국ANKOR유전",
       "qty": 3,
       "current_price": 0,
-      "value": 0
+      "value": 0,
+      "buy_price": 1670,
+      "pnl": 0,
+      "pnl_pct": 0.0,
+      "manual": true,
+      "stop_price": 1620
     }
   ],
-  "holdings_value": 0,
-  "total_value": 500080,
+  "holdings_value": 650,
+  "total_value": 623506,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "total_trades": 0,
@@ -42,20 +52,38 @@
       "holdings_value": 0,
       "day_pnl": 80,
       "cumul_pnl": 80
+    },
+    {
+      "date": "2026-05-14",
+      "total_value": 623506,
+      "cash": 500080,
+      "holdings_value": 650,
+      "day_pnl": 123426,
+      "cumul_pnl": 123506,
+      "regime": "up",
+      "hmm_state": "unknown",
+      "confidence": 0.461,
+      "k_value": 0.55
     }
   ],
   "market": {
-    "regime": "unknown",
+    "regime": "up",
     "hmm_state": "unknown",
-    "confidence": 0.5,
-    "volatility": "unknown",
-    "vol_percentile": 0,
+    "confidence": 0.461,
+    "volatility": "high",
+    "vol_percentile": 85.0,
     "overnight_gap": {
       "direction": "neutral",
       "strength": 0,
       "action": "normal"
     },
-    "strong_sectors": []
+    "strong_sectors": [
+      "반도체",
+      "금융",
+      "IT",
+      "KOSPI200",
+      "미국나스닥"
+    ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
@@ -65,29 +93,78 @@
     },
     "universe_count": 12,
     "universe": [
-      {"symbol": "091160", "name": "KODEX 반도체"},
-      {"symbol": "395160", "name": "KODEX 미국나스닥100TR"},
-      {"symbol": "069500", "name": "KODEX 200"},
-      {"symbol": "305720", "name": "KODEX 2차전지산업"},
-      {"symbol": "381180", "name": "TIGER 미국테크TOP10 INDXX"},
-      {"symbol": "360750", "name": "TIGER 미국S&P500"},
-      {"symbol": "091170", "name": "KODEX 은행"},
-      {"symbol": "244580", "name": "KODEX 바이오"},
-      {"symbol": "091180", "name": "KODEX 자동차"},
-      {"symbol": "117680", "name": "KODEX 철강"},
-      {"symbol": "364690", "name": "KODEX K-미래차"},
-      {"symbol": "371160", "name": "TIGER 미국필라델피아반도체나스닥"}
+      {
+        "symbol": "091160",
+        "name": "KODEX 반도체"
+      },
+      {
+        "symbol": "395160",
+        "name": "KODEX 미국나스닥100TR"
+      },
+      {
+        "symbol": "069500",
+        "name": "KODEX 200"
+      },
+      {
+        "symbol": "305720",
+        "name": "KODEX 2차전지산업"
+      },
+      {
+        "symbol": "381180",
+        "name": "TIGER 미국테크TOP10 INDXX"
+      },
+      {
+        "symbol": "360750",
+        "name": "TIGER 미국S&P500"
+      },
+      {
+        "symbol": "091170",
+        "name": "KODEX 은행"
+      },
+      {
+        "symbol": "244580",
+        "name": "KODEX 바이오"
+      },
+      {
+        "symbol": "091180",
+        "name": "KODEX 자동차"
+      },
+      {
+        "symbol": "117680",
+        "name": "KODEX 철강"
+      },
+      {
+        "symbol": "364690",
+        "name": "KODEX K-미래차"
+      },
+      {
+        "symbol": "371160",
+        "name": "TIGER 미국필라델피아반도체나스닥"
+      }
     ]
   },
   "risk": {
-    "kelly_f": 0.10,
+    "kelly_f": 0.1,
     "drawdown_scale": 1.0,
-    "drawdown_reason": "기본",
+    "drawdown_reason": "거래 0건, 스케일링 미적용",
     "stop_type": "ATR×1.5 동적",
     "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
   },
   "fusion": {
     "trained": false
+  },
+  "bear_strategy": {
+    "regime": "BULL",
+    "enabled": false
+  },
+  "us_session": {
+    "enabled": true,
+    "cash_usd": 0.0,
+    "positions": 0,
+    "holdings": [],
+    "max_positions": 2,
+    "budget_pct": 0.4,
+    "regime_linked": true
   },
   "decisions": []
 }
