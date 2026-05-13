@@ -59,17 +59,90 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .profit { color: var(--profit) !important; }
 .loss { color: var(--loss) !important; }
 
-/* Strategy Section */
-.strategies { margin-bottom: 32px; }
-.strategy-card {
+/* Market Status Grid */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.market-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.market-label { font-size: 0.75em; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+.market-value { font-size: 1.1em; font-weight: 600; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.badge-up, .badge-bull, .badge-bullish { background: rgba(63, 185, 80, 0.15); color: var(--profit); }
+.badge-down, .badge-bear, .badge-bearish { background: rgba(248, 81, 73, 0.15); color: var(--loss); }
+.badge-sideways, .badge-neutral { background: rgba(139, 148, 158, 0.15); color: var(--text-dim); }
+.badge-unknown { background: rgba(139, 148, 158, 0.1); color: var(--text-dim); }
+.badge-high { background: rgba(248, 81, 73, 0.15); color: var(--loss); }
+.badge-low { background: rgba(63, 185, 80, 0.15); color: var(--profit); }
+
+/* Sector Tags */
+.sector-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.tag {
+  background: rgba(88, 166, 255, 0.12);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+/* Info Grid (Strategy & Risk) */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.info-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 16px 20px;
-  margin-bottom: 12px;
 }
-.strategy-card h4 { color: var(--accent); margin-bottom: 8px; }
-.strategy-card .params { color: var(--text-dim); font-size: 0.85em; }
+.info-card h4 { color: var(--accent); margin-bottom: 10px; font-size: 0.95em; }
+.info-card .dim, .dim { color: var(--text-dim); font-size: 0.85em; }
+table.compact { margin: 0; }
+table.compact td { padding: 4px 8px; font-size: 0.85em; border-bottom: 1px solid rgba(48, 54, 61, 0.5); }
+
+/* Universe Grid */
+.universe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.universe-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.85em;
+}
+.universe-chip .dim { margin-right: 4px; }
 
 /* Holdings Table */
 table {
@@ -170,4 +243,8 @@ footer {
 @media (max-width: 600px) {
   .dashboard { grid-template-columns: 1fr 1fr; }
   .card .value { font-size: 1.4em; }
+  .market-grid { grid-template-columns: 1fr 1fr; }
+  .info-grid { grid-template-columns: 1fr; }
+  table { font-size: 0.85em; }
+  th, td { padding: 6px 8px; }
 }

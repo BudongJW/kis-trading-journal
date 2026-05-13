@@ -33,22 +33,82 @@ title: Dashboard
   </div>
 </div>
 
+<!-- ── Market Status ── -->
+<h2>Market Status</h2>
+<div class="market-grid">
+  <div class="market-card">
+    <span class="market-label">Regime</span>
+    <span class="market-value badge badge-{{ p.market.regime | default: 'unknown' }}">
+      {{ p.market.regime | default: "unknown" }}
+    </span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">HMM State</span>
+    <span class="market-value badge badge-{{ p.market.hmm_state | default: 'unknown' }}">
+      {{ p.market.hmm_state | default: "unknown" }}
+    </span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">Confidence</span>
+    <span class="market-value">{{ p.market.confidence | times: 100 | round }}%</span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">Volatility</span>
+    <span class="market-value">{{ p.market.vol_percentile | round }}p</span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">US Gap</span>
+    <span class="market-value badge badge-{{ p.market.overnight_gap.direction | default: 'neutral' }}">
+      {{ p.market.overnight_gap.direction | default: "neutral" }}
+      {% if p.market.overnight_gap.strength > 0 %}({{ p.market.overnight_gap.strength }}){% endif %}
+    </span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">Gap Action</span>
+    <span class="market-value">{{ p.market.overnight_gap.action | default: "normal" }}</span>
+  </div>
+</div>
+
+{% if p.market.strong_sectors.size > 0 %}
+<div class="sector-tags">
+  <span class="market-label">Strong Sectors:</span>
+  {% for sec in p.market.strong_sectors %}
+  <span class="tag">{{ sec }}</span>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ── Current Holdings ── -->
 <h2>Current Holdings</h2>
 {% if p.holdings.size > 0 %}
 <table>
   <thead>
-    <tr><th>종목</th><th>수량</th><th>매수가</th><th>현재가</th><th>손익</th></tr>
+    <tr>
+      <th>종목</th>
+      <th>수량</th>
+      <th>매수가</th>
+      <th>현재가</th>
+      <th>손익</th>
+      <th>손절가</th>
+      <th>보유</th>
+    </tr>
   </thead>
   <tbody>
     {% for h in p.holdings %}
     <tr>
-      <td>{{ h.name }} ({{ h.symbol }})</td>
+      <td>{{ h.name }} <span class="dim">({{ h.symbol }})</span></td>
       <td class="num">{{ h.qty }}주</td>
       <td class="num">{{ h.buy_price }}원</td>
       <td class="num">{{ h.current_price }}원</td>
       <td class="num {% if h.pnl > 0 %}profit{% elsif h.pnl < 0 %}loss{% endif %}">
         {% if h.pnl > 0 %}+{% endif %}{{ h.pnl }}원
+        <span class="dim">({% if h.pnl_pct > 0 %}+{% endif %}{{ h.pnl_pct }}%)</span>
       </td>
+      <td class="num">
+        {{ h.stop_price }}원
+        {% if h.atr_at_buy > 0 %}<span class="dim">ATR</span>{% endif %}
+      </td>
+      <td class="num">{{ h.hold_days | default: 0 }}일</td>
     </tr>
     {% endfor %}
   </tbody>
@@ -57,24 +117,67 @@ title: Dashboard
 <p style="color: var(--text-dim);">현재 보유 종목 없음 (현금 100%)</p>
 {% endif %}
 
-<h2>Strategies</h2>
-<div class="strategies">
-  {% for s in p.strategies %}
-  <div class="strategy-card">
-    <h4>{{ s[1].name }} ({{ s[1].allocation }})</h4>
-    <div class="params">
-      거래: {{ s[1].trades }}건 | PnL: {% if s[1].pnl > 0 %}+{% endif %}{{ s[1].pnl }}원
-      {% if s[1].params %} | K={{ s[1].params.k }}, MA={{ s[1].params.trend_ma }}{% endif %}
-    </div>
+<!-- ── Strategy & Risk ── -->
+<h2>Strategy & Risk</h2>
+<div class="info-grid">
+  <div class="info-card">
+    <h4>{{ p.strategy.name }}</h4>
+    <table class="compact">
+      <tr><td>K값</td><td class="num">{{ p.strategy.params.k }}</td></tr>
+      <tr><td>MA</td><td class="num">{{ p.strategy.params.trend_ma }}</td></tr>
+      <tr><td>유니버스</td><td class="num">{{ p.strategy.universe_count }}개 ETF</td></tr>
+    </table>
+  </div>
+  <div class="info-card">
+    <h4>Risk Management</h4>
+    <table class="compact">
+      <tr><td>Kelly</td><td class="num">{{ p.risk.kelly_f | times: 100 | round }}%</td></tr>
+      <tr><td>Drawdown</td><td class="num">×{{ p.risk.drawdown_scale }}</td></tr>
+      <tr><td>손절</td><td class="num">{{ p.risk.stop_type }}</td></tr>
+      <tr><td>추적</td><td class="num">{{ p.risk.trailing_type }}</td></tr>
+    </table>
+  </div>
+  <div class="info-card">
+    <h4>Signal Fusion</h4>
+    {% if p.fusion.trained %}
+    <table class="compact">
+      <tr><td>Brier Score</td><td class="num">{{ p.fusion.brier_score }}</td></tr>
+      <tr><td>학습 샘플</td><td class="num">{{ p.fusion.n_samples }}건</td></tr>
+      {% if p.fusion.weights %}
+      <tr><td>TA</td><td class="num">{{ p.fusion.weights.ta_score }}</td></tr>
+      <tr><td>LGBM</td><td class="num">{{ p.fusion.weights.lgbm_prob }}</td></tr>
+      <tr><td>Breakout</td><td class="num">{{ p.fusion.weights.breakout }}</td></tr>
+      {% endif %}
+    </table>
+    {% else %}
+    <p class="dim">학습 전 (기본 가중치 사용)</p>
+    <table class="compact">
+      <tr><td>TA</td><td class="num">0.25</td></tr>
+      <tr><td>LGBM</td><td class="num">0.30</td></tr>
+      <tr><td>Breakout</td><td class="num">0.20</td></tr>
+      <tr><td>Gap</td><td class="num">0.10</td></tr>
+      <tr><td>Regime</td><td class="num">0.15</td></tr>
+    </table>
+    {% endif %}
+  </div>
+</div>
+
+<!-- ── Universe ── -->
+<h2>ETF Universe ({{ p.strategy.universe_count }})</h2>
+<div class="universe-grid">
+  {% for etf in p.strategy.universe %}
+  <div class="universe-chip">
+    <span class="dim">{{ etf.symbol }}</span> {{ etf.name }}
   </div>
   {% endfor %}
 </div>
 
+<!-- ── Daily PnL History ── -->
 <h2>Daily PnL History</h2>
 <div class="chart-container" id="pnl-chart">
   {% if p.daily_history.size > 0 %}
   <table>
-    <thead><tr><th>Date</th><th>Value</th><th>Day PnL</th><th>Cumul PnL</th></tr></thead>
+    <thead><tr><th>Date</th><th>Value</th><th>Day PnL</th><th>Cumul PnL</th><th>Regime</th></tr></thead>
     <tbody>
       {% for d in p.daily_history reversed %}
       <tr>
@@ -86,6 +189,11 @@ title: Dashboard
         <td class="num {% if d.cumul_pnl > 0 %}profit{% elsif d.cumul_pnl < 0 %}loss{% endif %}">
           {% if d.cumul_pnl > 0 %}+{% endif %}{{ d.cumul_pnl }}원
         </td>
+        <td>
+          <span class="badge badge-{{ d.regime | default: 'unknown' }}">{{ d.regime | default: "?" }}</span>
+          /
+          <span class="badge badge-{{ d.hmm_state | default: 'unknown' }}">{{ d.hmm_state | default: "?" }}</span>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
@@ -95,6 +203,7 @@ title: Dashboard
   {% endif %}
 </div>
 
+<!-- ── Recent Notes ── -->
 <h2>Recent Notes</h2>
 <ul class="notes-list">
   {% for post in site.posts limit:10 %}
@@ -112,5 +221,5 @@ title: Dashboard
   {% endfor %}
 </ul>
 {% if site.posts.size == 0 %}
-<p style="color: var(--text-dim);">아직 투자 노트가 없습니다. 내일 첫 거래 후 자동 생성됩니다.</p>
+<p style="color: var(--text-dim);">아직 투자 노트가 없습니다. 첫 거래 후 자동 생성됩니다.</p>
 {% endif %}
