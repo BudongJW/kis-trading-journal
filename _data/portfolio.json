@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-13T15:30:42.663050",
+  "updated_at": "2026-05-13T18:19:49.966976",
   "initial_capital": 500000,
   "cash": 500080,
   "holdings": [
@@ -42,7 +42,7 @@
       "total_value": 500080,
       "cash": 500080,
       "holdings_value": 0,
-      "day_pnl": -125600,
+      "day_pnl": 80,
       "cumul_pnl": 80
     }
   ],
