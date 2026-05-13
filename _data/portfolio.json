@@ -88,5 +88,6 @@
   },
   "fusion": {
     "trained": false
-  }
+  },
+  "decisions": []
 }

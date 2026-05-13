@@ -119,7 +119,7 @@ title: Dashboard
 
 <!-- ── Today's Strategy Log ── -->
 <h2>Today's Strategy Log</h2>
-{% if p.decisions.size > 0 %}
+{% if p.decisions and p.decisions.size > 0 %}
 <div class="decisions-list">
   {% for d in p.decisions %}
   <div class="decision-card decision-{{ d.action }}">

@@ -13,7 +13,7 @@ layout: default
     <table>
       <tr><td>시작 자산</td><td class="num">{{ page.summary.start_value | default: "-" }}</td></tr>
       <tr><td>종료 자산</td><td class="num">{{ page.summary.end_value | default: "-" }}</td></tr>
-      <tr><td>당일 손익</td><td class="num {% if page.summary.day_pnl > 0 %}profit{% elsif page.summary.day_pnl < 0 %}loss{% endif %}">{{ page.summary.day_pnl | default: 0 }}</td></tr>
+      <tr><td>당일 손익</td><td class="num">{{ page.summary.day_pnl | default: 0 }}</td></tr>
       <tr><td>거래 횟수</td><td class="num">{{ page.summary.trades | default: 0 }}건</td></tr>
     </table>
   </div>
