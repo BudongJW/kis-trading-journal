@@ -1,16 +1,8 @@
 {
-  "updated_at": "2026-05-12T21:40:22.129904",
+  "updated_at": "2026-05-13T15:30:42.663050",
   "initial_capital": 500000,
   "cash": 500080,
   "holdings": [
-    {
-      "symbol": "034020",
-      "name": "034020",
-      "tag": "급등주",
-      "qty": 1,
-      "current_price": 125600,
-      "value": 125600
-    },
     {
       "symbol": "070480",
       "name": "070480",
@@ -28,8 +20,8 @@
       "value": 0
     }
   ],
-  "holdings_value": 125600,
-  "total_value": 625680,
+  "holdings_value": 0,
+  "total_value": 500080,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "total_trades": 0,
@@ -44,6 +36,14 @@
       "holdings_value": 125600,
       "day_pnl": 125680,
       "cumul_pnl": 125680
+    },
+    {
+      "date": "2026-05-13",
+      "total_value": 500080,
+      "cash": 500080,
+      "holdings_value": 0,
+      "day_pnl": -125600,
+      "cumul_pnl": 80
     }
   ],
   "strategies": {
@@ -51,7 +51,7 @@
       "name": "ETF 변동성 돌파",
       "allocation": "60%",
       "params": {
-        "k": 0.6,
+        "k": 0.55,
         "trend_ma": 25
       },
       "trades": 0,
