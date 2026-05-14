@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T06:00:52.843381",
+  "updated_at": "2026-05-14T15:30:28.500654",
   "initial_capital": 500000,
   "cash": 500080,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "070480",
       "name": "#신비앤텍",
       "qty": 1,
-      "current_price": 650,
-      "value": 650,
+      "current_price": 742,
+      "value": 742,
       "buy_price": 916,
-      "pnl": -266,
-      "pnl_pct": -29.03,
+      "pnl": -174,
+      "pnl_pct": -18.99,
       "manual": true,
       "stop_price": 889
     },
@@ -28,8 +28,8 @@
       "stop_price": 1620
     }
   ],
-  "holdings_value": 650,
-  "total_value": 623506,
+  "holdings_value": 742,
+  "total_value": 623598,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "total_trades": 0,
@@ -55,30 +55,31 @@
     },
     {
       "date": "2026-05-14",
-      "total_value": 623506,
+      "total_value": 623598,
       "cash": 500080,
-      "holdings_value": 650,
-      "day_pnl": 123426,
-      "cumul_pnl": 123506,
+      "holdings_value": 742,
+      "day_pnl": 123598,
+      "cumul_pnl": 123598,
       "regime": "up",
       "hmm_state": "unknown",
-      "confidence": 0.461,
-      "k_value": 0.55
+      "confidence": 0.508,
+      "k_value": 0.5
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "unknown",
-    "confidence": 0.461,
+    "confidence": 0.508,
     "volatility": "high",
     "vol_percentile": 85.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0,
+      "direction": "bullish",
+      "strength": 0.32,
       "action": "normal"
     },
     "strong_sectors": [
       "반도체",
+      "자동차",
       "금융",
       "IT",
       "KOSPI200",
@@ -88,10 +89,10 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.55,
+      "k": 0.5,
       "trend_ma": 25
     },
-    "universe_count": 12,
+    "universe_count": 14,
     "universe": [
       {
         "symbol": "091160",
@@ -140,6 +141,14 @@
       {
         "symbol": "371160",
         "name": "TIGER 미국필라델피아반도체나스닥"
+      },
+      {
+        "symbol": "102110",
+        "name": "KODEX 금융"
+      },
+      {
+        "symbol": "098560",
+        "name": "KODEX IT"
       }
     ]
   },
