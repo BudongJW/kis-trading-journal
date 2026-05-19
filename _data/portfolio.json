@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-05-14T15:30:28.500654",
+  "updated_at": "2026-05-20T06:00:23.070072",
   "initial_capital": 500000,
-  "cash": 500080,
+  "cash": 622856,
   "holdings": [
     {
       "symbol": "070480",
       "name": "#신비앤텍",
       "qty": 1,
-      "current_price": 742,
-      "value": 742,
+      "current_price": 511,
+      "value": 511,
       "buy_price": 916,
-      "pnl": -174,
-      "pnl_pct": -18.99,
+      "pnl": -405,
+      "pnl_pct": -44.21,
       "manual": true,
       "stop_price": 889
     },
@@ -28,8 +28,8 @@
       "stop_price": 1620
     }
   ],
-  "holdings_value": 742,
-  "total_value": 623598,
+  "holdings_value": 511,
+  "total_value": 623367,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "total_trades": 0,
@@ -64,26 +64,33 @@
       "hmm_state": "unknown",
       "confidence": 0.508,
       "k_value": 0.5
+    },
+    {
+      "date": "2026-05-20",
+      "total_value": 623367,
+      "cash": 622856,
+      "holdings_value": 511,
+      "day_pnl": -231,
+      "cumul_pnl": 123367,
+      "regime": "up",
+      "hmm_state": "unknown",
+      "confidence": 0.27,
+      "k_value": 0.5
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "unknown",
-    "confidence": 0.508,
+    "confidence": 0.27,
     "volatility": "high",
-    "vol_percentile": 85.0,
+    "vol_percentile": 90.0,
     "overnight_gap": {
-      "direction": "bullish",
-      "strength": 0.32,
+      "direction": "neutral",
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "반도체",
-      "자동차",
-      "금융",
-      "IT",
-      "KOSPI200",
-      "미국나스닥"
+      "IT"
     ]
   },
   "strategy": {
@@ -92,7 +99,7 @@
       "k": 0.5,
       "trend_ma": 25
     },
-    "universe_count": 14,
+    "universe_count": 13,
     "universe": [
       {
         "symbol": "091160",
@@ -141,10 +148,6 @@
       {
         "symbol": "371160",
         "name": "TIGER 미국필라델피아반도체나스닥"
-      },
-      {
-        "symbol": "102110",
-        "name": "KODEX 금융"
       },
       {
         "symbol": "098560",
