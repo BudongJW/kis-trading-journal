@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T18:55:07.396068",
+  "updated_at": "2026-05-21T06:00:09.816242",
   "initial_capital": 500000,
   "cash": 622856,
   "holdings": [
@@ -76,6 +76,18 @@
       "cash": 622856,
       "holdings_value": 618,
       "day_pnl": 123474,
+      "cumul_pnl": 123474,
+      "regime": "up",
+      "hmm_state": "unknown",
+      "confidence": 0.239,
+      "k_value": 0.5
+    },
+    {
+      "date": "2026-05-21",
+      "total_value": 623474,
+      "cash": 622856,
+      "holdings_value": 618,
+      "day_pnl": 0,
       "cumul_pnl": 123474,
       "regime": "up",
       "hmm_state": "unknown",
