@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-20T10:45:24.558584",
+  "updated_at": "2026-05-20T10:55:06.851268",
   "initial_capital": 500000,
   "cash": 622856,
   "holdings": [
@@ -169,11 +169,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.088,
+    "sma_ratio": 0.684,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.3113,
-      "132030": -1.1327
+      "195930": 0.0531,
+      "132030": -0.8938
     }
   },
   "us_session": {
@@ -187,121 +187,112 @@
   },
   "decisions": [
     {
-      "time": "10:45:20",
+      "time": "10:55:00",
       "symbol": "371160",
       "name": "TIGER 미국필라델피아반도체나스닥",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 8,000 < 목표 8,068)",
-      "price": 8000,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 8,010 < 목표 8,068)",
+      "price": 8010,
+      "ta_total": -14.2
     },
     {
-      "time": "10:45:20",
+      "time": "10:54:58",
       "symbol": "364690",
       "name": "KODEX K-미래차",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 40,300 < 목표 42,375)",
-      "price": 40300,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 40,835 < 목표 42,375)",
+      "price": 40835,
+      "ta_total": -12.8
     },
     {
-      "time": "10:45:19",
+      "time": "10:54:56",
       "symbol": "117680",
       "name": "KODEX 철강",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 15,060 < 목표 16,728)",
-      "price": 15060,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 15,195 < 목표 16,728)",
+      "price": 15195,
+      "ta_total": -1.2
     },
     {
-      "time": "10:45:19",
+      "time": "10:54:54",
       "symbol": "091180",
       "name": "KODEX 자동차",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 33,475 < 목표 35,692)",
-      "price": 33475,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 33,770 < 목표 35,692)",
+      "price": 33770,
+      "ta_total": -4.4
     },
     {
-      "time": "10:45:18",
+      "time": "10:54:52",
       "symbol": "244580",
       "name": "KODEX 바이오",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 10,190 < 목표 10,835)",
-      "price": 10190,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 10,280 < 목표 10,835)",
+      "price": 10280,
+      "ta_total": 2.0
     },
     {
-      "time": "10:45:18",
+      "time": "10:54:50",
       "symbol": "091170",
       "name": "KODEX 은행",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 14,650 < 목표 15,345)",
-      "price": 14650,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 14,760 < 목표 15,345)",
+      "price": 14760,
+      "ta_total": -8.3
     },
     {
-      "time": "10:45:17",
+      "time": "10:54:47",
       "symbol": "360750",
       "name": "TIGER 미국S&P500",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 27,505 < 목표 27,642)",
-      "price": 27505,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 27,500 < 목표 27,642)",
+      "price": 27500,
+      "ta_total": 10.0
     },
     {
-      "time": "10:45:17",
+      "time": "10:54:45",
       "symbol": "381180",
       "name": "TIGER 미국테크TOP10 INDXX",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 44,650 < 목표 45,022)",
-      "price": 44650,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 44,670 < 목표 45,022)",
+      "price": 44670,
+      "ta_total": -9.1
     },
     {
-      "time": "10:45:16",
+      "time": "10:54:43",
       "symbol": "305720",
       "name": "KODEX 2차전지산업",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 17,695 < 목표 19,105)",
-      "price": 17695,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 17,865 < 목표 19,105)",
+      "price": 17865,
+      "ta_total": -5.3
     },
     {
-      "time": "10:45:16",
+      "time": "10:54:41",
       "symbol": "069500",
       "name": "KODEX 200",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 112,045 < 목표 117,158)",
-      "price": 112045,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 113,155 < 목표 117,158)",
+      "price": 113155,
+      "ta_total": -15.2
     },
     {
-      "time": "10:45:15",
+      "time": "10:54:39",
       "symbol": "395160",
       "name": "KODEX 미국나스닥100TR",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 36,220 < 목표 37,892)",
-      "price": 36220,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 36,725 < 목표 37,892)",
+      "price": 36725,
+      "ta_total": -16.5
     },
     {
-      "time": "10:45:15",
+      "time": "10:54:37",
       "symbol": "091160",
       "name": "KODEX 반도체",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 139,570 < 목표 144,642)",
-      "price": 139570,
-      "ta_total": 0
-    },
-    {
-      "time": "10:45:14",
-      "symbol": "098560",
-      "name": "KODEX IT",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 8,330 < 목표 8,370)",
-      "price": 8330,
-      "ta_total": 0
+      "reason": "신호 없음: 미돌파 (현재 141,145 < 목표 144,642)",
+      "price": 141145,
+      "ta_total": -14.9
     }
   ]
 }
