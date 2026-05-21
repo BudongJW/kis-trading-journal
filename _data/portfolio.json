@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-21T06:00:09.816242",
+  "updated_at": "2026-05-21T15:53:03.238784",
   "initial_capital": 500000,
   "cash": 622856,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "070480",
       "name": "#신비앤텍",
       "qty": 1,
-      "current_price": 618,
-      "value": 618,
+      "current_price": 512,
+      "value": 512,
       "buy_price": 916,
-      "pnl": -298,
-      "pnl_pct": -32.53,
+      "pnl": -404,
+      "pnl_pct": -44.1,
       "manual": true,
       "stop_price": 889
     },
@@ -28,12 +28,12 @@
       "stop_price": 1620
     }
   ],
-  "holdings_value": 618,
-  "total_value": 623474,
+  "holdings_value": 512,
+  "total_value": 623368,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
-  "unrealized_pnl": -298,
+  "unrealized_pnl": -404,
   "total_trades": 0,
   "completed_trades": 0,
   "winning_trades": 0,
@@ -84,39 +84,43 @@
     },
     {
       "date": "2026-05-21",
-      "total_value": 623474,
+      "total_value": 623368,
       "cash": 622856,
-      "holdings_value": 618,
-      "day_pnl": 0,
-      "cumul_pnl": 123474,
+      "holdings_value": 512,
+      "day_pnl": 123368,
+      "cumul_pnl": 123368,
       "regime": "up",
-      "hmm_state": "unknown",
-      "confidence": 0.239,
-      "k_value": 0.5
+      "hmm_state": "bear",
+      "confidence": 0.654,
+      "k_value": 0.59
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "unknown",
-    "confidence": 0.239,
-    "volatility": "high",
-    "vol_percentile": 80.0,
+    "hmm_state": "bear",
+    "confidence": 0.654,
+    "volatility": "normal",
+    "vol_percentile": 60.0,
     "overnight_gap": {
-      "direction": "bearish",
-      "strength": 0.26,
-      "action": "reduce_size"
+      "direction": "bullish",
+      "strength": 0.45,
+      "action": "normal"
     },
     "strong_sectors": [
-      "IT"
+      "반도체",
+      "금융",
+      "IT",
+      "KOSPI200",
+      "미국나스닥"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.5,
+      "k": 0.59,
       "trend_ma": 25
     },
-    "universe_count": 13,
+    "universe_count": 14,
     "universe": [
       {
         "symbol": "091160",
@@ -165,6 +169,10 @@
       {
         "symbol": "371160",
         "name": "TIGER 미국필라델피아반도체나스닥"
+      },
+      {
+        "symbol": "102110",
+        "name": "KODEX 금융"
       },
       {
         "symbol": "098560",
