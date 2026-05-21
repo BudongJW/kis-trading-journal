@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-21T16:52:32.780069",
+  "updated_at": "2026-05-21T16:59:53.834072",
   "initial_capital": 500000,
-  "cash": 622856,
+  "cash": 922856,
   "holdings": [
     {
       "symbol": "070480",
@@ -29,7 +29,7 @@
     }
   ],
   "holdings_value": 512,
-  "total_value": 623368,
+  "total_value": 923368,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
@@ -84,11 +84,11 @@
     },
     {
       "date": "2026-05-21",
-      "total_value": 623368,
-      "cash": 622856,
+      "total_value": 923368,
+      "cash": 922856,
       "holdings_value": 512,
-      "day_pnl": 123368,
-      "cumul_pnl": 123368,
+      "day_pnl": 423368,
+      "cumul_pnl": 423368,
       "regime": "up",
       "hmm_state": "bear",
       "confidence": 0.654,
