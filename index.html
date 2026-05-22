@@ -4,6 +4,30 @@ title: Dashboard
 ---
 {% assign p = site.data.portfolio %}
 
+<!-- ── Status Bar: Killswitch + Reconcile ── -->
+<div class="status-bar">
+  {% if p.killswitch.active %}
+  <div class="status-badge status-danger">
+    ⚠️ Killswitch ACTIVE — {{ p.killswitch.mode }} ({{ p.killswitch.reason | default: "manual" }})
+    <a href="https://github.com/BudongJW/kis-autotrader/actions/workflows/killswitch.yml"
+       target="_blank" rel="noopener">해제</a>
+  </div>
+  {% else %}
+  <div class="status-badge status-ok">✅ 봇 운영 중</div>
+  {% endif %}
+
+  {% if p.reconcile.qty_mismatch > 0 or p.reconcile.broker_only > 0 or p.reconcile.ledger_only > 0 %}
+  <div class="status-badge status-warn">
+    📋 정합성 차이:
+    {% if p.reconcile.qty_mismatch > 0 %}수량차이 {{ p.reconcile.qty_mismatch }} {% endif %}
+    {% if p.reconcile.broker_only > 0 %}계좌만 {{ p.reconcile.broker_only }} {% endif %}
+    {% if p.reconcile.ledger_only > 0 %}원장만 {{ p.reconcile.ledger_only }} {% endif %}
+  </div>
+  {% else %}
+  <div class="status-badge status-ok">📋 원장·계좌 일치 ({{ p.reconcile.matched | default: 0 }}건)</div>
+  {% endif %}
+</div>
+
 <h2>Portfolio Dashboard</h2>
 
 <div class="dashboard">
@@ -152,9 +176,31 @@ title: Dashboard
 <p style="color: var(--text-dim);">아직 완료된 매수→매도 사이클이 없습니다. 봇의 첫 라운드트립이 끝나면 표시됩니다.</p>
 {% endif %}
 
-<!-- ── Trade History (Raw) ── -->
+<!-- ── Trade History (Raw, Alpine 필터) ── -->
 <h2>Trade History</h2>
 {% if p.trades and p.trades.size > 0 %}
+<div x-data="tradeFilter()" class="filter-wrapper">
+  <div class="filter-controls">
+    <label>
+      구분:
+      <select x-model="sideFilter">
+        <option value="all">전체</option>
+        <option value="buy">매수만</option>
+        <option value="sell">매도만</option>
+      </select>
+    </label>
+    <label>
+      종목:
+      <input type="text" x-model="symbolFilter" placeholder="심볼·이름 검색">
+    </label>
+    <label>
+      <input type="checkbox" x-model="todayOnly">
+      오늘만
+    </label>
+    <span class="filter-count dim">
+      <span x-text="filteredCount"></span> / {{ p.trades.size }}건
+    </span>
+  </div>
 <table>
   <thead>
     <tr>
@@ -168,7 +214,7 @@ title: Dashboard
   </thead>
   <tbody>
     {% for t in p.trades reversed %}
-    <tr>
+    <tr x-show="match('{{ t.side }}', '{{ t.symbol }}', '{{ t.name | escape }}', '{{ t.date }}')">
       <td><span class="dim">{{ t.date }}</span> {{ t.time }}</td>
       <td>{{ t.name }} <span class="dim">({{ t.symbol }})</span></td>
       <td><span class="badge badge-action-{{ t.side }}">{{ t.side | upcase }}</span></td>
@@ -180,6 +226,29 @@ title: Dashboard
   </tbody>
 </table>
 <p class="dim" style="font-size: 0.85em; margin-top: 8px;">최근 50건 표시 (전체는 GitHub Actions trade-log artifact).</p>
+</div>
+<script>
+  function tradeFilter() {
+    return {
+      sideFilter: 'all',
+      symbolFilter: '',
+      todayOnly: false,
+      today: new Date().toISOString().slice(0, 10),
+      get filteredCount() {
+        return document.querySelectorAll('.filter-wrapper tbody tr[x-show="true"], .filter-wrapper tbody tr:not([style*="display: none"])').length;
+      },
+      match(side, symbol, name, date) {
+        if (this.sideFilter !== 'all' && side !== this.sideFilter) return false;
+        if (this.todayOnly && date !== this.today) return false;
+        if (this.symbolFilter) {
+          const q = this.symbolFilter.toLowerCase();
+          if (!symbol.toLowerCase().includes(q) && !name.toLowerCase().includes(q)) return false;
+        }
+        return true;
+      },
+    };
+  }
+</script>
 {% else %}
 <p style="color: var(--text-dim);">자동매매 봇의 첫 거래 체결 후 여기에 표시됩니다.</p>
 {% endif %}
@@ -271,10 +340,75 @@ title: Dashboard
   {% endfor %}
 </div>
 
-<!-- ── Daily PnL History ── -->
+<!-- ── Daily PnL Chart + History ── -->
 <h2>Daily PnL History</h2>
-<div class="chart-container" id="pnl-chart">
-  {% if p.daily_history.size > 0 %}
+{% if p.daily_history.size > 0 %}
+<div class="chart-wrapper">
+  <canvas id="pnl-chart-canvas" height="100"></canvas>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('pnl-chart-canvas').getContext('2d');
+    const labels = [
+      {% for d in p.daily_history %}"{{ d.date }}"{% unless forloop.last %},{% endunless %}{% endfor %}
+    ];
+    const cumul = [
+      {% for d in p.daily_history %}{{ d.cumul_pnl | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}
+    ];
+    const dayPnl = [
+      {% for d in p.daily_history %}{{ d.day_pnl | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}
+    ];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: '누적 손익 (₩)',
+            data: cumul,
+            borderColor: '#58a6ff',
+            backgroundColor: 'rgba(88, 166, 255, 0.1)',
+            tension: 0.2,
+            fill: true,
+            yAxisID: 'y',
+          },
+          {
+            label: '일별 손익 (₩)',
+            data: dayPnl,
+            borderColor: '#3fb950',
+            backgroundColor: 'rgba(63, 185, 80, 0.1)',
+            tension: 0.2,
+            borderDash: [5, 5],
+            yAxisID: 'y1',
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { labels: { color: '#c9d1d9' } },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y >= 0 ? '+' : ''}${ctx.parsed.y.toLocaleString()}원`,
+            },
+          },
+        },
+        scales: {
+          x: { ticks: { color: '#8b949e' }, grid: { color: 'rgba(139, 148, 158, 0.1)' } },
+          y: { position: 'left', ticks: { color: '#58a6ff', callback: (v) => v.toLocaleString() },
+               grid: { color: 'rgba(139, 148, 158, 0.1)' },
+               title: { display: true, text: '누적', color: '#58a6ff' } },
+          y1: { position: 'right', ticks: { color: '#3fb950', callback: (v) => v.toLocaleString() },
+                grid: { drawOnChartArea: false },
+                title: { display: true, text: '일별', color: '#3fb950' } },
+        },
+      },
+    });
+  });
+</script>
+
+<div class="chart-container" id="pnl-table">
   <table>
     <thead><tr><th>Date</th><th>Value</th><th>Day PnL</th><th>Cumul PnL</th><th>Regime</th></tr></thead>
     <tbody>
@@ -297,10 +431,10 @@ title: Dashboard
       {% endfor %}
     </tbody>
   </table>
-  {% else %}
-  <p style="color: var(--text-dim); text-align: center; padding: 40px 0;">거래 시작 후 데이터가 쌓입니다.</p>
-  {% endif %}
 </div>
+{% else %}
+<p style="color: var(--text-dim); text-align: center; padding: 40px 0;">거래 시작 후 데이터가 쌓입니다.</p>
+{% endif %}
 
 <!-- ── Recent Notes ── -->
 <h2>Recent Notes</h2>

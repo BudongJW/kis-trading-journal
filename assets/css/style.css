@@ -290,6 +290,88 @@ footer {
   text-align: center;
 }
 
+/* Status bar (killswitch + reconcile) */
+.status-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.status-badge a {
+  margin-left: 8px;
+  color: inherit;
+  text-decoration: underline;
+}
+.status-ok { background: rgba(63, 185, 80, 0.12); color: var(--profit); border: 1px solid rgba(63, 185, 80, 0.3); }
+.status-warn { background: rgba(248, 165, 73, 0.12); color: #f5a242; border: 1px solid rgba(248, 165, 73, 0.3); }
+.status-danger { background: rgba(248, 81, 73, 0.15); color: var(--loss); border: 1px solid rgba(248, 81, 73, 0.4); }
+
+/* Killswitch link in nav */
+.nav-killswitch {
+  color: #f5a242 !important;
+  font-weight: 500;
+}
+
+/* Auto-refresh status in footer */
+.auto-refresh-status {
+  margin-left: 12px;
+  font-size: 0.95em;
+}
+.auto-refresh-status label { cursor: pointer; }
+
+/* Chart wrapper */
+.chart-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+/* Filter wrapper (Trade History) */
+.filter-wrapper {
+  margin-top: 8px;
+}
+.filter-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.filter-controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+}
+.filter-controls input[type="text"],
+.filter-controls select {
+  padding: 4px 8px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.filter-count {
+  margin-left: auto;
+  font-size: 0.85em;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   .dashboard { grid-template-columns: 1fr 1fr; }
@@ -298,4 +380,7 @@ footer {
   .info-grid { grid-template-columns: 1fr; }
   table { font-size: 0.85em; }
   th, td { padding: 6px 8px; }
+  .status-bar { flex-direction: column; }
+  .filter-controls { flex-direction: column; align-items: stretch; }
+  .filter-count { margin-left: 0; text-align: right; }
 }
