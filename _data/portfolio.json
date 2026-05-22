@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22T06:00:21.773308",
+  "updated_at": "2026-05-22T10:22:50.843909",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [
@@ -99,7 +99,7 @@
       "total_value": 923368,
       "cash": 922856,
       "holdings_value": 512,
-      "day_pnl": 512,
+      "day_pnl": 423368,
       "cumul_pnl": 423368,
       "regime": "up",
       "hmm_state": "bear",
@@ -114,8 +114,8 @@
     "volatility": "normal",
     "vol_percentile": 60.0,
     "overnight_gap": {
-      "direction": "bullish",
-      "strength": 0.45,
+      "direction": "neutral",
+      "strength": 0.0,
       "action": "normal"
     },
     "strong_sectors": [
@@ -203,8 +203,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.815,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.335,
+      "132030": -0.6411
+    }
   },
   "us_session": {
     "enabled": true,
