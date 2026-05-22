@@ -1,16 +1,57 @@
 {
-  "updated_at": "2026-05-22T19:29:22.357129",
+  "updated_at": "2026-05-23T05:00:22.565976",
   "initial_capital": 500000,
-  "cash": 0,
+  "cash": 922856,
   "holdings": [],
+  "reconcile": {
+    "matched": 0,
+    "broker_only": 0,
+    "ledger_only": 0,
+    "qty_mismatch": 0
+  },
+  "killswitch": {
+    "active": false,
+    "mode": "off",
+    "reason": "",
+    "set_at": "",
+    "set_by": ""
+  },
   "holdings_value": 0,
-  "total_value": 0,
+  "total_value": 922856,
   "total_pnl": 0,
   "total_pnl_pct": 0,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0,
   "total_trades": 0,
+  "completed_trades": 0,
   "winning_trades": 0,
   "losing_trades": 0,
   "win_rate": 0.0,
+  "trades": [],
+  "realized": [],
+  "today_summary": {
+    "date": "2026-05-23",
+    "buys": 0,
+    "sells": 0,
+    "completed_round_trips": 0,
+    "buy_notional": 0,
+    "sell_notional": 0,
+    "fees": 0,
+    "taxes": 0,
+    "total_cost": 0,
+    "realized_pnl_gross": 0,
+    "realized_pnl_net": 0,
+    "best_trade": null,
+    "worst_trade": null
+  },
+  "costs": {
+    "total_fees": 0,
+    "total_taxes": 0,
+    "total_cost": 0,
+    "realized_pnl_gross": 0,
+    "realized_pnl_net": 0,
+    "tax_exemption_remaining_krw": 2500000
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -75,23 +116,31 @@
       "hmm_state": "sideways",
       "confidence": 0.8,
       "k_value": 0.54
+    },
+    {
+      "date": "2026-05-23",
+      "total_value": 922856,
+      "cash": 922856,
+      "holdings_value": 0,
+      "day_pnl": 922856,
+      "cumul_pnl": 422856,
+      "regime": "up",
+      "hmm_state": "sideways",
+      "confidence": 0.8,
+      "k_value": 0.54
     }
   ],
-  "market_context": {
-    "regime": {
-      "trend": "up",
-      "volatility": "normal",
-      "trend_score": 0.442,
-      "vol_percentile": 72.0,
-      "hmm_state": "sideways",
-      "hmm_confidence": 0.9644464360315292,
-      "hmm_transition": {
-        "sideways": 3.090088929945525e-08,
-        "bear": 0.9999999690991105,
-        "bull": 1.7278077471907838e-16
-      }
-    },
+  "market": {
+    "regime": "up",
+    "hmm_state": "sideways",
     "confidence": 0.8,
+    "volatility": "normal",
+    "vol_percentile": 72.0,
+    "overnight_gap": {
+      "direction": "neutral",
+      "strength": 0.1,
+      "action": "normal"
+    },
     "strong_sectors": [
       "반도체",
       "2차전지",
@@ -103,88 +152,104 @@
       "KOSPI200",
       "KOSDAQ150",
       "미국나스닥"
-    ],
-    "k_value": 0.54,
-    "ta_weights": {
-      "rsi": 0.17,
-      "macd": 0.17,
-      "bb": 0.12,
-      "stoch": 0.12,
-      "adx": 0.12,
-      "ma": 0.12,
-      "obv": 0.06,
-      "mfi": 0.06,
-      "atr": 0.06
-    },
-    "sectors": {},
-    "breadth": {
-      "health": "unknown",
-      "error": "KIS 토큰 발급 실패 (status=403): {\"error_code\":\"EGW00133\",\"error_description\":\"접근토큰 발급 잠시 후 다시 시도하세요(1분당 1회)\"}"
-    },
-    "turbulence": {
-      "is_turbulent": false,
-      "reason": "확인 실패: KIS 토큰 발급 실패 (status=403): {\"error_code\":\"EGW00133\",\"error_description\":\"접근토큰 발급 잠시 후 다시 시도하세요(1분당 1회)\"}"
-    },
-    "kelly": {
-      "combined": 0.1,
-      "etf": 0.1,
-      "surge": 0.1
-    },
-    "expectancy": {
-      "etf": 0.6,
-      "surge": 0.4
-    },
-    "lgbm": {},
-    "ta_accuracy": {
-      "rsi": {
-        "correct": 0,
-        "total": 0
-      },
-      "macd": {
-        "correct": 0,
-        "total": 0
-      },
-      "bb": {
-        "correct": 0,
-        "total": 0
-      },
-      "stoch": {
-        "correct": 0,
-        "total": 0
-      },
-      "adx": {
-        "correct": 0,
-        "total": 0
-      },
-      "ma": {
-        "correct": 0,
-        "total": 0
-      },
-      "obv": {
-        "correct": 0,
-        "total": 0
-      },
-      "mfi": {
-        "correct": 0,
-        "total": 0
-      },
-      "atr": {
-        "correct": 0,
-        "total": 0
-      }
-    },
-    "market_history_recent": []
+    ]
   },
-  "strategies": {
-    "etf_breakout": {
-      "name": "ETF 변동성 돌파",
-      "params": {
-        "k": 0.54,
-        "trend_ma": 25
-      }
+  "strategy": {
+    "name": "ETF 변동성 돌파 + 신호 융합",
+    "params": {
+      "k": 0.54,
+      "trend_ma": 25
     },
-    "surge_scalp": {
-      "name": "급등주 단타"
-    }
-  }
+    "universe_count": 16,
+    "universe": [
+      {
+        "symbol": "091160",
+        "name": "KODEX 반도체"
+      },
+      {
+        "symbol": "395160",
+        "name": "KODEX 미국나스닥100TR"
+      },
+      {
+        "symbol": "069500",
+        "name": "KODEX 200"
+      },
+      {
+        "symbol": "305720",
+        "name": "KODEX 2차전지산업"
+      },
+      {
+        "symbol": "381180",
+        "name": "TIGER 미국테크TOP10 INDXX"
+      },
+      {
+        "symbol": "360750",
+        "name": "TIGER 미국S&P500"
+      },
+      {
+        "symbol": "091170",
+        "name": "KODEX 은행"
+      },
+      {
+        "symbol": "244580",
+        "name": "KODEX 바이오"
+      },
+      {
+        "symbol": "091180",
+        "name": "KODEX 자동차"
+      },
+      {
+        "symbol": "117680",
+        "name": "KODEX 철강"
+      },
+      {
+        "symbol": "364690",
+        "name": "KODEX K-미래차"
+      },
+      {
+        "symbol": "371160",
+        "name": "TIGER 미국필라델피아반도체나스닥"
+      },
+      {
+        "symbol": "102110",
+        "name": "KODEX 금융"
+      },
+      {
+        "symbol": "098560",
+        "name": "KODEX IT"
+      },
+      {
+        "symbol": "117700",
+        "name": "KODEX 철강"
+      },
+      {
+        "symbol": "229200",
+        "name": "KODEX KOSDAQ150"
+      }
+    ]
+  },
+  "risk": {
+    "kelly_f": 0.1,
+    "drawdown_scale": 1.0,
+    "drawdown_reason": "거래 0건, 스케일링 미적용",
+    "stop_type": "ATR×1.5 동적",
+    "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
+  },
+  "fusion": {
+    "trained": false
+  },
+  "bear_strategy": {
+    "regime": "BULL",
+    "enabled": false
+  },
+  "us_session": {
+    "enabled": true,
+    "cash_usd": 577.040073,
+    "positions": 0,
+    "holdings": [],
+    "max_positions": 2,
+    "budget_pct": 0.4,
+    "regime_linked": true
+  },
+  "decisions": []
 }
