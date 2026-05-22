@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-05-22T14:10:31.921994",
+  "updated_at": "2026-05-22T14:21:11.195294",
   "initial_capital": 500000,
-  "cash": 0,
+  "cash": 922856,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,7 +17,7 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 0,
+  "total_value": 922856,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
@@ -84,11 +84,11 @@
     },
     {
       "date": "2026-05-22",
-      "total_value": 0,
-      "cash": 0,
+      "total_value": 922856,
+      "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": -500000,
-      "cumul_pnl": -500000,
+      "day_pnl": 422856,
+      "cumul_pnl": 422856,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.8,
@@ -207,11 +207,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.8192,
+    "sma_ratio": 0.8187,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.3174,
-      "132030": -0.659
+      "195930": 0.2865,
+      "132030": -0.6698
     }
   },
   "us_session": {
