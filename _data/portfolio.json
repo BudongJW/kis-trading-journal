@@ -1,39 +1,27 @@
 {
-  "updated_at": "2026-05-22T10:22:50.843909",
+  "updated_at": "2026-05-22T14:10:31.921994",
   "initial_capital": 500000,
-  "cash": 922856,
-  "holdings": [
-    {
-      "symbol": "070480",
-      "name": "#신비앤텍",
-      "qty": 1,
-      "current_price": 512,
-      "value": 512,
-      "buy_price": 916,
-      "pnl": -404,
-      "pnl_pct": -44.1,
-      "manual": true,
-      "stop_price": 889
-    },
-    {
-      "symbol": "152550",
-      "name": "*한국ANKOR유전",
-      "qty": 3,
-      "current_price": 0,
-      "value": 0,
-      "buy_price": 1670,
-      "pnl": 0,
-      "pnl_pct": 0.0,
-      "manual": true,
-      "stop_price": 1620
-    }
-  ],
-  "holdings_value": 512,
-  "total_value": 923368,
+  "cash": 0,
+  "holdings": [],
+  "reconcile": {
+    "matched": 0,
+    "broker_only": 0,
+    "ledger_only": 0,
+    "qty_mismatch": 0
+  },
+  "killswitch": {
+    "active": false,
+    "mode": "off",
+    "reason": "",
+    "set_at": "",
+    "set_by": ""
+  },
+  "holdings_value": 0,
+  "total_value": 0,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
-  "unrealized_pnl": -404,
+  "unrealized_pnl": 0,
   "total_trades": 0,
   "completed_trades": 0,
   "winning_trades": 0,
@@ -96,43 +84,48 @@
     },
     {
       "date": "2026-05-22",
-      "total_value": 923368,
-      "cash": 922856,
-      "holdings_value": 512,
-      "day_pnl": 423368,
-      "cumul_pnl": 423368,
+      "total_value": 0,
+      "cash": 0,
+      "holdings_value": 0,
+      "day_pnl": -500000,
+      "cumul_pnl": -500000,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.654,
-      "k_value": 0.59
+      "hmm_state": "sideways",
+      "confidence": 0.8,
+      "k_value": 0.54
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.654,
+    "hmm_state": "sideways",
+    "confidence": 0.8,
     "volatility": "normal",
-    "vol_percentile": 60.0,
+    "vol_percentile": 72.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.0,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
       "반도체",
+      "2차전지",
+      "바이오",
+      "자동차",
       "금융",
       "IT",
+      "철강",
       "KOSPI200",
+      "KOSDAQ150",
       "미국나스닥"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.59,
+      "k": 0.54,
       "trend_ma": 25
     },
-    "universe_count": 14,
+    "universe_count": 16,
     "universe": [
       {
         "symbol": "091160",
@@ -189,6 +182,14 @@
       {
         "symbol": "098560",
         "name": "KODEX IT"
+      },
+      {
+        "symbol": "117700",
+        "name": "KODEX 철강"
+      },
+      {
+        "symbol": "229200",
+        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -204,13 +205,13 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.815,
+    "sma_ratio": 0.8192,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.335,
-      "132030": -0.6411
+      "195930": 0.3174,
+      "132030": -0.659
     }
   },
   "us_session": {
