@@ -28,6 +28,89 @@ title: Dashboard
   {% endif %}
 </div>
 
+<!-- ── Today's Summary (A2) ── -->
+{% if p.today_summary %}
+{% assign ts = p.today_summary %}
+<div class="today-summary">
+  <h3>📋 Today's Summary <span class="dim">({{ ts.date }})</span></h3>
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span class="summary-label">매수/매도</span>
+      <span class="summary-value">{{ ts.buys }} / {{ ts.sells }}건</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">완료 라운드트립</span>
+      <span class="summary-value">{{ ts.completed_round_trips }}건</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">실현 손익 (Gross)</span>
+      <span class="summary-value {% if ts.realized_pnl_gross > 0 %}profit{% elsif ts.realized_pnl_gross < 0 %}loss{% endif %}">
+        {% if ts.realized_pnl_gross > 0 %}+{% endif %}{{ ts.realized_pnl_gross }}원
+      </span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">실현 손익 (Net, 비용 차감)</span>
+      <span class="summary-value {% if ts.realized_pnl_net > 0 %}profit{% elsif ts.realized_pnl_net < 0 %}loss{% endif %}">
+        {% if ts.realized_pnl_net > 0 %}+{% endif %}{{ ts.realized_pnl_net }}원
+      </span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">오늘 비용 (수수료+세금)</span>
+      <span class="summary-value loss">{{ ts.total_cost }}원</span>
+    </div>
+    {% if ts.best_trade %}
+    <div class="summary-item">
+      <span class="summary-label">Best Trade</span>
+      <span class="summary-value profit">{{ ts.best_trade.symbol }} +{{ ts.best_trade.pnl }}원 ({{ ts.best_trade.pnl_pct }}%)</span>
+    </div>
+    {% endif %}
+    {% if ts.worst_trade %}
+    <div class="summary-item">
+      <span class="summary-label">Worst Trade</span>
+      <span class="summary-value loss">{{ ts.worst_trade.symbol }} {{ ts.worst_trade.pnl }}원 ({{ ts.worst_trade.pnl_pct }}%)</span>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ── Cumulative Costs (B1+B2) ── -->
+{% if p.costs %}
+<div class="costs-summary">
+  <h3>💰 누적 비용·세금 <span class="dim">전체 운영 기간</span></h3>
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span class="summary-label">실현 손익 (Gross)</span>
+      <span class="summary-value {% if p.costs.realized_pnl_gross > 0 %}profit{% elsif p.costs.realized_pnl_gross < 0 %}loss{% endif %}">
+        {% if p.costs.realized_pnl_gross > 0 %}+{% endif %}{{ p.costs.realized_pnl_gross }}원
+      </span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">누적 수수료</span>
+      <span class="summary-value loss">−{{ p.costs.total_fees }}원</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">누적 거래세 (매도)</span>
+      <span class="summary-value loss">−{{ p.costs.total_taxes }}원</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">실현 손익 (Net)</span>
+      <span class="summary-value {% if p.costs.realized_pnl_net > 0 %}profit{% elsif p.costs.realized_pnl_net < 0 %}loss{% endif %}">
+        {% if p.costs.realized_pnl_net > 0 %}+{% endif %}{{ p.costs.realized_pnl_net }}원
+      </span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">미국 ETF 양도세 공제 잔여</span>
+      <span class="summary-value">{{ p.costs.tax_exemption_remaining_krw }}원/년</span>
+    </div>
+  </div>
+  <p class="dim" style="font-size: 0.85em; margin-top: 8px;">
+    한국 주식 수수료 0.015% (매수/매도), 거래세 0.20% (매도) 기준 추정.
+    미국 ETF 양도세 22%, 연 250만원 공제는 실제 신고는 5월 종합소득세 신고 시.
+  </p>
+</div>
+{% endif %}
+
 <h2>Portfolio Dashboard</h2>
 
 <div class="dashboard">
