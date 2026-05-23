@@ -407,12 +407,112 @@ footer {
   font-size: 0.85em;
 }
 
+/* Performance Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.metric-label {
+  font-size: 0.75em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.metric-value {
+  font-size: 1.3em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Calendar Heatmap */
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.cal-cell {
+  width: 72px;
+  padding: 8px 6px;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--border);
+}
+.cal-date { font-size: 0.7em; color: var(--text-dim); }
+.cal-pnl { font-size: 0.75em; font-weight: 600; font-variant-numeric: tabular-nums; }
+.cal-zero { background: rgba(139,148,158,0.08); }
+.cal-zero .cal-pnl { color: var(--text-dim); }
+.cal-profit-1 { background: rgba(63,185,80,0.1); }
+.cal-profit-1 .cal-pnl { color: var(--profit); }
+.cal-profit-2 { background: rgba(63,185,80,0.2); }
+.cal-profit-2 .cal-pnl { color: var(--profit); }
+.cal-profit-3 { background: rgba(63,185,80,0.35); }
+.cal-profit-3 .cal-pnl { color: var(--profit); }
+.cal-loss-1 { background: rgba(248,81,73,0.1); }
+.cal-loss-1 .cal-pnl { color: var(--loss); }
+.cal-loss-2 { background: rgba(248,81,73,0.2); }
+.cal-loss-2 .cal-pnl { color: var(--loss); }
+.cal-loss-3 { background: rgba(248,81,73,0.35); }
+.cal-loss-3 .cal-pnl { color: var(--loss); }
+.cal-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  font-size: 0.75em;
+  color: var(--text-dim);
+}
+.cal-legend-item { display: flex; align-items: center; gap: 4px; }
+.cal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Table Scroll */
+.table-scroll { overflow-x: auto; margin-bottom: 16px; }
+
+/* Collapsible Sections */
+details { margin-bottom: 24px; }
+details summary {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: var(--text);
+  padding: 8px 0;
+  list-style: none;
+}
+details summary::before {
+  content: '▶ ';
+  font-size: 0.7em;
+  color: var(--text-dim);
+}
+details[open] summary::before { content: '▼ '; }
+details summary::-webkit-details-marker { display: none; }
+
 /* Responsive */
 @media (max-width: 600px) {
   .dashboard { grid-template-columns: 1fr 1fr; }
   .card .value { font-size: 1.4em; }
   .market-grid { grid-template-columns: 1fr 1fr; }
   .info-grid { grid-template-columns: 1fr; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .cal-cell { width: 60px; padding: 6px 4px; }
   table { font-size: 0.85em; }
   th, td { padding: 6px 8px; }
   .status-bar { flex-direction: column; }

@@ -111,6 +111,67 @@ title: Dashboard
 </div>
 {% endif %}
 
+<!-- ── Performance Metrics ── -->
+{% if p.performance %}
+<h2>Performance Metrics</h2>
+<div class="metrics-grid">
+  <div class="metric-card">
+    <span class="metric-label">Sharpe Ratio</span>
+    <span class="metric-value {% if p.performance.sharpe_ratio > 1 %}profit{% elsif p.performance.sharpe_ratio < 0 %}loss{% endif %}">
+      {{ p.performance.sharpe_ratio | default: 0 }}
+    </span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Max Drawdown</span>
+    <span class="metric-value loss">{{ p.performance.max_drawdown_pct | default: 0 }}%</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Profit Factor</span>
+    <span class="metric-value {% if p.performance.profit_factor > 1 %}profit{% endif %}">
+      {{ p.performance.profit_factor | default: 0 }}
+    </span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Avg Win</span>
+    <span class="metric-value profit">+{{ p.performance.avg_win_pct | default: 0 }}%</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Avg Loss</span>
+    <span class="metric-value loss">{{ p.performance.avg_loss_pct | default: 0 }}%</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Total Return</span>
+    <span class="metric-value {% if p.performance.total_return_pct > 0 %}profit{% elsif p.performance.total_return_pct < 0 %}loss{% endif %}">
+      {% if p.performance.total_return_pct > 0 %}+{% endif %}{{ p.performance.total_return_pct | default: 0 }}%
+    </span>
+  </div>
+</div>
+{% if p.r_summary.total_trades and p.r_summary.total_trades > 0 %}
+<div class="metrics-grid" style="margin-top: 12px;">
+  <div class="metric-card">
+    <span class="metric-label">Avg R-Multiple</span>
+    <span class="metric-value {% if p.r_summary.avg_r > 0 %}profit{% elsif p.r_summary.avg_r < 0 %}loss{% endif %}">
+      {{ p.r_summary.avg_r }}R
+    </span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Expectancy (R)</span>
+    <span class="metric-value {% if p.r_summary.expectancy_r > 0 %}profit{% endif %}">
+      {{ p.r_summary.expectancy_r }}R
+    </span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Best Trade</span>
+    <span class="metric-value profit">+{{ p.r_summary.best_r }}R</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">Worst Trade</span>
+    <span class="metric-value loss">{{ p.r_summary.worst_r }}R</span>
+  </div>
+</div>
+{% endif %}
+{% endif %}
+
 <h2>Portfolio Dashboard</h2>
 
 <div class="dashboard">
@@ -403,25 +464,70 @@ title: Dashboard
     {% else %}
     <p class="dim">학습 전 (기본 가중치 사용)</p>
     <table class="compact">
-      <tr><td>TA</td><td class="num">0.25</td></tr>
-      <tr><td>LGBM</td><td class="num">0.30</td></tr>
-      <tr><td>Breakout</td><td class="num">0.20</td></tr>
-      <tr><td>Gap</td><td class="num">0.10</td></tr>
-      <tr><td>Regime</td><td class="num">0.15</td></tr>
+      <tr><td>TA</td><td class="num">0.22</td></tr>
+      <tr><td>LGBM</td><td class="num">0.28</td></tr>
+      <tr><td>Breakout</td><td class="num">0.18</td></tr>
+      <tr><td>Gap</td><td class="num">0.08</td></tr>
+      <tr><td>Regime</td><td class="num">0.14</td></tr>
+      <tr><td>Flow</td><td class="num">0.10</td></tr>
     </table>
     {% endif %}
   </div>
 </div>
 
 <!-- ── Universe ── -->
-<h2>ETF Universe ({{ p.strategy.universe_count }})</h2>
-<div class="universe-grid">
-  {% for etf in p.strategy.universe %}
-  <div class="universe-chip">
-    <span class="dim">{{ etf.symbol }}</span> {{ etf.name }}
+<details>
+  <summary>ETF Universe ({{ p.strategy.universe_count }})</summary>
+  <div class="universe-grid" style="margin-top: 12px;">
+    {% for etf in p.strategy.universe %}
+    <div class="universe-chip">
+      <span class="dim">{{ etf.symbol }}</span> {{ etf.name }}
+    </div>
+    {% endfor %}
+  </div>
+</details>
+
+<!-- ── Equity Curve + Drawdown ── -->
+{% if p.daily_history.size > 1 %}
+<h2>Equity Curve</h2>
+<div class="chart-wrapper">
+  <canvas id="equityChart"></canvas>
+</div>
+<h2>Drawdown</h2>
+<div class="chart-wrapper">
+  <canvas id="drawdownChart"></canvas>
+</div>
+{% endif %}
+
+<!-- ── Calendar Heatmap ── -->
+{% if p.daily_history.size > 0 %}
+<h2>Daily P&L Calendar</h2>
+<div class="calendar-container">
+  {% for d in p.daily_history reversed %}
+  {% assign pnl_class = "cal-zero" %}
+  {% if d.day_pnl > 10000 %}{% assign pnl_class = "cal-profit-3" %}
+  {% elsif d.day_pnl > 3000 %}{% assign pnl_class = "cal-profit-2" %}
+  {% elsif d.day_pnl > 0 %}{% assign pnl_class = "cal-profit-1" %}
+  {% elsif d.day_pnl < -10000 %}{% assign pnl_class = "cal-loss-3" %}
+  {% elsif d.day_pnl < -3000 %}{% assign pnl_class = "cal-loss-2" %}
+  {% elsif d.day_pnl < 0 %}{% assign pnl_class = "cal-loss-1" %}
+  {% endif %}
+  <div class="cal-cell {{ pnl_class }}" title="{{ d.date }}: {% if d.day_pnl > 0 %}+{% endif %}{{ d.day_pnl }}원">
+    <span class="cal-date">{{ d.date | slice: 5, 5 }}</span>
+    <span class="cal-pnl">{% if d.day_pnl > 0 %}+{% endif %}{{ d.day_pnl }}</span>
   </div>
   {% endfor %}
 </div>
+<div class="cal-legend">
+  <span class="cal-legend-item"><span class="cal-dot cal-loss-3"></span>-1만+</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-loss-2"></span>-3k~-1만</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-loss-1"></span>-1~-3k</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-zero"></span>0</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-profit-1"></span>+1~3k</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-profit-2"></span>+3k~1만</span>
+  <span class="cal-legend-item"><span class="cal-dot cal-profit-3"></span>+1만+</span>
+</div>
+{% endif %}
 
 <!-- ── Daily PnL Chart + History ── -->
 <h2>Daily PnL History</h2>
@@ -429,69 +535,10 @@ title: Dashboard
 <div class="chart-wrapper">
   <canvas id="pnl-chart-canvas" height="100"></canvas>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('pnl-chart-canvas').getContext('2d');
-    const labels = [
-      {% for d in p.daily_history %}"{{ d.date }}"{% unless forloop.last %},{% endunless %}{% endfor %}
-    ];
-    const cumul = [
-      {% for d in p.daily_history %}{{ d.cumul_pnl | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}
-    ];
-    const dayPnl = [
-      {% for d in p.daily_history %}{{ d.day_pnl | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}
-    ];
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: '누적 손익 (₩)',
-            data: cumul,
-            borderColor: '#58a6ff',
-            backgroundColor: 'rgba(88, 166, 255, 0.1)',
-            tension: 0.2,
-            fill: true,
-            yAxisID: 'y',
-          },
-          {
-            label: '일별 손익 (₩)',
-            data: dayPnl,
-            borderColor: '#3fb950',
-            backgroundColor: 'rgba(63, 185, 80, 0.1)',
-            tension: 0.2,
-            borderDash: [5, 5],
-            yAxisID: 'y1',
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { labels: { color: '#c9d1d9' } },
-          tooltip: {
-            callbacks: {
-              label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y >= 0 ? '+' : ''}${ctx.parsed.y.toLocaleString()}원`,
-            },
-          },
-        },
-        scales: {
-          x: { ticks: { color: '#8b949e' }, grid: { color: 'rgba(139, 148, 158, 0.1)' } },
-          y: { position: 'left', ticks: { color: '#58a6ff', callback: (v) => v.toLocaleString() },
-               grid: { color: 'rgba(139, 148, 158, 0.1)' },
-               title: { display: true, text: '누적', color: '#58a6ff' } },
-          y1: { position: 'right', ticks: { color: '#3fb950', callback: (v) => v.toLocaleString() },
-                grid: { drawOnChartArea: false },
-                title: { display: true, text: '일별', color: '#3fb950' } },
-        },
-      },
-    });
-  });
-</script>
 
-<div class="chart-container" id="pnl-table">
+<details>
+  <summary>Daily History Table ({{ p.daily_history.size }}일)</summary>
+  <div class="table-scroll" style="margin-top: 12px;">
   <table>
     <thead><tr><th>Date</th><th>Value</th><th>Day PnL</th><th>Cumul PnL</th><th>Regime</th></tr></thead>
     <tbody>
@@ -514,7 +561,8 @@ title: Dashboard
       {% endfor %}
     </tbody>
   </table>
-</div>
+  </div>
+</details>
 {% else %}
 <p style="color: var(--text-dim); text-align: center; padding: 40px 0;">거래 시작 후 데이터가 쌓입니다.</p>
 {% endif %}
@@ -538,4 +586,71 @@ title: Dashboard
 </ul>
 {% if site.posts.size == 0 %}
 <p style="color: var(--text-dim);">아직 투자 노트가 없습니다. 첫 거래 후 자동 생성됩니다.</p>
+{% endif %}
+
+<!-- ── Charts Script ── -->
+{% if p.daily_history.size > 1 %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var history = [
+    {% for d in p.daily_history %}
+    {date:"{{ d.date }}",value:{{ d.total_value }},pnl:{{ d.day_pnl }},cumul:{{ d.cumul_pnl }}}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  var labels = history.map(function(d){return d.date.slice(5)});
+  var values = history.map(function(d){return d.value});
+  var cumulPnl = history.map(function(d){return d.cumul});
+  var dayPnl = history.map(function(d){return d.pnl});
+  var chartOpts = {color:'#8b949e',font:{size:10}};
+  var gridOpts = {color:'rgba(48,54,61,0.4)'};
+
+  // Equity curve
+  new Chart(document.getElementById('equityChart').getContext('2d'), {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [
+        {label:'총 자산 (원)',data:values,borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,0.08)',fill:true,tension:0.3,pointRadius:2,borderWidth:2,yAxisID:'y'},
+        {label:'누적 P&L (원)',data:cumulPnl,borderColor:cumulPnl[cumulPnl.length-1]>=0?'#3fb950':'#f85149',backgroundColor:'transparent',borderDash:[5,3],tension:0.3,pointRadius:0,borderWidth:1.5,yAxisID:'y1'}
+      ]
+    },
+    options: {
+      responsive:true,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:chartOpts},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+(c.parsed.y>=0?'+':'')+c.parsed.y.toLocaleString()+'원'}}}},
+      scales:{x:{ticks:chartOpts,grid:gridOpts},y:{position:'left',ticks:chartOpts,grid:gridOpts},y1:{position:'right',ticks:chartOpts,grid:{display:false}}}
+    }
+  });
+
+  // Drawdown
+  var peak = values[0];
+  var drawdowns = values.map(function(v){if(v>peak)peak=v;return((v-peak)/peak)*100});
+  new Chart(document.getElementById('drawdownChart').getContext('2d'), {
+    type: 'line',
+    data: {labels:labels,datasets:[{label:'Drawdown (%)',data:drawdowns,borderColor:'#f85149',backgroundColor:'rgba(248,81,73,0.12)',fill:true,tension:0.3,pointRadius:1,borderWidth:1.5}]},
+    options: {
+      responsive:true,
+      plugins:{legend:{labels:chartOpts}},
+      scales:{x:{ticks:chartOpts,grid:gridOpts},y:{ticks:{color:'#8b949e',font:{size:10},callback:function(v){return v.toFixed(1)+'%'}},grid:gridOpts,max:0}}
+    }
+  });
+
+  // PnL chart (cumul + daily)
+  new Chart(document.getElementById('pnl-chart-canvas').getContext('2d'), {
+    type:'line',
+    data:{labels:labels,datasets:[
+      {label:'누적 손익 (₩)',data:cumulPnl,borderColor:'#58a6ff',backgroundColor:'rgba(88,166,255,0.1)',tension:0.2,fill:true,yAxisID:'y'},
+      {label:'일별 손익 (₩)',data:dayPnl,borderColor:'#3fb950',backgroundColor:'rgba(63,185,80,0.1)',tension:0.2,borderDash:[5,5],yAxisID:'y1'}
+    ]},
+    options:{
+      responsive:true,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#c9d1d9'}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+(c.parsed.y>=0?'+':'')+c.parsed.y.toLocaleString()+'원'}}}},
+      scales:{
+        x:{ticks:{color:'#8b949e'},grid:{color:'rgba(139,148,158,0.1)'}},
+        y:{position:'left',ticks:{color:'#58a6ff',callback:function(v){return v.toLocaleString()}},grid:{color:'rgba(139,148,158,0.1)'},title:{display:true,text:'누적',color:'#58a6ff'}},
+        y1:{position:'right',ticks:{color:'#3fb950',callback:function(v){return v.toLocaleString()}},grid:{drawOnChartArea:false},title:{display:true,text:'일별',color:'#3fb950'}}
+      }
+    }
+  });
+});
+</script>
 {% endif %}
