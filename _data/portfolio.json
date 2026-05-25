@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-25T15:31:00.916415",
+  "updated_at": "2026-05-25T19:48:27.920853",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -143,7 +143,7 @@
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": 0,
+      "day_pnl": 422856,
       "cumul_pnl": 422856,
       "regime": "up",
       "hmm_state": "sideways",
@@ -236,15 +236,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.8158,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.2645,
-      "132030": -0.6698
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
