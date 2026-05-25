@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23T05:00:22.565976",
+  "updated_at": "2026-05-25T15:31:00.916415",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -30,7 +30,7 @@
   "trades": [],
   "realized": [],
   "today_summary": {
-    "date": "2026-05-23",
+    "date": "2026-05-25",
     "buys": 0,
     "sells": 0,
     "completed_round_trips": 0,
@@ -52,6 +52,15 @@
     "realized_pnl_net": 0,
     "tax_exemption_remaining_krw": 2500000
   },
+  "performance": {
+    "sharpe_ratio": -2.7,
+    "max_drawdown_pct": -100.0,
+    "profit_factor": 0,
+    "avg_win_pct": 0,
+    "avg_loss_pct": 0,
+    "total_return_pct": 47.5
+  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -128,6 +137,18 @@
       "hmm_state": "sideways",
       "confidence": 0.8,
       "k_value": 0.54
+    },
+    {
+      "date": "2026-05-25",
+      "total_value": 922856,
+      "cash": 922856,
+      "holdings_value": 0,
+      "day_pnl": 0,
+      "cumul_pnl": 422856,
+      "regime": "up",
+      "hmm_state": "sideways",
+      "confidence": 0.8,
+      "k_value": 0.56
     }
   ],
   "market": {
@@ -135,7 +156,7 @@
     "hmm_state": "sideways",
     "confidence": 0.8,
     "volatility": "normal",
-    "vol_percentile": 72.0,
+    "vol_percentile": 70.0,
     "overnight_gap": {
       "direction": "neutral",
       "strength": 0.1,
@@ -157,10 +178,10 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.54,
-      "trend_ma": 25
+      "k": 0.56,
+      "trend_ma": 15
     },
-    "universe_count": 16,
+    "universe_count": 10,
     "universe": [
       {
         "symbol": "091160",
@@ -176,19 +197,7 @@
       },
       {
         "symbol": "305720",
-        "name": "KODEX 2차전지산업"
-      },
-      {
-        "symbol": "381180",
-        "name": "TIGER 미국테크TOP10 INDXX"
-      },
-      {
-        "symbol": "360750",
-        "name": "TIGER 미국S&P500"
-      },
-      {
-        "symbol": "091170",
-        "name": "KODEX 은행"
+        "name": "KODEX 2차전지"
       },
       {
         "symbol": "244580",
@@ -197,18 +206,6 @@
       {
         "symbol": "091180",
         "name": "KODEX 자동차"
-      },
-      {
-        "symbol": "117680",
-        "name": "KODEX 철강"
-      },
-      {
-        "symbol": "364690",
-        "name": "KODEX K-미래차"
-      },
-      {
-        "symbol": "371160",
-        "name": "TIGER 미국필라델피아반도체나스닥"
       },
       {
         "symbol": "102110",
@@ -239,15 +236,22 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.8158,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.2645,
+      "132030": -0.6698
+    }
   },
   "us_session": {
     "enabled": true,
     "cash_usd": 577.040073,
     "positions": 0,
     "holdings": [],
-    "max_positions": 2,
+    "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true
   },
