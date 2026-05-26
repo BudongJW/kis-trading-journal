@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T19:18:48.045993",
+  "updated_at": "2026-05-27T05:00:44.130649",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -30,7 +30,7 @@
   "trades": [],
   "realized": [],
   "today_summary": {
-    "date": "2026-05-26",
+    "date": "2026-05-27",
     "buys": 0,
     "sells": 0,
     "completed_round_trips": 0,
@@ -53,7 +53,7 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -6.81,
+    "sharpe_ratio": -6.22,
     "max_drawdown_pct": -100.0,
     "profit_factor": 0,
     "avg_win_pct": 0,
@@ -156,6 +156,18 @@
       "cash": 922856,
       "holdings_value": 0,
       "day_pnl": 422856,
+      "cumul_pnl": 422856,
+      "regime": "up",
+      "hmm_state": "bull",
+      "confidence": 0.9,
+      "k_value": 0.5
+    },
+    {
+      "date": "2026-05-27",
+      "total_value": 922856,
+      "cash": 922856,
+      "holdings_value": 0,
+      "day_pnl": 0,
       "cumul_pnl": 422856,
       "regime": "up",
       "hmm_state": "bull",
