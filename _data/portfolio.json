@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T05:00:44.130649",
+  "updated_at": "2026-05-27T07:02:06.847794",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -167,7 +167,7 @@
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": 0,
+      "day_pnl": 422856,
       "cumul_pnl": 422856,
       "regime": "up",
       "hmm_state": "bull",
