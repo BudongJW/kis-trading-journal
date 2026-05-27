@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T08:14:48.537426",
+  "updated_at": "2026-05-27T09:03:35.743325",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -183,7 +183,7 @@
     "vol_percentile": 64.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.0,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
@@ -250,7 +250,7 @@
     ]
   },
   "risk": {
-    "kelly_f": 0.2,
+    "kelly_f": 0.1,
     "drawdown_scale": 1.0,
     "drawdown_reason": "거래 0건, 스케일링 미적용",
     "stop_type": "ATR×1.5 동적",
@@ -265,7 +265,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 573.303212,
+    "cash_usd": 575.35629,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
