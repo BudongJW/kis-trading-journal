@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T15:30:43.167486",
+  "updated_at": "2026-05-27T19:20:36.532374",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -18,50 +18,38 @@
   },
   "holdings_value": 0,
   "total_value": 922856,
-  "total_pnl": -34605,
-  "total_pnl_pct": -100.0,
+  "total_pnl": 0,
+  "total_pnl_pct": 0,
   "realized_pnl": 0,
   "unrealized_pnl": 0,
-  "total_trades": 1,
+  "total_trades": 0,
   "completed_trades": 0,
   "winning_trades": 0,
   "losing_trades": 0,
   "win_rate": 0.0,
-  "trades": [
-    {
-      "timestamp": "2026-05-27T15:20:35",
-      "date": "2026-05-27",
-      "time": "15:20:35",
-      "symbol": "244580",
-      "name": "KODEX 바이오",
-      "side": "buy",
-      "qty": 3,
-      "price": 11535,
-      "amount": 34605
-    }
-  ],
+  "trades": [],
   "realized": [],
   "today_summary": {
     "date": "2026-05-27",
-    "buys": 1,
+    "buys": 0,
     "sells": 0,
     "completed_round_trips": 0,
-    "buy_notional": 34605,
+    "buy_notional": 0,
     "sell_notional": 0,
-    "fees": 5,
+    "fees": 0,
     "taxes": 0,
-    "total_cost": 5,
+    "total_cost": 0,
     "realized_pnl_gross": 0,
-    "realized_pnl_net": -5,
+    "realized_pnl_net": 0,
     "best_trade": null,
     "worst_trade": null
   },
   "costs": {
-    "total_fees": 5,
+    "total_fees": 0,
     "total_taxes": 0,
-    "total_cost": 5,
+    "total_cost": 0,
     "realized_pnl_gross": 0,
-    "realized_pnl_net": -5,
+    "realized_pnl_net": 0,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -272,59 +260,17 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.9363,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.844,
-      "132030": -0.5535
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 553.675754,
+    "cash_usd": 575.35629,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": [
-    {
-      "time": "13:48:08",
-      "symbol": "244580",
-      "name": "KODEX 바이오",
-      "action": "buy",
-      "reason": "융합 BUY (60%, TA=+17)",
-      "price": 11590,
-      "fusion_prob": 0.602,
-      "fusion_signal": "BUY",
-      "ta_total": 17.3,
-      "lgbm_prob": 0.5,
-      "breakout": true,
-      "sizing_ratio": 1.0,
-      "atr_at_buy": 553.68,
-      "qty": 3
-    },
-    {
-      "time": "13:48:05",
-      "symbol": "305720",
-      "name": "KODEX 2차전지",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 19,235 < 목표 20,073)",
-      "price": 19235,
-      "ta_total": -3.9
-    },
-    {
-      "time": "13:48:03",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 167,330 < 목표 168,154)",
-      "price": 167330,
-      "ta_total": 0.9
-    }
-  ]
+  "decisions": []
 }
