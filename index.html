@@ -111,7 +111,7 @@ title: Dashboard
 </div>
 {% endif %}
 
-<!-- ── Performance Metrics ── -->
+<!-- ── Performance Metrics (origin 버전 유지 — metrics-grid 스타일) ── -->
 {% if p.performance %}
 <h2>Performance Metrics</h2>
 <div class="metrics-grid">
@@ -170,6 +170,86 @@ title: Dashboard
   </div>
 </div>
 {% endif %}
+{% endif %}
+
+<!-- ── US Session (미국장 야간 매매) ── -->
+{% if p.us_session.enabled %}
+<h2>🇺🇸 US Session</h2>
+<div class="today-summary">
+  <div class="summary-grid">
+    <div class="summary-item">
+      <span class="summary-label">USD 매수가능 (통합증거금)</span>
+      <span class="summary-value">${{ p.us_session.cash_usd | default: 0 }}</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">보유 포지션</span>
+      <span class="summary-value">{{ p.us_session.positions | default: 0 }} / {{ p.us_session.max_positions | default: 2 }}</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">예산 비중</span>
+      <span class="summary-value">{{ p.us_session.budget_pct | times: 100 | round }}%</span>
+    </div>
+    <div class="summary-item">
+      <span class="summary-label">한국장 레짐 연동</span>
+      <span class="summary-value">{% if p.us_session.regime_linked %}✅{% else %}❌{% endif %}</span>
+    </div>
+  </div>
+  {% if p.us_session.holdings.size > 0 %}
+  <table style="margin-top: 12px;">
+    <thead><tr><th>종목</th><th>수량</th><th>매수가</th><th>현재가</th><th>손익%</th></tr></thead>
+    <tbody>
+      {% for h in p.us_session.holdings %}
+      <tr>
+        <td>{{ h.symbol }} <span class="dim">({{ h.exchange }})</span></td>
+        <td class="num">{{ h.qty }}</td>
+        <td class="num">${{ h.buy_price }}</td>
+        <td class="num">${{ h.current_price }}</td>
+        <td class="num {% if h.pnl_pct > 0 %}profit{% elsif h.pnl_pct < 0 %}loss{% endif %}">
+          {% if h.pnl_pct > 0 %}+{% endif %}{{ h.pnl_pct }}%
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="dim" style="margin-top: 8px; font-size: 0.9em;">현재 미국 보유 종목 없음. 야간 봇 운영 중 (22:30~05:00 KST).</p>
+  {% endif %}
+</div>
+{% endif %}
+
+<!-- ── Rejected Orders (KIS 거부 주문 — 봇이 시도했지만 거부됨) ── -->
+{% if p.rejected_orders.size > 0 %}
+<h2>⚠️ 거부된 주문</h2>
+<div class="today-summary" style="border-left: 3px solid var(--loss);">
+  <table>
+    <thead>
+      <tr>
+        <th>시각</th>
+        <th>종목</th>
+        <th>구분</th>
+        <th>수량</th>
+        <th>가격</th>
+        <th>거부 사유</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for o in p.rejected_orders %}
+      <tr>
+        <td><span class="dim">{{ o.attempted_at | slice: 0, 10 }}</span> {{ o.attempted_at | slice: 11, 8 }}</td>
+        <td>{{ o.name | default: o.symbol }} <span class="dim">({{ o.symbol }})</span></td>
+        <td><span class="badge badge-action-{{ o.side }}">{{ o.side | upcase }}</span></td>
+        <td class="num">{{ o.qty }}주</td>
+        <td class="num">{{ o.price | round }}원</td>
+        <td class="dim" style="font-size: 0.85em;">{{ o.gate_reason | default: o.reason | truncate: 60 }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="dim" style="margin-top: 8px; font-size: 0.85em;">
+    봇이 매수·매도 시도했지만 KIS가 거부한 주문. 동시호가 시간·잘못된 가격·블랙리스트 등이 원인.
+    execution_verifier가 자동으로 감지·기록.
+  </p>
+</div>
 {% endif %}
 
 <h2>Portfolio Dashboard</h2>
