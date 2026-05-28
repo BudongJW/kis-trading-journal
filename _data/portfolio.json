@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T11:05:46.587563",
+  "updated_at": "2026-05-28T11:06:18.667180",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -29,6 +29,7 @@
   "win_rate": 0.0,
   "trades": [],
   "realized": [],
+  "rejected_orders": [],
   "today_summary": {
     "date": "2026-05-28",
     "buys": 0,
@@ -67,135 +68,158 @@
       "total_value": 625680,
       "cash": 500080,
       "holdings_value": 125600,
-      "day_pnl": 125680,
-      "cumul_pnl": 125680
+      "day_pnl": 0,
+      "cumul_pnl": 0,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-13",
       "total_value": 500080,
       "cash": 500080,
       "holdings_value": 0,
-      "day_pnl": 80,
-      "cumul_pnl": 80
+      "day_pnl": 0,
+      "cumul_pnl": 0,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-14",
       "total_value": 623598,
       "cash": 500080,
       "holdings_value": 742,
-      "day_pnl": 123598,
-      "cumul_pnl": 123598,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "regime": "up",
       "hmm_state": "unknown",
       "confidence": 0.508,
-      "k_value": 0.5
+      "k_value": 0.5,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-20",
       "total_value": 623474,
       "cash": 622856,
       "holdings_value": 618,
-      "day_pnl": 123474,
-      "cumul_pnl": 123474,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "regime": "up",
       "hmm_state": "unknown",
       "confidence": 0.239,
-      "k_value": 0.5
+      "k_value": 0.5,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-21",
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": -512,
-      "cumul_pnl": 422856,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "market_regime": "up",
       "hmm_state": "bear",
       "confidence": 0.654,
-      "k_value": 0.59
+      "k_value": 0.59,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-22",
       "total_value": 0,
       "cash": 0,
       "holdings_value": 0,
-      "day_pnl": -922856,
-      "cumul_pnl": -500000,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "market_regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.8,
-      "k_value": 0.54
+      "k_value": 0.54,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-23",
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": 922856,
-      "cumul_pnl": 422856,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.8,
-      "k_value": 0.54
+      "k_value": 0.54,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-25",
       "total_value": 0,
       "cash": 0,
       "holdings_value": 0,
-      "day_pnl": -922856,
-      "cumul_pnl": -500000,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "market_regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.8,
-      "k_value": 0.56
+      "k_value": 0.56,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-26",
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": 422856,
-      "cumul_pnl": 422856,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "regime": "up",
       "hmm_state": "bull",
       "confidence": 0.9,
-      "k_value": 0.5
+      "k_value": 0.5,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-27",
       "total_value": 0,
       "cash": 0,
       "holdings_value": 0,
-      "day_pnl": -922856,
-      "cumul_pnl": -500000,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
       "market_regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.838,
-      "k_value": 0.54
+      "k_value": 0.54,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0
     },
     {
       "date": "2026-05-28",
       "total_value": 922856,
       "cash": 922856,
       "holdings_value": 0,
-      "day_pnl": 422856,
-      "cumul_pnl": 422856,
+      "day_pnl": 0,
+      "cumul_pnl": 0,
+      "realized_pnl": 0,
+      "unrealized_pnl": 0,
+      "net_deposit": 422856,
       "regime": "up",
       "hmm_state": "sideways",
-      "confidence": 0.838,
-      "k_value": 0.55
+      "confidence": 0.78,
+      "k_value": 0.5
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "sideways",
-    "confidence": 0.838,
+    "confidence": 0.78,
     "volatility": "normal",
     "vol_percentile": 60.0,
     "overnight_gap": {
-      "direction": "bullish",
-      "strength": 0.32,
+      "direction": "neutral",
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
@@ -205,7 +229,6 @@
       "자동차",
       "금융",
       "IT",
-      "철강",
       "KOSPI200",
       "KOSDAQ150",
       "미국나스닥"
@@ -214,10 +237,10 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.55,
+      "k": 0.5,
       "trend_ma": 15
     },
-    "universe_count": 10,
+    "universe_count": 9,
     "universe": [
       {
         "symbol": "091160",
@@ -252,10 +275,6 @@
         "name": "KODEX IT"
       },
       {
-        "symbol": "117700",
-        "name": "KODEX 철강"
-      },
-      {
         "symbol": "229200",
         "name": "KODEX KOSDAQ150"
       }
@@ -272,12 +291,19 @@
     "trained": false
   },
   "bear_strategy": {
+    "enabled": true,
     "regime": "BULL",
-    "enabled": false
+    "confidence": 0.5,
+    "sma_ratio": 0.0,
+    "canary_bad": 0,
+    "canary_scores": {
+      "195930": 0.0,
+      "132030": 0.0
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 577.770212,
+    "cash_usd": 0.0,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
