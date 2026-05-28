@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T11:06:18.667180",
+  "updated_at": "2026-05-28T11:11:03.548253",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -54,12 +54,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -9.47,
-    "max_drawdown_pct": -100.0,
+    "sharpe_ratio": 0,
+    "max_drawdown_pct": 0,
     "profit_factor": 0,
     "avg_win_pct": 0,
     "avg_loss_pct": 0,
-    "total_return_pct": 47.5
+    "total_return_pct": 0
   },
   "r_summary": {},
   "daily_history": [
@@ -292,18 +292,18 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BULL",
-    "confidence": 0.5,
-    "sma_ratio": 0.0,
-    "canary_bad": 0,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.8729,
+    "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.0,
-      "132030": 0.0
+      "195930": 0.7484,
+      "132030": -0.9066
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 577.770212,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
