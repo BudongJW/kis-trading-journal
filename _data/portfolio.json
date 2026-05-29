@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-29T15:30:34.551335",
+  "updated_at": "2026-05-29T15:41:52.032999",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -295,15 +295,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.9303,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.6135,
-      "132030": -0.592
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -314,41 +307,5 @@
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": [
-    {
-      "time": "15:01:54",
-      "symbol": "091180",
-      "name": "KODEX 자동차",
-      "action": "buy",
-      "reason": "융합 STRONG_BUY (70%, TA=+40)",
-      "price": 40975,
-      "fusion_prob": 0.696,
-      "fusion_signal": "STRONG_BUY",
-      "ta_total": 40.2,
-      "lgbm_prob": 0.5,
-      "breakout": true,
-      "sizing_ratio": 1.0,
-      "atr_at_buy": 2215.0,
-      "qty": 1
-    },
-    {
-      "time": "15:01:52",
-      "symbol": "305720",
-      "name": "KODEX 2차전지",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 20,210 < 목표 20,427)",
-      "price": 20210,
-      "ta_total": -6.6
-    },
-    {
-      "time": "15:01:50",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "돌파 미통과, 융합 BUY 54% (STRONG 필요)",
-      "price": 160980,
-      "ta_total": 14.4,
-      "lgbm_prob": 0.5
-    }
-  ]
+  "decisions": []
 }
