@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T15:31:01.997148",
+  "updated_at": "2026-06-01T17:38:20.867320",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [],
@@ -324,15 +324,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 1.0163,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.8845,
-      "132030": -0.3699
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -343,22 +336,5 @@
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": [
-    {
-      "time": "14:56:21",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "buy",
-      "reason": "융합 BUY (56%, TA=+1)",
-      "price": 165270,
-      "fusion_prob": 0.558,
-      "fusion_signal": "BUY",
-      "ta_total": 1.4,
-      "lgbm_prob": 0.5,
-      "breakout": true,
-      "sizing_ratio": 0.69,
-      "atr_at_buy": 7535.58,
-      "qty": 1
-    }
-  ]
+  "decisions": []
 }
