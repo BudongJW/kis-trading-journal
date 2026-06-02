@@ -1,10 +1,23 @@
 {
-  "updated_at": "2026-06-02T09:02:53.855485",
+  "updated_at": "2026-06-02T11:04:22.958575",
   "initial_capital": 500000,
   "cash": 922856,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "qty": 1,
+      "current_price": 26955,
+      "value": 26955,
+      "buy_price": 27675,
+      "pnl": -720,
+      "pnl_pct": -2.6,
+      "manual": true,
+      "stop_price": 26845
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,12 +29,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 922856,
+  "holdings_value": 26955,
+  "total_value": 922136,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": -720,
   "total_trades": 0,
   "completed_trades": 0,
   "winning_trades": 0,
@@ -54,12 +67,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0,
-    "max_drawdown_pct": 0,
+    "sharpe_ratio": -4.4,
+    "max_drawdown_pct": -0.14,
     "profit_factor": 0,
     "avg_win_pct": 0,
     "avg_loss_pct": 0,
-    "total_return_pct": 0
+    "total_return_pct": -0.14
   },
   "r_summary": {},
   "daily_history": [
@@ -254,13 +267,13 @@
     },
     {
       "date": "2026-06-02",
-      "total_value": 922856,
+      "total_value": 922136,
       "cash": 922856,
-      "holdings_value": 0,
-      "day_pnl": 0,
-      "cumul_pnl": 0,
+      "holdings_value": 26955,
+      "day_pnl": -720,
+      "cumul_pnl": -720,
       "realized_pnl": 0,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": -720,
       "net_deposit": 422856,
       "regime": "up",
       "hmm_state": "sideways",
@@ -338,7 +351,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 573.260703,
+    "cash_usd": 555.96462,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
