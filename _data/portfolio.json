@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T11:04:22.958575",
+  "updated_at": "2026-06-02T14:33:06.995940",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [
@@ -286,14 +286,14 @@
     "hmm_state": "sideways",
     "confidence": 0.62,
     "volatility": "normal",
-    "vol_percentile": 42.0,
+    "vol_percentile": 50.0,
     "overnight_gap": {
       "direction": "neutral",
       "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "반도체",
+      "2차전지",
       "자동차",
       "금융",
       "IT",
@@ -307,7 +307,7 @@
       "k": 0.5,
       "trend_ma": 10
     },
-    "universe_count": 6,
+    "universe_count": 7,
     "universe": [
       {
         "symbol": "091160",
@@ -320,6 +320,10 @@
       {
         "symbol": "069500",
         "name": "KODEX 200"
+      },
+      {
+        "symbol": "305720",
+        "name": "KODEX 2차전지"
       },
       {
         "symbol": "091180",
