@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T15:30:23.175835",
+  "updated_at": "2026-06-02T16:21:57.205502",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [
@@ -350,15 +350,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.9933,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.9699,
-      "132030": -0.2355
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -369,118 +362,5 @@
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": [
-    {
-      "time": "15:12:34",
-      "symbol": "069500",
-      "name": "KODEX 200",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 140,820 < 목표 146,448)",
-      "price": 140820,
-      "ta_total": -5.1
-    },
-    {
-      "time": "15:12:33",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "융합 SKIP (46%)",
-      "price": 163400,
-      "ta_total": 15.3,
-      "lgbm_prob": 0.5
-    },
-    {
-      "time": "15:12:31",
-      "symbol": "395160",
-      "name": "KODEX 미국나스닥100TR",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 51,895 < 목표 53,818)",
-      "price": 51895,
-      "ta_total": 0.7
-    },
-    {
-      "time": "15:12:29",
-      "symbol": "102110",
-      "name": "KODEX 금융",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 140,720 < 목표 146,488)",
-      "price": 140720,
-      "ta_total": -5.1
-    },
-    {
-      "time": "15:12:28",
-      "symbol": "091180",
-      "name": "KODEX 자동차",
-      "action": "skip",
-      "reason": "융합 SKIP (46%)",
-      "price": 40625,
-      "ta_total": 18.7,
-      "lgbm_prob": 0.5
-    },
-    {
-      "time": "15:12:26",
-      "symbol": "305720",
-      "name": "KODEX 2차전지",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,855 < 목표 19,960)",
-      "price": 18855,
-      "ta_total": -17.6
-    },
-    {
-      "time": "15:07:40",
-      "symbol": "069500",
-      "name": "KODEX 200",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 140,800 < 목표 146,448)",
-      "price": 140800,
-      "ta_total": -5.1
-    },
-    {
-      "time": "15:07:38",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "융합 SKIP (46%)",
-      "price": 163460,
-      "ta_total": 15.2,
-      "lgbm_prob": 0.5
-    },
-    {
-      "time": "15:07:36",
-      "symbol": "395160",
-      "name": "KODEX 미국나스닥100TR",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 51,830 < 목표 53,818)",
-      "price": 51830,
-      "ta_total": 0.9
-    },
-    {
-      "time": "15:07:34",
-      "symbol": "102110",
-      "name": "KODEX 금융",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 140,685 < 목표 146,488)",
-      "price": 140685,
-      "ta_total": -5.1
-    },
-    {
-      "time": "15:07:33",
-      "symbol": "091180",
-      "name": "KODEX 자동차",
-      "action": "skip",
-      "reason": "융합 SKIP (47%)",
-      "price": 40485,
-      "ta_total": 19.2,
-      "lgbm_prob": 0.5
-    },
-    {
-      "time": "15:07:31",
-      "symbol": "305720",
-      "name": "KODEX 2차전지",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,895 < 목표 19,960)",
-      "price": 18895,
-      "ta_total": -17.6
-    }
-  ]
+  "decisions": []
 }
