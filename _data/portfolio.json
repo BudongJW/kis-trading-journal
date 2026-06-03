@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T08:05:17.315893",
+  "updated_at": "2026-06-04T08:29:19.866726",
   "initial_capital": 500000,
   "cash": 922856,
   "holdings": [
@@ -313,7 +313,7 @@
     "vol_percentile": 44.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.1,
+      "strength": 0.28,
       "action": "normal"
     },
     "strong_sectors": [
@@ -375,7 +375,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 555.96462,
+    "cash_usd": 554.384778,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
