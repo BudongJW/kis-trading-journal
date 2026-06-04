@@ -1,29 +1,30 @@
 {
-  "updated_at": "2026-06-05T05:00:31.818978",
+  "updated_at": "2026-06-05T05:03:38.288642",
   "initial_capital": 500000,
-  "cash": 921610,
+  "cash": 893935,
   "holdings": [
     {
       "symbol": "091160",
       "name": "KODEX 반도체",
-      "tag": "ETF",
       "qty": 1,
       "current_price": 168300,
       "value": 168300,
-      "ta_score": 9.4,
-      "ta_signal": "HOLD",
-      "ta_detail": "TA=+9(sideways) [RSI(72)=-12 MACD=+20 BB=-7 Stoch=-1 ADX=-6 MA=+15 OBV=+7 MFI=+0 ATR=-3]"
+      "buy_price": 169405,
+      "pnl": -1105,
+      "pnl_pct": -0.65,
+      "manual": true,
+      "stop_price": 164323
     },
     {
       "symbol": "498400",
-      "name": "498400",
-      "tag": "급등주",
+      "name": "KODEX 200타겟위클리커버드콜",
       "qty": 1,
       "current_price": 27310,
       "value": 27310,
-      "ta_score": -5.5,
-      "ta_signal": "HOLD",
-      "ta_detail": "TA=-5(sideways) [RSI(76)=-16 MACD=+20 BB=-7 Stoch=-15 ADX=-8 MA=+15 OBV=+7 MFI=+0 ATR=-3]"
+      "buy_price": 27675,
+      "pnl": -365,
+      "pnl_pct": -1.31,
+      "stop_price": 26845
     }
   ],
   "reconcile": {
@@ -40,11 +41,11 @@
     "set_by": ""
   },
   "holdings_value": 195610,
-  "total_value": 1117220,
+  "total_value": 922435,
   "total_pnl": -26265,
   "total_pnl_pct": -7.23,
   "realized_pnl": 1405,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": -1470,
   "total_trades": 5,
   "completed_trades": 2,
   "winning_trades": 1,
@@ -162,12 +163,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.01,
-    "max_drawdown_pct": -55.12,
+    "sharpe_ratio": -0.0,
+    "max_drawdown_pct": -55.25,
     "profit_factor": 2.4,
     "avg_win_pct": 1.45,
     "avg_loss_pct": -0.59,
-    "total_return_pct": 0.28
+    "total_return_pct": -0.01
   },
   "r_summary": {},
   "daily_history": [
@@ -398,14 +399,14 @@
     },
     {
       "date": "2026-06-05",
-      "total_value": 1117220,
-      "cash": 921610,
+      "total_value": 922435,
+      "cash": 893935,
       "holdings_value": 195610,
-      "day_pnl": 0,
-      "cumul_pnl": 1405,
+      "day_pnl": -1470,
+      "cumul_pnl": -65,
       "realized_pnl": 1405,
-      "unrealized_pnl": 0,
-      "net_deposit": 615815,
+      "unrealized_pnl": -1470,
+      "net_deposit": 422500,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.587,
@@ -482,7 +483,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 449.110108,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
