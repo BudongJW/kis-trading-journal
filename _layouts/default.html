@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <!-- Chart.js (차트) + Alpine.js (필터·토글) — CDN, 빌드 없음 -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
@@ -14,7 +18,7 @@
     <nav>
       <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
       <div class="nav-links">
-        <a href="{{ '/' | relative_url }}">Dashboard</a>
+        <a href="{{ '/' | relative_url }}"><span class="live-dot"></span>Dashboard</a>
         <a href="{{ '/notes/' | relative_url }}">Daily Notes</a>
         <a href="https://github.com/BudongJW/kis-autotrader/actions/workflows/killswitch.yml"
            target="_blank" rel="noopener" class="nav-killswitch">⚠️ Killswitch</a>
@@ -46,5 +50,12 @@
       </span>
     </p>
   </footer>
+  <!-- 숫자 천단위 구분(₩) — Liquid엔 number_with_delimiter가 없어 클라이언트에서 포맷 -->
+  <script>
+    document.querySelectorAll('.fmt-num').forEach(function (el) {
+      var v = Number(el.dataset.val);
+      if (!isNaN(v)) el.textContent = Math.round(v).toLocaleString('ko-KR');
+    });
+  </script>
 </body>
 </html>

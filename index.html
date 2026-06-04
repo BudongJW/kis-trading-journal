@@ -4,6 +4,55 @@ title: Dashboard
 ---
 {% assign p = site.data.portfolio %}
 
+{% assign invested = p.holdings_value | default: 0 %}
+{% assign cash_val = p.total_value | minus: invested %}
+{% if p.total_value and p.total_value > 0 %}
+  {% assign cash_pct = cash_val | times: 100 | divided_by: p.total_value %}
+  {% assign inv_pct = invested | times: 100 | divided_by: p.total_value %}
+{% else %}
+  {% assign cash_pct = 0 %}
+  {% assign inv_pct = 0 %}
+{% endif %}
+
+<!-- ── Hero: 총자산 (premium) ── -->
+<section class="hero">
+  <span class="hero-glow"></span>
+  <span class="hero-glow purple"></span>
+  <div class="hero-top">
+    <span class="hero-label">총 자산</span>
+    <span class="hero-asof">{{ p.updated_at | date: "%m/%d %H:%M" }} 기준</span>
+  </div>
+  <div class="hero-value">
+    <span class="hero-currency">₩</span><span class="fmt-num" data-val="{{ p.total_value | default: 0 }}">{{ p.total_value | default: 0 }}</span>
+  </div>
+  <div class="hero-change {% if p.total_pnl > 0 %}profit{% elsif p.total_pnl < 0 %}loss{% endif %}">
+    {% if p.total_pnl > 0 %}▲{% elsif p.total_pnl < 0 %}▼{% else %}–{% endif %}
+    {% if p.total_pnl > 0 %}+{% endif %}<span class="fmt-num" data-val="{{ p.total_pnl | default: 0 }}">{{ p.total_pnl | default: 0 }}</span>원
+    ({% if p.total_pnl_pct > 0 %}+{% endif %}{{ p.total_pnl_pct | default: 0 }}%)
+    <span class="hero-change-tag">누적 손익</span>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hs-val">{{ p.holdings.size | default: 0 }}</span>
+      <span class="hs-label">보유 종목</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-val">{{ inv_pct }}%</span>
+      <span class="hs-label">투자 비중</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hs-val">{{ cash_pct }}%</span>
+      <span class="hs-label">현금 비중</span>
+    </div>
+    {% if p.us_session.enabled %}
+    <div class="hero-stat">
+      <span class="hs-val">${{ p.us_session.cash_usd | default: 0 | round }}</span>
+      <span class="hs-label">미국 가용</span>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
 <!-- ── Status Bar: Killswitch + Reconcile ── -->
 <div class="status-bar">
   {% if p.killswitch.active %}
@@ -252,21 +301,17 @@ title: Dashboard
 </div>
 {% endif %}
 
-<h2>Portfolio Dashboard</h2>
+<h2>상세 현황</h2>
 
 <div class="dashboard">
-  <div class="card">
-    <h3>Total Value</h3>
-    <div class="value">{{ p.total_value | divided_by: 10000 }}만원</div>
-    <div class="sub">초기자본: {{ p.initial_capital | divided_by: 10000 }}만원</div>
-  </div>
   <div class="card">
     <h3>Cumulative PnL</h3>
     <div class="value {% if p.total_pnl > 0 %}profit{% elsif p.total_pnl < 0 %}loss{% endif %}">
       {% if p.total_pnl > 0 %}+{% endif %}{{ p.total_pnl }}원
     </div>
     <div class="sub">
-      실현 <span class="{% if p.realized_pnl > 0 %}profit{% elsif p.realized_pnl < 0 %}loss{% endif %}">{% if p.realized_pnl > 0 %}+{% endif %}{{ p.realized_pnl | default: 0 }}</span>
+      원금 {{ p.initial_capital | divided_by: 10000 }}만원
+      · 실현 <span class="{% if p.realized_pnl > 0 %}profit{% elsif p.realized_pnl < 0 %}loss{% endif %}">{% if p.realized_pnl > 0 %}+{% endif %}{{ p.realized_pnl | default: 0 }}</span>
       · 미실현 <span class="{% if p.unrealized_pnl > 0 %}profit{% elsif p.unrealized_pnl < 0 %}loss{% endif %}">{% if p.unrealized_pnl > 0 %}+{% endif %}{{ p.unrealized_pnl | default: 0 }}</span>
     </div>
   </div>
