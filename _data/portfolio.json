@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T15:30:22.789732",
+  "updated_at": "2026-06-04T15:37:32.135630",
   "initial_capital": 500000,
   "cash": 921610,
   "holdings": [
@@ -43,109 +43,50 @@
   },
   "holdings_value": 195610,
   "total_value": 922435,
-  "total_pnl": -1005,
-  "total_pnl_pct": -0.59,
-  "realized_pnl": -1005,
+  "total_pnl": 0,
+  "total_pnl_pct": 0,
+  "realized_pnl": 0,
   "unrealized_pnl": -1470,
-  "total_trades": 2,
-  "completed_trades": 1,
+  "total_trades": 0,
+  "completed_trades": 0,
   "winning_trades": 0,
-  "losing_trades": 1,
+  "losing_trades": 0,
   "win_rate": 0.0,
-  "trades": [
-    {
-      "timestamp": "2026-06-04T14:44:06",
-      "date": "2026-06-04",
-      "time": "14:44:06",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "side": "buy",
-      "qty": 1,
-      "price": 169405,
-      "amount": 169405
-    },
-    {
-      "timestamp": "2026-06-04T15:21:08",
-      "date": "2026-06-04",
-      "time": "15:21:08",
-      "symbol": "091160",
-      "name": "ETF",
-      "side": "sell",
-      "qty": 1,
-      "price": 168400,
-      "amount": 168400
-    }
-  ],
-  "realized": [
-    {
-      "symbol": "091160",
-      "name": "ETF",
-      "buy_date": "2026-06-04",
-      "buy_time": "14:44:06",
-      "buy_price": 169405,
-      "sell_date": "2026-06-04",
-      "sell_time": "15:21:08",
-      "sell_price": 168400,
-      "qty": 1,
-      "pnl": -1005,
-      "pnl_pct": -0.59,
-      "hold_days": 0
-    }
-  ],
+  "trades": [],
+  "realized": [],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-04",
-    "buys": 1,
-    "sells": 1,
-    "completed_round_trips": 1,
-    "buy_notional": 169405,
-    "sell_notional": 168400,
-    "fees": 50,
-    "taxes": 387,
-    "total_cost": 437,
-    "realized_pnl_gross": -1005,
-    "realized_pnl_net": -1442,
-    "best_trade": {
-      "symbol": "091160",
-      "name": "ETF",
-      "pnl": -1005,
-      "pnl_pct": -0.59
-    },
-    "worst_trade": {
-      "symbol": "091160",
-      "name": "ETF",
-      "pnl": -1005,
-      "pnl_pct": -0.59
-    }
+    "buys": 0,
+    "sells": 0,
+    "completed_round_trips": 0,
+    "buy_notional": 0,
+    "sell_notional": 0,
+    "fees": 0,
+    "taxes": 0,
+    "total_cost": 0,
+    "realized_pnl_gross": 0,
+    "realized_pnl_net": 0,
+    "best_trade": null,
+    "worst_trade": null
   },
   "costs": {
-    "total_fees": 51,
-    "total_taxes": 387,
-    "total_cost": 438,
-    "realized_pnl_gross": -1005,
-    "realized_pnl_net": -1443,
+    "total_fees": 0,
+    "total_taxes": 0,
+    "total_cost": 0,
+    "realized_pnl_gross": 0,
+    "realized_pnl_net": 0,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.02,
-    "max_drawdown_pct": -47.67,
-    "profit_factor": 0.0,
+    "sharpe_ratio": -0.01,
+    "max_drawdown_pct": -47.56,
+    "profit_factor": 0,
     "avg_win_pct": 0,
-    "avg_loss_pct": -0.59,
-    "total_return_pct": -0.5
+    "avg_loss_pct": 0,
+    "total_return_pct": -0.29
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": -0.2,
-    "median_r": -0.2,
-    "win_rate": 0.0,
-    "avg_win_r": 0,
-    "avg_loss_r": -0.2,
-    "expectancy_r": -0.2,
-    "best_r": -0.2,
-    "worst_r": -0.2,
-    "last_updated": "2026-06-04 15:21"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -365,11 +306,11 @@
       "total_value": 922435,
       "cash": 921610,
       "holdings_value": 195610,
-      "day_pnl": -2912,
-      "cumul_pnl": -2475,
-      "realized_pnl": -1005,
+      "day_pnl": -1470,
+      "cumul_pnl": -1470,
+      "realized_pnl": 0,
       "unrealized_pnl": -1470,
-      "net_deposit": 424910,
+      "net_deposit": 423905,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.587,
@@ -433,7 +374,7 @@
   "risk": {
     "kelly_f": 0.2,
     "drawdown_scale": 1.0,
-    "drawdown_reason": "거래 1건, 스케일링 미적용",
+    "drawdown_reason": "거래 0건, 스케일링 미적용",
     "stop_type": "ATR×1.5 동적",
     "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
   },
@@ -441,15 +382,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.9704,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.9367,
-      "132030": -0.5738
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -460,22 +394,5 @@
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": [
-    {
-      "time": "14:43:36",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "buy",
-      "reason": "융합 BUY (54%, TA=+2)",
-      "price": 169420,
-      "fusion_prob": 0.543,
-      "fusion_signal": "BUY",
-      "ta_total": 2.5,
-      "lgbm_prob": 0.5,
-      "breakout": true,
-      "sizing_ratio": 0.62,
-      "atr_at_buy": 7763.16,
-      "qty": 1
-    }
-  ]
+  "decisions": []
 }
