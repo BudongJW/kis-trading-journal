@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-04T19:45:00.578592",
+  "updated_at": "2026-06-05T05:00:31.818978",
   "initial_capital": 500000,
   "cash": 921610,
   "holdings": [
@@ -26,14 +26,150 @@
       "ta_detail": "TA=-5(sideways) [RSI(76)=-16 MACD=+20 BB=-7 Stoch=-15 ADX=-8 MA=+15 OBV=+7 MFI=+0 ATR=-3]"
     }
   ],
+  "reconcile": {
+    "matched": 2,
+    "broker_only": 0,
+    "ledger_only": 0,
+    "qty_mismatch": 0
+  },
+  "killswitch": {
+    "active": false,
+    "mode": "off",
+    "reason": "",
+    "set_at": "",
+    "set_by": ""
+  },
   "holdings_value": 195610,
   "total_value": 1117220,
-  "total_pnl": 0,
-  "total_pnl_pct": 0,
-  "total_trades": 0,
+  "total_pnl": -26265,
+  "total_pnl_pct": -7.23,
+  "realized_pnl": 1405,
+  "unrealized_pnl": 0,
+  "total_trades": 5,
+  "completed_trades": 2,
   "winning_trades": 1,
   "losing_trades": 1,
   "win_rate": 50.0,
+  "trades": [
+    {
+      "timestamp": "2026-06-02T09:53:39",
+      "date": "2026-06-02",
+      "time": "09:53:39",
+      "symbol": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "side": "buy",
+      "qty": 1,
+      "price": 27670,
+      "amount": 27670
+    },
+    {
+      "timestamp": "2026-06-04T09:13:38",
+      "date": "2026-06-04",
+      "time": "09:13:38",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "side": "buy",
+      "qty": 1,
+      "price": 166100,
+      "amount": 166100
+    },
+    {
+      "timestamp": "2026-06-04T11:16:38",
+      "date": "2026-06-04",
+      "time": "11:16:38",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "side": "sell",
+      "qty": 1,
+      "price": 168510,
+      "amount": 168510
+    },
+    {
+      "timestamp": "2026-06-04T14:44:06",
+      "date": "2026-06-04",
+      "time": "14:44:06",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "side": "buy",
+      "qty": 1,
+      "price": 169405,
+      "amount": 169405
+    },
+    {
+      "timestamp": "2026-06-04T15:21:08",
+      "date": "2026-06-04",
+      "time": "15:21:08",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "side": "sell",
+      "qty": 1,
+      "price": 168400,
+      "amount": 168400
+    }
+  ],
+  "realized": [
+    {
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "buy_date": "2026-06-04",
+      "buy_time": "09:13:38",
+      "buy_price": 166100,
+      "sell_date": "2026-06-04",
+      "sell_time": "11:16:38",
+      "sell_price": 168510,
+      "qty": 1,
+      "pnl": 2410,
+      "pnl_pct": 1.45,
+      "hold_days": 0
+    },
+    {
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "buy_date": "2026-06-04",
+      "buy_time": "14:44:06",
+      "buy_price": 169405,
+      "sell_date": "2026-06-04",
+      "sell_time": "15:21:08",
+      "sell_price": 168400,
+      "qty": 1,
+      "pnl": -1005,
+      "pnl_pct": -0.59,
+      "hold_days": 0
+    }
+  ],
+  "rejected_orders": [],
+  "today_summary": {
+    "date": "2026-06-05",
+    "buys": 0,
+    "sells": 0,
+    "completed_round_trips": 0,
+    "buy_notional": 0,
+    "sell_notional": 0,
+    "fees": 0,
+    "taxes": 0,
+    "total_cost": 0,
+    "realized_pnl_gross": 0,
+    "realized_pnl_net": 0,
+    "best_trade": null,
+    "worst_trade": null
+  },
+  "costs": {
+    "total_fees": 105,
+    "total_taxes": 775,
+    "total_cost": 880,
+    "realized_pnl_gross": 1405,
+    "realized_pnl_net": 525,
+    "tax_exemption_remaining_krw": 2500000
+  },
+  "performance": {
+    "sharpe_ratio": 0.01,
+    "max_drawdown_pct": -55.12,
+    "profit_factor": 2.4,
+    "avg_win_pct": 1.45,
+    "avg_loss_pct": -0.59,
+    "total_return_pct": 0.28
+  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -259,23 +395,34 @@
       "hmm_state": "sideways",
       "confidence": 0.587,
       "k_value": 0.5
+    },
+    {
+      "date": "2026-06-05",
+      "total_value": 1117220,
+      "cash": 921610,
+      "holdings_value": 195610,
+      "day_pnl": 0,
+      "cumul_pnl": 1405,
+      "realized_pnl": 1405,
+      "unrealized_pnl": 0,
+      "net_deposit": 615815,
+      "regime": "up",
+      "hmm_state": "sideways",
+      "confidence": 0.587,
+      "k_value": 0.5
     }
   ],
-  "market_context": {
-    "regime": {
-      "trend": "up",
-      "volatility": "normal",
-      "trend_score": 0.612,
-      "vol_percentile": 38.0,
-      "hmm_state": "sideways",
-      "hmm_confidence": 0.8049104540366119,
-      "hmm_transition": {
-        "bull": 0.9318547852146573,
-        "sideways": 0.06814521478534272,
-        "bear": 9.602305708063495e-26
-      }
-    },
+  "market": {
+    "regime": "up",
+    "hmm_state": "sideways",
     "confidence": 0.587,
+    "volatility": "normal",
+    "vol_percentile": 38.0,
+    "overnight_gap": {
+      "direction": "bearish",
+      "strength": 0.28,
+      "action": "reduce_size"
+    },
     "strong_sectors": [
       "반도체",
       "자동차",
@@ -283,161 +430,64 @@
       "IT",
       "KOSPI200",
       "미국나스닥"
-    ],
-    "k_value": 0.5,
-    "ta_weights": {
-      "rsi": 0.17,
-      "macd": 0.17,
-      "bb": 0.12,
-      "stoch": 0.12,
-      "adx": 0.12,
-      "ma": 0.12,
-      "obv": 0.06,
-      "mfi": 0.06,
-      "atr": 0.06
-    },
-    "sectors": {
-      "반도체": {
-        "symbol": "091160",
-        "ret_5d": 4.66,
-        "ret_20d": 20.2,
-        "vol_ratio": 1.09,
-        "momentum": "positive"
-      },
-      "2차전지": {
-        "symbol": "305720",
-        "ret_5d": -5.99,
-        "ret_20d": -17.38,
-        "vol_ratio": 0.73,
-        "momentum": "negative"
-      },
-      "바이오": {
-        "symbol": "244580",
-        "ret_5d": -6.7,
-        "ret_20d": -11.24,
-        "vol_ratio": 0.85,
-        "momentum": "negative"
-      },
-      "자동차": {
-        "symbol": "091180",
-        "ret_5d": 3.49,
-        "ret_20d": 22.05,
-        "vol_ratio": 0.83,
-        "momentum": "positive"
-      },
-      "금융": {
-        "symbol": "102110",
-        "ret_5d": 6.75,
-        "ret_20d": 22.61,
-        "vol_ratio": 0.82,
-        "momentum": "positive"
-      },
-      "IT": {
-        "symbol": "098560",
-        "ret_5d": 0.06,
-        "ret_20d": 3.35,
-        "vol_ratio": 0.6,
-        "momentum": "positive"
-      },
-      "철강": {
-        "symbol": "117700",
-        "ret_5d": -4.88,
-        "ret_20d": -17.98,
-        "vol_ratio": 0.69,
-        "momentum": "negative"
-      },
-      "KOSPI200": {
-        "symbol": "069500",
-        "ret_5d": 6.72,
-        "ret_20d": 22.48,
-        "vol_ratio": 0.93,
-        "momentum": "positive"
-      },
-      "KOSDAQ150": {
-        "symbol": "229200",
-        "ret_5d": -2.88,
-        "ret_20d": -8.23,
-        "vol_ratio": 1.26,
-        "momentum": "negative"
-      },
-      "미국나스닥": {
-        "symbol": "395160",
-        "ret_5d": 0.9,
-        "ret_20d": 35.6,
-        "vol_ratio": 1.22,
-        "momentum": "positive"
-      }
-    },
-    "breadth": {
-      "kospi_5d": 6.72,
-      "kosdaq_5d": -2.88,
-      "spread": 9.6,
-      "health": "mixed"
-    },
-    "turbulence": {
-      "is_turbulent": false,
-      "reason": "정상 (변동성 0.8x)"
-    },
-    "kelly": {
-      "combined": 0.2,
-      "etf": 0.2,
-      "surge": 0.2
-    },
-    "expectancy": {
-      "etf": 0.6,
-      "surge": 0.4
-    },
-    "lgbm": {},
-    "ta_accuracy": {
-      "rsi": {
-        "correct": 0,
-        "total": 0
-      },
-      "macd": {
-        "correct": 0,
-        "total": 0
-      },
-      "bb": {
-        "correct": 0,
-        "total": 0
-      },
-      "stoch": {
-        "correct": 0,
-        "total": 0
-      },
-      "adx": {
-        "correct": 0,
-        "total": 0
-      },
-      "ma": {
-        "correct": 0,
-        "total": 0
-      },
-      "obv": {
-        "correct": 0,
-        "total": 0
-      },
-      "mfi": {
-        "correct": 0,
-        "total": 0
-      },
-      "atr": {
-        "correct": 0,
-        "total": 0
-      }
-    },
-    "market_history_recent": []
+    ]
   },
-  "strategies": {
-    "etf_breakout": {
-      "name": "ETF 변동성 돌파",
-      "params": {
-        "k": 0.5,
-        "trend_ma": 10
-      }
+  "strategy": {
+    "name": "ETF 변동성 돌파 + 신호 융합",
+    "params": {
+      "k": 0.5,
+      "trend_ma": 10
     },
-    "surge_scalp": {
-      "name": "급등주 단타"
-    }
-  }
+    "universe_count": 6,
+    "universe": [
+      {
+        "symbol": "091160",
+        "name": "KODEX 반도체"
+      },
+      {
+        "symbol": "395160",
+        "name": "KODEX 미국나스닥100TR"
+      },
+      {
+        "symbol": "069500",
+        "name": "KODEX 200"
+      },
+      {
+        "symbol": "091180",
+        "name": "KODEX 자동차"
+      },
+      {
+        "symbol": "102110",
+        "name": "KODEX 금융"
+      },
+      {
+        "symbol": "098560",
+        "name": "KODEX IT"
+      }
+    ]
+  },
+  "risk": {
+    "kelly_f": 0.2,
+    "drawdown_scale": 1.0,
+    "drawdown_reason": "거래 2건, 스케일링 미적용",
+    "stop_type": "ATR×1.5 동적",
+    "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
+  },
+  "fusion": {
+    "trained": false
+  },
+  "bear_strategy": {
+    "regime": "BULL",
+    "enabled": false
+  },
+  "us_session": {
+    "enabled": true,
+    "cash_usd": 0.0,
+    "positions": 0,
+    "holdings": [],
+    "max_positions": 3,
+    "budget_pct": 0.4,
+    "regime_linked": true
+  },
+  "decisions": []
 }
