@@ -1,23 +1,35 @@
 {
-  "updated_at": "2026-06-04T08:29:19.866726",
+  "updated_at": "2026-06-04T10:30:54.089987",
   "initial_capital": 500000,
-  "cash": 922856,
+  "cash": 921610,
   "holdings": [
+    {
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "qty": 1,
+      "current_price": 169440,
+      "value": 169440,
+      "buy_price": 166110,
+      "pnl": 3330,
+      "pnl_pct": 2.0,
+      "manual": true,
+      "stop_price": 161127
+    },
     {
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 1,
-      "current_price": 27825,
-      "value": 27825,
+      "current_price": 27325,
+      "value": 27325,
       "buy_price": 27675,
-      "pnl": 150,
-      "pnl_pct": 0.54,
+      "pnl": -350,
+      "pnl_pct": -1.26,
       "manual": true,
       "stop_price": 26845
     }
   ],
   "reconcile": {
-    "matched": 1,
+    "matched": 2,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -29,12 +41,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 27825,
-  "total_value": 923006,
+  "holdings_value": 196765,
+  "total_value": 924570,
   "total_pnl": 0,
   "total_pnl_pct": 0,
   "realized_pnl": 0,
-  "unrealized_pnl": 150,
+  "unrealized_pnl": 2980,
   "total_trades": 0,
   "completed_trades": 0,
   "winning_trades": 0,
@@ -67,12 +79,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.0,
-    "max_drawdown_pct": -47.39,
+    "sharpe_ratio": 0.02,
+    "max_drawdown_pct": -47.09,
     "profit_factor": 0,
     "avg_win_pct": 0,
     "avg_loss_pct": 0,
-    "total_return_pct": 0.03
+    "total_return_pct": 0.6
   },
   "r_summary": {},
   "daily_history": [
@@ -291,14 +303,14 @@
     },
     {
       "date": "2026-06-04",
-      "total_value": 923006,
-      "cash": 922856,
-      "holdings_value": 27825,
-      "day_pnl": 150,
-      "cumul_pnl": 150,
+      "total_value": 924570,
+      "cash": 921610,
+      "holdings_value": 196765,
+      "day_pnl": 2980,
+      "cumul_pnl": 2980,
       "realized_pnl": 0,
-      "unrealized_pnl": 150,
-      "net_deposit": 422856,
+      "unrealized_pnl": 2980,
+      "net_deposit": 421590,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.62,
@@ -375,7 +387,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 554.384778,
+    "cash_usd": 450.863031,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
