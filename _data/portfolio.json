@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T13:25:01.510786",
+  "updated_at": "2026-06-05T14:40:03.272126",
   "initial_capital": 500000,
   "cash": 893935,
   "holdings": [
@@ -42,11 +42,11 @@
   },
   "holdings_value": 210040,
   "total_value": 910880,
-  "total_pnl": -26265,
-  "total_pnl_pct": -7.23,
+  "total_pnl": -52265,
+  "total_pnl_pct": -13.43,
   "realized_pnl": 1405,
   "unrealized_pnl": -13025,
-  "total_trades": 5,
+  "total_trades": 6,
   "completed_trades": 2,
   "winning_trades": 1,
   "losing_trades": 1,
@@ -106,6 +106,17 @@
       "qty": 1,
       "price": 168400,
       "amount": 168400
+    },
+    {
+      "timestamp": "2026-06-05T09:11:01",
+      "date": "2026-06-05",
+      "time": "09:11:01",
+      "symbol": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "side": "buy",
+      "qty": 1,
+      "price": 26000,
+      "amount": 26000
     }
   ],
   "realized": [
@@ -141,25 +152,25 @@
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-05",
-    "buys": 0,
+    "buys": 1,
     "sells": 0,
     "completed_round_trips": 0,
-    "buy_notional": 0,
+    "buy_notional": 26000,
     "sell_notional": 0,
-    "fees": 0,
+    "fees": 4,
     "taxes": 0,
-    "total_cost": 0,
+    "total_cost": 4,
     "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
+    "realized_pnl_net": -4,
     "best_trade": null,
     "worst_trade": null
   },
   "costs": {
-    "total_fees": 105,
+    "total_fees": 109,
     "total_taxes": 775,
-    "total_cost": 880,
+    "total_cost": 884,
     "realized_pnl_gross": 1405,
-    "realized_pnl_net": 525,
+    "realized_pnl_net": 521,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -402,30 +413,35 @@
       "total_value": 910880,
       "cash": 893935,
       "holdings_value": 210040,
-      "day_pnl": -13025,
+      "day_pnl": -13029,
       "cumul_pnl": -11620,
       "realized_pnl": 1405,
       "unrealized_pnl": -13025,
       "net_deposit": 422500,
       "regime": "up",
       "hmm_state": "sideways",
-      "confidence": 0.42,
+      "confidence": 0.587,
       "k_value": 0.5
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "sideways",
-    "confidence": 0.42,
+    "confidence": 0.587,
     "volatility": "normal",
-    "vol_percentile": 64.0,
+    "vol_percentile": 38.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.1,
+      "strength": 0.09,
       "action": "normal"
     },
     "strong_sectors": [
-      "IT"
+      "반도체",
+      "자동차",
+      "금융",
+      "IT",
+      "KOSPI200",
+      "미국나스닥"
     ]
   },
   "strategy": {
@@ -434,7 +450,7 @@
       "k": 0.5,
       "trend_ma": 10
     },
-    "universe_count": 4,
+    "universe_count": 6,
     "universe": [
       {
         "symbol": "091160",
@@ -447,6 +463,14 @@
       {
         "symbol": "069500",
         "name": "KODEX 200"
+      },
+      {
+        "symbol": "091180",
+        "name": "KODEX 자동차"
+      },
+      {
+        "symbol": "102110",
+        "name": "KODEX 금융"
       },
       {
         "symbol": "098560",
@@ -465,8 +489,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.8456,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.9971,
+      "132030": -0.5837
+    }
   },
   "us_session": {
     "enabled": true,
