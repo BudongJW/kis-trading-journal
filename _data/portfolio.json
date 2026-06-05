@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T17:35:01.049265",
+  "updated_at": "2026-06-05T17:42:43.660825",
   "initial_capital": 500000,
   "cash": 893935,
   "holdings": [
@@ -525,5 +525,123 @@
       }
     ]
   },
-  "decisions": []
+  "decisions": [],
+  "learning": {
+    "market": {
+      "trend": "up",
+      "hmm_state": "sideways",
+      "hmm_confidence": 98.9,
+      "volatility": "normal",
+      "vol_percentile": 64.0,
+      "market_confidence": 0.42,
+      "analyzed_at": "2026-06-05 10:35"
+    },
+    "overnight": {
+      "direction": "neutral",
+      "nasdaq_change": -0.09,
+      "sp500_change": 0.41,
+      "recommended_action": "normal"
+    },
+    "strong_sectors": [
+      "IT"
+    ],
+    "lgbm": {
+      "accuracy": 69.4,
+      "auc": 0.7491,
+      "n_samples": 177,
+      "trained_at": "2026-06-05T07:53:11.773776",
+      "top_features": [
+        {
+          "name": "vol_cycle_pos",
+          "importance": 172.5
+        },
+        {
+          "name": "body_ratio",
+          "importance": 78.4
+        },
+        {
+          "name": "vol_20d",
+          "importance": 74.5
+        },
+        {
+          "name": "day_of_week",
+          "importance": 69.3
+        },
+        {
+          "name": "ma5_20_cross",
+          "importance": 59.1
+        },
+        {
+          "name": "momentum_accel_3d",
+          "importance": 51.0
+        },
+        {
+          "name": "upper_shadow",
+          "importance": 45.6
+        },
+        {
+          "name": "ret_3d",
+          "importance": 28.0
+        },
+        {
+          "name": "ret_1d",
+          "importance": 26.8
+        },
+        {
+          "name": "adx",
+          "importance": 22.7
+        }
+      ]
+    },
+    "strategy_params": {
+      "k": 0.5,
+      "trend_ma": 10,
+      "train_sharpe": 2.61,
+      "val_sharpe": 5.25,
+      "optimized_at": "2026-05-31"
+    },
+    "ta_weights": {
+      "rsi": 0.17,
+      "macd": 0.17,
+      "bb": 0.12,
+      "stoch": 0.12,
+      "adx": 0.12,
+      "ma": 0.12,
+      "obv": 0.06,
+      "mfi": 0.06,
+      "atr": 0.06
+    },
+    "adaptive": {
+      "etf": 1.0,
+      "win_rate": 0.5,
+      "trades": 0
+    },
+    "diary": [
+      {
+        "date": "2026-06-05",
+        "timestamp": "2026-06-05 07:52:51",
+        "phase": "post_us",
+        "changes": [
+          {
+            "category": "갭예측",
+            "param": "direction",
+            "old": "이전",
+            "new": "neutral",
+            "reason": "QQQ -0.9%, SPY +0.4%"
+          }
+        ],
+        "metrics": {
+          "qqq_change": -0.9,
+          "spy_change": 0.38,
+          "lgbm_accuracy": 0.694444,
+          "lgbm_auc": 0.749091
+        },
+        "decisions": [
+          "US 거래 결과 평가 + 교차 시장 학습 완료",
+          "LGBM 갱신 완료 (accuracy=69.4%)"
+        ],
+        "errors": []
+      }
+    ]
+  }
 }
