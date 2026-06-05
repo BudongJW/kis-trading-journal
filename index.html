@@ -263,6 +263,19 @@ title: Dashboard
   {% else %}
   <p class="dim" style="margin-top: 8px; font-size: 0.9em;">현재 미국 보유 종목 없음. 야간 봇 운영 중 (22:30~05:00 KST).</p>
   {% endif %}
+
+  {% if p.us_session.universe and p.us_session.universe.size > 0 %}
+  <div style="margin-top: 14px;">
+    <span class="summary-label">📋 US 유니버스 — 스캔 종목 ({{ p.us_session.universe.size }})</span>
+    <div class="universe-grid" style="margin-top: 8px;">
+      {% for u in p.us_session.universe %}
+      <span class="universe-chip">{{ u.symbol }}<span
+        class="badge badge-{% if u.type == 'inverse' %}down{% elsif u.type == 'defensive' %}neutral{% else %}up{% endif %}"
+        style="margin-left: 5px;">{% if u.type == 'inverse' %}인버스{% elsif u.type == 'defensive' %}방어{% else %}롱{% endif %}</span></span>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
 </div>
 {% endif %}
 
