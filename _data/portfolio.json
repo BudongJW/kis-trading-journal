@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T17:42:43.660825",
+  "updated_at": "2026-06-05T17:50:11.943757",
   "initial_capital": 500000,
   "cash": 893935,
   "holdings": [
@@ -642,6 +642,95 @@
         ],
         "errors": []
       }
-    ]
+    ],
+    "game": {
+      "level": 3,
+      "title": "수습 분석가",
+      "xp": 1932,
+      "xp_in_level": 492,
+      "xp_for_next": 1176,
+      "progress_pct": 41.8,
+      "achievements": [
+        {
+          "icon": "🎯",
+          "name": "첫 체결",
+          "desc": "첫 주문 체결",
+          "done": true
+        },
+        {
+          "icon": "🔁",
+          "name": "첫 라운드트립",
+          "desc": "매수→매도 완료",
+          "done": true
+        },
+        {
+          "icon": "🤖",
+          "name": "LGBM 가동",
+          "desc": "갭 예측 모델 학습",
+          "done": true
+        },
+        {
+          "icon": "🎓",
+          "name": "예측력 65%",
+          "desc": "LGBM 정확도 65%+",
+          "done": true
+        },
+        {
+          "icon": "💰",
+          "name": "수익 전환",
+          "desc": "누적 손익 플러스",
+          "done": false
+        },
+        {
+          "icon": "📊",
+          "name": "승률 50%",
+          "desc": "승률 50%+",
+          "done": true
+        },
+        {
+          "icon": "💪",
+          "name": "10거래 달성",
+          "desc": "누적 10체결",
+          "done": false
+        },
+        {
+          "icon": "🧠",
+          "name": "Lv.5 도달",
+          "desc": "AI 레벨 5",
+          "done": false
+        }
+      ],
+      "stats": [
+        {
+          "label": "예측력",
+          "icon": "🎯",
+          "value": 69,
+          "suffix": "%",
+          "bar": 69
+        },
+        {
+          "label": "승률",
+          "icon": "📈",
+          "value": 50,
+          "suffix": "%",
+          "bar": 50
+        },
+        {
+          "label": "거래경험",
+          "icon": "💼",
+          "value": 6,
+          "suffix": "건",
+          "bar": null
+        },
+        {
+          "label": "학습데이터",
+          "icon": "📚",
+          "value": 177,
+          "suffix": "샘플",
+          "bar": null
+        }
+      ],
+      "unlocked_count": 5
+    }
   }
 }
