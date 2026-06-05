@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T14:40:03.272126",
+  "updated_at": "2026-06-05T15:30:50.784208",
   "initial_capital": 500000,
   "cash": 893935,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "091160",
       "name": "KODEX 반도체",
       "qty": 1,
-      "current_price": 158440,
-      "value": 158440,
+      "current_price": 157180,
+      "value": 157180,
       "buy_price": 169405,
-      "pnl": -10965,
-      "pnl_pct": -6.47,
+      "pnl": -12225,
+      "pnl_pct": -7.21,
       "manual": true,
       "stop_price": 164323
     },
@@ -19,11 +19,11 @@
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 2,
-      "current_price": 25800,
-      "value": 51600,
+      "current_price": 25795,
+      "value": 51590,
       "buy_price": 26830,
-      "pnl": -2060,
-      "pnl_pct": -3.83,
+      "pnl": -2070,
+      "pnl_pct": -3.85,
       "stop_price": 26025
     }
   ],
@@ -40,12 +40,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 210040,
-  "total_value": 910880,
+  "holdings_value": 208770,
+  "total_value": 909610,
   "total_pnl": -52265,
   "total_pnl_pct": -13.43,
   "realized_pnl": 1405,
-  "unrealized_pnl": -13025,
+  "unrealized_pnl": -14295,
   "total_trades": 6,
   "completed_trades": 2,
   "winning_trades": 1,
@@ -175,11 +175,11 @@
   },
   "performance": {
     "sharpe_ratio": -0.06,
-    "max_drawdown_pct": -56.29,
+    "max_drawdown_pct": -56.4,
     "profit_factor": 2.4,
     "avg_win_pct": 1.45,
     "avg_loss_pct": -0.59,
-    "total_return_pct": -2.32
+    "total_return_pct": -2.58
   },
   "r_summary": {},
   "daily_history": [
@@ -410,38 +410,33 @@
     },
     {
       "date": "2026-06-05",
-      "total_value": 910880,
+      "total_value": 909610,
       "cash": 893935,
-      "holdings_value": 210040,
-      "day_pnl": -13029,
-      "cumul_pnl": -11620,
+      "holdings_value": 208770,
+      "day_pnl": -14299,
+      "cumul_pnl": -12890,
       "realized_pnl": 1405,
-      "unrealized_pnl": -13025,
+      "unrealized_pnl": -14295,
       "net_deposit": 422500,
       "regime": "up",
       "hmm_state": "sideways",
-      "confidence": 0.587,
+      "confidence": 0.42,
       "k_value": 0.5
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "sideways",
-    "confidence": 0.587,
+    "confidence": 0.42,
     "volatility": "normal",
-    "vol_percentile": 38.0,
+    "vol_percentile": 64.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.09,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "반도체",
-      "자동차",
-      "금융",
-      "IT",
-      "KOSPI200",
-      "미국나스닥"
+      "IT"
     ]
   },
   "strategy": {
@@ -450,7 +445,7 @@
       "k": 0.5,
       "trend_ma": 10
     },
-    "universe_count": 6,
+    "universe_count": 4,
     "universe": [
       {
         "symbol": "091160",
@@ -463,14 +458,6 @@
       {
         "symbol": "069500",
         "name": "KODEX 200"
-      },
-      {
-        "symbol": "091180",
-        "name": "KODEX 자동차"
-      },
-      {
-        "symbol": "102110",
-        "name": "KODEX 금융"
       },
       {
         "symbol": "098560",
@@ -492,11 +479,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.8456,
+    "sma_ratio": 0.8249,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.9971,
-      "132030": -0.5837
+      "195930": 1.051,
+      "132030": -0.6896
     }
   },
   "us_session": {
@@ -508,5 +495,25 @@
     "budget_pct": 0.4,
     "regime_linked": true
   },
-  "decisions": []
+  "decisions": [
+    {
+      "time": "14:46:59",
+      "symbol": "069500",
+      "name": "KODEX 200",
+      "action": "skip",
+      "reason": "융합 SKIP (46%)",
+      "price": 131480,
+      "ta_total": 17.8,
+      "lgbm_prob": 0.5
+    },
+    {
+      "time": "14:46:55",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 158,405 < 목표 163,678)",
+      "price": 158405,
+      "ta_total": -13.4
+    }
+  ]
 }
