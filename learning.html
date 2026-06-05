@@ -1,0 +1,146 @@
+---
+layout: default
+title: AI Learning
+permalink: /learning/
+---
+{% assign p = site.data.portfolio %}
+{% assign l = p.learning %}
+
+<section class="hero" style="padding: 22px 26px;">
+  <span class="hero-glow"></span>
+  <div class="hero-top">
+    <span class="hero-label">🧠 AI 학습 현황</span>
+    <span class="hero-asof">{{ p.updated_at | date: "%m/%d %H:%M" }} 기준</span>
+  </div>
+  <div class="hero-value" style="font-size: clamp(1.4em, 4vw, 2em);">실시간 학습 상태</div>
+  <div class="hero-change" style="color: var(--text-dim);">봇이 매일 장 전/후 시장을 학습해 파라미터를 조정합니다</div>
+</section>
+
+{% if l %}
+
+<!-- ── 시장 인식 ── -->
+<h2>🧭 시장 인식</h2>
+<div class="market-grid">
+  <div class="market-card">
+    <span class="market-label">레짐(추세)</span>
+    <span class="market-value"><span class="badge badge-{{ l.market.trend }}">{{ l.market.trend | default: "—" }}</span></span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">HMM 상태</span>
+    <span class="market-value"><span class="badge badge-{{ l.market.hmm_state }}">{{ l.market.hmm_state | default: "—" }}</span> {{ l.market.hmm_confidence }}%</span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">변동성</span>
+    <span class="market-value">{{ l.market.volatility | default: "—" }} <span class="dim">({{ l.market.vol_percentile }}%ile)</span></span>
+  </div>
+  <div class="market-card">
+    <span class="market-label">시장 신뢰도</span>
+    <span class="market-value">{{ l.market.market_confidence | times: 100 | round }}%</span>
+  </div>
+</div>
+
+<!-- ── 오버나이트 / 섹터 ── -->
+<div class="info-grid">
+  <div class="info-card">
+    <h4>🌙 오버나이트 신호</h4>
+    <table class="compact">
+      <tr><td class="dim">방향</td><td><span class="badge badge-{{ l.overnight.direction }}">{{ l.overnight.direction | default: "—" }}</span></td></tr>
+      <tr><td class="dim">나스닥</td><td class="{% if l.overnight.nasdaq_change > 0 %}profit{% elsif l.overnight.nasdaq_change < 0 %}loss{% endif %}">{{ l.overnight.nasdaq_change }}%</td></tr>
+      <tr><td class="dim">S&P500</td><td class="{% if l.overnight.sp500_change > 0 %}profit{% elsif l.overnight.sp500_change < 0 %}loss{% endif %}">{{ l.overnight.sp500_change }}%</td></tr>
+      <tr><td class="dim">추천 행동</td><td>{{ l.overnight.recommended_action | default: "normal" }}</td></tr>
+    </table>
+  </div>
+  <div class="info-card">
+    <h4>📈 강세 섹터 (학습)</h4>
+    <div class="sector-tags" style="margin: 0;">
+      {% for s in l.strong_sectors %}<span class="tag">{{ s }}</span>{% endfor %}
+      {% unless l.strong_sectors %}<span class="dim">—</span>{% endunless %}
+    </div>
+    <h4 style="margin-top: 14px;">⚙️ 전략 파라미터</h4>
+    <table class="compact">
+      <tr><td class="dim">K값(돌파)</td><td>{{ l.strategy_params.k }}</td></tr>
+      <tr><td class="dim">추세 MA</td><td>{{ l.strategy_params.trend_ma }}</td></tr>
+      <tr><td class="dim">최적화 Sharpe</td><td>train {{ l.strategy_params.train_sharpe }} / val {{ l.strategy_params.val_sharpe }}</td></tr>
+      <tr><td class="dim">최적화일</td><td class="dim">{{ l.strategy_params.optimized_at }}</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ── LGBM 모델 ── -->
+<h2>🤖 LGBM 갭 예측 모델</h2>
+<div class="metrics-grid">
+  <div class="metric-card">
+    <span class="metric-label">정확도</span>
+    <span class="metric-value {% if l.lgbm.accuracy >= 60 %}profit{% endif %}">{{ l.lgbm.accuracy }}%</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">AUC</span>
+    <span class="metric-value {% if l.lgbm.auc >= 0.65 %}profit{% endif %}">{{ l.lgbm.auc }}</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">학습 샘플</span>
+    <span class="metric-value">{{ l.lgbm.n_samples | default: 0 }}</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-label">마지막 학습</span>
+    <span class="metric-value" style="font-size: 0.95em;">{{ l.lgbm.trained_at | date: "%m/%d %H:%M" }}</span>
+  </div>
+</div>
+
+{% if l.lgbm.top_features and l.lgbm.top_features.size > 0 %}
+<div class="info-card" style="margin-bottom: 24px;">
+  <h4>🔬 피처 중요도 (모델이 보는 신호 Top 10)</h4>
+  {% assign maxfi = l.lgbm.top_features[0].importance %}
+  {% for f in l.lgbm.top_features %}
+  <div style="display:flex; align-items:center; gap:10px; margin:5px 0; font-size:0.85em;">
+    <span style="width:140px; color:var(--text-dim);">{{ f.name }}</span>
+    <div style="flex:1; background:rgba(88,166,255,0.1); border-radius:4px; height:14px; overflow:hidden;">
+      <div style="height:100%; width:{{ f.importance | times: 100 | divided_by: maxfi }}%; background:linear-gradient(90deg,var(--accent),#a371f7);"></div>
+    </div>
+    <span style="width:48px; text-align:right; font-variant-numeric:tabular-nums;">{{ f.importance }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ── TA 가중치 ── -->
+{% if l.ta_weights %}
+<h2>🎚️ TA 지표 가중치 (학습된 융합 비중)</h2>
+<div class="universe-grid" style="margin-bottom: 24px;">
+  {% for w in l.ta_weights %}
+  <span class="universe-chip">{{ w[0] | upcase }} <span class="dim">{{ w[1] | times: 100 | round }}%</span></span>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ── 학습 일지 (changelog) ── -->
+<h2>📓 학습 일지 — 봇이 무엇을·왜 바꿨나</h2>
+{% if l.diary and l.diary.size > 0 %}
+{% for d in l.diary %}
+<div class="decision-card">
+  <div class="decision-header">
+    <span class="decision-time">{{ d.timestamp }}</span>
+    <span class="badge badge-neutral">{{ d.phase }}</span>
+    {% if d.metrics.lgbm_accuracy %}<span class="detail-chip chip-green">LGBM {{ d.metrics.lgbm_accuracy | times: 100 | round: 1 }}%</span>{% endif %}
+  </div>
+  {% if d.changes and d.changes.size > 0 %}
+  <div class="decision-reason">
+    {% for c in d.changes %}
+    <div>• <b>{{ c.category }}</b> {{ c.param }}: {{ c.old }} → <b>{{ c.new }}</b> <span class="dim">({{ c.reason }})</span></div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if d.decisions and d.decisions.size > 0 %}
+  <div class="decision-details">
+    {% for dec in d.decisions %}<span class="detail-chip">{{ dec }}</span>{% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
+{% else %}
+<p class="dim">학습 일지 데이터 없음 (다음 장 전/후 학습 후 채워짐).</p>
+{% endif %}
+
+{% else %}
+<p class="dim" style="margin-top: 24px;">학습 데이터가 아직 없습니다. 다음 시장 학습(장 전 08:30 / 장 후 16:00 KST) 후 채워집니다.</p>
+{% endif %}
