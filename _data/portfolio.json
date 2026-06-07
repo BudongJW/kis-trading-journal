@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T07:57:23.278730",
+  "updated_at": "2026-06-08T08:46:08.157861",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -440,7 +440,7 @@
       "total_value": 909766,
       "cash": 726981,
       "holdings_value": 208770,
-      "day_pnl": 0,
+      "day_pnl": -14295,
       "cumul_pnl": -12890,
       "realized_pnl": 1405,
       "unrealized_pnl": -14295,
@@ -500,7 +500,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 431.045185,
+    "cash_usd": 427.022469,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -750,6 +750,28 @@
         }
       ],
       "unlocked_count": 5
+    }
+  },
+  "day_plan": {
+    "stance": "RISK_OFF",
+    "stance_kr": "위험회피(현금)",
+    "budget_pct": 0.0,
+    "max_new_positions": 0,
+    "allow_long": false,
+    "allow_inverse": false,
+    "allow_leverage": false,
+    "size_mult": 0.0,
+    "k_effective": 0.7,
+    "allow_summary": "현금/방어자산만",
+    "briefing": "오늘 스탠스 위험회피(현금)(RISK_OFF) · 레짐 BULL·신뢰도 27% · 美 오버나이트 bearish(-5.1%) · 고변동(82.0%ile) · 예산 0%·최대 0종목·허용 현금/방어자산만",
+    "signals": {
+      "regime": "BULL",
+      "confidence": 0.27,
+      "direction": "bearish",
+      "nasdaq_change": -5.11,
+      "high_vol": true,
+      "vol_percentile": 82.0,
+      "rapid_level": "NONE"
     }
   }
 }
