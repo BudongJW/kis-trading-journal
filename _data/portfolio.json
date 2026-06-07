@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-06T07:14:44.205897",
+  "updated_at": "2026-06-08T07:57:23.278730",
   "initial_capital": 500000,
-  "cash": 893935,
+  "cash": 726981,
   "holdings": [
     {
       "symbol": "091160",
@@ -41,7 +41,7 @@
     "set_by": ""
   },
   "holdings_value": 208770,
-  "total_value": 909610,
+  "total_value": 909766,
   "total_pnl": -12890,
   "total_pnl_pct": -1.4,
   "realized_pnl": 1405,
@@ -151,7 +151,7 @@
   ],
   "rejected_orders": [],
   "today_summary": {
-    "date": "2026-06-06",
+    "date": "2026-06-08",
     "buys": 0,
     "sells": 0,
     "completed_round_trips": 0,
@@ -434,18 +434,33 @@
       "hmm_state": "sideways",
       "confidence": 0.42,
       "k_value": 0.5
+    },
+    {
+      "date": "2026-06-08",
+      "total_value": 909766,
+      "cash": 726981,
+      "holdings_value": 208770,
+      "day_pnl": 0,
+      "cumul_pnl": -12890,
+      "realized_pnl": 1405,
+      "unrealized_pnl": -14295,
+      "net_deposit": 422656,
+      "regime": "up",
+      "hmm_state": "unknown",
+      "confidence": 0.27,
+      "k_value": 0.6000000000000001
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "sideways",
-    "confidence": 0.42,
-    "volatility": "normal",
-    "vol_percentile": 64.0,
+    "hmm_state": "unknown",
+    "confidence": 0.27,
+    "volatility": "high",
+    "vol_percentile": 82.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.1,
-      "action": "normal"
+      "direction": "bearish",
+      "strength": 1.32,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -454,22 +469,14 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.5,
-      "trend_ma": 10
+      "k": 0.6000000000000001,
+      "trend_ma": 20
     },
-    "universe_count": 4,
+    "universe_count": 2,
     "universe": [
-      {
-        "symbol": "091160",
-        "name": "KODEX 반도체"
-      },
       {
         "symbol": "395160",
         "name": "KODEX 미국나스닥100TR"
-      },
-      {
-        "symbol": "069500",
-        "name": "KODEX 200"
       },
       {
         "symbol": "098560",
@@ -493,7 +500,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 429.229681,
+    "cash_usd": 431.045185,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -541,18 +548,18 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "sideways",
-      "hmm_confidence": 98.9,
-      "volatility": "normal",
-      "vol_percentile": 64.0,
-      "market_confidence": 0.42,
-      "analyzed_at": "2026-06-05 10:35"
+      "hmm_state": null,
+      "hmm_confidence": 0,
+      "volatility": "high",
+      "vol_percentile": 82.0,
+      "market_confidence": 0.27,
+      "analyzed_at": "2026-06-07"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": -0.09,
-      "sp500_change": 0.41,
-      "recommended_action": "normal"
+      "direction": "bearish",
+      "nasdaq_change": -5.11,
+      "sp500_change": -2.81,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -561,7 +568,7 @@
       "accuracy": 80.6,
       "auc": 0.8109,
       "n_samples": 180,
-      "trained_at": "2026-06-05T19:53:54.441009",
+      "trained_at": "2026-06-06T07:40:46.947263",
       "top_features": [
         {
           "name": "vol_cycle_pos",
@@ -606,11 +613,11 @@
       ]
     },
     "strategy_params": {
-      "k": 0.5,
-      "trend_ma": 10,
-      "train_sharpe": 2.61,
-      "val_sharpe": 5.25,
-      "optimized_at": "2026-05-31"
+      "k": 0.6000000000000001,
+      "trend_ma": 20,
+      "train_sharpe": 0.8,
+      "val_sharpe": 5.14,
+      "optimized_at": "2026-06-07"
     },
     "ta_weights": {
       "rsi": 0.17,
