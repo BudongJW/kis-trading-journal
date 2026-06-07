@@ -53,6 +53,24 @@ title: Dashboard
   </div>
 </section>
 
+<!-- ── 오늘의 전략 브리핑 (장전 신호 종합) ── -->
+{% if p.day_plan and p.day_plan.stance %}
+{% assign dp = p.day_plan %}
+<div class="today-summary" style="border-left: 4px solid {% if dp.stance == 'RISK_ON' %}var(--profit){% elsif dp.stance == 'RISK_OFF' %}var(--loss){% elsif dp.stance == 'DEFENSIVE' %}#f5a242{% else %}var(--text-dim){% endif %};">
+  <h3>🧭 오늘의 전략 브리핑
+    <span class="badge {% if dp.stance == 'RISK_ON' %}badge-up{% elsif dp.stance == 'RISK_OFF' or dp.stance == 'DEFENSIVE' %}badge-down{% else %}badge-sideways{% endif %}">{{ dp.stance_kr }} ({{ dp.stance }})</span>
+  </h3>
+  <div class="summary-grid">
+    <div class="summary-item"><span class="summary-label">매수 예산</span><span class="summary-value">{{ dp.budget_pct | times: 100 | round }}%</span></div>
+    <div class="summary-item"><span class="summary-label">최대 신규</span><span class="summary-value">{{ dp.max_new_positions }}종목</span></div>
+    <div class="summary-item"><span class="summary-label">허용 전략</span><span class="summary-value">{{ dp.allow_summary }}</span></div>
+    <div class="summary-item"><span class="summary-label">유효 K</span><span class="summary-value">{{ dp.k_effective }}</span></div>
+  </div>
+  <p class="dim" style="font-size:0.85em; margin-top:8px;">{{ dp.briefing }}</p>
+  <p class="dim" style="font-size:0.72em; margin-top:4px;">※ 현재는 정보 표시용. 실제 매매는 기존 안전 시스템(레짐·손절·게이트)이 구동 — 검증 후 연동 예정.</p>
+</div>
+{% endif %}
+
 <!-- ── Status Bar: Killswitch + Reconcile ── -->
 <div class="status-bar">
   {% if p.killswitch.active %}
