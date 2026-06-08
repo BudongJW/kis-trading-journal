@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T15:43:17.656367",
+  "updated_at": "2026-06-08T16:29:08.169328",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -12,6 +12,9 @@
       "buy_price": 114630,
       "pnl": 10,
       "pnl_pct": 0.0,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 114640,
       "stop_price": 111191
     }
   ],
