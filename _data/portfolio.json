@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T10:20:11.623132",
+  "updated_at": "2026-06-08T10:37:20.248133",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "091160",
       "name": "KODEX 반도체",
       "qty": 1,
-      "current_price": 145885,
-      "value": 145885,
+      "current_price": 145245,
+      "value": 145245,
       "buy_price": 169405,
-      "pnl": -23520,
-      "pnl_pct": -13.88,
+      "pnl": -24160,
+      "pnl_pct": -14.26,
       "manual": true,
       "stop_price": 164323
     },
@@ -19,11 +19,11 @@
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 2,
-      "current_price": 23735,
-      "value": 47470,
+      "current_price": 23670,
+      "value": 47340,
       "buy_price": 26830,
-      "pnl": -6190,
-      "pnl_pct": -11.53,
+      "pnl": -6320,
+      "pnl_pct": -11.77,
       "stop_price": 26025
     }
   ],
@@ -40,12 +40,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 193355,
-  "total_value": 894351,
-  "total_pnl": -28305,
-  "total_pnl_pct": -3.07,
+  "holdings_value": 192585,
+  "total_value": 893581,
+  "total_pnl": -29075,
+  "total_pnl_pct": -3.15,
   "realized_pnl": 1405,
-  "unrealized_pnl": -29710,
+  "unrealized_pnl": -30480,
   "total_trades": 6,
   "completed_trades": 2,
   "winning_trades": 1,
@@ -174,12 +174,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.13,
-    "max_drawdown_pct": -57.78,
+    "sharpe_ratio": -0.14,
+    "max_drawdown_pct": -57.85,
     "profit_factor": 2.4,
     "avg_win_pct": 1.45,
     "avg_loss_pct": -0.59,
-    "total_return_pct": -5.66
+    "total_return_pct": -5.82
   },
   "r_summary": {},
   "daily_history": [
@@ -437,13 +437,13 @@
     },
     {
       "date": "2026-06-08",
-      "total_value": 894351,
+      "total_value": 893581,
       "cash": 726981,
-      "holdings_value": 193355,
-      "day_pnl": -29710,
-      "cumul_pnl": -28305,
+      "holdings_value": 192585,
+      "day_pnl": -30480,
+      "cumul_pnl": -29075,
       "realized_pnl": 1405,
-      "unrealized_pnl": -29710,
+      "unrealized_pnl": -30480,
       "net_deposit": 422656,
       "regime": "up",
       "hmm_state": "unknown",
@@ -498,11 +498,11 @@
     "enabled": true,
     "regime": "CRISIS",
     "confidence": 0.65,
-    "sma_ratio": 0.677,
+    "sma_ratio": 0.6757,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.637,
-      "132030": -1.3377
+      "195930": 0.6013,
+      "132030": -1.3486
     }
   },
   "us_session": {
@@ -782,5 +782,22 @@
       "vol_percentile": 82.0,
       "rapid_level": "NONE"
     }
+  },
+  "leverage": {
+    "enabled": true,
+    "dry_run": true,
+    "gate_allowed": false,
+    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
+    "hard_stop_pct": 0.04,
+    "max_weight": 0.15,
+    "regime": "CRISIS",
+    "hmm_state": "unknown",
+    "hmm_confidence": 0.5,
+    "universe": [
+      {
+        "symbol": "122630",
+        "name": "KODEX 레버리지"
+      }
+    ]
   }
 }
