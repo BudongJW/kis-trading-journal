@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T08:46:08.157861",
+  "updated_at": "2026-06-08T09:23:59.952644",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -495,12 +495,19 @@
     "trained": false
   },
   "bear_strategy": {
+    "enabled": true,
     "regime": "BULL",
-    "enabled": false
+    "confidence": 0.5,
+    "sma_ratio": 0.0,
+    "canary_bad": 0,
+    "canary_scores": {
+      "195930": 0.0,
+      "132030": 0.0
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 427.022469,
+    "cash_usd": 0.0,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -754,6 +761,8 @@
   },
   "day_plan": {
     "stance": "RISK_OFF",
+    "forced": false,
+    "auto_stance": "RISK_OFF",
     "stance_kr": "위험회피(현금)",
     "budget_pct": 0.0,
     "max_new_positions": 0,
