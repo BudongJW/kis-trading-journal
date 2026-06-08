@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T09:23:59.952644",
+  "updated_at": "2026-06-08T09:41:18.488294",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -496,18 +496,18 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BULL",
-    "confidence": 0.5,
-    "sma_ratio": 0.0,
-    "canary_bad": 0,
+    "regime": "CRISIS",
+    "confidence": 0.65,
+    "sma_ratio": 0.7126,
+    "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.0,
-      "132030": 0.0
+      "195930": 0.8647,
+      "132030": -1.2255
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 427.022469,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -760,21 +760,21 @@
     }
   },
   "day_plan": {
-    "stance": "RISK_OFF",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "RISK_OFF",
-    "stance_kr": "위험회피(현금)",
-    "budget_pct": 0.0,
-    "max_new_positions": 0,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
     "allow_long": false,
-    "allow_inverse": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.0,
+    "size_mult": 0.4,
     "k_effective": 0.7,
-    "allow_summary": "현금/방어자산만",
-    "briefing": "오늘 스탠스 위험회피(현금)(RISK_OFF) · 레짐 BULL·신뢰도 27% · 美 오버나이트 bearish(-5.1%) · 고변동(82.0%ile) · 예산 0%·최대 0종목·허용 현금/방어자산만",
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 27% · 美 오버나이트 bearish(-5.1%) · 고변동(82.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CRISIS",
       "confidence": 0.27,
       "direction": "bearish",
       "nasdaq_change": -5.11,
