@@ -530,6 +530,7 @@ title: Dashboard
       <th>수량</th>
       <th>단가</th>
       <th>총액</th>
+      <th>근거 (AI 판단)</th>
     </tr>
   </thead>
   <tbody>
@@ -541,6 +542,7 @@ title: Dashboard
       <td class="num">{{ t.qty }}주</td>
       <td class="num">{{ t.price }}원</td>
       <td class="num">{{ t.amount }}원</td>
+      <td style="font-size:0.85em; max-width:280px;">{% if t.reason and t.reason != '' %}{{ t.reason }}{% else %}<span class="dim">—</span>{% endif %}</td>
     </tr>
     {% endfor %}
   </tbody>
