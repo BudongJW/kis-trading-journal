@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T13:54:20.829120",
+  "updated_at": "2026-06-08T13:58:07.115888",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [],
@@ -542,11 +542,11 @@
     "enabled": true,
     "regime": "CRISIS",
     "confidence": 0.65,
-    "sma_ratio": 0.7056,
+    "sma_ratio": 0.6954,
     "canary_bad": 1,
     "canary_scores": {
       "195930": 0.5611,
-      "132030": -1.3558
+      "132030": -1.3631
     }
   },
   "us_session": {
