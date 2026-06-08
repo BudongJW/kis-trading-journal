@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T12:50:24.507594",
+  "updated_at": "2026-06-08T13:49:11.241345",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [],
@@ -225,18 +225,7 @@
     "avg_loss_pct": -6.15,
     "total_return_pct": -0.69
   },
-  "r_summary": {
-    "total_trades": 2,
-    "avg_r": -3.56,
-    "median_r": -3.0,
-    "win_rate": 0.0,
-    "avg_win_r": 0,
-    "avg_loss_r": -3.56,
-    "expectancy_r": -3.56,
-    "best_r": -3.0,
-    "worst_r": -4.13,
-    "last_updated": "2026-06-08 12:50"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -550,8 +539,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CRISIS",
+    "confidence": 0.65,
+    "sma_ratio": 0.7054,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.6683,
+      "132030": -1.3667
+    }
   },
   "us_session": {
     "enabled": true,
@@ -820,9 +816,9 @@
     "size_mult": 0.4,
     "k_effective": 0.8,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BULL·신뢰도 7% · 美 오버나이트 bearish(-4.2%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 7% · 美 오버나이트 bearish(-4.2%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CRISIS",
       "confidence": 0.07,
       "direction": "bearish",
       "nasdaq_change": -4.18,
@@ -835,10 +831,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CRISIS",
     "hmm_state": "bear",
     "hmm_confidence": 0.999,
     "universe": [
