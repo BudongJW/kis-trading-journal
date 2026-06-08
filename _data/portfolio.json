@@ -1,34 +1,10 @@
 {
-  "updated_at": "2026-06-08T12:27:15.844751",
+  "updated_at": "2026-06-08T12:50:24.507594",
   "initial_capital": 500000,
   "cash": 726981,
-  "holdings": [
-    {
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "qty": 1,
-      "current_price": 148535,
-      "value": 148535,
-      "buy_price": 169405,
-      "pnl": -20870,
-      "pnl_pct": -12.31,
-      "manual": true,
-      "stop_price": 164323
-    },
-    {
-      "symbol": "498400",
-      "name": "KODEX 200타겟위클리커버드콜",
-      "qty": 2,
-      "current_price": 24460,
-      "value": 48920,
-      "buy_price": 26830,
-      "pnl": -4740,
-      "pnl_pct": -8.83,
-      "stop_price": 26025
-    }
-  ],
+  "holdings": [],
   "reconcile": {
-    "matched": 2,
+    "matched": 0,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -40,17 +16,17 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 197455,
-  "total_value": 898451,
-  "total_pnl": -24205,
-  "total_pnl_pct": -2.62,
-  "realized_pnl": 1405,
-  "unrealized_pnl": -25610,
-  "total_trades": 6,
-  "completed_trades": 2,
+  "holdings_value": 0,
+  "total_value": 898041,
+  "total_pnl": -3435,
+  "total_pnl_pct": -0.38,
+  "realized_pnl": -3435,
+  "unrealized_pnl": 0,
+  "total_trades": 8,
+  "completed_trades": 4,
   "winning_trades": 1,
-  "losing_trades": 1,
-  "win_rate": 50.0,
+  "losing_trades": 3,
+  "win_rate": 25.0,
   "trades": [
     {
       "timestamp": "2026-06-02T09:53:39",
@@ -123,6 +99,30 @@
       "price": 26000,
       "amount": 26000,
       "reason": ""
+    },
+    {
+      "timestamp": "2026-06-08T12:50:18",
+      "date": "2026-06-08",
+      "time": "12:50:18",
+      "symbol": "091160",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 1,
+      "price": 148420,
+      "amount": 148420,
+      "reason": "매도: 손절매 (-12.4% ≤ -3%)"
+    },
+    {
+      "timestamp": "2026-06-08T12:50:19",
+      "date": "2026-06-08",
+      "time": "12:50:19",
+      "symbol": "498400",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 2,
+      "price": 24415,
+      "amount": 48830,
+      "reason": "매도: 손절매 (-9.0% ≤ -3%)"
     }
   ],
   "realized": [
@@ -153,41 +153,90 @@
       "pnl": -1005,
       "pnl_pct": -0.59,
       "hold_days": 0
+    },
+    {
+      "symbol": "498400",
+      "name": "급등주",
+      "buy_date": "2026-06-02",
+      "buy_time": "09:53:39",
+      "buy_price": 27670,
+      "sell_date": "2026-06-08",
+      "sell_time": "12:50:19",
+      "sell_price": 24415,
+      "qty": 1,
+      "pnl": -3255,
+      "pnl_pct": -11.76,
+      "hold_days": 6
+    },
+    {
+      "symbol": "498400",
+      "name": "급등주",
+      "buy_date": "2026-06-05",
+      "buy_time": "09:11:01",
+      "buy_price": 26000,
+      "sell_date": "2026-06-08",
+      "sell_time": "12:50:19",
+      "sell_price": 24415,
+      "qty": 1,
+      "pnl": -1585,
+      "pnl_pct": -6.1,
+      "hold_days": 3
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-08",
     "buys": 0,
-    "sells": 0,
-    "completed_round_trips": 0,
+    "sells": 2,
+    "completed_round_trips": 2,
     "buy_notional": 0,
-    "sell_notional": 0,
-    "fees": 0,
-    "taxes": 0,
-    "total_cost": 0,
-    "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
-    "best_trade": null,
-    "worst_trade": null
+    "sell_notional": 197250,
+    "fees": 30,
+    "taxes": 454,
+    "total_cost": 484,
+    "realized_pnl_gross": -4840,
+    "realized_pnl_net": -5324,
+    "best_trade": {
+      "symbol": "498400",
+      "name": "급등주",
+      "pnl": -1585,
+      "pnl_pct": -6.1
+    },
+    "worst_trade": {
+      "symbol": "498400",
+      "name": "급등주",
+      "pnl": -3255,
+      "pnl_pct": -11.76
+    }
   },
   "costs": {
-    "total_fees": 109,
-    "total_taxes": 775,
-    "total_cost": 884,
-    "realized_pnl_gross": 1405,
-    "realized_pnl_net": 521,
+    "total_fees": 139,
+    "total_taxes": 1229,
+    "total_cost": 1368,
+    "realized_pnl_gross": -3435,
+    "realized_pnl_net": -4803,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.11,
-    "max_drawdown_pct": -57.41,
-    "profit_factor": 2.4,
+    "sharpe_ratio": -0.02,
+    "max_drawdown_pct": -56.4,
+    "profit_factor": 0.41,
     "avg_win_pct": 1.45,
-    "avg_loss_pct": -0.59,
-    "total_return_pct": -4.84
+    "avg_loss_pct": -6.15,
+    "total_return_pct": -0.69
   },
-  "r_summary": {},
+  "r_summary": {
+    "total_trades": 2,
+    "avg_r": -3.56,
+    "median_r": -3.0,
+    "win_rate": 0.0,
+    "avg_win_r": 0,
+    "avg_loss_r": -3.56,
+    "expectancy_r": -3.56,
+    "best_r": -3.0,
+    "worst_r": -4.13,
+    "last_updated": "2026-06-08 12:50"
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -443,14 +492,14 @@
     },
     {
       "date": "2026-06-08",
-      "total_value": 898451,
+      "total_value": 898041,
       "cash": 726981,
-      "holdings_value": 197455,
-      "day_pnl": -25610,
-      "cumul_pnl": -24205,
-      "realized_pnl": 1405,
-      "unrealized_pnl": -25610,
-      "net_deposit": 422656,
+      "holdings_value": 0,
+      "day_pnl": -5324,
+      "cumul_pnl": -3435,
+      "realized_pnl": -3435,
+      "unrealized_pnl": 0,
+      "net_deposit": 401476,
       "regime": "up",
       "hmm_state": "bear",
       "confidence": 0.07,
@@ -492,8 +541,8 @@
   },
   "risk": {
     "kelly_f": 0.2,
-    "drawdown_scale": 1.0,
-    "drawdown_reason": "거래 2건, 스케일링 미적용",
+    "drawdown_scale": 0.7,
+    "drawdown_reason": "2연속 손실 → 70% 축소",
     "stop_type": "ATR×1.5 동적",
     "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
   },
@@ -506,7 +555,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 427.022469,
+    "cash_usd": 546.251056,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -671,10 +720,10 @@
     "game": {
       "level": 3,
       "title": "수습 분석가",
-      "xp": 2003,
-      "xp_in_level": 563,
+      "xp": 2503,
+      "xp_in_level": 1063,
       "xp_for_next": 1176,
-      "progress_pct": 47.9,
+      "progress_pct": 90.4,
       "achievements": [
         {
           "icon": "🎯",
@@ -710,7 +759,7 @@
           "icon": "📊",
           "name": "승률 50%",
           "desc": "승률 50%+",
-          "done": true
+          "done": false
         },
         {
           "icon": "💪",
@@ -736,14 +785,14 @@
         {
           "label": "승률",
           "icon": "📈",
-          "value": 50,
+          "value": 25,
           "suffix": "%",
-          "bar": 50
+          "bar": 25
         },
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 6,
+          "value": 8,
           "suffix": "건",
           "bar": null
         },
@@ -755,7 +804,7 @@
           "bar": null
         }
       ],
-      "unlocked_count": 5
+      "unlocked_count": 4
     }
   },
   "day_plan": {
