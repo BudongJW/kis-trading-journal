@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T14:01:38.368173",
+  "updated_at": "2026-06-08T14:37:17.693422",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -7,15 +7,12 @@
       "symbol": "214980",
       "name": "KODEX 단기채권PLUS",
       "qty": 1,
-      "current_price": 114630,
-      "value": 114630,
+      "current_price": 114640,
+      "value": 114640,
       "buy_price": 114630,
-      "pnl": 0,
+      "pnl": 10,
       "pnl_pct": 0.0,
-      "atr_at_buy": 0.0,
-      "hold_days": 0,
-      "peak_price": 114625,
-      "stop_price": 111186
+      "stop_price": 111191
     }
   ],
   "reconcile": {
@@ -31,12 +28,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 114630,
-  "total_value": 898031,
-  "total_pnl": -3435,
+  "holdings_value": 114640,
+  "total_value": 898041,
+  "total_pnl": -3425,
   "total_pnl_pct": -0.38,
   "realized_pnl": -3435,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": 10,
   "total_trades": 9,
   "completed_trades": 4,
   "winning_trades": 1,
@@ -52,8 +49,7 @@
       "side": "buy",
       "qty": 1,
       "price": 27670,
-      "amount": 27670,
-      "reason": ""
+      "amount": 27670
     },
     {
       "timestamp": "2026-06-04T09:13:38",
@@ -64,8 +60,7 @@
       "side": "buy",
       "qty": 1,
       "price": 166100,
-      "amount": 166100,
-      "reason": ""
+      "amount": 166100
     },
     {
       "timestamp": "2026-06-04T11:16:38",
@@ -76,8 +71,7 @@
       "side": "sell",
       "qty": 1,
       "price": 168510,
-      "amount": 168510,
-      "reason": ""
+      "amount": 168510
     },
     {
       "timestamp": "2026-06-04T14:44:06",
@@ -88,8 +82,7 @@
       "side": "buy",
       "qty": 1,
       "price": 169405,
-      "amount": 169405,
-      "reason": ""
+      "amount": 169405
     },
     {
       "timestamp": "2026-06-04T15:21:08",
@@ -100,8 +93,7 @@
       "side": "sell",
       "qty": 1,
       "price": 168400,
-      "amount": 168400,
-      "reason": ""
+      "amount": 168400
     },
     {
       "timestamp": "2026-06-05T09:11:01",
@@ -112,8 +104,7 @@
       "side": "buy",
       "qty": 1,
       "price": 26000,
-      "amount": 26000,
-      "reason": ""
+      "amount": 26000
     },
     {
       "timestamp": "2026-06-08T12:50:18",
@@ -124,8 +115,7 @@
       "side": "sell",
       "qty": 1,
       "price": 148420,
-      "amount": 148420,
-      "reason": "매도: 손절매 (-12.4% ≤ -3%)"
+      "amount": 148420
     },
     {
       "timestamp": "2026-06-08T12:50:19",
@@ -136,8 +126,7 @@
       "side": "sell",
       "qty": 2,
       "price": 24415,
-      "amount": 48830,
-      "reason": "매도: 손절매 (-9.0% ≤ -3%)"
+      "amount": 48830
     },
     {
       "timestamp": "2026-06-08T14:01:36",
@@ -148,8 +137,7 @@
       "side": "buy",
       "qty": 1,
       "price": 114625,
-      "amount": 114625,
-      "reason": "방어자산 매수: CRISIS 레짐 — 모멘텀 0.0435"
+      "amount": 114625
     }
   ],
   "realized": [
@@ -508,30 +496,30 @@
     },
     {
       "date": "2026-06-08",
-      "total_value": 898031,
+      "total_value": 898041,
       "cash": 726981,
-      "holdings_value": 114630,
-      "day_pnl": -5341,
-      "cumul_pnl": -3435,
+      "holdings_value": 114640,
+      "day_pnl": -5331,
+      "cumul_pnl": -3425,
       "realized_pnl": -3435,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 10,
       "net_deposit": 401466,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.07,
-      "k_value": 0.7
+      "hmm_state": "unknown",
+      "confidence": 0.27,
+      "k_value": 0.6000000000000001
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.07,
+    "hmm_state": "unknown",
+    "confidence": 0.27,
     "volatility": "high",
-    "vol_percentile": 80.0,
+    "vol_percentile": 82.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 1.0,
-      "action": "skip"
+      "strength": 1.32,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -540,7 +528,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.6000000000000001,
       "trend_ma": 20
     },
     "universe_count": 2,
@@ -569,11 +557,11 @@
     "enabled": true,
     "regime": "CRISIS",
     "confidence": 0.65,
-    "sma_ratio": 0.7005,
+    "sma_ratio": 0.6897,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.5611,
-      "132030": -1.3558
+      "195930": 0.6326,
+      "132030": -1.4029
     }
   },
   "us_session": {
@@ -626,18 +614,18 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 99.9,
+      "hmm_state": null,
+      "hmm_confidence": 0,
       "volatility": "high",
-      "vol_percentile": 80.0,
-      "market_confidence": 0.07,
-      "analyzed_at": "2026-06-08 10:39"
+      "vol_percentile": 82.0,
+      "market_confidence": 0.27,
+      "analyzed_at": "2026-06-07"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -4.18,
-      "sp500_change": -2.64,
-      "recommended_action": "skip"
+      "nasdaq_change": -5.11,
+      "sp500_change": -2.81,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -691,7 +679,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.6000000000000001,
       "trend_ma": 20,
       "train_sharpe": 0.8,
       "val_sharpe": 5.14,
@@ -831,44 +819,25 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
-    "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
+    "stance": "RISK_OFF",
+    "stance_kr": "위험회피(현금)",
+    "budget_pct": 0.0,
+    "max_new_positions": 0,
     "allow_long": false,
-    "allow_inverse": true,
+    "allow_inverse": false,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.8,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 7% · 美 오버나이트 bearish(-4.2%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.0,
+    "k_effective": 0.7,
+    "allow_summary": "현금/방어자산만",
+    "briefing": "오늘 스탠스 위험회피(현금)(RISK_OFF) · 레짐 CRISIS·신뢰도 27% · 美 오버나이트 bearish(-5.1%) · 고변동(82.0%ile) · 예산 0%·최대 0종목·허용 현금/방어자산만",
     "signals": {
       "regime": "CRISIS",
-      "confidence": 0.07,
+      "confidence": 0.27,
       "direction": "bearish",
-      "nasdaq_change": -4.18,
+      "nasdaq_change": -5.11,
       "high_vol": true,
-      "vol_percentile": 80.0,
+      "vol_percentile": 82.0,
       "rapid_level": "NONE"
     }
-  },
-  "leverage": {
-    "enabled": true,
-    "dry_run": true,
-    "gate_allowed": false,
-    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
-    "hard_stop_pct": 0.04,
-    "max_weight": 0.15,
-    "regime": "CRISIS",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.999,
-    "universe": [
-      {
-        "symbol": "122630",
-        "name": "KODEX 레버리지"
-      }
-    ]
   }
 }
