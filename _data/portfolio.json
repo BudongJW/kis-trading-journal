@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T09:41:18.488294",
+  "updated_at": "2026-06-08T09:47:34.311088",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "091160",
       "name": "KODEX 반도체",
       "qty": 1,
-      "current_price": 157180,
-      "value": 157180,
+      "current_price": 147635,
+      "value": 147635,
       "buy_price": 169405,
-      "pnl": -12225,
-      "pnl_pct": -7.21,
+      "pnl": -21770,
+      "pnl_pct": -12.85,
       "manual": true,
       "stop_price": 164323
     },
@@ -19,11 +19,11 @@
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 2,
-      "current_price": 25795,
-      "value": 51590,
+      "current_price": 24030,
+      "value": 48060,
       "buy_price": 26830,
-      "pnl": -2070,
-      "pnl_pct": -3.85,
+      "pnl": -5600,
+      "pnl_pct": -10.43,
       "stop_price": 26025
     }
   ],
@@ -40,12 +40,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 208770,
-  "total_value": 909766,
-  "total_pnl": -12890,
-  "total_pnl_pct": -1.4,
+  "holdings_value": 195695,
+  "total_value": 896691,
+  "total_pnl": -25965,
+  "total_pnl_pct": -2.81,
   "realized_pnl": 1405,
-  "unrealized_pnl": -14295,
+  "unrealized_pnl": -27370,
   "total_trades": 6,
   "completed_trades": 2,
   "winning_trades": 1,
@@ -174,12 +174,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.06,
-    "max_drawdown_pct": -56.4,
+    "sharpe_ratio": -0.12,
+    "max_drawdown_pct": -57.57,
     "profit_factor": 2.4,
     "avg_win_pct": 1.45,
     "avg_loss_pct": -0.59,
-    "total_return_pct": -2.58
+    "total_return_pct": -5.19
   },
   "r_summary": {},
   "daily_history": [
@@ -437,13 +437,13 @@
     },
     {
       "date": "2026-06-08",
-      "total_value": 909766,
+      "total_value": 896691,
       "cash": 726981,
-      "holdings_value": 208770,
-      "day_pnl": -14295,
-      "cumul_pnl": -12890,
+      "holdings_value": 195695,
+      "day_pnl": -27370,
+      "cumul_pnl": -25965,
       "realized_pnl": 1405,
-      "unrealized_pnl": -14295,
+      "unrealized_pnl": -27370,
       "net_deposit": 422656,
       "regime": "up",
       "hmm_state": "unknown",
@@ -498,11 +498,11 @@
     "enabled": true,
     "regime": "CRISIS",
     "confidence": 0.65,
-    "sma_ratio": 0.7126,
+    "sma_ratio": 0.6955,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.8647,
-      "132030": -1.2255
+      "195930": 0.8022,
+      "132030": -1.2436
     }
   },
   "us_session": {
