@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T10:37:20.248133",
+  "updated_at": "2026-06-08T12:27:15.844751",
   "initial_capital": 500000,
   "cash": 726981,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "091160",
       "name": "KODEX 반도체",
       "qty": 1,
-      "current_price": 145245,
-      "value": 145245,
+      "current_price": 148535,
+      "value": 148535,
       "buy_price": 169405,
-      "pnl": -24160,
-      "pnl_pct": -14.26,
+      "pnl": -20870,
+      "pnl_pct": -12.31,
       "manual": true,
       "stop_price": 164323
     },
@@ -19,11 +19,11 @@
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 2,
-      "current_price": 23670,
-      "value": 47340,
+      "current_price": 24460,
+      "value": 48920,
       "buy_price": 26830,
-      "pnl": -6320,
-      "pnl_pct": -11.77,
+      "pnl": -4740,
+      "pnl_pct": -8.83,
       "stop_price": 26025
     }
   ],
@@ -40,12 +40,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 192585,
-  "total_value": 893581,
-  "total_pnl": -29075,
-  "total_pnl_pct": -3.15,
+  "holdings_value": 197455,
+  "total_value": 898451,
+  "total_pnl": -24205,
+  "total_pnl_pct": -2.62,
   "realized_pnl": 1405,
-  "unrealized_pnl": -30480,
+  "unrealized_pnl": -25610,
   "total_trades": 6,
   "completed_trades": 2,
   "winning_trades": 1,
@@ -61,7 +61,8 @@
       "side": "buy",
       "qty": 1,
       "price": 27670,
-      "amount": 27670
+      "amount": 27670,
+      "reason": ""
     },
     {
       "timestamp": "2026-06-04T09:13:38",
@@ -72,7 +73,8 @@
       "side": "buy",
       "qty": 1,
       "price": 166100,
-      "amount": 166100
+      "amount": 166100,
+      "reason": ""
     },
     {
       "timestamp": "2026-06-04T11:16:38",
@@ -83,7 +85,8 @@
       "side": "sell",
       "qty": 1,
       "price": 168510,
-      "amount": 168510
+      "amount": 168510,
+      "reason": ""
     },
     {
       "timestamp": "2026-06-04T14:44:06",
@@ -94,7 +97,8 @@
       "side": "buy",
       "qty": 1,
       "price": 169405,
-      "amount": 169405
+      "amount": 169405,
+      "reason": ""
     },
     {
       "timestamp": "2026-06-04T15:21:08",
@@ -105,7 +109,8 @@
       "side": "sell",
       "qty": 1,
       "price": 168400,
-      "amount": 168400
+      "amount": 168400,
+      "reason": ""
     },
     {
       "timestamp": "2026-06-05T09:11:01",
@@ -116,7 +121,8 @@
       "side": "buy",
       "qty": 1,
       "price": 26000,
-      "amount": 26000
+      "amount": 26000,
+      "reason": ""
     }
   ],
   "realized": [
@@ -174,12 +180,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.14,
-    "max_drawdown_pct": -57.85,
+    "sharpe_ratio": -0.11,
+    "max_drawdown_pct": -57.41,
     "profit_factor": 2.4,
     "avg_win_pct": 1.45,
     "avg_loss_pct": -0.59,
-    "total_return_pct": -5.82
+    "total_return_pct": -4.84
   },
   "r_summary": {},
   "daily_history": [
@@ -437,30 +443,30 @@
     },
     {
       "date": "2026-06-08",
-      "total_value": 893581,
+      "total_value": 898451,
       "cash": 726981,
-      "holdings_value": 192585,
-      "day_pnl": -30480,
-      "cumul_pnl": -29075,
+      "holdings_value": 197455,
+      "day_pnl": -25610,
+      "cumul_pnl": -24205,
       "realized_pnl": 1405,
-      "unrealized_pnl": -30480,
+      "unrealized_pnl": -25610,
       "net_deposit": 422656,
       "regime": "up",
-      "hmm_state": "unknown",
-      "confidence": 0.27,
-      "k_value": 0.6000000000000001
+      "hmm_state": "bear",
+      "confidence": 0.07,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "unknown",
-    "confidence": 0.27,
+    "hmm_state": "bear",
+    "confidence": 0.07,
     "volatility": "high",
-    "vol_percentile": 82.0,
+    "vol_percentile": 80.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 1.32,
-      "action": "reduce_size"
+      "strength": 1.0,
+      "action": "skip"
     },
     "strong_sectors": [
       "IT"
@@ -469,7 +475,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.6000000000000001,
+      "k": 0.7,
       "trend_ma": 20
     },
     "universe_count": 2,
@@ -495,15 +501,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CRISIS",
-    "confidence": 0.65,
-    "sma_ratio": 0.6757,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.6013,
-      "132030": -1.3486
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -555,18 +554,18 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": null,
-      "hmm_confidence": 0,
+      "hmm_state": "bear",
+      "hmm_confidence": 99.9,
       "volatility": "high",
-      "vol_percentile": 82.0,
-      "market_confidence": 0.27,
-      "analyzed_at": "2026-06-07"
+      "vol_percentile": 80.0,
+      "market_confidence": 0.07,
+      "analyzed_at": "2026-06-08 10:39"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -5.11,
-      "sp500_change": -2.81,
-      "recommended_action": "reduce_size"
+      "nasdaq_change": -4.18,
+      "sp500_change": -2.64,
+      "recommended_action": "skip"
     },
     "strong_sectors": [
       "IT"
@@ -620,7 +619,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.6000000000000001,
+      "k": 0.7,
       "trend_ma": 20,
       "train_sharpe": 0.8,
       "val_sharpe": 5.14,
@@ -770,16 +769,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.4,
-    "k_effective": 0.7,
+    "k_effective": 0.8,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 27% · 美 오버나이트 bearish(-5.1%) · 고변동(82.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BULL·신뢰도 7% · 美 오버나이트 bearish(-4.2%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CRISIS",
-      "confidence": 0.27,
+      "regime": "BULL",
+      "confidence": 0.07,
       "direction": "bearish",
-      "nasdaq_change": -5.11,
+      "nasdaq_change": -4.18,
       "high_vol": true,
-      "vol_percentile": 82.0,
+      "vol_percentile": 80.0,
       "rapid_level": "NONE"
     }
   },
@@ -787,12 +786,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
+    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CRISIS",
-    "hmm_state": "unknown",
-    "hmm_confidence": 0.5,
+    "regime": "BULL",
+    "hmm_state": "bear",
+    "hmm_confidence": 0.999,
     "universe": [
       {
         "symbol": "122630",
