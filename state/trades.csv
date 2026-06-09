@@ -10,3 +10,5 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-08T14:01:36,214980,KODEX 단기채권PLUS,buy,1,114625,114625,0,방어자산 매수: CRISIS 레짐 — 모멘텀 0.0435
 2026-06-09T01:36:17,PSQ,ProShares Short QQQ (1x inverse 나스닥),buy,7,2592,18144,0,US 매수: 변동성 돌파 + TA +16
 2026-06-09T04:45:06,PSQ,US_PSQ,sell,7,2606,18242,0,매도: 미국장 마감 청산
+2026-06-10T00:39:53,XLF,Financial Select Sector SPDR (금융),buy,3,5213,15639,0,US 매수: 변동성 돌파 + TA +22
+2026-06-10T04:45:44,XLF,US_XLF,sell,3,5230,15690,0,매도: 미국장 마감 청산
