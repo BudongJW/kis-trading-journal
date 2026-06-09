@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T14:37:12.096981",
+  "updated_at": "2026-06-09T15:30:58.616676",
   "initial_capital": 500000,
   "cash": 700996,
   "holdings": [
@@ -14,7 +14,7 @@
       "pnl_pct": 0.02,
       "atr_at_buy": 0.0,
       "hold_days": 2,
-      "peak_price": 114660,
+      "peak_price": 114665,
       "stop_price": 111186
     }
   ],
@@ -567,20 +567,20 @@
       "unrealized_pnl": 30,
       "net_deposit": 401368,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.12,
-      "k_value": 0.7
+      "hmm_state": "sideways",
+      "confidence": 0.295,
+      "k_value": 0.65
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.12,
+    "hmm_state": "sideways",
+    "confidence": 0.295,
     "volatility": "high",
     "vol_percentile": 86.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.25,
+      "direction": "bullish",
+      "strength": 0.21,
       "action": "normal"
     },
     "strong_sectors": [
@@ -590,7 +590,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 20
     },
     "universe_count": 2,
@@ -616,15 +616,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "BEAR",
-    "confidence": 0.65,
-    "sma_ratio": 0.7419,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.7967,
-      "132030": -1.4075
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -676,17 +669,17 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 100.0,
+      "hmm_state": "sideways",
+      "hmm_confidence": 94.9,
       "volatility": "high",
       "vol_percentile": 86.0,
-      "market_confidence": 0.12,
-      "analyzed_at": "2026-06-08 21:06"
+      "market_confidence": 0.295,
+      "analyzed_at": "2026-06-09 10:26"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": 1.34,
-      "sp500_change": 0.13,
+      "direction": "bullish",
+      "nasdaq_change": 0.86,
+      "sp500_change": 0.3,
       "recommended_action": "normal"
     },
     "strong_sectors": [
@@ -741,7 +734,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 20,
       "train_sharpe": 0.8,
       "val_sharpe": 5.14,
@@ -881,24 +874,24 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.8,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 12% · 美 오버나이트 neutral(+1.3%) · 고변동(86.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.7,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 30% · 美 오버나이트 bullish(+0.9%) · 고변동(86.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BEAR",
-      "confidence": 0.12,
-      "direction": "neutral",
-      "nasdaq_change": 1.34,
+      "regime": "BULL",
+      "confidence": 0.295,
+      "direction": "bullish",
+      "nasdaq_change": 0.86,
       "high_vol": true,
       "vol_percentile": 86.0,
       "rapid_level": "NONE"
@@ -908,12 +901,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
+    "gate_reason": "HMM sideways(bull 아님/횡보) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BEAR",
-    "hmm_state": "bear",
-    "hmm_confidence": 1.0,
+    "regime": "BULL",
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.949,
     "universe": [
       {
         "symbol": "122630",
