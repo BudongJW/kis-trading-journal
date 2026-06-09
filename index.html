@@ -91,6 +91,33 @@ title: Dashboard
 </div>
 {% endif %}
 
+<!-- ── AI 판단 프리뷰 (dry-run, 주문 없음) ── -->
+{% assign dr = site.data.dry_run %}
+{% if dr and dr.summary %}
+<div class="today-summary" style="border-left: 4px solid #6c8cff;">
+  <h3>🔎 AI 판단 프리뷰 <span class="badge badge-sideways">dry-run · 주문 없음</span></h3>
+  <div class="summary-grid">
+    <div class="summary-item"><span class="summary-label">레짐</span><span class="summary-value">{{ dr.market.regime }}</span></div>
+    <div class="summary-item"><span class="summary-label">당일 스탠스</span><span class="summary-value">{{ dr.market.day_stance }}</span></div>
+    <div class="summary-item"><span class="summary-label">신규매수</span><span class="summary-value">{% if dr.market.blocks_new_buys %}차단{% else %}허용{% endif %}</span></div>
+    <div class="summary-item"><span class="summary-label">레버리지</span><span class="summary-value">{% if dr.gates.leverage_gate_allowed %}허용{% else %}차단{% endif %}{% if dr.gates.leverage_dry_run %}(모의){% endif %}</span></div>
+  </div>
+  <p class="dim" style="font-size:0.9em; margin-top:8px;"><strong>▶ 판정:</strong> {{ dr.summary.verdict }}</p>
+  <p class="dim" style="font-size:0.85em;">매수예정: {% if dr.summary.would_buy.size > 0 %}{{ dr.summary.would_buy | join: ", " }}{% else %}없음{% endif %} · 매도예정: {% if dr.summary.would_sell.size > 0 %}{{ dr.summary.would_sell | join: ", " }}{% else %}없음{% endif %}</p>
+  {% if dr.entry_candidates %}
+  <table style="margin-top:8px; font-size:0.82em;">
+    <thead><tr><th>종목</th><th>구분</th><th>판단</th><th>돌파</th><th>TA</th><th>ATR%</th><th>사유</th></tr></thead>
+    <tbody>
+    {% for c in dr.entry_candidates %}
+      <tr><td>{{ c.symbol }}</td><td>{{ c.type }}</td><td>{{ c.decision }}</td><td>{% if c.breakout %}O{% else %}X{% endif %}</td><td class="num">{{ c.ta }}</td><td class="num">{{ c.atr_pct }}%</td><td>{{ c.why_skip }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  <p class="dim" style="font-size:0.72em; margin-top:6px;">※ 라이브 주문 없이 봇의 실제 결정 함수로 산출. 세션 직전 자동 갱신 ({{ dr.generated_at }}).</p>
+</div>
+{% endif %}
+
 <!-- ── Status Bar: Killswitch + Reconcile ── -->
 <div class="status-bar">
   {% if p.killswitch.active %}
