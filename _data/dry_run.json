@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-06-09T23:08:22",
+  "mode": "DRY-RUN (읽기 전용, 주문 없음)",
+  "market": {
+    "regime": "CAUTION",
+    "regime_blind": false,
+    "regime_detail": "카나리아 1/2 음전환",
+    "day_stance": "DEFENSIVE",
+    "day_stance_forced": false,
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CAUTION·신뢰도 22% · 美 오버나이트 bearish(-1.5%) · 고변동(86.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "blocks_new_buys": false
+  },
+  "gates": {
+    "leverage_dry_run": true,
+    "leverage_gate_allowed": false,
+    "leverage_gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지"
+  },
+  "account": {
+    "cash": 783401,
+    "holdings_readable": {
+      "214980": 1
+    }
+  },
+  "holdings_risk": [
+    {
+      "symbol": "214980",
+      "qty": 1,
+      "price": 114660,
+      "would_sell": false,
+      "reason": ""
+    }
+  ],
+  "entry_candidates": [
+    {
+      "symbol": "395160",
+      "type": "롱",
+      "decision": "스킵",
+      "breakout": true,
+      "ta": -23.3,
+      "atr_pct": 5.6,
+      "fee_gate_ok": true,
+      "why_skip": "TA부족(-23)"
+    },
+    {
+      "symbol": "098560",
+      "type": "롱",
+      "decision": "평가실패",
+      "why_skip": "오류: 일봉 데이터 비어있음"
+    },
+    {
+      "symbol": "114800",
+      "type": "인버스",
+      "decision": "스킵",
+      "breakout": false,
+      "ta": 33.6,
+      "atr_pct": 4.79,
+      "fee_gate_ok": true,
+      "why_skip": "미돌파"
+    }
+  ],
+  "summary": {
+    "would_buy": [],
+    "would_sell": [],
+    "new_buys_blocked_by_stance": false,
+    "verdict": "진입 조건 미충족 — 현금/방어 유지"
+  }
+}
