@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-10T01:54:58",
+  "generated_at": "2026-06-10T16:46:34",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "BEAR",
     "regime_blind": false,
-    "regime_detail": "카나리아 1/2 음전환 | HMM bear (99%) → BEAR 격상",
+    "regime_detail": "카나리아 1/2 음전환 | HMM bear (100%) → BEAR 격상",
     "day_stance": "DEFENSIVE",
     "day_stance_forced": false,
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 24% · 美 오버나이트 bearish(-1.0%) · 고변동(100.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 29% · 美 오버나이트 bullish(+0.9%) · 고변동(100.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "blocks_new_buys": false
   },
   "gates": {
@@ -17,29 +17,19 @@
   },
   "account": {
     "cash": 783401,
-    "holdings_readable": {
-      "214980": 1
-    }
+    "holdings_readable": "없음/조회실패"
   },
-  "holdings_risk": [
-    {
-      "symbol": "214980",
-      "qty": 1,
-      "price": 114665,
-      "would_sell": false,
-      "reason": ""
-    }
-  ],
+  "holdings_risk": [],
   "entry_candidates": [
     {
       "symbol": "395160",
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -9.6,
-      "atr_pct": 5.47,
+      "ta": -15.1,
+      "atr_pct": 6.02,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-10)"
+      "why_skip": "미돌파 · TA부족(-15)"
     },
     {
       "symbol": "098560",
@@ -53,7 +43,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 36.0,
-      "atr_pct": 4.25,
+      "atr_pct": 4.41,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     }
