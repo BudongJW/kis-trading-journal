@@ -13,3 +13,5 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-10T00:39:53,XLF,Financial Select Sector SPDR (금융),buy,3,5213,15639,0,US 매수: 변동성 돌파 + TA +22
 2026-06-10T04:45:44,XLF,US_XLF,sell,3,5230,15690,0,매도: 미국장 마감 청산
 2026-06-10T15:20:24,214980,급등주,sell,1,114665,114665,0,매도: 장마감청산
+2026-06-11T01:22:21,SCHG,Schwab US Large-Cap Growth (성장),buy,6,3313,19878,0,US 매수: 변동성 돌파 + TA +21
+2026-06-11T04:45:13,SCHG,US_SCHG,sell,6,3296,19776,0,매도: 미국장 마감 청산
