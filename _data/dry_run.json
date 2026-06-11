@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T23:30:10",
+  "generated_at": "2026-06-12T08:34:42",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -16,7 +16,7 @@
     "leverage_gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지"
   },
   "account": {
-    "cash": 897633,
+    "cash": 894568,
     "holdings_readable": "없음/조회실패"
   },
   "holdings_risk": [],
@@ -26,20 +26,20 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -6.1,
-      "atr_pct": 6.24,
+      "ta": -17.7,
+      "atr_pct": 5.93,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-6)"
+      "why_skip": "미돌파 · TA부족(-18)"
     },
     {
       "symbol": "091160",
       "type": "롱",
       "decision": "스킵",
-      "breakout": true,
-      "ta": -3.0,
-      "atr_pct": 5.45,
+      "breakout": false,
+      "ta": -4.2,
+      "atr_pct": 5.17,
       "fee_gate_ok": true,
-      "why_skip": "TA부족(-3)"
+      "why_skip": "미돌파 · TA부족(-4)"
     },
     {
       "symbol": "098560",
@@ -52,18 +52,18 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -10.9,
-      "atr_pct": 5.67,
+      "ta": -9.6,
+      "atr_pct": 5.39,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-11)"
+      "why_skip": "미돌파 · TA부족(-10)"
     },
     {
       "symbol": "114800",
       "type": "인버스",
       "decision": "스킵",
       "breakout": false,
-      "ta": 34.9,
-      "atr_pct": 4.5,
+      "ta": 32.6,
+      "atr_pct": 4.2,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     }
@@ -103,7 +103,10 @@
       "symbol": "PSQ",
       "type": "inverse",
       "decision": "스킵",
-      "why_skip": "재진입쿨다운(2일, churn방지)"
+      "breakout": false,
+      "ta": -1.0,
+      "atr_pct": 1.86,
+      "why_skip": "미돌파 · TA부족(-1)"
     },
     {
       "symbol": "TLT",
