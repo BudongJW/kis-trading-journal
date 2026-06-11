@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-11T07:51:06.150135",
+  "updated_at": "2026-06-11T14:41:43.786462",
   "initial_capital": 500000,
-  "cash": 783401,
+  "cash": 782973,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,7 +17,7 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 898061,
+  "total_value": 897633,
   "total_pnl": -3348,
   "total_pnl_pct": -0.37,
   "realized_pnl": -3348,
@@ -669,30 +669,30 @@
     },
     {
       "date": "2026-06-11",
-      "total_value": 898061,
-      "cash": 783401,
+      "total_value": 897633,
+      "cash": 782973,
       "holdings_value": 0,
       "day_pnl": -201,
       "cumul_pnl": -3348,
       "realized_pnl": -3348,
       "unrealized_pnl": 0,
-      "net_deposit": 401409,
+      "net_deposit": 400981,
       "regime": "up",
       "hmm_state": "bear",
-      "confidence": 0.291,
+      "confidence": 0.141,
       "k_value": 0.7
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bear",
-    "confidence": 0.291,
+    "confidence": 0.141,
     "volatility": "high",
     "vol_percentile": 100.0,
     "overnight_gap": {
-      "direction": "bullish",
-      "strength": 0.17,
-      "action": "normal"
+      "direction": "bearish",
+      "strength": 0.75,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -732,7 +732,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 552.093849,
+    "cash_usd": 551.824566,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -784,14 +784,14 @@
       "hmm_confidence": 99.9,
       "volatility": "high",
       "vol_percentile": 100.0,
-      "market_confidence": 0.291,
+      "market_confidence": 0.141,
       "analyzed_at": "2026-06-10 20:02"
     },
     "overnight": {
-      "direction": "bullish",
-      "nasdaq_change": 0.86,
-      "sp500_change": 0,
-      "recommended_action": "normal"
+      "direction": "bearish",
+      "nasdaq_change": -2.57,
+      "sp500_change": -1.94,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -985,24 +985,24 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.75,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 29% · 美 오버나이트 bullish(+0.9%) · 고변동(100.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BULL·신뢰도 14% · 美 오버나이트 bearish(-2.6%) · 고변동(100.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "BULL",
-      "confidence": 0.291,
-      "direction": "bullish",
-      "nasdaq_change": 0.86,
+      "confidence": 0.141,
+      "direction": "bearish",
+      "nasdaq_change": -2.57,
       "high_vol": true,
       "vol_percentile": 100.0,
       "rapid_level": "NONE"
