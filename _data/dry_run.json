@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T23:27:07",
+  "generated_at": "2026-06-11T23:30:10",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -82,37 +82,28 @@
       "symbol": "SCHG",
       "type": "long",
       "decision": "스킵",
-      "breakout": false,
-      "ta": 15.6,
-      "atr_pct": 1.48,
-      "why_skip": "미돌파"
+      "why_skip": "재진입쿨다운(2일, churn방지)"
     },
     {
       "symbol": "XLF",
       "type": "long",
       "decision": "스킵",
-      "breakout": false,
-      "ta": 12.1,
-      "atr_pct": 1.1,
-      "why_skip": "미돌파 · TA부족(+12)"
+      "why_skip": "재진입쿨다운(2일, churn방지)"
     },
     {
       "symbol": "SH",
       "type": "inverse",
       "decision": "스킵",
       "breakout": false,
-      "ta": -12.8,
+      "ta": -18.4,
       "atr_pct": 1.12,
-      "why_skip": "미돌파 · TA부족(-13)"
+      "why_skip": "미돌파 · TA부족(-18)"
     },
     {
       "symbol": "PSQ",
       "type": "inverse",
       "decision": "스킵",
-      "breakout": false,
-      "ta": -1.0,
-      "atr_pct": 1.86,
-      "why_skip": "미돌파 · TA부족(-1)"
+      "why_skip": "재진입쿨다운(2일, churn방지)"
     },
     {
       "symbol": "TLT",
