@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T02:05:55",
+  "generated_at": "2026-06-11T03:55:10",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -26,10 +26,10 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -8.9,
-      "atr_pct": 6.27,
+      "ta": -6.1,
+      "atr_pct": 6.24,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-9)"
+      "why_skip": "미돌파 · TA부족(-6)"
     },
     {
       "symbol": "098560",
@@ -42,8 +42,8 @@
       "type": "인버스",
       "decision": "스킵",
       "breakout": false,
-      "ta": 30.9,
-      "atr_pct": 4.44,
+      "ta": 34.9,
+      "atr_pct": 4.47,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     }
