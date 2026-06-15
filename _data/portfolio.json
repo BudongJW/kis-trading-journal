@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T07:24:02.508914",
+  "updated_at": "2026-06-15T14:40:47.059204",
   "initial_capital": 500000,
   "cash": 894568,
   "holdings": [],
@@ -375,7 +375,7 @@
   ],
   "rejected_orders": [],
   "today_summary": {
-    "date": "2026-06-13",
+    "date": "2026-06-15",
     "buys": 0,
     "sells": 0,
     "completed_round_trips": 0,
@@ -733,14 +733,29 @@
       "hmm_state": "bear",
       "confidence": 0.741,
       "k_value": 0.7
+    },
+    {
+      "date": "2026-06-15",
+      "total_value": 894568,
+      "cash": 894568,
+      "holdings_value": 0,
+      "day_pnl": 0,
+      "cumul_pnl": -3192,
+      "realized_pnl": -3192,
+      "unrealized_pnl": 0,
+      "net_deposit": 397760,
+      "regime": "up",
+      "hmm_state": "unknown",
+      "confidence": 0.741,
+      "k_value": 0.65
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
+    "hmm_state": "unknown",
     "confidence": 0.741,
     "volatility": "high",
-    "vol_percentile": 100.0,
+    "vol_percentile": 92.0,
     "overnight_gap": {
       "direction": "bullish",
       "strength": 0.51,
@@ -762,8 +777,8 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
-      "trend_ma": 20
+      "k": 0.65,
+      "trend_ma": 15
     },
     "universe_count": 10,
     "universe": [
@@ -820,12 +835,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.8358,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.6319,
+      "132030": -1.4583
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 551.53964,
+    "cash_usd": 553.9304,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -869,16 +891,197 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "14:39:27",
+      "symbol": "395160",
+      "name": "KODEX 미국나스닥100TR",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 52,490 < 목표 55,170)",
+      "price": 52490,
+      "ta_total": -11.5
+    },
+    {
+      "time": "14:39:25",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,165 < 목표 19,025)",
+      "price": 18165,
+      "ta_total": -16.4
+    },
+    {
+      "time": "14:39:23",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 135,955 < 목표 140,285)",
+      "price": 135955,
+      "ta_total": -13.3
+    },
+    {
+      "time": "14:39:21",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 7,785 < 목표 8,565)",
+      "price": 7785,
+      "ta_total": -21.3
+    },
+    {
+      "time": "14:39:18",
+      "symbol": "102110",
+      "name": "KODEX 금융",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 136,205 < 목표 140,921)",
+      "price": 136205,
+      "ta_total": -13.9
+    },
+    {
+      "time": "14:39:16",
+      "symbol": "091180",
+      "name": "KODEX 자동차",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 38,440 < 목표 39,006)",
+      "price": 38440,
+      "ta_total": -12.2
+    },
+    {
+      "time": "14:39:14",
+      "symbol": "244580",
+      "name": "KODEX 바이오",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 9,745 < 목표 10,284)",
+      "price": 9745,
+      "ta_total": -8.3
+    },
+    {
+      "time": "14:39:12",
+      "symbol": "305720",
+      "name": "KODEX 2차전지",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,030 < 목표 18,455)",
+      "price": 18030,
+      "ta_total": -13.8
+    },
+    {
+      "time": "14:39:10",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 171,880 < 목표 180,869)",
+      "price": 171880,
+      "ta_total": -12.7
+    },
+    {
+      "time": "14:34:26",
+      "symbol": "395160",
+      "name": "KODEX 미국나스닥100TR",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 52,770 < 목표 55,170)",
+      "price": 52770,
+      "ta_total": -11.8
+    },
+    {
+      "time": "14:34:24",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,250 < 목표 19,025)",
+      "price": 18250,
+      "ta_total": -20.4
+    },
+    {
+      "time": "14:34:22",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 136,640 < 목표 140,285)",
+      "price": 136640,
+      "ta_total": -13.6
+    },
+    {
+      "time": "14:34:20",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 7,820 < 목표 8,565)",
+      "price": 7820,
+      "ta_total": -21.3
+    },
+    {
+      "time": "14:34:18",
+      "symbol": "102110",
+      "name": "KODEX 금융",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 136,825 < 목표 140,921)",
+      "price": 136825,
+      "ta_total": -14.2
+    },
+    {
+      "time": "14:34:16",
+      "symbol": "091180",
+      "name": "KODEX 자동차",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 38,595 < 목표 39,006)",
+      "price": 38595,
+      "ta_total": -12.2
+    },
+    {
+      "time": "14:34:14",
+      "symbol": "244580",
+      "name": "KODEX 바이오",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 9,755 < 목표 10,284)",
+      "price": 9755,
+      "ta_total": -8.4
+    },
+    {
+      "time": "14:34:12",
+      "symbol": "305720",
+      "name": "KODEX 2차전지",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,065 < 목표 18,455)",
+      "price": 18065,
+      "ta_total": -13.8
+    },
+    {
+      "time": "14:34:10",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 172,580 < 목표 180,869)",
+      "price": 172580,
+      "ta_total": -19.4
+    },
+    {
+      "time": "14:29:29",
+      "symbol": "395160",
+      "name": "KODEX 미국나스닥100TR",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 52,855 < 목표 55,170)",
+      "price": 52855,
+      "ta_total": -11.9
+    },
+    {
+      "time": "14:29:27",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,255 < 목표 19,025)",
+      "price": 18255,
+      "ta_total": -20.4
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 87.6,
+      "hmm_state": null,
+      "hmm_confidence": 0,
       "volatility": "high",
-      "vol_percentile": 100.0,
+      "vol_percentile": 92.0,
       "market_confidence": 0.741,
-      "analyzed_at": "2026-06-12 20:07"
+      "analyzed_at": "2026-06-14"
     },
     "overnight": {
       "direction": "bullish",
@@ -947,11 +1150,11 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
-      "trend_ma": 20,
-      "train_sharpe": 0.8,
-      "val_sharpe": 5.14,
-      "optimized_at": "2026-06-07"
+      "k": 0.65,
+      "trend_ma": 15,
+      "train_sharpe": 1.26,
+      "val_sharpe": 3.28,
+      "optimized_at": "2026-06-14"
     },
     "ta_weights": {
       "rsi": 0.17,
@@ -1087,26 +1290,26 @@
     }
   },
   "day_plan": {
-    "stance": "NEUTRAL",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "NEUTRAL",
-    "stance_kr": "중립",
-    "budget_pct": 0.7,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
     "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.85,
+    "size_mult": 0.6,
     "k_effective": 0.7,
-    "allow_summary": "롱",
-    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 74% · 美 오버나이트 bullish(+2.5%) · 고변동(100.0%ile) · 예산 70%·최대 2종목·허용 롱",
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 74% · 美 오버나이트 bullish(+2.5%) · 고변동(92.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CAUTION",
       "confidence": 0.741,
       "direction": "bullish",
       "nasdaq_change": 2.54,
       "high_vol": true,
-      "vol_percentile": 100.0,
+      "vol_percentile": 92.0,
       "rapid_level": "NONE"
     }
   },
@@ -1114,12 +1317,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.876,
+    "regime": "CAUTION",
+    "hmm_state": "unknown",
+    "hmm_confidence": 0.5,
     "universe": [
       {
         "symbol": "122630",
