@@ -17,3 +17,5 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-11T04:45:13,SCHG,US_SCHG,sell,6,3296,19776,0,매도: 미국장 마감 청산
 2026-06-12T02:31:23,SCHG,Schwab US Large-Cap Growth (성장),buy,6,3316,19896,0,US 매수: 변동성 돌파 + TA +20
 2026-06-12T04:45:21,SCHG,US_SCHG,sell,6,3342,20052,0,매도: 미국장 마감 청산
+2026-06-16T02:31:49,SCHG,Schwab US Large-Cap Growth (성장),buy,6,3426,20556,0,US 매수: 변동성 돌파 + TA +4
+2026-06-16T04:45:43,SCHG,US_SCHG,sell,6,3420,20520,0,매도: 미국장 마감 청산
