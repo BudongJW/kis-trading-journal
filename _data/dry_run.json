@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T09:30:06",
+  "generated_at": "2026-06-15T09:34:14",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -26,18 +26,18 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -12.0,
-      "atr_pct": 5.63,
+      "ta": -6.1,
+      "atr_pct": 5.62,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-12)"
+      "why_skip": "미돌파 · TA부족(-6)"
     },
     {
       "symbol": "091160",
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -20.0,
-      "atr_pct": 4.74,
+      "ta": -20.1,
+      "atr_pct": 4.73,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-20)"
     },
@@ -47,7 +47,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -13.8,
-      "atr_pct": 5.3,
+      "atr_pct": 5.29,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-14)"
     },
@@ -57,7 +57,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -2.7,
-      "atr_pct": 5.78,
+      "atr_pct": 5.8,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-3)"
     },
@@ -67,7 +67,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -12.2,
-      "atr_pct": 5.14,
+      "atr_pct": 5.13,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-12)"
     },
@@ -76,7 +76,7 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -14.6,
+      "ta": -14.7,
       "atr_pct": 4.1,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-15)"
@@ -93,7 +93,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -21.3,
-      "atr_pct": 5.07,
+      "atr_pct": 5.08,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-21)"
     },
@@ -102,7 +102,7 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -14.1,
+      "ta": -14.2,
       "atr_pct": 4.05,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-14)"
@@ -113,7 +113,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 14.8,
-      "atr_pct": 5.25,
+      "atr_pct": 5.24,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -123,7 +123,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 30.6,
-      "atr_pct": 4.74,
+      "atr_pct": 4.76,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     }
