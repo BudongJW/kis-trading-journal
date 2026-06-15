@@ -1,15 +1,1 @@
-{
-  "091180": {
-    "buy_price": 39135,
-    "buy_time": "2026-06-15T10:53:49.286179",
-    "buy_date": "2026-06-15",
-    "qty": 0,
-    "peak_price": 39135,
-    "hold_days": 0,
-    "max_hold_days": 15,
-    "atr_at_buy": 2386.61,
-    "asset_type": "long",
-    "pyramid_count": 0,
-    "initial_risk": 4773.21
-  }
-}
+{}
