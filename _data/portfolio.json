@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T15:30:41.547265",
+  "updated_at": "2026-06-16T15:32:22.065424",
   "initial_capital": 500000,
   "cash": 894568,
   "holdings": [
@@ -896,25 +896,26 @@
       "unrealized_pnl": -55,
       "net_deposit": 397766,
       "regime": "up",
-      "hmm_state": "bull",
-      "confidence": 0.73,
-      "k_value": 0.46
+      "hmm_state": "bear",
+      "confidence": 0.8,
+      "k_value": 0.64
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bull",
-    "confidence": 0.73,
+    "hmm_state": "bear",
+    "confidence": 0.8,
     "volatility": "high",
-    "vol_percentile": 100.0,
+    "vol_percentile": 96.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.74,
+      "strength": 0.83,
       "action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
       "2차전지",
+      "바이오",
       "자동차",
       "금융",
       "IT",
@@ -927,10 +928,10 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.46,
+      "k": 0.64,
       "trend_ma": 15
     },
-    "universe_count": 9,
+    "universe_count": 10,
     "universe": [
       {
         "symbol": "395160",
@@ -943,6 +944,10 @@
       {
         "symbol": "305720",
         "name": "KODEX 2차전지"
+      },
+      {
+        "symbol": "244580",
+        "name": "KODEX 바이오"
       },
       {
         "symbol": "091180",
@@ -981,19 +986,12 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.8579,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 1.5082,
-      "132030": -1.4327
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 545.46398,
+    "cash_usd": 0.0,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1037,98 +1035,27 @@
       }
     ]
   },
-  "decisions": [
-    {
-      "time": "10:58:06",
-      "symbol": "229200",
-      "name": "KODEX KOSDAQ150",
-      "action": "buy",
-      "reason": "융합 STRONG_BUY (67%, TA=+28)",
-      "price": 17820,
-      "fusion_prob": 0.673,
-      "fusion_signal": "STRONG_BUY",
-      "ta_total": 28.1,
-      "lgbm_prob": 0.6653328718528264,
-      "breakout": false,
-      "sizing_ratio": 1.1,
-      "atr_at_buy": 1014.47,
-      "qty": 1
-    },
-    {
-      "time": "10:58:04",
-      "symbol": "069500",
-      "name": "KODEX KOSPI200",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 138,620 < 목표 140,544)",
-      "price": 138620,
-      "ta_total": -14.7
-    },
-    {
-      "time": "10:58:02",
-      "symbol": "117700",
-      "name": "KODEX 철강",
-      "action": "skip",
-      "reason": "호가 약세 -0.45",
-      "price": 8205,
-      "ta_total": 27.4,
-      "lgbm_prob": 0.6734019827709716
-    },
-    {
-      "time": "10:57:59",
-      "symbol": "102110",
-      "name": "KODEX 금융",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 138,570 < 목표 140,669)",
-      "price": 138570,
-      "ta_total": -14.9
-    },
-    {
-      "time": "10:57:57",
-      "symbol": "091180",
-      "name": "KODEX 자동차",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 38,345 < 목표 39,592)",
-      "price": 38345,
-      "ta_total": -23.8
-    },
-    {
-      "time": "10:57:55",
-      "symbol": "305720",
-      "name": "KODEX 2차전지",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 17,855 < 목표 18,485)",
-      "price": 17855,
-      "ta_total": -12.0
-    },
-    {
-      "time": "10:57:54",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 172,135 < 목표 177,423)",
-      "price": 172135,
-      "ta_total": -13.8
-    }
-  ],
+  "decisions": [],
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bull",
-      "hmm_confidence": 98.6,
+      "hmm_state": "bear",
+      "hmm_confidence": 86.7,
       "volatility": "high",
-      "vol_percentile": 100.0,
-      "market_confidence": 0.73,
-      "analyzed_at": "2026-06-15 22:23"
+      "vol_percentile": 96.0,
+      "market_confidence": 0.8,
+      "analyzed_at": "2026-06-16 11:04"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 2.9,
-      "sp500_change": 1.57,
+      "nasdaq_change": 3.07,
+      "sp500_change": 1.65,
       "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
       "2차전지",
+      "바이오",
       "자동차",
       "금융",
       "IT",
@@ -1186,7 +1113,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.46,
+      "k": 0.64,
       "trend_ma": 15,
       "train_sharpe": 1.26,
       "val_sharpe": 3.28,
@@ -1326,26 +1253,26 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "NEUTRAL",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
+    "auto_stance": "NEUTRAL",
+    "stance_kr": "중립",
+    "budget_pct": 0.7,
     "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": true,
+    "allow_inverse": false,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.51,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 73% · 美 오버나이트 bullish(+2.9%) · 고변동(100.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.85,
+    "k_effective": 0.64,
+    "allow_summary": "롱",
+    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 80% · 美 오버나이트 bullish(+3.1%) · 고변동(96.0%ile) · 예산 70%·최대 2종목·허용 롱",
     "signals": {
-      "regime": "CAUTION",
-      "confidence": 0.73,
+      "regime": "BULL",
+      "confidence": 0.8,
       "direction": "bullish",
-      "nasdaq_change": 2.9,
+      "nasdaq_change": 3.07,
       "high_vol": true,
-      "vol_percentile": 100.0,
+      "vol_percentile": 96.0,
       "rapid_level": "NONE"
     }
   },
@@ -1353,12 +1280,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
-    "hmm_state": "bull",
-    "hmm_confidence": 0.986,
+    "regime": "BULL",
+    "hmm_state": "bear",
+    "hmm_confidence": 0.867,
     "universe": [
       {
         "symbol": "122630",
