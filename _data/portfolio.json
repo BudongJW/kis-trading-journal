@@ -1,10 +1,25 @@
 {
-  "updated_at": "2026-06-16T10:55:51.857477",
+  "updated_at": "2026-06-16T15:30:41.547265",
   "initial_capital": 500000,
   "cash": 894568,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "qty": 1,
+      "current_price": 17760,
+      "value": 17760,
+      "buy_price": 17815,
+      "pnl": -55,
+      "pnl_pct": -0.3,
+      "atr_at_buy": 0.0,
+      "hold_days": 0,
+      "peak_price": 17905,
+      "stop_price": 17276
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,13 +31,13 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 895163,
-  "total_pnl": -2603,
-  "total_pnl_pct": -0.29,
+  "holdings_value": 17760,
+  "total_value": 895108,
+  "total_pnl": -2658,
+  "total_pnl_pct": -0.3,
   "realized_pnl": -2603,
-  "unrealized_pnl": 0,
-  "total_trades": 23,
+  "unrealized_pnl": -55,
+  "total_trades": 24,
   "completed_trades": 12,
   "winning_trades": 7,
   "losing_trades": 5,
@@ -303,6 +318,18 @@
       "price": 8505,
       "amount": 8505,
       "reason": "매도: 추적 손절 (고점 8,640원에서 -1.6% 하락, 수익 +4.5%)"
+    },
+    {
+      "timestamp": "2026-06-16T10:58:23",
+      "date": "2026-06-16",
+      "time": "10:58:23",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "side": "buy",
+      "qty": 1,
+      "price": 17810,
+      "amount": 17810,
+      "reason": "매수: 융합 STRONG_BUY (확률 67%, TA +28, 돌파 X)"
     }
   ],
   "realized": [
@@ -478,16 +505,16 @@
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-16",
-    "buys": 2,
+    "buys": 3,
     "sells": 3,
     "completed_round_trips": 3,
-    "buy_notional": 36836,
+    "buy_notional": 54646,
     "sell_notional": 37425,
-    "fees": 106,
+    "fees": 109,
     "taxes": 39,
-    "total_cost": 145,
+    "total_cost": 148,
     "realized_pnl_gross": 589,
-    "realized_pnl_net": 444,
+    "realized_pnl_net": 441,
     "best_trade": {
       "symbol": "117700",
       "name": "ETF",
@@ -502,11 +529,11 @@
     }
   },
   "costs": {
-    "total_fees": 645,
+    "total_fees": 648,
     "total_taxes": 1531,
-    "total_cost": 2176,
+    "total_cost": 2179,
     "realized_pnl_gross": -2603,
-    "realized_pnl_net": -4779,
+    "realized_pnl_net": -4782,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -515,20 +542,9 @@
     "profit_factor": 0.56,
     "avg_win_pct": 1.54,
     "avg_loss_pct": -3.83,
-    "total_return_pct": -0.52
+    "total_return_pct": -0.53
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 1.49,
-    "median_r": 1.49,
-    "win_rate": 1.0,
-    "avg_win_r": 1.49,
-    "avg_loss_r": 0,
-    "expectancy_r": 1.49,
-    "best_r": 1.49,
-    "worst_r": 1.49,
-    "last_updated": "2026-06-16 09:45"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -871,30 +887,30 @@
     },
     {
       "date": "2026-06-16",
-      "total_value": 895163,
+      "total_value": 895108,
       "cash": 894568,
-      "holdings_value": 0,
-      "day_pnl": 444,
-      "cumul_pnl": -2603,
+      "holdings_value": 17760,
+      "day_pnl": 386,
+      "cumul_pnl": -2658,
       "realized_pnl": -2603,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": -55,
       "net_deposit": 397766,
       "regime": "up",
       "hmm_state": "bull",
-      "confidence": 0.63,
+      "confidence": 0.73,
       "k_value": 0.46
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bull",
-    "confidence": 0.63,
+    "confidence": 0.73,
     "volatility": "high",
     "vol_percentile": 100.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.1,
-      "action": "normal"
+      "direction": "bullish",
+      "strength": 0.74,
+      "action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
@@ -968,16 +984,16 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.8749,
+    "sma_ratio": 0.8579,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.5171,
-      "132030": -1.4183
+      "195930": 1.5082,
+      "132030": -1.4327
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 556.611364,
+    "cash_usd": 545.46398,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1023,57 +1039,75 @@
   },
   "decisions": [
     {
-      "time": "09:10:57",
-      "symbol": "117700",
-      "name": "KODEX 철강",
+      "time": "10:58:06",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
       "action": "buy",
-      "reason": "융합 STRONG_BUY (73%, TA=+23)",
-      "price": 8095,
-      "fusion_prob": 0.73,
+      "reason": "융합 STRONG_BUY (67%, TA=+28)",
+      "price": 17820,
+      "fusion_prob": 0.673,
       "fusion_signal": "STRONG_BUY",
-      "ta_total": 23.4,
-      "lgbm_prob": 0.662827946923257,
-      "breakout": true,
-      "sizing_ratio": 1.0,
-      "atr_at_buy": 509.89,
-      "qty": 2
+      "ta_total": 28.1,
+      "lgbm_prob": 0.6653328718528264,
+      "breakout": false,
+      "sizing_ratio": 1.1,
+      "atr_at_buy": 1014.47,
+      "qty": 1
     },
     {
-      "time": "09:10:54",
+      "time": "10:58:04",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 138,620 < 목표 140,544)",
+      "price": 138620,
+      "ta_total": -14.7
+    },
+    {
+      "time": "10:58:02",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "action": "skip",
+      "reason": "호가 약세 -0.45",
+      "price": 8205,
+      "ta_total": 27.4,
+      "lgbm_prob": 0.6734019827709716
+    },
+    {
+      "time": "10:57:59",
       "symbol": "102110",
       "name": "KODEX 금융",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 140,010 < 목표 140,669)",
-      "price": 140010,
-      "ta_total": -15.4
+      "reason": "신호 없음: 미돌파 (현재 138,570 < 목표 140,669)",
+      "price": 138570,
+      "ta_total": -14.9
     },
     {
-      "time": "09:10:52",
+      "time": "10:57:57",
       "symbol": "091180",
       "name": "KODEX 자동차",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 38,645 < 목표 39,592)",
-      "price": 38645,
+      "reason": "신호 없음: 미돌파 (현재 38,345 < 목표 39,592)",
+      "price": 38345,
       "ta_total": -23.8
     },
     {
-      "time": "09:10:50",
+      "time": "10:57:55",
       "symbol": "305720",
       "name": "KODEX 2차전지",
       "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,065 < 목표 18,485)",
-      "price": 18065,
+      "reason": "신호 없음: 미돌파 (현재 17,855 < 목표 18,485)",
+      "price": 17855,
       "ta_total": -12.0
     },
     {
-      "time": "09:10:48",
+      "time": "10:57:54",
       "symbol": "091160",
       "name": "KODEX 반도체",
       "action": "skip",
-      "reason": "호가 약세 -0.36",
-      "price": 175075,
-      "ta_total": 22.8,
-      "lgbm_prob": 0.6734019827709716
+      "reason": "신호 없음: 미돌파 (현재 172,135 < 목표 177,423)",
+      "price": 172135,
+      "ta_total": -13.8
     }
   ],
   "learning": {
@@ -1083,14 +1117,14 @@
       "hmm_confidence": 98.6,
       "volatility": "high",
       "vol_percentile": 100.0,
-      "market_confidence": 0.63,
+      "market_confidence": 0.73,
       "analyzed_at": "2026-06-15 22:23"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": 0.31,
-      "sp500_change": 0.5,
-      "recommended_action": "normal"
+      "direction": "bullish",
+      "nasdaq_change": 2.9,
+      "sp500_change": 1.57,
+      "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
@@ -1204,10 +1238,10 @@
     "game": {
       "level": 4,
       "title": "수습 분석가",
-      "xp": 4141,
-      "xp_in_level": 1525,
+      "xp": 4191,
+      "xp_in_level": 1575,
       "xp_for_next": 1646,
-      "progress_pct": 92.6,
+      "progress_pct": 95.7,
       "achievements": [
         {
           "icon": "🎯",
@@ -1276,7 +1310,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 23,
+          "value": 24,
           "suffix": "건",
           "bar": null
         },
@@ -1304,12 +1338,12 @@
     "size_mult": 0.6,
     "k_effective": 0.51,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 63% · 美 오버나이트 neutral(+0.3%) · 고변동(100.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 73% · 美 오버나이트 bullish(+2.9%) · 고변동(100.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.63,
-      "direction": "neutral",
-      "nasdaq_change": 0.31,
+      "confidence": 0.73,
+      "direction": "bullish",
+      "nasdaq_change": 2.9,
       "high_vol": true,
       "vol_percentile": 100.0,
       "rapid_level": "NONE"

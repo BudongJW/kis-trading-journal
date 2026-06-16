@@ -1,1 +1,15 @@
-{}
+{
+  "229200": {
+    "buy_price": 17810,
+    "buy_time": "2026-06-16T10:58:23.411625",
+    "buy_date": "2026-06-16",
+    "qty": 1,
+    "peak_price": 17905,
+    "hold_days": 0,
+    "max_hold_days": 15,
+    "atr_at_buy": 0.0,
+    "asset_type": "long",
+    "pyramid_count": 0,
+    "initial_risk": 534.3
+  }
+}
