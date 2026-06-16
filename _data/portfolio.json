@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T15:32:22.065424",
+  "updated_at": "2026-06-16T18:10:19.236998",
   "initial_capital": 500000,
   "cash": 894568,
   "holdings": [
@@ -13,9 +13,9 @@
       "pnl": -55,
       "pnl_pct": -0.3,
       "atr_at_buy": 0.0,
-      "hold_days": 0,
-      "peak_price": 17905,
-      "stop_price": 17276
+      "hold_days": 1,
+      "peak_price": 17815,
+      "stop_price": 17281
     }
   ],
   "reconcile": {
@@ -991,7 +991,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 545.46398,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
