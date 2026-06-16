@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T08:02:17.874762",
+  "updated_at": "2026-06-16T10:55:51.857477",
   "initial_capital": 500000,
   "cash": 894568,
   "holdings": [],
@@ -17,16 +17,16 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 894568,
-  "total_pnl": -3228,
-  "total_pnl_pct": -0.36,
-  "realized_pnl": -3228,
+  "total_value": 895163,
+  "total_pnl": -2603,
+  "total_pnl_pct": -0.29,
+  "realized_pnl": -2603,
   "unrealized_pnl": 0,
-  "total_trades": 20,
-  "completed_trades": 10,
-  "winning_trades": 5,
+  "total_trades": 23,
+  "completed_trades": 12,
+  "winning_trades": 7,
   "losing_trades": 5,
-  "win_rate": 50.0,
+  "win_rate": 58.3,
   "trades": [
     {
       "timestamp": "2026-06-02T09:53:39",
@@ -267,6 +267,42 @@
       "price": 3420,
       "amount": 20520,
       "reason": "매도: 미국장 마감 청산"
+    },
+    {
+      "timestamp": "2026-06-16T09:11:05",
+      "date": "2026-06-16",
+      "time": "09:11:05",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "side": "buy",
+      "qty": 2,
+      "price": 8140,
+      "amount": 16280,
+      "reason": "매수: 융합 STRONG_BUY (확률 73%, TA +23, 돌파 O)"
+    },
+    {
+      "timestamp": "2026-06-16T09:31:05",
+      "date": "2026-06-16",
+      "time": "09:31:05",
+      "symbol": "117700",
+      "name": "ETF",
+      "side": "sell",
+      "qty": 1,
+      "price": 8400,
+      "amount": 8400,
+      "reason": "분할매도: [분할] 1차 익절 (+3.2% ≥ 3%, 보유분의 50% 매도)"
+    },
+    {
+      "timestamp": "2026-06-16T09:45:05",
+      "date": "2026-06-16",
+      "time": "09:45:05",
+      "symbol": "117700",
+      "name": "ETF",
+      "side": "sell",
+      "qty": 1,
+      "price": 8505,
+      "amount": 8505,
+      "reason": "매도: 추적 손절 (고점 8,640원에서 -1.6% 하락, 수익 +4.5%)"
     }
   ],
   "realized": [
@@ -409,26 +445,54 @@
       "pnl": -36,
       "pnl_pct": -0.18,
       "hold_days": 0
+    },
+    {
+      "symbol": "117700",
+      "name": "ETF",
+      "buy_date": "2026-06-16",
+      "buy_time": "09:11:05",
+      "buy_price": 8140,
+      "sell_date": "2026-06-16",
+      "sell_time": "09:31:05",
+      "sell_price": 8400,
+      "qty": 1,
+      "pnl": 260,
+      "pnl_pct": 3.19,
+      "hold_days": 0
+    },
+    {
+      "symbol": "117700",
+      "name": "ETF",
+      "buy_date": "2026-06-16",
+      "buy_time": "09:11:05",
+      "buy_price": 8140,
+      "sell_date": "2026-06-16",
+      "sell_time": "09:45:05",
+      "sell_price": 8505,
+      "qty": 1,
+      "pnl": 365,
+      "pnl_pct": 4.48,
+      "hold_days": 0
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-16",
-    "buys": 1,
-    "sells": 1,
-    "completed_round_trips": 1,
-    "buy_notional": 20556,
-    "sell_notional": 20520,
-    "fees": 102,
-    "taxes": 0,
-    "total_cost": 102,
-    "realized_pnl_gross": -36,
-    "realized_pnl_net": -138,
+    "buys": 2,
+    "sells": 3,
+    "completed_round_trips": 3,
+    "buy_notional": 36836,
+    "sell_notional": 37425,
+    "fees": 106,
+    "taxes": 39,
+    "total_cost": 145,
+    "realized_pnl_gross": 589,
+    "realized_pnl_net": 444,
     "best_trade": {
-      "symbol": "SCHG",
-      "name": "US_SCHG",
-      "pnl": -36,
-      "pnl_pct": -0.18
+      "symbol": "117700",
+      "name": "ETF",
+      "pnl": 365,
+      "pnl_pct": 4.48
     },
     "worst_trade": {
       "symbol": "SCHG",
@@ -438,22 +502,33 @@
     }
   },
   "costs": {
-    "total_fees": 641,
-    "total_taxes": 1492,
-    "total_cost": 2133,
-    "realized_pnl_gross": -3228,
-    "realized_pnl_net": -5361,
+    "total_fees": 645,
+    "total_taxes": 1531,
+    "total_cost": 2176,
+    "realized_pnl_gross": -2603,
+    "realized_pnl_net": -4779,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
     "sharpe_ratio": -0.01,
     "max_drawdown_pct": -100.0,
-    "profit_factor": 0.46,
-    "avg_win_pct": 0.63,
+    "profit_factor": 0.56,
+    "avg_win_pct": 1.54,
     "avg_loss_pct": -3.83,
-    "total_return_pct": -0.65
+    "total_return_pct": -0.52
   },
-  "r_summary": {},
+  "r_summary": {
+    "total_trades": 1,
+    "avg_r": 1.49,
+    "median_r": 1.49,
+    "win_rate": 1.0,
+    "avg_win_r": 1.49,
+    "avg_loss_r": 0,
+    "expectancy_r": 1.49,
+    "best_r": 1.49,
+    "worst_r": 1.49,
+    "last_updated": "2026-06-16 09:45"
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -796,14 +871,14 @@
     },
     {
       "date": "2026-06-16",
-      "total_value": 894568,
+      "total_value": 895163,
       "cash": 894568,
       "holdings_value": 0,
-      "day_pnl": -138,
-      "cumul_pnl": -3228,
-      "realized_pnl": -3228,
+      "day_pnl": 444,
+      "cumul_pnl": -2603,
+      "realized_pnl": -2603,
       "unrealized_pnl": 0,
-      "net_deposit": 397796,
+      "net_deposit": 397766,
       "regime": "up",
       "hmm_state": "bull",
       "confidence": 0.63,
@@ -890,12 +965,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.8749,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.5171,
+      "132030": -1.4183
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 551.344107,
+    "cash_usd": 556.611364,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -939,7 +1021,61 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "09:10:57",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "action": "buy",
+      "reason": "융합 STRONG_BUY (73%, TA=+23)",
+      "price": 8095,
+      "fusion_prob": 0.73,
+      "fusion_signal": "STRONG_BUY",
+      "ta_total": 23.4,
+      "lgbm_prob": 0.662827946923257,
+      "breakout": true,
+      "sizing_ratio": 1.0,
+      "atr_at_buy": 509.89,
+      "qty": 2
+    },
+    {
+      "time": "09:10:54",
+      "symbol": "102110",
+      "name": "KODEX 금융",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 140,010 < 목표 140,669)",
+      "price": 140010,
+      "ta_total": -15.4
+    },
+    {
+      "time": "09:10:52",
+      "symbol": "091180",
+      "name": "KODEX 자동차",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 38,645 < 목표 39,592)",
+      "price": 38645,
+      "ta_total": -23.8
+    },
+    {
+      "time": "09:10:50",
+      "symbol": "305720",
+      "name": "KODEX 2차전지",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,065 < 목표 18,485)",
+      "price": 18065,
+      "ta_total": -12.0
+    },
+    {
+      "time": "09:10:48",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "호가 약세 -0.36",
+      "price": 175075,
+      "ta_total": 22.8,
+      "lgbm_prob": 0.6734019827709716
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
@@ -1068,10 +1204,10 @@
     "game": {
       "level": 4,
       "title": "수습 분석가",
-      "xp": 3591,
-      "xp_in_level": 975,
+      "xp": 4141,
+      "xp_in_level": 1525,
       "xp_for_next": 1646,
-      "progress_pct": 59.2,
+      "progress_pct": 92.6,
       "achievements": [
         {
           "icon": "🎯",
@@ -1133,14 +1269,14 @@
         {
           "label": "승률",
           "icon": "📈",
-          "value": 50,
+          "value": 58,
           "suffix": "%",
-          "bar": 50
+          "bar": 58
         },
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 20,
+          "value": 23,
           "suffix": "건",
           "bar": null
         },
@@ -1156,21 +1292,21 @@
     }
   },
   "day_plan": {
-    "stance": "NEUTRAL",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "NEUTRAL",
-    "stance_kr": "중립",
-    "budget_pct": 0.7,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
     "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.85,
-    "k_effective": 0.46,
-    "allow_summary": "롱",
-    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 63% · 美 오버나이트 neutral(+0.3%) · 고변동(100.0%ile) · 예산 70%·최대 2종목·허용 롱",
+    "size_mult": 0.6,
+    "k_effective": 0.51,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 63% · 美 오버나이트 neutral(+0.3%) · 고변동(100.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CAUTION",
       "confidence": 0.63,
       "direction": "neutral",
       "nasdaq_change": 0.31,
@@ -1182,11 +1318,11 @@
   "leverage": {
     "enabled": true,
     "dry_run": true,
-    "gate_allowed": true,
-    "gate_reason": "강한 상승추세 확인(BULL+bull+확신+급락無) → 레버리지 진입 허용",
+    "gate_allowed": false,
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CAUTION",
     "hmm_state": "bull",
     "hmm_confidence": 0.986,
     "universe": [
