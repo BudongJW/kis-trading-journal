@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T10:40:56",
+  "generated_at": "2026-06-16T10:45:36",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -26,18 +26,18 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -20.5,
-      "atr_pct": 5.66,
+      "ta": -17.3,
+      "atr_pct": 5.67,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-20)"
+      "why_skip": "미돌파 · TA부족(-17)"
     },
     {
       "symbol": "091160",
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -13.8,
-      "atr_pct": 5.0,
+      "ta": -13.6,
+      "atr_pct": 5.01,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-14)"
     },
@@ -67,7 +67,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -14.9,
-      "atr_pct": 4.16,
+      "atr_pct": 4.17,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-15)"
     },
@@ -83,7 +83,7 @@
       "decision": "진입가능",
       "breakout": true,
       "ta": 27.4,
-      "atr_pct": 5.29,
+      "atr_pct": 5.3,
       "fee_gate_ok": true,
       "why_skip": "-"
     },
@@ -120,7 +120,7 @@
   ],
   "gap_recovery": {
     "enabled_live": true,
-    "now_kst": "10:41",
+    "now_kst": "10:46",
     "window": "09:00~09:20",
     "candidates": [
       {
@@ -128,7 +128,7 @@
         "name": "KODEX 미국나스닥100TR",
         "decision": "스킵",
         "gap_open_pct": 2.39,
-        "intraday_pct": -0.88,
+        "intraday_pct": -0.96,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -137,7 +137,7 @@
         "name": "KODEX 반도체",
         "decision": "스킵",
         "gap_open_pct": 1.38,
-        "intraday_pct": -1.9,
+        "intraday_pct": -2.03,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -146,7 +146,7 @@
         "name": "KODEX 2차전지",
         "decision": "스킵",
         "gap_open_pct": 0.03,
-        "intraday_pct": -1.95,
+        "intraday_pct": -2.05,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -155,7 +155,7 @@
         "name": "KODEX 자동차",
         "decision": "스킵",
         "gap_open_pct": 0.96,
-        "intraday_pct": -1.79,
+        "intraday_pct": -1.8,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -164,7 +164,7 @@
         "name": "KODEX 금융",
         "decision": "스킵",
         "gap_open_pct": 2.45,
-        "intraday_pct": -0.78,
+        "intraday_pct": -0.83,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -182,7 +182,7 @@
         "name": "KODEX 철강",
         "decision": "스킵",
         "gap_open_pct": 0.06,
-        "intraday_pct": 4.9,
+        "intraday_pct": 4.96,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -191,7 +191,7 @@
         "name": "KODEX KOSPI200",
         "decision": "스킵",
         "gap_open_pct": 2.36,
-        "intraday_pct": -0.71,
+        "intraday_pct": -0.73,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       },
@@ -200,7 +200,7 @@
         "name": "KODEX KOSDAQ150",
         "decision": "스킵",
         "gap_open_pct": 0.03,
-        "intraday_pct": -2.81,
+        "intraday_pct": -2.73,
         "in_window": false,
         "reason": "개장윈도(09:00~09:20) 경과 — 추격 방지"
       }
