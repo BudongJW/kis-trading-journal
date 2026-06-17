@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17T14:41:46.724722",
+  "updated_at": "2026-06-17T15:30:29.306215",
   "initial_capital": 500000,
   "cash": 893673,
   "holdings": [],
@@ -555,18 +555,7 @@
     "avg_loss_pct": -3.83,
     "total_return_pct": -0.43
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.84,
-    "median_r": 0.84,
-    "win_rate": 1.0,
-    "avg_win_r": 0.84,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.84,
-    "best_r": 0.84,
-    "worst_r": 0.84,
-    "last_updated": "2026-06-17 11:26"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -930,20 +919,20 @@
       "unrealized_pnl": 0,
       "net_deposit": 396861,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.57,
-      "k_value": 0.7
+      "hmm_state": "sideways",
+      "confidence": 0.613,
+      "k_value": 0.65
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.57,
+    "hmm_state": "sideways",
+    "confidence": 0.613,
     "volatility": "high",
     "vol_percentile": 94.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.36,
+      "strength": 0.31,
       "action": "reduce_size"
     },
     "strong_sectors": [
@@ -962,7 +951,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 15
     },
     "universe_count": 10,
@@ -1021,13 +1010,13 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.8933,
+    "sma_ratio": 0.8908,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.7228,
-      "132030": -1.0429
+      "195930": 1.7453,
+      "132030": -1.0576
     }
   },
   "us_session": {
@@ -1080,17 +1069,17 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 85.8,
+      "hmm_state": "sideways",
+      "hmm_confidence": 90.2,
       "volatility": "high",
       "vol_percentile": 94.0,
-      "market_confidence": 0.57,
-      "analyzed_at": "2026-06-16 21:17"
+      "market_confidence": 0.613,
+      "analyzed_at": "2026-06-17 10:46"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.67,
-      "sp500_change": -0.48,
+      "nasdaq_change": -1.15,
+      "sp500_change": -0.57,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
@@ -1154,7 +1143,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 15,
       "train_sharpe": 1.26,
       "val_sharpe": 3.28,
@@ -1304,14 +1293,14 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.4,
-    "k_effective": 0.8,
+    "k_effective": 0.75,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 57% · 美 오버나이트 bearish(-1.7%) · 고변동(94.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CAUTION·신뢰도 61% · 美 오버나이트 bearish(-1.1%) · 고변동(94.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BEAR",
-      "confidence": 0.57,
+      "regime": "CAUTION",
+      "confidence": 0.613,
       "direction": "bearish",
-      "nasdaq_change": -1.67,
+      "nasdaq_change": -1.15,
       "high_vol": true,
       "vol_percentile": 94.0,
       "rapid_level": "NONE"
@@ -1321,12 +1310,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BEAR",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.858,
+    "regime": "CAUTION",
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.902,
     "universe": [
       {
         "symbol": "122630",
