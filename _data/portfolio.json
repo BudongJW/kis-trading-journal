@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T06:29:44.635449",
+  "updated_at": "2026-06-19T07:56:40.559037",
   "initial_capital": 500000,
   "cash": 894713,
   "holdings": [
@@ -1080,7 +1080,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 535.83202,
+    "cash_usd": 0.0,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
