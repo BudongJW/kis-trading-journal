@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T14:41:53.225683",
+  "updated_at": "2026-06-18T15:30:37.655901",
   "initial_capital": 500000,
   "cash": 876453,
   "holdings": [
@@ -7,14 +7,14 @@
       "symbol": "498400",
       "name": "KODEX 200타겟위클리커버드콜",
       "qty": 1,
-      "current_price": 28105,
-      "value": 28105,
+      "current_price": 28270,
+      "value": 28270,
       "buy_price": 27665,
-      "pnl": 440,
-      "pnl_pct": 1.59,
+      "pnl": 605,
+      "pnl_pct": 2.18,
       "atr_at_buy": 0.0,
       "hold_days": 0,
-      "peak_price": 28105,
+      "peak_price": 28270,
       "stop_price": 26830
     }
   ],
@@ -31,12 +31,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 28105,
-  "total_value": 895153,
-  "total_pnl": -1708,
-  "total_pnl_pct": -0.19,
+  "holdings_value": 28270,
+  "total_value": 895318,
+  "total_pnl": -1543,
+  "total_pnl_pct": -0.17,
   "realized_pnl": -2148,
-  "unrealized_pnl": 440,
+  "unrealized_pnl": 605,
   "total_trades": 26,
   "completed_trades": 13,
   "winning_trades": 8,
@@ -570,7 +570,7 @@
     "profit_factor": 0.64,
     "avg_win_pct": 1.67,
     "avg_loss_pct": -3.83,
-    "total_return_pct": -0.34
+    "total_return_pct": -0.31
   },
   "r_summary": {},
   "daily_history": [
@@ -939,51 +939,48 @@
     },
     {
       "date": "2026-06-18",
-      "total_value": 895153,
+      "total_value": 895318,
       "cash": 876453,
-      "holdings_value": 28105,
-      "day_pnl": 436,
-      "cumul_pnl": -1708,
+      "holdings_value": 28270,
+      "day_pnl": 601,
+      "cumul_pnl": -1543,
       "realized_pnl": -2148,
-      "unrealized_pnl": 440,
+      "unrealized_pnl": 605,
       "net_deposit": 396861,
       "regime": "up",
-      "hmm_state": "sideways",
-      "confidence": 0.613,
-      "k_value": 0.6
+      "hmm_state": "bear",
+      "confidence": 0.438,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "sideways",
-    "confidence": 0.613,
+    "hmm_state": "bear",
+    "confidence": 0.438,
     "volatility": "high",
-    "vol_percentile": 96.0,
+    "vol_percentile": 90.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.16,
-      "action": "normal"
+      "direction": "bearish",
+      "strength": 0.43,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "반도체",
-      "2차전지",
       "바이오",
-      "자동차",
       "금융",
       "IT",
       "철강",
       "KOSPI200",
-      "KOSDAQ150",
       "미국나스닥"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.6,
+      "k": 0.7,
       "trend_ma": 15
     },
-    "universe_count": 10,
+    "universe_count": 7,
     "universe": [
       {
         "symbol": "395160",
@@ -994,16 +991,8 @@
         "name": "KODEX 반도체"
       },
       {
-        "symbol": "305720",
-        "name": "KODEX 2차전지"
-      },
-      {
         "symbol": "244580",
         "name": "KODEX 바이오"
-      },
-      {
-        "symbol": "091180",
-        "name": "KODEX 자동차"
       },
       {
         "symbol": "102110",
@@ -1020,10 +1009,6 @@
       {
         "symbol": "069500",
         "name": "KODEX KOSPI200"
-      },
-      {
-        "symbol": "229200",
-        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -1039,13 +1024,13 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "CAUTION",
+    "regime": "BEAR",
     "confidence": 0.65,
-    "sma_ratio": 0.9004,
+    "sma_ratio": 0.9452,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 2.1347,
-      "132030": -1.0737
+      "195930": 2.0523,
+      "132030": -1.0441
     }
   },
   "us_session": {
@@ -1098,29 +1083,26 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "sideways",
-      "hmm_confidence": 90.9,
+      "hmm_state": "bear",
+      "hmm_confidence": 81.1,
       "volatility": "high",
-      "vol_percentile": 96.0,
-      "market_confidence": 0.613,
-      "analyzed_at": "2026-06-17 20:56"
+      "vol_percentile": 90.0,
+      "market_confidence": 0.438,
+      "analyzed_at": "2026-06-18 10:59"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": -0.18,
-      "sp500_change": -0.8,
-      "recommended_action": "normal"
+      "direction": "bearish",
+      "nasdaq_change": -1.34,
+      "sp500_change": -1.21,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "반도체",
-      "2차전지",
       "바이오",
-      "자동차",
       "금융",
       "IT",
       "철강",
       "KOSPI200",
-      "KOSDAQ150",
       "미국나스닥"
     ],
     "lgbm": {
@@ -1172,7 +1154,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.6,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.26,
       "val_sharpe": 3.28,
@@ -1312,26 +1294,26 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.65,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 61% · 美 오버나이트 neutral(-0.2%) · 고변동(96.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 44% · 美 오버나이트 bearish(-1.3%) · 고변동(90.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CAUTION",
-      "confidence": 0.613,
-      "direction": "neutral",
-      "nasdaq_change": -0.18,
+      "regime": "BEAR",
+      "confidence": 0.438,
+      "direction": "bearish",
+      "nasdaq_change": -1.34,
       "high_vol": true,
-      "vol_percentile": 96.0,
+      "vol_percentile": 90.0,
       "rapid_level": "NONE"
     }
   },
@@ -1339,12 +1321,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
-    "hmm_state": "sideways",
-    "hmm_confidence": 0.909,
+    "regime": "BEAR",
+    "hmm_state": "bear",
+    "hmm_confidence": 0.811,
     "universe": [
       {
         "symbol": "122630",
