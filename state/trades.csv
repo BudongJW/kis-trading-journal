@@ -25,3 +25,5 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-16T10:58:23,229200,KODEX KOSDAQ150,buy,1,17810,17810,0,"매수: 융합 STRONG_BUY (확률 67%, TA +28, 돌파 X)"
 2026-06-17T11:26:55,229200,ETF,sell,1,18265,18265,0,"매도: ROI 청산 (1037분 보유, 수익 +2.5% ≥ 2.5%)"
 2026-06-18T09:11:51,498400,KODEX 200타겟위클리커버드콜,buy,1,27660,27660,0,인컴(커버드콜) 매수 — 모멘텀 7.3707
+2026-06-19T01:01:03,PSQ,ProShares Short QQQ (1x inverse 나스닥),buy,8,2522,20176,0,US 매수: 변동성 돌파 + TA +26
+2026-06-19T04:45:52,PSQ,US_PSQ,sell,8,2513,20104,0,매도: 미국장 마감 청산
