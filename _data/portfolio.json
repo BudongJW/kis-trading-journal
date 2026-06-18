@@ -1,10 +1,25 @@
 {
-  "updated_at": "2026-06-18T07:45:14.664135",
+  "updated_at": "2026-06-18T14:41:53.225683",
   "initial_capital": 500000,
   "cash": 876453,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "qty": 1,
+      "current_price": 28105,
+      "value": 28105,
+      "buy_price": 27665,
+      "pnl": 440,
+      "pnl_pct": 1.59,
+      "atr_at_buy": 0.0,
+      "hold_days": 0,
+      "peak_price": 28105,
+      "stop_price": 26830
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,13 +31,13 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 894713,
-  "total_pnl": -2148,
-  "total_pnl_pct": -0.24,
+  "holdings_value": 28105,
+  "total_value": 895153,
+  "total_pnl": -1708,
+  "total_pnl_pct": -0.19,
   "realized_pnl": -2148,
-  "unrealized_pnl": 0,
-  "total_trades": 25,
+  "unrealized_pnl": 440,
+  "total_trades": 26,
   "completed_trades": 13,
   "winning_trades": 8,
   "losing_trades": 5,
@@ -327,6 +342,18 @@
       "price": 18265,
       "amount": 18265,
       "reason": "매도: ROI 청산 (1037분 보유, 수익 +2.5% ≥ 2.5%)"
+    },
+    {
+      "timestamp": "2026-06-18T09:11:51",
+      "date": "2026-06-18",
+      "time": "09:11:51",
+      "symbol": "498400",
+      "name": "KODEX 200타겟위클리커버드콜",
+      "side": "buy",
+      "qty": 1,
+      "price": 27660,
+      "amount": 27660,
+      "reason": "인컴(커버드콜) 매수 — 모멘텀 7.3707"
     }
   ],
   "realized": [
@@ -516,25 +543,25 @@
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-18",
-    "buys": 0,
+    "buys": 1,
     "sells": 0,
     "completed_round_trips": 0,
-    "buy_notional": 0,
+    "buy_notional": 27660,
     "sell_notional": 0,
-    "fees": 0,
+    "fees": 4,
     "taxes": 0,
-    "total_cost": 0,
+    "total_cost": 4,
     "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
+    "realized_pnl_net": -4,
     "best_trade": null,
     "worst_trade": null
   },
   "costs": {
-    "total_fees": 651,
+    "total_fees": 655,
     "total_taxes": 1573,
-    "total_cost": 2224,
+    "total_cost": 2228,
     "realized_pnl_gross": -2148,
-    "realized_pnl_net": -4372,
+    "realized_pnl_net": -4376,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -543,7 +570,7 @@
     "profit_factor": 0.64,
     "avg_win_pct": 1.67,
     "avg_loss_pct": -3.83,
-    "total_return_pct": -0.43
+    "total_return_pct": -0.34
   },
   "r_summary": {},
   "daily_history": [
@@ -912,13 +939,13 @@
     },
     {
       "date": "2026-06-18",
-      "total_value": 894713,
+      "total_value": 895153,
       "cash": 876453,
-      "holdings_value": 0,
-      "day_pnl": 0,
-      "cumul_pnl": -2148,
+      "holdings_value": 28105,
+      "day_pnl": 436,
+      "cumul_pnl": -1708,
       "realized_pnl": -2148,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": 440,
       "net_deposit": 396861,
       "regime": "up",
       "hmm_state": "sideways",
@@ -933,9 +960,9 @@
     "volatility": "high",
     "vol_percentile": 96.0,
     "overnight_gap": {
-      "direction": "bearish",
-      "strength": 0.31,
-      "action": "reduce_size"
+      "direction": "neutral",
+      "strength": 0.16,
+      "action": "normal"
     },
     "strong_sectors": [
       "반도체",
@@ -1011,12 +1038,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.9004,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 2.1347,
+      "132030": -1.0737
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 538.652704,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1072,10 +1106,10 @@
       "analyzed_at": "2026-06-17 20:56"
     },
     "overnight": {
-      "direction": "bearish",
-      "nasdaq_change": -1.15,
-      "sp500_change": -0.57,
-      "recommended_action": "reduce_size"
+      "direction": "neutral",
+      "nasdaq_change": -0.18,
+      "sp500_change": -0.8,
+      "recommended_action": "normal"
     },
     "strong_sectors": [
       "반도체",
@@ -1190,10 +1224,10 @@
     "game": {
       "level": 5,
       "title": "전략가",
-      "xp": 4441,
-      "xp_in_level": 179,
+      "xp": 4491,
+      "xp_in_level": 229,
       "xp_for_next": 2304,
-      "progress_pct": 7.8,
+      "progress_pct": 9.9,
       "achievements": [
         {
           "icon": "🎯",
@@ -1262,7 +1296,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 25,
+          "value": 26,
           "suffix": "건",
           "bar": null
         },
@@ -1278,24 +1312,24 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.7,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BULL·신뢰도 61% · 美 오버나이트 bearish(-1.1%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.65,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 61% · 美 오버나이트 neutral(-0.2%) · 고변동(96.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CAUTION",
       "confidence": 0.613,
-      "direction": "bearish",
-      "nasdaq_change": -1.15,
+      "direction": "neutral",
+      "nasdaq_change": -0.18,
       "high_vol": true,
       "vol_percentile": 96.0,
       "rapid_level": "NONE"
@@ -1305,10 +1339,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM sideways(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CAUTION",
     "hmm_state": "sideways",
     "hmm_confidence": 0.909,
     "universe": [
