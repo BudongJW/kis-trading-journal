@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T15:30:29.628734",
+  "updated_at": "2026-06-19T17:55:26.657519",
   "initial_capital": 500000,
   "cash": 894713,
   "holdings": [
@@ -1131,15 +1131,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.9218,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 1.6859,
-      "132030": -1.6899
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -1189,40 +1182,14 @@
   },
   "decisions": [
     {
-      "time": "13:24:02",
-      "symbol": "069500",
-      "name": "KODEX KOSPI200",
+      "time": "01:01:03",
+      "symbol": "PSQ",
+      "name": "ProShares Short QQQ (1x inverse 나스닥)",
       "action": "buy",
-      "reason": "융합 STRONG_BUY (64%, TA=+19)",
-      "price": 146270,
-      "fusion_prob": 0.644,
-      "fusion_signal": "STRONG_BUY",
-      "ta_total": 18.9,
-      "lgbm_prob": 0.6593413857681198,
-      "breakout": false,
-      "sizing_ratio": 1.0,
-      "atr_at_buy": 6994.45,
-      "qty": 1
-    },
-    {
-      "time": "13:23:58",
-      "symbol": "102110",
-      "name": "KODEX 금융",
-      "action": "skip",
-      "reason": "호가 약세 -0.79",
-      "price": 146285,
-      "ta_total": 18.5,
-      "lgbm_prob": 0.6485497056133942
-    },
-    {
-      "time": "13:23:55",
-      "symbol": "091160",
-      "name": "KODEX 반도체",
-      "action": "skip",
-      "reason": "호가 약세 -0.84",
-      "price": 179870,
-      "ta_total": 11.2,
-      "lgbm_prob": 0.6734019827709716
+      "reason": "US 매수: 변동성 돌파 + TA +26",
+      "price": 2522,
+      "ta_total": 26.0,
+      "qty": 8
     }
   ],
   "learning": {
@@ -1249,50 +1216,50 @@
       "미국나스닥"
     ],
     "lgbm": {
-      "accuracy": 58.3,
-      "auc": 0.4571,
-      "n_samples": 60,
-      "trained_at": "2026-06-09T19:38:32.007213",
+      "accuracy": 77.8,
+      "auc": 0.786,
+      "n_samples": 180,
+      "trained_at": "2026-06-19T16:35:35.905310",
       "top_features": [
         {
           "name": "upper_shadow",
-          "importance": 8.1
-        },
-        {
-          "name": "obv_slope_10",
-          "importance": 5.9
-        },
-        {
-          "name": "bb_width",
-          "importance": 5.3
-        },
-        {
-          "name": "ret_1d",
-          "importance": 0.0
-        },
-        {
-          "name": "ret_3d",
-          "importance": 0.0
-        },
-        {
-          "name": "ret_5d",
-          "importance": 0.0
-        },
-        {
-          "name": "ret_10d",
-          "importance": 0.0
-        },
-        {
-          "name": "vol_5d",
-          "importance": 0.0
-        },
-        {
-          "name": "vol_20d",
-          "importance": 0.0
+          "importance": 103.3
         },
         {
           "name": "vol_ratio",
-          "importance": 0.0
+          "importance": 61.0
+        },
+        {
+          "name": "vol_ma5_ratio",
+          "importance": 49.7
+        },
+        {
+          "name": "body_ratio",
+          "importance": 48.1
+        },
+        {
+          "name": "vol_cycle_pos",
+          "importance": 35.0
+        },
+        {
+          "name": "rsi_14",
+          "importance": 35.0
+        },
+        {
+          "name": "adx",
+          "importance": 34.1
+        },
+        {
+          "name": "ma60_ratio",
+          "importance": 31.9
+        },
+        {
+          "name": "ret_5d",
+          "importance": 31.6
+        },
+        {
+          "name": "di_minus",
+          "importance": 23.5
         }
       ]
     },
@@ -1349,10 +1316,10 @@
     "game": {
       "level": 5,
       "title": "전략가",
-      "xp": 5091,
-      "xp_in_level": 829,
+      "xp": 5789,
+      "xp_in_level": 1527,
       "xp_for_next": 2304,
-      "progress_pct": 36.0,
+      "progress_pct": 66.3,
       "achievements": [
         {
           "icon": "🎯",
@@ -1376,7 +1343,7 @@
           "icon": "🎓",
           "name": "예측력 65%",
           "desc": "LGBM 정확도 65%+",
-          "done": false
+          "done": true
         },
         {
           "icon": "💰",
@@ -1407,9 +1374,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 58,
+          "value": 78,
           "suffix": "%",
-          "bar": 58
+          "bar": 78
         },
         {
           "label": "승률",
@@ -1428,30 +1395,30 @@
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 60,
+          "value": 180,
           "suffix": "샘플",
           "bar": null
         }
       ],
-      "unlocked_count": 6
+      "unlocked_count": 7
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "NEUTRAL",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
+    "auto_stance": "NEUTRAL",
+    "stance_kr": "중립",
+    "budget_pct": 0.7,
     "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": true,
+    "allow_inverse": false,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.64,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 55% · 美 오버나이트 bullish(+1.9%) · 고변동(84.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.85,
+    "k_effective": 0.59,
+    "allow_summary": "롱",
+    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 55% · 美 오버나이트 bullish(+1.9%) · 고변동(84.0%ile) · 예산 70%·최대 2종목·허용 롱",
     "signals": {
-      "regime": "CAUTION",
+      "regime": "BULL",
       "confidence": 0.545,
       "direction": "bullish",
       "nasdaq_change": 1.91,
@@ -1463,11 +1430,11 @@
   "leverage": {
     "enabled": true,
     "dry_run": true,
-    "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_allowed": true,
+    "gate_reason": "강한 상승추세 확인(BULL+bull+확신+급락無) → 레버리지 진입 허용",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
+    "regime": "BULL",
     "hmm_state": "bull",
     "hmm_confidence": 0.969,
     "universe": [
