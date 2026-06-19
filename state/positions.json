@@ -1,1 +1,17 @@
-{}
+{
+  "498400": {
+    "buy_price": 27665,
+    "buy_time": "2026-06-19T09:01:47.325110",
+    "buy_date": "2026-06-19",
+    "qty": 0,
+    "peak_price": 29100,
+    "hold_days": 2,
+    "max_hold_days": 15,
+    "atr_at_buy": 0.0,
+    "asset_type": "long",
+    "pyramid_count": 0,
+    "initial_risk": 829.95,
+    "adopted": true,
+    "partial_sold": true
+  }
+}
