@@ -1,10 +1,25 @@
 {
-  "updated_at": "2026-06-19T12:53:06.446938",
+  "updated_at": "2026-06-19T15:30:29.628734",
   "initial_capital": 500000,
   "cash": 894713,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "qty": 1,
+      "current_price": 146910,
+      "value": 146910,
+      "buy_price": 146530,
+      "pnl": 380,
+      "pnl_pct": 0.25,
+      "atr_at_buy": 0.0,
+      "hold_days": 0,
+      "peak_price": 148280,
+      "stop_price": 142124
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,13 +31,13 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 896153,
-  "total_pnl": -780,
-  "total_pnl_pct": -0.09,
+  "holdings_value": 146910,
+  "total_value": 896513,
+  "total_pnl": -400,
+  "total_pnl_pct": -0.04,
   "realized_pnl": -780,
-  "unrealized_pnl": 0,
-  "total_trades": 29,
+  "unrealized_pnl": 380,
+  "total_trades": 30,
   "completed_trades": 15,
   "winning_trades": 9,
   "losing_trades": 6,
@@ -375,6 +390,18 @@
       "price": 29100,
       "amount": 29100,
       "reason": "분할매도: [분할] 1차 익절 (+5.2% ≥ 3%, 보유분의 50% 매도)"
+    },
+    {
+      "timestamp": "2026-06-19T13:24:15",
+      "date": "2026-06-19",
+      "time": "13:24:15",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "side": "buy",
+      "qty": 1,
+      "price": 146520,
+      "amount": 146520,
+      "reason": "매수: 융합 STRONG_BUY (확률 64%, TA +19, 돌파 X)"
     }
   ],
   "realized": [
@@ -592,16 +619,16 @@
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-06-19",
-    "buys": 1,
+    "buys": 2,
     "sells": 2,
     "completed_round_trips": 2,
-    "buy_notional": 20176,
+    "buy_notional": 166696,
     "sell_notional": 49204,
-    "fees": 104,
+    "fees": 126,
     "taxes": 67,
-    "total_cost": 171,
+    "total_cost": 193,
     "realized_pnl_gross": 1368,
-    "realized_pnl_net": 1197,
+    "realized_pnl_net": 1175,
     "best_trade": {
       "symbol": "498400",
       "name": "급등주",
@@ -616,11 +643,11 @@
     }
   },
   "costs": {
-    "total_fees": 759,
+    "total_fees": 781,
     "total_taxes": 1640,
-    "total_cost": 2399,
+    "total_cost": 2421,
     "realized_pnl_gross": -780,
-    "realized_pnl_net": -3179,
+    "realized_pnl_net": -3201,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -629,7 +656,7 @@
     "profit_factor": 0.87,
     "avg_win_pct": 2.06,
     "avg_loss_pct": -3.25,
-    "total_return_pct": -0.16
+    "total_return_pct": -0.08
   },
   "r_summary": {},
   "daily_history": [
@@ -1010,36 +1037,35 @@
     },
     {
       "date": "2026-06-19",
-      "total_value": 896153,
+      "total_value": 896513,
       "cash": 894713,
-      "holdings_value": 0,
-      "day_pnl": 1197,
-      "cumul_pnl": -780,
+      "holdings_value": 146910,
+      "day_pnl": 1555,
+      "cumul_pnl": -400,
       "realized_pnl": -780,
-      "unrealized_pnl": 0,
-      "net_deposit": 396933,
+      "unrealized_pnl": 380,
+      "net_deposit": 396913,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.468,
-      "k_value": 0.7
+      "hmm_state": "bull",
+      "confidence": 0.545,
+      "k_value": 0.59
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.468,
+    "hmm_state": "bull",
+    "confidence": 0.545,
     "volatility": "high",
-    "vol_percentile": 96.0,
+    "vol_percentile": 84.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.56,
-      "action": "normal"
+      "strength": 0.53,
+      "action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
       "금융",
       "IT",
-      "철강",
       "KOSPI200",
       "미국나스닥"
     ]
@@ -1047,14 +1073,34 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.59,
       "trend_ma": 15
     },
-    "universe_count": 6,
+    "universe_count": 10,
     "universe": [
       {
         "symbol": "395160",
         "name": "KODEX 미국나스닥100TR"
+      },
+      {
+        "symbol": "005930",
+        "name": "삼성전자"
+      },
+      {
+        "symbol": "000660",
+        "name": "SK하이닉스"
+      },
+      {
+        "symbol": "034220",
+        "name": "LG디스플레이"
+      },
+      {
+        "symbol": "010140",
+        "name": "삼성중공업"
+      },
+      {
+        "symbol": "011200",
+        "name": "HMM"
       },
       {
         "symbol": "091160",
@@ -1067,10 +1113,6 @@
       {
         "symbol": "098560",
         "name": "KODEX IT"
-      },
-      {
-        "symbol": "117700",
-        "name": "KODEX 철강"
       },
       {
         "symbol": "069500",
@@ -1090,18 +1132,18 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.9209,
+    "sma_ratio": 0.9218,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.6724,
-      "132030": -1.6492
+      "195930": 1.6859,
+      "132030": -1.6899
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 551.109348,
+    "cash_usd": 460.22778,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1145,28 +1187,64 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "13:24:02",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "action": "buy",
+      "reason": "융합 STRONG_BUY (64%, TA=+19)",
+      "price": 146270,
+      "fusion_prob": 0.644,
+      "fusion_signal": "STRONG_BUY",
+      "ta_total": 18.9,
+      "lgbm_prob": 0.6593413857681198,
+      "breakout": false,
+      "sizing_ratio": 1.0,
+      "atr_at_buy": 6994.45,
+      "qty": 1
+    },
+    {
+      "time": "13:23:58",
+      "symbol": "102110",
+      "name": "KODEX 금융",
+      "action": "skip",
+      "reason": "호가 약세 -0.79",
+      "price": 146285,
+      "ta_total": 18.5,
+      "lgbm_prob": 0.6485497056133942
+    },
+    {
+      "time": "13:23:55",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "호가 약세 -0.84",
+      "price": 179870,
+      "ta_total": 11.2,
+      "lgbm_prob": 0.6734019827709716
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 85.5,
+      "hmm_state": "bull",
+      "hmm_confidence": 96.9,
       "volatility": "high",
-      "vol_percentile": 96.0,
-      "market_confidence": 0.468,
-      "analyzed_at": "2026-06-18 20:14"
+      "vol_percentile": 84.0,
+      "market_confidence": 0.545,
+      "analyzed_at": "2026-06-19 11:11"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 2.32,
-      "sp500_change": 1.02,
-      "recommended_action": "normal"
+      "nasdaq_change": 1.91,
+      "sp500_change": 1.08,
+      "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
       "금융",
       "IT",
-      "철강",
       "KOSPI200",
       "미국나스닥"
     ],
@@ -1219,7 +1297,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.59,
       "trend_ma": 15,
       "train_sharpe": 1.26,
       "val_sharpe": 3.28,
@@ -1271,10 +1349,10 @@
     "game": {
       "level": 5,
       "title": "전략가",
-      "xp": 5041,
-      "xp_in_level": 779,
+      "xp": 5091,
+      "xp_in_level": 829,
       "xp_for_next": 2304,
-      "progress_pct": 33.8,
+      "progress_pct": 36.0,
       "achievements": [
         {
           "icon": "🎯",
@@ -1343,7 +1421,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 29,
+          "value": 30,
           "suffix": "건",
           "bar": null
         },
@@ -1359,26 +1437,26 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.8,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 47% · 美 오버나이트 bullish(+2.3%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.64,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 55% · 美 오버나이트 bullish(+1.9%) · 고변동(84.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BEAR",
-      "confidence": 0.468,
+      "regime": "CAUTION",
+      "confidence": 0.545,
       "direction": "bullish",
-      "nasdaq_change": 2.32,
+      "nasdaq_change": 1.91,
       "high_vol": true,
-      "vol_percentile": 96.0,
+      "vol_percentile": 84.0,
       "rapid_level": "NONE"
     }
   },
@@ -1386,12 +1464,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BEAR",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.855,
+    "regime": "CAUTION",
+    "hmm_state": "bull",
+    "hmm_confidence": 0.969,
     "universe": [
       {
         "symbol": "122630",

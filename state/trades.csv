@@ -28,3 +28,4 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-19T01:01:03,PSQ,ProShares Short QQQ (1x inverse 나스닥),buy,8,2522,20176,0,US 매수: 변동성 돌파 + TA +26
 2026-06-19T04:45:52,PSQ,US_PSQ,sell,8,2513,20104,0,매도: 미국장 마감 청산
 2026-06-19T09:02:56,498400,급등주,sell,1,29100,29100,0,"분할매도: [분할] 1차 익절 (+5.2% ≥ 3%, 보유분의 50% 매도)"
+2026-06-19T13:24:15,069500,KODEX KOSPI200,buy,1,146520,146520,0,"매수: 융합 STRONG_BUY (확률 64%, TA +19, 돌파 X)"
