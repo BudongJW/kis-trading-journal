@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T14:43:14.750544",
+  "updated_at": "2026-06-22T15:31:03.323034",
   "initial_capital": 500000,
   "cash": 894713,
   "holdings": [
@@ -1054,26 +1054,26 @@
       "total_value": 896513,
       "cash": 894713,
       "holdings_value": 146910,
-      "day_pnl": 0,
+      "day_pnl": 380,
       "cumul_pnl": -400,
       "realized_pnl": -780,
       "unrealized_pnl": 380,
       "net_deposit": 396913,
       "regime": "up",
-      "hmm_state": "unknown",
-      "confidence": 0.595,
-      "k_value": 0.65
+      "hmm_state": "bear",
+      "confidence": 0.646,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "unknown",
-    "confidence": 0.595,
-    "volatility": "high",
-    "vol_percentile": 82.0,
+    "hmm_state": "bear",
+    "confidence": 0.646,
+    "volatility": "normal",
+    "vol_percentile": 50.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.59,
+      "strength": 0.38,
       "action": "normal"
     },
     "strong_sectors": [
@@ -1087,7 +1087,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.65,
+      "k": 0.7,
       "trend_ma": 15
     },
     "universe_count": 5,
@@ -1125,8 +1125,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.9331,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.7925,
+      "132030": -1.1979
+    }
   },
   "us_session": {
     "enabled": true,
@@ -1178,17 +1185,17 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": null,
-      "hmm_confidence": 0,
-      "volatility": "high",
-      "vol_percentile": 82.0,
-      "market_confidence": 0.595,
-      "analyzed_at": "2026-06-21"
+      "hmm_state": "bear",
+      "hmm_confidence": 82.1,
+      "volatility": "normal",
+      "vol_percentile": 50.0,
+      "market_confidence": 0.646,
+      "analyzed_at": "2026-06-22 10:45"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 2.51,
-      "sp500_change": 1.04,
+      "nasdaq_change": 1.91,
+      "sp500_change": 0,
       "recommended_action": "normal"
     },
     "strong_sectors": [
@@ -1247,7 +1254,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.65,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.21,
       "val_sharpe": 1.78,
@@ -1266,8 +1273,8 @@
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.5,
-      "trades": 0
+      "win_rate": 0.545,
+      "trades": 7
     },
     "diary": [
       {
@@ -1387,26 +1394,26 @@
     }
   },
   "day_plan": {
-    "stance": "NEUTRAL",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "NEUTRAL",
-    "stance_kr": "중립",
-    "budget_pct": 0.7,
-    "max_new_positions": 2,
-    "allow_long": true,
-    "allow_inverse": false,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.85,
-    "k_effective": 0.65,
-    "allow_summary": "롱",
-    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 60% · 美 오버나이트 bullish(+2.5%) · 고변동(82.0%ile) · 예산 70%·최대 2종목·허용 롱",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 65% · 美 오버나이트 bullish(+1.9%) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.595,
+      "regime": "BEAR",
+      "confidence": 0.646,
       "direction": "bullish",
-      "nasdaq_change": 2.51,
-      "high_vol": true,
-      "vol_percentile": 82.0,
+      "nasdaq_change": 1.91,
+      "high_vol": false,
+      "vol_percentile": 50.0,
       "rapid_level": "NONE"
     }
   },
@@ -1414,12 +1421,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM unknown(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
-    "hmm_state": "unknown",
-    "hmm_confidence": 0.5,
+    "regime": "BEAR",
+    "hmm_state": "bear",
+    "hmm_confidence": 0.821,
     "universe": [
       {
         "symbol": "122630",
