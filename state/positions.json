@@ -1,16 +1,1 @@
-{
-  "069500": {
-    "buy_price": 146530,
-    "buy_time": "2026-06-22T14:50:15.462962",
-    "buy_date": "2026-06-22",
-    "qty": 1,
-    "peak_price": 148265,
-    "hold_days": 1,
-    "max_hold_days": 15,
-    "atr_at_buy": 0.0,
-    "asset_type": "long",
-    "pyramid_count": 0,
-    "initial_risk": 4395.9,
-    "adopted": true
-  }
-}
+{}
