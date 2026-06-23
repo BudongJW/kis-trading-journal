@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T05:00:12.241954",
+  "updated_at": "2026-06-24T05:01:36.741562",
   "initial_capital": 500000,
   "cash": 746932,
   "holdings": [],
@@ -1187,8 +1187,8 @@
         "symbol": "PSQ",
         "qty": 8,
         "buy_price": 25.2101,
-        "current_price": 26.04,
-        "pnl_pct": 3.29,
+        "current_price": 26.05,
+        "pnl_pct": 3.33,
         "exchange": "AMEX",
         "asset_type": "us_inverse"
       }
