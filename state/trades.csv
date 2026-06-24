@@ -31,3 +31,6 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-19T13:24:15,069500,KODEX KOSPI200,buy,1,146520,146520,0,"매수: 융합 STRONG_BUY (확률 64%, TA +19, 돌파 X)"
 2026-06-23T03:22:09,PSQ,ProShares Short QQQ (1x inverse 나스닥),buy,8,2521,20168,0,US 매수: 변동성 돌파 + TA +18
 2026-06-23T10:50:27,069500,ETF,sell,1,141950,141950,0,매도: 손절매 (-3.1% ≤ -3%)
+2026-06-25T00:19:28,PSQ,US_PSQ,sell,8,2570,20560,0,매도: US 추적손절 (고점 $26.11에서 -1.5%)
+2026-06-25T00:19:39,PSQ,ProShares Short QQQ (1x inverse 나스닥),buy,8,2570,20560,0,US 매수: 변동성 돌파 + TA +18
+2026-06-25T04:45:28,PSQ,US_PSQ,sell,8,2604,20832,0,매도: 미국장 마감 청산
