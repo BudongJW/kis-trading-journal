@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-06-24T01:07:55",
+  "generated_at": "2026-06-24T10:34:22",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
-    "regime": "CRISIS",
-    "regime_blind": false,
-    "regime_detail": "카나리아 1/2 음전환 | ⚡급락 트리거 CRISIS → CAUTION에서 CRISIS 격상 (급락 CRISIS (1일 -10.5%, 3일 -9.6%))",
-    "day_stance": "DEFENSIVE",
+    "regime": "CAUTION",
+    "regime_blind": true,
+    "regime_detail": "SMA200 +0.0% 상회, 카나리아 양호 | ⚠️ 시장데이터 불가(블라인드) — 강세 폴백 차단, 신규매수 보류",
+    "day_stance": "CAUTIOUS",
     "day_stance_forced": false,
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 57% · 美 오버나이트 bearish(-1.3%) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 40% · 美 오버나이트 bearish(+0.0%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "blocks_new_buys": false
   },
   "gates": {
     "leverage_dry_run": true,
     "leverage_gate_allowed": false,
-    "leverage_gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지"
+    "leverage_gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지"
   },
   "account": {
-    "cash": 746932,
+    "cash": 0,
     "holdings_readable": "없음/조회실패"
   },
   "holdings_risk": [],
@@ -24,91 +24,35 @@
     {
       "symbol": "395160",
       "type": "롱",
-      "decision": "스킵",
-      "breakout": false,
-      "ta": 5.0,
-      "atr_pct": 6.38,
-      "fee_gate_ok": true,
-      "why_skip": "미돌파"
-    },
-    {
-      "symbol": "091160",
-      "type": "롱",
-      "decision": "스킵",
-      "breakout": false,
-      "ta": 19.6,
-      "atr_pct": 6.19,
-      "fee_gate_ok": true,
-      "why_skip": "미돌파"
-    },
-    {
-      "symbol": "102110",
-      "type": "롱",
-      "decision": "스킵",
-      "breakout": false,
-      "ta": -20.2,
-      "atr_pct": 5.14,
-      "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-20)"
+      "decision": "평가실패",
+      "why_skip": "오류: HTTPSConnectionPool(host='openapi.koreainvestment.com', port=9443): Max retries exceeded with url: /oauth2/tokenP (Caused by ConnectTimeoutError(<HTTPSConnection(host='openapi.koreainvestment.com', port=9443) at 0x7f4f116cd100>, 'Connection to openapi.koreainvestment.com timed out. (connect timeout=15)'))"
     },
     {
       "symbol": "098560",
       "type": "롱",
       "decision": "평가실패",
-      "why_skip": "오류: 일봉 데이터 비어있음"
-    },
-    {
-      "symbol": "069500",
-      "type": "롱",
-      "decision": "스킵",
-      "breakout": false,
-      "ta": -20.0,
-      "atr_pct": 5.15,
-      "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-20)"
+      "why_skip": "오류: HTTPSConnectionPool(host='openapi.koreainvestment.com', port=9443): Max retries exceeded with url: /oauth2/tokenP (Caused by ConnectTimeoutError(<HTTPSConnection(host='openapi.koreainvestment.com', port=9443) at 0x7f4f116c8170>, 'Connection to openapi.koreainvestment.com timed out. (connect timeout=15)'))"
     },
     {
       "symbol": "114800",
       "type": "인버스",
-      "decision": "스킵",
-      "breakout": false,
-      "ta": 26.7,
-      "atr_pct": 5.15,
-      "fee_gate_ok": true,
-      "why_skip": "미돌파"
+      "decision": "평가실패",
+      "why_skip": "오류: HTTPSConnectionPool(host='openapi.koreainvestment.com', port=9443): Max retries exceeded with url: /oauth2/tokenP (Caused by ConnectTimeoutError(<HTTPSConnection(host='openapi.koreainvestment.com', port=9443) at 0x7f4f116cc590>, 'Connection to openapi.koreainvestment.com timed out. (connect timeout=15)'))"
     }
   ],
   "gap_recovery": {
     "enabled_live": true,
-    "now_kst": "01:08",
+    "now_kst": "10:40",
     "window": "09:00~09:20",
     "candidates": [
       {
         "symbol": "395160",
         "name": "KODEX 미국나스닥100TR",
         "decision": "스킵",
-        "gap_open_pct": -0.98,
-        "intraday_pct": -9.11,
+        "gap_open_pct": 0.0,
+        "intraday_pct": 0.0,
         "in_window": false,
-        "reason": "CRISIS 레짐 제외"
-      },
-      {
-        "symbol": "091160",
-        "name": "KODEX 반도체",
-        "decision": "스킵",
-        "gap_open_pct": -0.75,
-        "intraday_pct": -10.78,
-        "in_window": false,
-        "reason": "CRISIS 레짐 제외"
-      },
-      {
-        "symbol": "102110",
-        "name": "KODEX 금융",
-        "decision": "스킵",
-        "gap_open_pct": -0.05,
-        "intraday_pct": -9.94,
-        "in_window": false,
-        "reason": "CRISIS 레짐 제외"
+        "reason": "가격데이터 부족(시가/전일종가 없음)"
       },
       {
         "symbol": "098560",
@@ -118,15 +62,6 @@
         "intraday_pct": 0.0,
         "in_window": false,
         "reason": "가격데이터 부족(시가/전일종가 없음)"
-      },
-      {
-        "symbol": "069500",
-        "name": "KODEX KOSPI200",
-        "decision": "스킵",
-        "gap_open_pct": -0.03,
-        "intraday_pct": -10.44,
-        "in_window": false,
-        "reason": "CRISIS 레짐 제외"
       }
     ]
   },
@@ -136,63 +71,63 @@
       "type": "long",
       "decision": "스킵",
       "breakout": false,
-      "ta": -2.7,
+      "ta": -2.1,
       "atr_pct": 1.24,
-      "why_skip": "미돌파 · TA부족(-3)"
+      "why_skip": "미돌파 · TA부족(-2)"
     },
     {
       "symbol": "SCHG",
       "type": "long",
       "decision": "스킵",
       "breakout": false,
-      "ta": -7.8,
-      "atr_pct": 1.67,
-      "why_skip": "미돌파 · TA부족(-8)"
+      "ta": -4.4,
+      "atr_pct": 1.68,
+      "why_skip": "미돌파 · TA부족(-4)"
     },
     {
       "symbol": "XLF",
       "type": "long",
       "decision": "스킵",
       "breakout": true,
-      "ta": 8.8,
+      "ta": 1.0,
       "atr_pct": 1.23,
-      "why_skip": "TA부족(+9)"
+      "why_skip": "TA부족(+1)"
     },
     {
       "symbol": "SH",
       "type": "inverse",
       "decision": "스킵",
       "breakout": false,
-      "ta": 5.6,
-      "atr_pct": 1.28,
-      "why_skip": "미돌파 · TA부족(+6)"
+      "ta": 2.3,
+      "atr_pct": 1.27,
+      "why_skip": "미돌파 · TA부족(+2)"
     },
     {
       "symbol": "PSQ",
       "type": "inverse",
       "decision": "스킵",
       "breakout": false,
-      "ta": 11.8,
+      "ta": 20.9,
       "atr_pct": 2.04,
-      "why_skip": "미돌파 · TA부족(+12)"
+      "why_skip": "미돌파"
     },
     {
       "symbol": "TLT",
       "type": "defensive",
       "decision": "스킵",
-      "breakout": true,
-      "ta": 17.2,
+      "breakout": false,
+      "ta": 7.7,
       "atr_pct": 0.56,
-      "why_skip": "수수료게이트"
+      "why_skip": "미돌파 · TA부족(+8) · 수수료게이트"
     },
     {
       "symbol": "SHY",
       "type": "defensive",
       "decision": "스킵",
       "breakout": false,
-      "ta": 8.2,
+      "ta": -5.3,
       "atr_pct": 0.09,
-      "why_skip": "미돌파 · TA부족(+8) · 수수료게이트"
+      "why_skip": "미돌파 · TA부족(-5) · 수수료게이트"
     }
   ],
   "us_summary": {
