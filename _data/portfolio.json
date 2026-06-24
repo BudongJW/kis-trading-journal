@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-24T07:11:15.182547",
+  "updated_at": "2026-06-24T14:27:05.114346",
   "initial_capital": 500000,
-  "cash": 746932,
+  "cash": 435549,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 888807,
+  "total_value": 577424,
   "total_pnl": -5350,
-  "total_pnl_pct": -0.6,
+  "total_pnl_pct": -0.92,
   "realized_pnl": -5350,
   "unrealized_pnl": 0,
   "total_trades": 32,
@@ -1101,29 +1101,29 @@
     },
     {
       "date": "2026-06-24",
-      "total_value": 888807,
-      "cash": 746932,
+      "total_value": 577424,
+      "cash": 435549,
       "holdings_value": 0,
       "day_pnl": 0,
       "cumul_pnl": -5350,
       "realized_pnl": -5350,
       "unrealized_pnl": 0,
-      "net_deposit": 394157,
+      "net_deposit": 82774,
       "regime": "up",
       "hmm_state": "bull",
-      "confidence": 0.568,
+      "confidence": 0.418,
       "k_value": 0.59
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bull",
-    "confidence": 0.568,
+    "confidence": 0.418,
     "volatility": "normal",
     "vol_percentile": 34.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.26,
+      "strength": 0.8,
       "action": "reduce_size"
     },
     "strong_sectors": [
@@ -1175,24 +1175,21 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.778,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.5752,
+      "132030": -1.4861
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 353.438224,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "PSQ",
-        "qty": 8,
-        "buy_price": 25.2101,
-        "current_price": 26.05,
-        "pnl_pct": 3.33,
-        "exchange": "AMEX",
-        "asset_type": "us_inverse"
-      }
-    ],
+    "cash_usd": 352.545375,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -1242,13 +1239,13 @@
       "hmm_confidence": 80.2,
       "volatility": "normal",
       "vol_percentile": 34.0,
-      "market_confidence": 0.568,
+      "market_confidence": 0.418,
       "analyzed_at": "2026-06-23 10:28"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.32,
-      "sp500_change": 0,
+      "nasdaq_change": -3.31,
+      "sp500_change": -1.47,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
@@ -1459,12 +1456,12 @@
     "size_mult": 0.6,
     "k_effective": 0.64,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 57% · 美 오버나이트 bearish(-1.3%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 42% · 美 오버나이트 bearish(-3.3%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.568,
+      "regime": "CAUTION",
+      "confidence": 0.418,
       "direction": "bearish",
-      "nasdaq_change": -1.32,
+      "nasdaq_change": -3.31,
       "high_vol": false,
       "vol_percentile": 34.0,
       "rapid_level": "NONE"
@@ -1473,11 +1470,11 @@
   "leverage": {
     "enabled": true,
     "dry_run": true,
-    "gate_allowed": true,
-    "gate_reason": "강한 상승추세 확인(BULL+bull+확신+급락無) → 레버리지 진입 허용",
+    "gate_allowed": false,
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CAUTION",
     "hmm_state": "bull",
     "hmm_confidence": 0.802,
     "universe": [
