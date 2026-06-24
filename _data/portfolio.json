@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-24T14:27:05.114346",
+  "updated_at": "2026-06-24T15:30:34.441709",
   "initial_capital": 500000,
   "cash": 435549,
   "holdings": [],
@@ -1110,57 +1110,41 @@
       "unrealized_pnl": 0,
       "net_deposit": 82774,
       "regime": "up",
-      "hmm_state": "bull",
-      "confidence": 0.418,
-      "k_value": 0.59
+      "hmm_state": "sideways",
+      "confidence": 0.397,
+      "k_value": 0.54
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bull",
-    "confidence": 0.418,
+    "hmm_state": "sideways",
+    "confidence": 0.397,
     "volatility": "normal",
-    "vol_percentile": 34.0,
+    "vol_percentile": 74.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.8,
+      "strength": 0.19,
       "action": "reduce_size"
     },
     "strong_sectors": [
-      "반도체",
-      "금융",
-      "IT",
-      "KOSPI200",
-      "미국나스닥"
+      "IT"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.59,
+      "k": 0.54,
       "trend_ma": 15
     },
-    "universe_count": 5,
+    "universe_count": 2,
     "universe": [
       {
         "symbol": "395160",
         "name": "KODEX 미국나스닥100TR"
       },
       {
-        "symbol": "091160",
-        "name": "KODEX 반도체"
-      },
-      {
-        "symbol": "102110",
-        "name": "KODEX 금융"
-      },
-      {
         "symbol": "098560",
         "name": "KODEX IT"
-      },
-      {
-        "symbol": "069500",
-        "name": "KODEX KOSPI200"
       }
     ]
   },
@@ -1178,11 +1162,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.778,
+    "sma_ratio": 0.7793,
     "canary_bad": 1,
     "canary_scores": {
       "195930": 1.5752,
-      "132030": -1.4861
+      "132030": -1.4021
     }
   },
   "us_session": {
@@ -1235,25 +1219,21 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bull",
-      "hmm_confidence": 80.2,
+      "hmm_state": "sideways",
+      "hmm_confidence": 60.0,
       "volatility": "normal",
-      "vol_percentile": 34.0,
-      "market_confidence": 0.418,
-      "analyzed_at": "2026-06-23 10:28"
+      "vol_percentile": 74.0,
+      "market_confidence": 0.397,
+      "analyzed_at": "2026-06-24 10:22"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -3.31,
-      "sp500_change": -1.47,
+      "nasdaq_change": 0,
+      "sp500_change": -1.44,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
-      "반도체",
-      "금융",
-      "IT",
-      "KOSPI200",
-      "미국나스닥"
+      "IT"
     ],
     "lgbm": {
       "accuracy": 83.3,
@@ -1304,7 +1284,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.59,
+      "k": 0.54,
       "trend_ma": 15,
       "train_sharpe": 1.21,
       "val_sharpe": 1.78,
@@ -1323,8 +1303,8 @@
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.545,
-      "trades": 7
+      "win_rate": 0.5,
+      "trades": 8
     },
     "diary": [
       {
@@ -1454,16 +1434,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.6,
-    "k_effective": 0.64,
+    "k_effective": 0.59,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 42% · 美 오버나이트 bearish(-3.3%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 40% · 美 오버나이트 bearish(+0.0%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.418,
+      "confidence": 0.397,
       "direction": "bearish",
-      "nasdaq_change": -3.31,
+      "nasdaq_change": 0,
       "high_vol": false,
-      "vol_percentile": 34.0,
+      "vol_percentile": 74.0,
       "rapid_level": "NONE"
     }
   },
@@ -1475,8 +1455,8 @@
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
     "regime": "CAUTION",
-    "hmm_state": "bull",
-    "hmm_confidence": 0.802,
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.6,
     "universe": [
       {
         "symbol": "122630",
