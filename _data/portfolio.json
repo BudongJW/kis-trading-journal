@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T07:15:51.380675",
+  "updated_at": "2026-06-25T14:38:02.585509",
   "initial_capital": 500000,
   "cash": 577424,
   "holdings": [],
@@ -1208,9 +1208,9 @@
     "volatility": "normal",
     "vol_percentile": 74.0,
     "overnight_gap": {
-      "direction": "bearish",
-      "strength": 0.19,
-      "action": "reduce_size"
+      "direction": "neutral",
+      "strength": 0.32,
+      "action": "normal"
     },
     "strong_sectors": [
       "IT"
@@ -1250,7 +1250,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 556.923471,
+    "cash_usd": 0.0,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1294,7 +1294,18 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "00:19:39",
+      "symbol": "PSQ",
+      "name": "ProShares Short QQQ (1x inverse 나스닥)",
+      "action": "buy",
+      "reason": "US 매수: 변동성 돌파 + TA +18",
+      "price": 2570,
+      "ta_total": 18.0,
+      "qty": 8
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
@@ -1306,10 +1317,10 @@
       "analyzed_at": "2026-06-24 10:22"
     },
     "overnight": {
-      "direction": "bearish",
-      "nasdaq_change": 0,
-      "sp500_change": -1.44,
-      "recommended_action": "reduce_size"
+      "direction": "neutral",
+      "nasdaq_change": 1.44,
+      "sp500_change": 0.48,
+      "recommended_action": "normal"
     },
     "strong_sectors": [
       "IT"
@@ -1515,12 +1526,12 @@
     "size_mult": 0.6,
     "k_effective": 0.59,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 40% · 美 오버나이트 bearish(+0.0%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 40% · 美 오버나이트 neutral(+1.4%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "BULL",
       "confidence": 0.397,
-      "direction": "bearish",
-      "nasdaq_change": 0,
+      "direction": "neutral",
+      "nasdaq_change": 1.44,
       "high_vol": false,
       "vol_percentile": 74.0,
       "rapid_level": "NONE"
