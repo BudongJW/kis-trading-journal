@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-25T16:38:56.872663",
+  "updated_at": "2026-06-25T18:57:10.839959",
   "initial_capital": 500000,
-  "cash": 894617,
+  "cash": 893760,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,7 +17,7 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 894617,
+  "total_value": 893760,
   "total_pnl": -4686,
   "total_pnl_pct": -0.52,
   "realized_pnl": -4686,
@@ -1187,14 +1187,14 @@
     },
     {
       "date": "2026-06-25",
-      "total_value": 894617,
-      "cash": 894617,
+      "total_value": 893760,
+      "cash": 893760,
       "holdings_value": 0,
       "day_pnl": 510,
       "cumul_pnl": -4686,
       "realized_pnl": -4686,
       "unrealized_pnl": 0,
-      "net_deposit": 399303,
+      "net_deposit": 398446,
       "regime": "up",
       "hmm_state": "bear",
       "confidence": 0.27,
@@ -1250,7 +1250,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 558.520776,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
