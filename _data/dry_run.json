@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T10:54:13",
+  "generated_at": "2026-06-26T13:28:32",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "CAUTION",
@@ -26,10 +26,10 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": 6.0,
-      "atr_pct": 6.51,
+      "ta": -9.8,
+      "atr_pct": 7.12,
       "fee_gate_ok": true,
-      "why_skip": "미돌파"
+      "why_skip": "미돌파 · TA부족(-10)"
     },
     {
       "symbol": "098560",
@@ -42,15 +42,15 @@
       "type": "인버스",
       "decision": "스킵",
       "breakout": false,
-      "ta": 17.4,
-      "atr_pct": 5.56,
+      "ta": 17.1,
+      "atr_pct": 5.68,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     }
   ],
   "gap_recovery": {
     "enabled_live": true,
-    "now_kst": "10:54",
+    "now_kst": "13:28",
     "window": "09:00~09:20",
     "candidates": [
       {
@@ -58,7 +58,7 @@
         "name": "KODEX 미국나스닥100TR",
         "decision": "스킵",
         "gap_open_pct": -1.85,
-        "intraday_pct": -3.08,
+        "intraday_pct": -6.56,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
