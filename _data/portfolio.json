@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T15:30:46.411963",
+  "updated_at": "2026-06-26T15:39:47.234561",
   "initial_capital": 500000,
   "cash": 894751,
   "holdings": [],
@@ -1275,11 +1275,31 @@
       "k": 0.65,
       "trend_ma": 15
     },
-    "universe_count": 2,
+    "universe_count": 7,
     "universe": [
       {
         "symbol": "395160",
         "name": "KODEX 미국나스닥100TR"
+      },
+      {
+        "symbol": "005930",
+        "name": "삼성전자"
+      },
+      {
+        "symbol": "000660",
+        "name": "SK하이닉스"
+      },
+      {
+        "symbol": "034220",
+        "name": "LG디스플레이"
+      },
+      {
+        "symbol": "010140",
+        "name": "삼성중공업"
+      },
+      {
+        "symbol": "011200",
+        "name": "HMM"
       },
       {
         "symbol": "098560",
@@ -1298,15 +1318,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.7369,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 1.2404,
-      "132030": -1.9223
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -1586,9 +1599,9 @@
     "size_mult": 0.6,
     "k_effective": 0.7,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 27% · 美 오버나이트 neutral(-0.5%) · 고변동(80.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 27% · 美 오버나이트 neutral(-0.5%) · 고변동(80.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "CAUTION",
+      "regime": "BULL",
       "confidence": 0.27,
       "direction": "neutral",
       "nasdaq_change": -0.46,
@@ -1601,10 +1614,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
+    "regime": "BULL",
     "hmm_state": "bear",
     "hmm_confidence": 0.543,
     "universe": [
