@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-26T07:20:00.866214",
+  "updated_at": "2026-06-26T14:42:08.699772",
   "initial_capital": 500000,
-  "cash": 891467,
+  "cash": 894751,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 891467,
+  "total_value": 894751,
   "total_pnl": -4620,
-  "total_pnl_pct": -0.52,
+  "total_pnl_pct": -0.51,
   "realized_pnl": -4620,
   "unrealized_pnl": 0,
   "total_trades": 37,
@@ -1240,14 +1240,14 @@
     },
     {
       "date": "2026-06-26",
-      "total_value": 891467,
-      "cash": 891467,
+      "total_value": 894751,
+      "cash": 894751,
       "holdings_value": 0,
       "day_pnl": -34,
       "cumul_pnl": -4620,
       "realized_pnl": -4620,
       "unrealized_pnl": 0,
-      "net_deposit": 396087,
+      "net_deposit": 399371,
       "regime": "up",
       "hmm_state": "bear",
       "confidence": 0.27,
@@ -1262,7 +1262,7 @@
     "vol_percentile": 78.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.1,
+      "strength": 0.09,
       "action": "normal"
     },
     "strong_sectors": [
@@ -1298,12 +1298,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.7472,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.2847,
+      "132030": -1.892
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 557.028987,
+    "cash_usd": 556.633858,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1347,7 +1354,18 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "00:24:32",
+      "symbol": "SH",
+      "name": "ProShares Short S&P500 (1x inverse)",
+      "action": "buy",
+      "reason": "US 매수: 변동성 돌파 + TA +13",
+      "price": 3353,
+      "ta_total": 13.0,
+      "qty": 6
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
@@ -1360,8 +1378,8 @@
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -0.43,
-      "sp500_change": -0.1,
+      "nasdaq_change": 0.55,
+      "sp500_change": -0.04,
       "recommended_action": "normal"
     },
     "strong_sectors": [
@@ -1568,12 +1586,12 @@
     "size_mult": 0.6,
     "k_effective": 0.64,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 27% · 美 오버나이트 neutral(-0.4%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 27% · 美 오버나이트 neutral(+0.6%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "CAUTION",
       "confidence": 0.27,
       "direction": "neutral",
-      "nasdaq_change": -0.43,
+      "nasdaq_change": 0.55,
       "high_vol": true,
       "vol_percentile": 78.0,
       "rapid_level": "NONE"
@@ -1583,10 +1601,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CAUTION",
     "hmm_state": "bear",
     "hmm_confidence": 0.6,
     "universe": [
