@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-30T07:08:20.593021",
+  "updated_at": "2026-06-30T10:10:35.539799",
   "initial_capital": 500000,
-  "cash": 894525,
+  "cash": 893971,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,7 +17,7 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 894525,
+  "total_value": 893971,
   "total_pnl": -4620,
   "total_pnl_pct": -0.51,
   "realized_pnl": -4620,
@@ -1269,29 +1269,29 @@
     },
     {
       "date": "2026-06-30",
-      "total_value": 894525,
-      "cash": 894525,
+      "total_value": 893971,
+      "cash": 893971,
       "holdings_value": 0,
       "day_pnl": 0,
       "cumul_pnl": -4620,
       "realized_pnl": -4620,
       "unrealized_pnl": 0,
-      "net_deposit": 399145,
+      "net_deposit": 398591,
       "regime": "up",
       "hmm_state": "bull",
-      "confidence": 0.61,
+      "confidence": 0.66,
       "k_value": 0.41
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bull",
-    "confidence": 0.61,
+    "confidence": 0.66,
     "volatility": "high",
     "vol_percentile": 78.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.1,
+      "direction": "bullish",
+      "strength": 0.65,
       "action": "normal"
     },
     "strong_sectors": [
@@ -1382,12 +1382,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.6936,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.4411,
+      "132030": -2.1502
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 556.884089,
+    "cash_usd": 557.499818,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1431,7 +1438,189 @@
       }
     ]
   },
-  "decisions": [],
+  "decisions": [
+    {
+      "time": "10:08:56",
+      "symbol": "011200",
+      "name": "HMM",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,850 < 목표 19,713)",
+      "price": 18850,
+      "ta_total": -20.0
+    },
+    {
+      "time": "10:08:54",
+      "symbol": "010140",
+      "name": "삼성중공업",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 23,550 < 목표 25,318)",
+      "price": 23550,
+      "ta_total": -19.4
+    },
+    {
+      "time": "10:08:53",
+      "symbol": "034220",
+      "name": "LG디스플레이",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 11,600 < 목표 12,445)",
+      "price": 11600,
+      "ta_total": -11.9
+    },
+    {
+      "time": "10:08:51",
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 2,575,000 < 목표 2,678,110)",
+      "price": 2575000,
+      "ta_total": -21.2
+    },
+    {
+      "time": "10:08:50",
+      "symbol": "005930",
+      "name": "삼성전자",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 326,000 < 목표 331,495)",
+      "price": 326000,
+      "ta_total": -31.5
+    },
+    {
+      "time": "10:08:48",
+      "symbol": "395160",
+      "name": "KODEX 미국나스닥100TR",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 55,600 < 목표 57,132)",
+      "price": 55600,
+      "ta_total": -23.4
+    },
+    {
+      "time": "10:08:47",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 16,480 < 목표 17,212)",
+      "price": 16480,
+      "ta_total": -10.4
+    },
+    {
+      "time": "10:08:45",
+      "symbol": "069500",
+      "name": "KODEX KOSPI200",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 135,020 < 목표 139,189)",
+      "price": 135020,
+      "ta_total": -22.1
+    },
+    {
+      "time": "10:08:43",
+      "symbol": "117700",
+      "name": "KODEX 철강",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 6,570 < 목표 6,975)",
+      "price": 6570,
+      "ta_total": -8.4
+    },
+    {
+      "time": "10:08:41",
+      "symbol": "102110",
+      "name": "KODEX 금융",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 135,070 < 목표 139,532)",
+      "price": 135070,
+      "ta_total": -22.3
+    },
+    {
+      "time": "10:08:40",
+      "symbol": "244580",
+      "name": "KODEX 바이오",
+      "action": "skip",
+      "reason": "확신상한<최소 (69,290<300,000) 약신호 과집중 회피",
+      "price": 9580,
+      "ta_total": 24.4,
+      "lgbm_prob": 0.7047218489807408
+    },
+    {
+      "time": "10:08:37",
+      "symbol": "305720",
+      "name": "KODEX 2차전지",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 15,245 < 목표 16,643)",
+      "price": 15245,
+      "ta_total": -12.4
+    },
+    {
+      "time": "10:08:36",
+      "symbol": "091160",
+      "name": "KODEX 반도체",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 167,755 < 목표 172,360)",
+      "price": 167755,
+      "ta_total": -21.3
+    },
+    {
+      "time": "10:03:56",
+      "symbol": "011200",
+      "name": "HMM",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 18,830 < 목표 19,713)",
+      "price": 18830,
+      "ta_total": -20.0
+    },
+    {
+      "time": "10:03:54",
+      "symbol": "010140",
+      "name": "삼성중공업",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 23,450 < 목표 25,318)",
+      "price": 23450,
+      "ta_total": -19.2
+    },
+    {
+      "time": "10:03:53",
+      "symbol": "034220",
+      "name": "LG디스플레이",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 11,570 < 목표 12,445)",
+      "price": 11570,
+      "ta_total": -11.8
+    },
+    {
+      "time": "10:03:51",
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 2,559,000 < 목표 2,678,110)",
+      "price": 2559000,
+      "ta_total": -21.2
+    },
+    {
+      "time": "10:03:50",
+      "symbol": "005930",
+      "name": "삼성전자",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 324,000 < 목표 331,495)",
+      "price": 324000,
+      "ta_total": -31.5
+    },
+    {
+      "time": "10:03:48",
+      "symbol": "395160",
+      "name": "KODEX 미국나스닥100TR",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 55,100 < 목표 57,132)",
+      "price": 55100,
+      "ta_total": -23.4
+    },
+    {
+      "time": "10:03:47",
+      "symbol": "229200",
+      "name": "KODEX KOSDAQ150",
+      "action": "skip",
+      "reason": "신호 없음: 미돌파 (현재 16,490 < 목표 17,212)",
+      "price": 16490,
+      "ta_total": -10.4
+    }
+  ],
   "learning": {
     "market": {
       "trend": "up",
@@ -1439,13 +1628,13 @@
       "hmm_confidence": 68.3,
       "volatility": "high",
       "vol_percentile": 78.0,
-      "market_confidence": 0.61,
+      "market_confidence": 0.66,
       "analyzed_at": "2026-06-29 10:35"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": 0,
-      "sp500_change": -0.05,
+      "direction": "bullish",
+      "nasdaq_change": 2.33,
+      "sp500_change": 1.57,
       "recommended_action": "normal"
     },
     "strong_sectors": [
@@ -1459,50 +1648,50 @@
       "KOSDAQ150"
     ],
     "lgbm": {
-      "accuracy": 63.9,
-      "auc": 0.7273,
-      "n_samples": 180,
-      "trained_at": "2026-06-29T21:05:41.991173",
+      "accuracy": 61.1,
+      "auc": 0.7808,
+      "n_samples": 177,
+      "trained_at": "2026-06-30T07:36:05.778024",
       "top_features": [
         {
-          "name": "upper_shadow",
-          "importance": 96.3
+          "name": "bb_width",
+          "importance": 43.7
         },
         {
-          "name": "body_ratio",
-          "importance": 76.2
+          "name": "bb_pos",
+          "importance": 40.7
         },
         {
           "name": "vol_trend_5d",
-          "importance": 52.5
-        },
-        {
-          "name": "adx",
-          "importance": 47.6
-        },
-        {
-          "name": "momentum_accel",
-          "importance": 47.5
-        },
-        {
-          "name": "ret_10d",
-          "importance": 38.6
-        },
-        {
-          "name": "vol_5d",
-          "importance": 37.8
-        },
-        {
-          "name": "obv_slope_10",
-          "importance": 36.5
-        },
-        {
-          "name": "ret_1d",
-          "importance": 33.5
+          "importance": 29.8
         },
         {
           "name": "momentum_accel_3d",
-          "importance": 32.9
+          "importance": 26.9
+        },
+        {
+          "name": "upper_shadow",
+          "importance": 26.6
+        },
+        {
+          "name": "ret_10d",
+          "importance": 26.5
+        },
+        {
+          "name": "adx",
+          "importance": 24.8
+        },
+        {
+          "name": "ma60_ratio",
+          "importance": 22.7
+        },
+        {
+          "name": "stoch_k",
+          "importance": 17.3
+        },
+        {
+          "name": "ret_5d",
+          "importance": 12.9
         }
       ]
     },
@@ -1559,10 +1748,10 @@
     "game": {
       "level": 6,
       "title": "전략가",
-      "xp": 6869,
-      "xp_in_level": 303,
+      "xp": 6840,
+      "xp_in_level": 274,
       "xp_for_next": 3225,
-      "progress_pct": 9.4,
+      "progress_pct": 8.5,
       "achievements": [
         {
           "icon": "🎯",
@@ -1617,9 +1806,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 64,
+          "value": 61,
           "suffix": "%",
-          "bar": 64
+          "bar": 61
         },
         {
           "label": "승률",
@@ -1638,7 +1827,7 @@
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -1647,24 +1836,24 @@
     }
   },
   "day_plan": {
-    "stance": "NEUTRAL",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "NEUTRAL",
-    "stance_kr": "중립",
-    "budget_pct": 0.7,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
     "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.85,
-    "k_effective": 0.41,
-    "allow_summary": "롱",
-    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 61% · 美 오버나이트 neutral(+0.0%) · 고변동(78.0%ile) · 예산 70%·최대 2종목·허용 롱",
+    "size_mult": 0.6,
+    "k_effective": 0.46,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 66% · 美 오버나이트 bullish(+2.3%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.61,
-      "direction": "neutral",
-      "nasdaq_change": 0,
+      "regime": "CAUTION",
+      "confidence": 0.66,
+      "direction": "bullish",
+      "nasdaq_change": 2.33,
       "high_vol": true,
       "vol_percentile": 78.0,
       "rapid_level": "NONE"
@@ -1674,10 +1863,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM 확신 부족(68% < 70%) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "CAUTION",
     "hmm_state": "bull",
     "hmm_confidence": 0.683,
     "universe": [
