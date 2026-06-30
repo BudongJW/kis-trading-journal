@@ -1,10 +1,23 @@
 {
-  "updated_at": "2026-06-30T10:21:01.973922",
+  "updated_at": "2026-06-30T15:30:37.080784",
   "initial_capital": 500000,
   "cash": 893971,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "qty": 276,
+      "current_price": 902,
+      "value": 248952,
+      "buy_price": 904,
+      "pnl": -552,
+      "pnl_pct": -0.22,
+      "manual": true,
+      "stop_price": 877
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,12 +29,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 893971,
-  "total_pnl": -4620,
-  "total_pnl_pct": -0.51,
+  "holdings_value": 248952,
+  "total_value": 893389,
+  "total_pnl": -5172,
+  "total_pnl_pct": -0.58,
   "realized_pnl": -4620,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": -552,
   "total_trades": 37,
   "completed_trades": 19,
   "winning_trades": 12,
@@ -766,12 +779,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.0,
+    "sharpe_ratio": -0.01,
     "max_drawdown_pct": -100.0,
     "profit_factor": 0.57,
     "avg_win_pct": 1.85,
     "avg_loss_pct": -3.23,
-    "total_return_pct": -0.92
+    "total_return_pct": -1.03
   },
   "r_summary": {},
   "daily_history": [
@@ -1269,14 +1282,14 @@
     },
     {
       "date": "2026-06-30",
-      "total_value": 893971,
+      "total_value": 893389,
       "cash": 893971,
-      "holdings_value": 0,
-      "day_pnl": 0,
-      "cumul_pnl": -4620,
+      "holdings_value": 248952,
+      "day_pnl": -552,
+      "cumul_pnl": -5172,
       "realized_pnl": -4620,
-      "unrealized_pnl": 0,
-      "net_deposit": 398591,
+      "unrealized_pnl": -552,
+      "net_deposit": 398561,
       "regime": "up",
       "hmm_state": "bull",
       "confidence": 0.66,
@@ -1385,16 +1398,16 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.6982,
+    "sma_ratio": 0.7431,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.4411,
-      "132030": -2.1162
+      "195930": 1.3166,
+      "132030": -2.0026
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 557.499818,
+    "cash_usd": 404.580454,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
