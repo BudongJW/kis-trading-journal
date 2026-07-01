@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T14:36:42.616375",
+  "updated_at": "2026-07-01T15:30:23.617602",
   "initial_capital": 500000,
   "cash": 893251,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 276,
-      "current_price": 925,
-      "value": 255300,
+      "current_price": 927,
+      "value": 255852,
       "buy_price": 904,
-      "pnl": 5796,
-      "pnl_pct": 2.32,
+      "pnl": 6348,
+      "pnl_pct": 2.54,
       "manual": true,
       "stop_price": 877
     }
@@ -29,12 +29,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 255300,
-  "total_value": 899017,
-  "total_pnl": 1144,
-  "total_pnl_pct": 0.13,
+  "holdings_value": 255852,
+  "total_value": 899569,
+  "total_pnl": 1696,
+  "total_pnl_pct": 0.19,
   "realized_pnl": -4652,
-  "unrealized_pnl": 5796,
+  "unrealized_pnl": 6348,
   "total_trades": 39,
   "completed_trades": 20,
   "winning_trades": 12,
@@ -832,7 +832,7 @@
     "profit_factor": 0.56,
     "avg_win_pct": 1.85,
     "avg_loss_pct": -2.85,
-    "total_return_pct": 0.23
+    "total_return_pct": 0.34
   },
   "r_summary": {},
   "daily_history": [
@@ -1342,13 +1342,13 @@
     },
     {
       "date": "2026-07-01",
-      "total_value": 899017,
+      "total_value": 899569,
       "cash": 893251,
-      "holdings_value": 255300,
-      "day_pnl": 5656,
-      "cumul_pnl": 1144,
+      "holdings_value": 255852,
+      "day_pnl": 6208,
+      "cumul_pnl": 1696,
       "realized_pnl": -4652,
-      "unrealized_pnl": 5796,
+      "unrealized_pnl": 6348,
       "net_deposit": 397873,
       "regime": "up",
       "hmm_state": "sideways",
@@ -1438,11 +1438,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.6845,
+    "sma_ratio": 0.6853,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.6906,
-      "132030": -2.1118
+      "195930": 1.7396,
+      "132030": -2.1533
     }
   },
   "us_session": {
@@ -1493,188 +1493,14 @@
   },
   "decisions": [
     {
-      "time": "12:54:27",
-      "symbol": "011200",
-      "name": "HMM",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,730 < 목표 19,155)",
-      "price": 18730,
-      "ta_total": -11.8
-    },
-    {
-      "time": "12:54:25",
-      "symbol": "010140",
-      "name": "삼성중공업",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 23,750 < 목표 24,410)",
-      "price": 23750,
-      "ta_total": -6.4
-    },
-    {
-      "time": "12:54:23",
-      "symbol": "034220",
-      "name": "LG디스플레이",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 11,220 < 목표 11,995)",
-      "price": 11220,
-      "ta_total": -18.3
-    },
-    {
-      "time": "12:54:21",
-      "symbol": "000660",
-      "name": "SK하이닉스",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 2,623,000 < 목표 2,753,440)",
-      "price": 2623000,
-      "ta_total": -18.5
-    },
-    {
-      "time": "12:54:19",
-      "symbol": "005930",
-      "name": "삼성전자",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 323,000 < 목표 344,180)",
-      "price": 323000,
-      "ta_total": -26.4
-    },
-    {
-      "time": "12:54:17",
-      "symbol": "395160",
-      "name": "KODEX 미국나스닥100TR",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 57,850 < 목표 59,957)",
-      "price": 57850,
-      "ta_total": -25.2
-    },
-    {
-      "time": "12:54:15",
-      "symbol": "229200",
-      "name": "KODEX KOSDAQ150",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 16,770 < 목표 16,871)",
-      "price": 16770,
-      "ta_total": -8.5
-    },
-    {
-      "time": "12:54:13",
-      "symbol": "117700",
-      "name": "KODEX 철강",
-      "action": "skip",
-      "reason": "신호 없음: 추세 필터 미통과 (MA15 아래)",
-      "price": 6905,
-      "ta_total": -7.4
-    },
-    {
-      "time": "12:54:10",
-      "symbol": "244580",
-      "name": "KODEX 바이오",
-      "action": "skip",
-      "reason": "돌파 미통과, 융합 BUY 62% (STRONG 필요)",
-      "price": 9490,
-      "ta_total": 25.3,
-      "lgbm_prob": 0.7630351901395144
-    },
-    {
-      "time": "09:53:24",
-      "symbol": "011200",
-      "name": "HMM",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,810 < 목표 19,155)",
-      "price": 18810,
-      "ta_total": -11.8
-    },
-    {
-      "time": "09:53:22",
-      "symbol": "010140",
-      "name": "삼성중공업",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 24,150 < 목표 24,410)",
-      "price": 24150,
-      "ta_total": -7.9
-    },
-    {
-      "time": "09:53:20",
-      "symbol": "034220",
-      "name": "LG디스플레이",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 11,420 < 목표 11,995)",
-      "price": 11420,
-      "ta_total": -8.0
-    },
-    {
-      "time": "09:53:18",
-      "symbol": "000660",
-      "name": "SK하이닉스",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 2,598,000 < 목표 2,753,440)",
-      "price": 2598000,
-      "ta_total": -19.6
-    },
-    {
-      "time": "09:53:16",
-      "symbol": "005930",
-      "name": "삼성전자",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 325,750 < 목표 344,180)",
-      "price": 325750,
-      "ta_total": -26.4
-    },
-    {
-      "time": "09:53:14",
-      "symbol": "395160",
-      "name": "KODEX 미국나스닥100TR",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 56,612 < 목표 59,957)",
-      "price": 56612,
-      "ta_total": -25.2
-    },
-    {
-      "time": "09:53:12",
-      "symbol": "229200",
-      "name": "KODEX KOSDAQ150",
-      "action": "skip",
-      "reason": "확신상한<최소 (290,487<300,000) 약신호 과집중 회피",
-      "price": 17380,
-      "ta_total": 16.7,
-      "lgbm_prob": 0.7633520515635436
-    },
-    {
-      "time": "09:53:07",
-      "symbol": "117700",
-      "name": "KODEX 철강",
-      "action": "skip",
-      "reason": "확신상한<최소 (182,592<300,000) 약신호 과집중 회피",
-      "price": 7050,
-      "ta_total": -7.4,
-      "lgbm_prob": 0.7625712583051439
-    },
-    {
-      "time": "09:53:03",
-      "symbol": "244580",
-      "name": "KODEX 바이오",
-      "action": "skip",
-      "reason": "호가 약세 -0.43",
-      "price": 9725,
-      "ta_total": 27.3,
-      "lgbm_prob": 0.7565263325187453
-    },
-    {
-      "time": "09:51:16",
-      "symbol": "011200",
-      "name": "HMM",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 18,820 < 목표 19,155)",
-      "price": 18820,
-      "ta_total": -11.8
-    },
-    {
-      "time": "09:51:13",
-      "symbol": "010140",
-      "name": "삼성중공업",
-      "action": "skip",
-      "reason": "신호 없음: 미돌파 (현재 24,150 < 목표 24,410)",
-      "price": 24150,
-      "ta_total": -7.9
+      "time": "00:12:19",
+      "symbol": "XLF",
+      "name": "Financial Select Sector SPDR (금융)",
+      "action": "buy",
+      "reason": "US 매수: 변동성 돌파 + TA +24",
+      "price": 5370,
+      "ta_total": 24.0,
+      "qty": 4
     }
   ],
   "learning": {
