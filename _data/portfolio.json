@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T10:15:34.892198",
+  "updated_at": "2026-07-02T10:34:25.663140",
   "initial_capital": 500000,
   "cash": 647350,
   "holdings": [
@@ -7,11 +7,11 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 276,
-      "current_price": 982,
-      "value": 271032,
+      "current_price": 965,
+      "value": 266340,
       "buy_price": 904,
-      "pnl": 21528,
-      "pnl_pct": 8.62,
+      "pnl": 16836,
+      "pnl_pct": 6.74,
       "manual": true,
       "stop_price": 877
     }
@@ -29,12 +29,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 271032,
-  "total_value": 918382,
-  "total_pnl": 16876,
-  "total_pnl_pct": 1.87,
+  "holdings_value": 266340,
+  "total_value": 913690,
+  "total_pnl": 12184,
+  "total_pnl_pct": 1.35,
   "realized_pnl": -4652,
-  "unrealized_pnl": 21528,
+  "unrealized_pnl": 16836,
   "total_trades": 39,
   "completed_trades": 20,
   "winning_trades": 12,
@@ -817,12 +817,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.02,
+    "sharpe_ratio": 0.01,
     "max_drawdown_pct": -100.0,
     "profit_factor": 0.56,
     "avg_win_pct": 1.85,
     "avg_loss_pct": -2.85,
-    "total_return_pct": 3.38
+    "total_return_pct": 2.44
   },
   "r_summary": {},
   "daily_history": [
@@ -1344,13 +1344,13 @@
     },
     {
       "date": "2026-07-02",
-      "total_value": 918382,
+      "total_value": 913690,
       "cash": 647350,
-      "holdings_value": 271032,
-      "day_pnl": 21528,
-      "cumul_pnl": 16876,
+      "holdings_value": 266340,
+      "day_pnl": 16836,
+      "cumul_pnl": 12184,
       "realized_pnl": -4652,
-      "unrealized_pnl": 21528,
+      "unrealized_pnl": 16836,
       "net_deposit": 401506,
       "regime": "up",
       "hmm_state": "sideways",
@@ -1440,11 +1440,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.582,
+    "sma_ratio": 0.6102,
     "canary_bad": 1,
     "canary_scores": {
       "195930": 1.5582,
-      "132030": -1.8328
+      "132030": -1.8891
     }
   },
   "us_session": {
