@@ -36,6 +36,6 @@ timestamp,symbol,name,side,qty,price,amount,balance_after,reason
 2026-06-25T04:45:28,PSQ,US_PSQ,sell,8,2604,20832,0,매도: 미국장 마감 청산
 2026-06-26T00:24:32,SH,ProShares Short S&P500 (1x inverse),buy,6,3353,20118,0,US 매수: 변동성 돌파 + TA +13
 2026-06-26T04:45:23,SH,US_SH,sell,6,3364,20184,0,매도: 미국장 마감 청산
+2026-06-30T12:25:00,114800,KODEX 인버스,buy,276,903,249228,0,인버스 매수 백필: CAUTION 레짐 하락대응 (debug-once 미기록 복구)
 2026-07-01T00:12:19,XLF,Financial Select Sector SPDR (금융),buy,4,5370,21480,0,US 매수: 변동성 돌파 + TA +24
 2026-07-01T04:45:11,XLF,US_XLF,sell,4,5362,21448,0,매도: 미국장 마감 청산
-2026-06-30T12:25:00,114800,KODEX 인버스,buy,276,903,249228,0,인버스 매수 백필: CAUTION 레짐 하락대응 (debug-once 미기록 복구)

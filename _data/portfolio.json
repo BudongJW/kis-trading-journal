@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-02T10:34:25.663140",
+  "updated_at": "2026-07-02T13:40:49.297035",
   "initial_capital": 500000,
   "cash": 647350,
   "holdings": [
@@ -7,12 +7,11 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 276,
-      "current_price": 965,
-      "value": 266340,
+      "current_price": 985,
+      "value": 271860,
       "buy_price": 904,
-      "pnl": 16836,
-      "pnl_pct": 6.74,
-      "manual": true,
+      "pnl": 22356,
+      "pnl_pct": 8.96,
       "stop_price": 877
     }
   ],
@@ -29,13 +28,13 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 266340,
-  "total_value": 913690,
-  "total_pnl": 12184,
-  "total_pnl_pct": 1.35,
+  "holdings_value": 271860,
+  "total_value": 919210,
+  "total_pnl": 17704,
+  "total_pnl_pct": 1.96,
   "realized_pnl": -4652,
-  "unrealized_pnl": 16836,
-  "total_trades": 39,
+  "unrealized_pnl": 22356,
+  "total_trades": 40,
   "completed_trades": 20,
   "winning_trades": 12,
   "losing_trades": 8,
@@ -486,6 +485,18 @@
       "reason": "매도: 미국장 마감 청산"
     },
     {
+      "timestamp": "2026-06-30T12:25:00",
+      "date": "2026-06-30",
+      "time": "12:25:00",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 276,
+      "price": 903,
+      "amount": 249228,
+      "reason": "인버스 매수 백필: CAUTION 레짐 하락대응 (debug-once 미기록 복구)"
+    },
+    {
       "timestamp": "2026-07-01T00:12:19",
       "date": "2026-07-01",
       "time": "00:12:19",
@@ -809,20 +820,20 @@
     "worst_trade": null
   },
   "costs": {
-    "total_fees": 1214,
+    "total_fees": 1251,
     "total_taxes": 1966,
-    "total_cost": 3180,
+    "total_cost": 3217,
     "realized_pnl_gross": -4652,
-    "realized_pnl_net": -7832,
+    "realized_pnl_net": -7869,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.01,
+    "sharpe_ratio": 0.02,
     "max_drawdown_pct": -100.0,
     "profit_factor": 0.56,
     "avg_win_pct": 1.85,
     "avg_loss_pct": -2.85,
-    "total_return_pct": 2.44
+    "total_return_pct": 3.54
   },
   "r_summary": {},
   "daily_history": [
@@ -1344,33 +1355,35 @@
     },
     {
       "date": "2026-07-02",
-      "total_value": 913690,
+      "total_value": 919210,
       "cash": 647350,
-      "holdings_value": 266340,
-      "day_pnl": 16836,
-      "cumul_pnl": 12184,
+      "holdings_value": 271860,
+      "day_pnl": 22356,
+      "cumul_pnl": 17704,
       "realized_pnl": -4652,
-      "unrealized_pnl": 16836,
+      "unrealized_pnl": 22356,
       "net_deposit": 401506,
       "regime": "up",
       "hmm_state": "sideways",
-      "confidence": 0.583,
-      "k_value": 0.44
+      "confidence": 0.62,
+      "k_value": 0.41
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "sideways",
-    "confidence": 0.583,
-    "volatility": "high",
-    "vol_percentile": 76.0,
+    "confidence": 0.62,
+    "volatility": "normal",
+    "vol_percentile": 72.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.28,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
+      "2차전지",
       "바이오",
+      "자동차",
       "IT",
       "철강",
       "KOSDAQ150"
@@ -1379,10 +1392,10 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.44,
+      "k": 0.41,
       "trend_ma": 15
     },
-    "universe_count": 10,
+    "universe_count": 12,
     "universe": [
       {
         "symbol": "395160",
@@ -1409,8 +1422,16 @@
         "name": "HMM"
       },
       {
+        "symbol": "305720",
+        "name": "KODEX 2차전지"
+      },
+      {
         "symbol": "244580",
         "name": "KODEX 바이오"
+      },
+      {
+        "symbol": "091180",
+        "name": "KODEX 자동차"
       },
       {
         "symbol": "098560",
@@ -1440,11 +1461,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.6102,
+    "sma_ratio": 0.5755,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.5582,
-      "132030": -1.8891
+      "195930": 1.6423,
+      "132030": -1.8516
     }
   },
   "us_session": {
@@ -1498,20 +1519,22 @@
     "market": {
       "trend": "up",
       "hmm_state": "sideways",
-      "hmm_confidence": 56.1,
-      "volatility": "high",
-      "vol_percentile": 76.0,
-      "market_confidence": 0.583,
-      "analyzed_at": "2026-06-30 10:30"
+      "hmm_confidence": 76.0,
+      "volatility": "normal",
+      "vol_percentile": 72.0,
+      "market_confidence": 0.62,
+      "analyzed_at": "2026-07-02 10:29"
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -1.46,
-      "sp500_change": -0.19,
+      "nasdaq_change": -0.66,
+      "sp500_change": -0.22,
       "recommended_action": "normal"
     },
     "strong_sectors": [
+      "2차전지",
       "바이오",
+      "자동차",
       "IT",
       "철강",
       "KOSDAQ150"
@@ -1565,7 +1588,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.44,
+      "k": 0.41,
       "trend_ma": 15,
       "train_sharpe": 0.88,
       "val_sharpe": 5.67,
@@ -1617,10 +1640,10 @@
     "game": {
       "level": 6,
       "title": "전략가",
-      "xp": 7126,
-      "xp_in_level": 560,
+      "xp": 7176,
+      "xp_in_level": 610,
       "xp_for_next": 3225,
-      "progress_pct": 17.4,
+      "progress_pct": 18.9,
       "achievements": [
         {
           "icon": "🎯",
@@ -1689,7 +1712,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 39,
+          "value": 40,
           "suffix": "건",
           "bar": null
         },
@@ -1715,16 +1738,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.6,
-    "k_effective": 0.49,
+    "k_effective": 0.46,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 58% · 美 오버나이트 neutral(-1.5%) · 고변동(76.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 62% · 美 오버나이트 neutral(-0.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.583,
+      "confidence": 0.62,
       "direction": "neutral",
-      "nasdaq_change": -1.46,
-      "high_vol": true,
-      "vol_percentile": 76.0,
+      "nasdaq_change": -0.66,
+      "high_vol": false,
+      "vol_percentile": 72.0,
       "rapid_level": "NONE"
     }
   },
@@ -1737,7 +1760,7 @@
     "max_weight": 0.15,
     "regime": "CAUTION",
     "hmm_state": "sideways",
-    "hmm_confidence": 0.561,
+    "hmm_confidence": 0.76,
     "universe": [
       {
         "symbol": "122630",
