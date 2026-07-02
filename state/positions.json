@@ -1,1 +1,17 @@
-{}
+{
+  "114800": {
+    "buy_price": 904,
+    "buy_time": "2026-07-02T13:57:56.818666",
+    "buy_date": "2026-07-02",
+    "qty": 138,
+    "peak_price": 1009,
+    "hold_days": 1,
+    "max_hold_days": 15,
+    "atr_at_buy": 0.0,
+    "asset_type": "long",
+    "pyramid_count": 0,
+    "initial_risk": 27.12,
+    "adopted": true,
+    "partial_sold": true
+  }
+}

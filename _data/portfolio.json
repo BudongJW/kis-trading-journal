@@ -1,17 +1,20 @@
 {
-  "updated_at": "2026-07-02T13:40:49.297035",
+  "updated_at": "2026-07-02T15:30:28.182591",
   "initial_capital": 500000,
   "cash": 647350,
   "holdings": [
     {
       "symbol": "114800",
       "name": "KODEX 인버스",
-      "qty": 276,
-      "current_price": 985,
-      "value": 271860,
+      "qty": 138,
+      "current_price": 1001,
+      "value": 138138,
       "buy_price": 904,
-      "pnl": 22356,
-      "pnl_pct": 8.96,
+      "pnl": 13386,
+      "pnl_pct": 10.73,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 1009,
       "stop_price": 877
     }
   ],
@@ -28,17 +31,17 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 271860,
-  "total_value": 919210,
-  "total_pnl": 17704,
-  "total_pnl_pct": 1.96,
-  "realized_pnl": -4652,
-  "unrealized_pnl": 22356,
-  "total_trades": 40,
-  "completed_trades": 20,
-  "winning_trades": 12,
+  "holdings_value": 138138,
+  "total_value": 919890,
+  "total_pnl": 18670,
+  "total_pnl_pct": 2.07,
+  "realized_pnl": 5284,
+  "unrealized_pnl": 13386,
+  "total_trades": 41,
+  "completed_trades": 21,
+  "winning_trades": 13,
   "losing_trades": 8,
-  "win_rate": 60.0,
+  "win_rate": 61.9,
   "trades": [
     {
       "timestamp": "2026-06-02T09:53:39",
@@ -519,6 +522,18 @@
       "price": 5362,
       "amount": 21448,
       "reason": "매도: 미국장 마감 청산"
+    },
+    {
+      "timestamp": "2026-07-02T13:57:58",
+      "date": "2026-07-02",
+      "time": "13:57:58",
+      "symbol": "114800",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 138,
+      "price": 975,
+      "amount": 134550,
+      "reason": "분할매도: [분할] 1차 익절 (+7.9% ≥ 3%, 보유분의 50% 매도)"
     }
   ],
   "realized": [
@@ -801,39 +816,63 @@
       "pnl": -32,
       "pnl_pct": -0.15,
       "hold_days": 0
+    },
+    {
+      "symbol": "114800",
+      "name": "급등주",
+      "buy_date": "2026-06-30",
+      "buy_time": "12:25:00",
+      "buy_price": 903,
+      "sell_date": "2026-07-02",
+      "sell_time": "13:57:58",
+      "sell_price": 975,
+      "qty": 138,
+      "pnl": 9936,
+      "pnl_pct": 7.97,
+      "hold_days": 2
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-07-02",
     "buys": 0,
-    "sells": 0,
-    "completed_round_trips": 0,
+    "sells": 1,
+    "completed_round_trips": 1,
     "buy_notional": 0,
-    "sell_notional": 0,
-    "fees": 0,
-    "taxes": 0,
-    "total_cost": 0,
-    "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
-    "best_trade": null,
-    "worst_trade": null
+    "sell_notional": 134550,
+    "fees": 20,
+    "taxes": 309,
+    "total_cost": 329,
+    "realized_pnl_gross": 9936,
+    "realized_pnl_net": 9607,
+    "best_trade": {
+      "symbol": "114800",
+      "name": "급등주",
+      "pnl": 9936,
+      "pnl_pct": 7.97
+    },
+    "worst_trade": {
+      "symbol": "114800",
+      "name": "급등주",
+      "pnl": 9936,
+      "pnl_pct": 7.97
+    }
   },
   "costs": {
-    "total_fees": 1251,
-    "total_taxes": 1966,
-    "total_cost": 3217,
-    "realized_pnl_gross": -4652,
-    "realized_pnl_net": -7869,
+    "total_fees": 1271,
+    "total_taxes": 2275,
+    "total_cost": 3546,
+    "realized_pnl_gross": 5284,
+    "realized_pnl_net": 1738,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
     "sharpe_ratio": 0.02,
     "max_drawdown_pct": -100.0,
-    "profit_factor": 0.56,
-    "avg_win_pct": 1.85,
+    "profit_factor": 1.5,
+    "avg_win_pct": 2.32,
     "avg_loss_pct": -2.85,
-    "total_return_pct": 3.54
+    "total_return_pct": 3.73
   },
   "r_summary": {},
   "daily_history": [
@@ -1355,14 +1394,14 @@
     },
     {
       "date": "2026-07-02",
-      "total_value": 919210,
+      "total_value": 919890,
       "cash": 647350,
-      "holdings_value": 271860,
-      "day_pnl": 22356,
-      "cumul_pnl": 17704,
-      "realized_pnl": -4652,
-      "unrealized_pnl": 22356,
-      "net_deposit": 401506,
+      "holdings_value": 138138,
+      "day_pnl": 22993,
+      "cumul_pnl": 18670,
+      "realized_pnl": 5284,
+      "unrealized_pnl": 13386,
+      "net_deposit": 401220,
       "regime": "up",
       "hmm_state": "sideways",
       "confidence": 0.62,
@@ -1448,7 +1487,7 @@
     ]
   },
   "risk": {
-    "kelly_f": 0.0968,
+    "kelly_f": 0.1532,
     "drawdown_scale": 1.0,
     "drawdown_reason": "정상 스케일링",
     "stop_type": "ATR×1.5 동적",
@@ -1459,18 +1498,18 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "CAUTION",
+    "regime": "CRISIS",
     "confidence": 0.65,
-    "sma_ratio": 0.5755,
+    "sma_ratio": 0.5362,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 1.6423,
-      "132030": -1.8516
+      "195930": 1.5892,
+      "132030": -1.8141
     }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 403.827921,
+    "cash_usd": 484.553165,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -1640,10 +1679,10 @@
     "game": {
       "level": 6,
       "title": "전략가",
-      "xp": 7176,
-      "xp_in_level": 610,
+      "xp": 7426,
+      "xp_in_level": 860,
       "xp_for_next": 3225,
-      "progress_pct": 18.9,
+      "progress_pct": 26.7,
       "achievements": [
         {
           "icon": "🎯",
@@ -1705,14 +1744,14 @@
         {
           "label": "승률",
           "icon": "📈",
-          "value": 60,
+          "value": 62,
           "suffix": "%",
-          "bar": 60
+          "bar": 62
         },
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 40,
+          "value": 41,
           "suffix": "건",
           "bar": null
         },
@@ -1728,21 +1767,21 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.46,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 62% · 美 오버나이트 neutral(-0.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.51,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 62% · 美 오버나이트 neutral(-0.7%) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CAUTION",
+      "regime": "CRISIS",
       "confidence": 0.62,
       "direction": "neutral",
       "nasdaq_change": -0.66,
@@ -1755,10 +1794,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
+    "regime": "CRISIS",
     "hmm_state": "sideways",
     "hmm_confidence": 0.76,
     "universe": [
