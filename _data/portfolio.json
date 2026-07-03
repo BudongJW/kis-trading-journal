@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T15:30:07.436001",
+  "updated_at": "2026-07-03T15:31:30.326702",
   "initial_capital": 500000,
   "cash": 647288,
   "holdings": [],
@@ -1065,18 +1065,7 @@
     "avg_loss_pct": -3.22,
     "total_return_pct": -1.29
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.01,
-    "median_r": 0.01,
-    "win_rate": 1.0,
-    "avg_win_r": 0.01,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.01,
-    "best_r": 0.01,
-    "worst_r": 0.01,
-    "last_updated": "2026-07-03 11:12"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1617,29 +1606,24 @@
       "unrealized_pnl": 0,
       "net_deposit": 421174,
       "regime": "up",
-      "hmm_state": "sideways",
-      "confidence": 0.62,
+      "hmm_state": "bull",
+      "confidence": 0.27,
       "k_value": 0.41
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "sideways",
-    "confidence": 0.62,
-    "volatility": "normal",
-    "vol_percentile": 72.0,
+    "hmm_state": "bull",
+    "confidence": 0.27,
+    "volatility": "high",
+    "vol_percentile": 96.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.27,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "2차전지",
-      "바이오",
-      "자동차",
-      "IT",
-      "철강",
-      "KOSDAQ150"
+      "IT"
     ]
   },
   "strategy": {
@@ -1648,7 +1632,7 @@
       "k": 0.41,
       "trend_ma": 15
     },
-    "universe_count": 12,
+    "universe_count": 7,
     "universe": [
       {
         "symbol": "395160",
@@ -1675,28 +1659,8 @@
         "name": "HMM"
       },
       {
-        "symbol": "305720",
-        "name": "KODEX 2차전지"
-      },
-      {
-        "symbol": "244580",
-        "name": "KODEX 바이오"
-      },
-      {
-        "symbol": "091180",
-        "name": "KODEX 자동차"
-      },
-      {
         "symbol": "098560",
         "name": "KODEX IT"
-      },
-      {
-        "symbol": "117700",
-        "name": "KODEX 철강"
-      },
-      {
-        "symbol": "229200",
-        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -1764,26 +1728,21 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "sideways",
-      "hmm_confidence": 76.0,
-      "volatility": "normal",
-      "vol_percentile": 72.0,
-      "market_confidence": 0.62,
-      "analyzed_at": "2026-07-02 10:29"
+      "hmm_state": "bull",
+      "hmm_confidence": 57.3,
+      "volatility": "high",
+      "vol_percentile": 96.0,
+      "market_confidence": 0.27,
+      "analyzed_at": "2026-07-03 13:47"
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -1.54,
-      "sp500_change": -0.07,
+      "nasdaq_change": -0.8,
+      "sp500_change": 0.0,
       "recommended_action": "normal"
     },
     "strong_sectors": [
-      "2차전지",
-      "바이오",
-      "자동차",
-      "IT",
-      "철강",
-      "KOSDAQ150"
+      "IT"
     ],
     "lgbm": {
       "accuracy": 66.7,
@@ -1853,8 +1812,8 @@
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.5,
-      "trades": 8
+      "win_rate": 0.4,
+      "trades": 11
     },
     "diary": [
       {
@@ -1974,26 +1933,26 @@
     }
   },
   "day_plan": {
-    "stance": "RISK_ON",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "RISK_ON",
-    "stance_kr": "공격",
-    "budget_pct": 1.0,
-    "max_new_positions": 3,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
     "allow_long": true,
-    "allow_inverse": false,
-    "allow_leverage": true,
-    "size_mult": 1.0,
-    "k_effective": 0.41,
-    "allow_summary": "롱/레버리지",
-    "briefing": "오늘 스탠스 공격(RISK_ON) · 레짐 BULL·신뢰도 62% · 美 오버나이트 neutral(-1.5%) · 예산 100%·최대 3종목·허용 롱/레버리지",
+    "allow_inverse": true,
+    "allow_leverage": false,
+    "size_mult": 0.6,
+    "k_effective": 0.46,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 27% · 美 오버나이트 neutral(-0.8%) · 고변동(96.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "BULL",
-      "confidence": 0.62,
+      "confidence": 0.27,
       "direction": "neutral",
-      "nasdaq_change": -1.54,
-      "high_vol": false,
-      "vol_percentile": 72.0,
+      "nasdaq_change": -0.8,
+      "high_vol": true,
+      "vol_percentile": 96.0,
       "rapid_level": "NONE"
     }
   },
@@ -2001,12 +1960,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM sideways(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "HMM 확신 부족(57% < 70%) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
     "regime": "BULL",
-    "hmm_state": "sideways",
-    "hmm_confidence": 0.76,
+    "hmm_state": "bull",
+    "hmm_confidence": 0.573,
     "universe": [
       {
         "symbol": "122630",
