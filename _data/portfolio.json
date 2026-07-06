@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T15:30:31.787851",
+  "updated_at": "2026-07-06T15:54:36.539280",
   "initial_capital": 500000,
   "cash": 778731,
   "holdings": [],
@@ -1740,15 +1740,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.6019,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 1.8507,
-      "132030": -1.2669
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -2019,9 +2012,9 @@
     "size_mult": 0.6,
     "k_effective": 0.51,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 31% · 美 오버나이트 neutral(-0.8%) · 고변동(96.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 31% · 美 오버나이트 neutral(-0.8%) · 고변동(96.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "CAUTION",
+      "regime": "BULL",
       "confidence": 0.31,
       "direction": "neutral",
       "nasdaq_change": -0.8,
@@ -2034,10 +2027,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "HMM sideways(bull 아님/횡보) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
+    "regime": "BULL",
     "hmm_state": "sideways",
     "hmm_confidence": 0.6,
     "universe": [
