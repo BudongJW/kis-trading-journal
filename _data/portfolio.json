@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T05:00:08.891265",
+  "updated_at": "2026-07-08T05:01:43.397022",
   "initial_capital": 500000,
   "cash": 591613,
   "holdings": [],
@@ -1765,8 +1765,18 @@
   "us_session": {
     "enabled": true,
     "cash_usd": 282.030918,
-    "positions": 0,
-    "holdings": [],
+    "positions": 1,
+    "holdings": [
+      {
+        "symbol": "PSQ",
+        "qty": 11,
+        "buy_price": 26.09,
+        "current_price": 26.0,
+        "pnl_pct": -0.34,
+        "exchange": "AMEX",
+        "asset_type": "us_long"
+      }
+    ],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
