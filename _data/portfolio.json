@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T14:24:44.820767",
+  "updated_at": "2026-07-08T15:30:15.008580",
   "initial_capital": 500000,
   "cash": 591613,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -2.52,
     "total_return_pct": -0.95
   },
-  "r_summary": {
-    "total_trades": 2,
-    "avg_r": -0.05,
-    "median_r": 0.03,
-    "win_rate": 0.5,
-    "avg_win_r": 0.03,
-    "avg_loss_r": -0.13,
-    "expectancy_r": -0.05,
-    "best_r": 0.03,
-    "worst_r": -0.13,
-    "last_updated": "2026-07-08 10:02"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1696,34 +1685,36 @@
       "unrealized_pnl": 0,
       "net_deposit": 100695,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.398,
-      "k_value": 0.49
+      "hmm_state": "sideways",
+      "confidence": 0.545,
+      "k_value": 0.44
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.398,
+    "hmm_state": "sideways",
+    "confidence": 0.545,
     "volatility": "normal",
-    "vol_percentile": 74.0,
+    "vol_percentile": 62.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.41,
+      "strength": 0.29,
       "action": "reduce_size"
     },
     "strong_sectors": [
       "자동차",
-      "IT"
+      "금융",
+      "IT",
+      "KOSPI200"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.49,
+      "k": 0.44,
       "trend_ma": 15
     },
-    "universe_count": 8,
+    "universe_count": 10,
     "universe": [
       {
         "symbol": "395160",
@@ -1754,8 +1745,16 @@
         "name": "KODEX 자동차"
       },
       {
+        "symbol": "102110",
+        "name": "KODEX 금융"
+      },
+      {
         "symbol": "098560",
         "name": "KODEX IT"
+      },
+      {
+        "symbol": "069500",
+        "name": "KODEX KOSPI200"
       }
     ]
   },
@@ -1770,8 +1769,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.4232,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.3353,
+      "132030": -1.0876
+    }
   },
   "us_session": {
     "enabled": true,
@@ -1823,22 +1829,24 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 60.8,
+      "hmm_state": "sideways",
+      "hmm_confidence": 61.7,
       "volatility": "normal",
-      "vol_percentile": 74.0,
-      "market_confidence": 0.398,
-      "analyzed_at": "2026-07-07 10:13"
+      "vol_percentile": 62.0,
+      "market_confidence": 0.545,
+      "analyzed_at": "2026-07-08 09:57"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.87,
-      "sp500_change": -0.57,
+      "nasdaq_change": -1.16,
+      "sp500_change": -0.45,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "자동차",
-      "IT"
+      "금융",
+      "IT",
+      "KOSPI200"
     ],
     "lgbm": {
       "accuracy": 77.8,
@@ -1889,7 +1897,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.49,
+      "k": 0.44,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2029,26 +2037,26 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
+    "size_mult": 0.4,
     "k_effective": 0.54,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 40% · 美 오버나이트 bearish(-1.9%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 55% · 美 오버나이트 bearish(-1.2%) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.398,
+      "regime": "BEAR",
+      "confidence": 0.545,
       "direction": "bearish",
-      "nasdaq_change": -1.87,
+      "nasdaq_change": -1.16,
       "high_vol": false,
-      "vol_percentile": 74.0,
+      "vol_percentile": 62.0,
       "rapid_level": "NONE"
     }
   },
@@ -2056,12 +2064,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.608,
+    "regime": "BEAR",
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.617,
     "universe": [
       {
         "symbol": "122630",
