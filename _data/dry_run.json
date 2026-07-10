@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T10:18:10",
+  "generated_at": "2026-07-11T00:41:05",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
     "regime": "BEAR",
@@ -27,7 +27,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 19.5,
-      "atr_pct": 9.76,
+      "atr_pct": 9.83,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -36,8 +36,8 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -11.0,
-      "atr_pct": 8.39,
+      "ta": -11.1,
+      "atr_pct": 8.65,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-11)"
     },
@@ -46,18 +46,18 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": 8.0,
-      "atr_pct": 11.17,
+      "ta": -7.3,
+      "atr_pct": 11.3,
       "fee_gate_ok": true,
-      "why_skip": "미돌파"
+      "why_skip": "미돌파 · TA부족(-7)"
     },
     {
       "symbol": "034220",
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": 3.0,
-      "atr_pct": 7.94,
+      "ta": 2.6,
+      "atr_pct": 8.02,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -66,8 +66,8 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": 5.2,
-      "atr_pct": 6.86,
+      "ta": 4.0,
+      "atr_pct": 6.88,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -77,7 +77,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 11.7,
-      "atr_pct": 4.09,
+      "atr_pct": 4.14,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -93,15 +93,15 @@
       "entry_via": "-",
       "decision": "스킵",
       "breakout": false,
-      "ta": -6.3,
-      "atr_pct": 6.28,
+      "ta": -0.4,
+      "atr_pct": 6.34,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-6<20) · TA<10(-6)"
+      "why_skip": "미돌파 · TA부족(-0<20) · TA<10(-0)"
     }
   ],
   "gap_recovery": {
     "enabled_live": true,
-    "now_kst": "10:18",
+    "now_kst": "00:41",
     "window": "09:00~09:20",
     "candidates": [
       {
@@ -109,7 +109,7 @@
         "name": "KODEX 미국나스닥100TR",
         "decision": "스킵",
         "gap_open_pct": 5.12,
-        "intraday_pct": -1.16,
+        "intraday_pct": -1.47,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -118,7 +118,7 @@
         "name": "삼성전자",
         "decision": "스킵",
         "gap_open_pct": 4.68,
-        "intraday_pct": -0.95,
+        "intraday_pct": -2.06,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -127,7 +127,7 @@
         "name": "SK하이닉스",
         "decision": "스킵",
         "gap_open_pct": 5.03,
-        "intraday_pct": -4.05,
+        "intraday_pct": -5.05,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -136,7 +136,7 @@
         "name": "LG디스플레이",
         "decision": "스킵",
         "gap_open_pct": 1.03,
-        "intraday_pct": 2.97,
+        "intraday_pct": 2.04,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -145,7 +145,7 @@
         "name": "삼성중공업",
         "decision": "스킵",
         "gap_open_pct": 2.15,
-        "intraday_pct": 4.21,
+        "intraday_pct": 4.44,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -154,7 +154,7 @@
         "name": "HMM",
         "decision": "스킵",
         "gap_open_pct": 1.14,
-        "intraday_pct": 1.69,
+        "intraday_pct": 1.02,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -171,17 +171,17 @@
   },
   "morning_momentum": {
     "enabled_live": true,
-    "now_kst": "10:18",
+    "now_kst": "00:41",
     "window": "09:00~14:00",
     "up_th": 0.6,
     "down_th": 0.6,
     "benchmark": "069500",
     "direction": "none",
-    "in_window": true,
-    "move_pct": 3.22,
-    "intraday_pct": -0.62,
+    "in_window": false,
+    "move_pct": 2.47,
+    "intraday_pct": -1.35,
     "would_enter": false,
-    "reason": "임계 미달 (전일대비 +3.22%, 시가대비 -0.62%)"
+    "reason": "윈도 밖(00:41∉09:00~14:00)"
   },
   "us_entry_candidates": [
     {
@@ -197,28 +197,28 @@
       "symbol": "SCHG",
       "type": "long",
       "decision": "스킵",
-      "breakout": true,
-      "ta": -0.3,
-      "atr_pct": 1.35,
-      "why_skip": "TA부족(-0)"
+      "breakout": false,
+      "ta": 11.0,
+      "atr_pct": 1.3,
+      "why_skip": "미돌파 · TA부족(+11)"
     },
     {
       "symbol": "XLF",
       "type": "long",
       "decision": "스킵",
-      "breakout": true,
-      "ta": 3.6,
-      "atr_pct": 1.34,
-      "why_skip": "TA부족(+4)"
+      "breakout": false,
+      "ta": 1.4,
+      "atr_pct": 1.3,
+      "why_skip": "미돌파 · TA부족(+1)"
     },
     {
       "symbol": "SH",
       "type": "inverse",
       "decision": "스킵",
       "breakout": false,
-      "ta": -2.3,
-      "atr_pct": 1.07,
-      "why_skip": "미돌파 · TA부족(-2)"
+      "ta": 0.7,
+      "atr_pct": 1.0,
+      "why_skip": "미돌파 · TA부족(+1)"
     },
     {
       "symbol": "PSQ",
@@ -231,18 +231,18 @@
       "type": "defensive",
       "decision": "스킵",
       "breakout": false,
-      "ta": 7.4,
-      "atr_pct": 0.52,
-      "why_skip": "미돌파 · TA부족(+7) · 수수료게이트"
+      "ta": 8.1,
+      "atr_pct": 0.5,
+      "why_skip": "미돌파 · TA부족(+8) · 수수료게이트"
     },
     {
       "symbol": "SHY",
       "type": "defensive",
       "decision": "스킵",
       "breakout": false,
-      "ta": 13.4,
-      "atr_pct": 0.08,
-      "why_skip": "미돌파 · TA부족(+13) · 수수료게이트"
+      "ta": 10.0,
+      "atr_pct": 0.06,
+      "why_skip": "미돌파 · TA부족(+10) · 수수료게이트"
     }
   ],
   "us_summary": {
