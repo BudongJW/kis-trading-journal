@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-13T15:30:28.119952",
+  "updated_at": "2026-07-13T15:31:58.239184",
   "initial_capital": 500000,
   "cash": 633732,
   "holdings": [
@@ -12,7 +12,9 @@
       "buy_price": 1116,
       "pnl": 47,
       "pnl_pct": 0.02,
-      "manual": true,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 1117,
       "stop_price": 1083
     }
   ],
@@ -1106,18 +1108,7 @@
     "avg_loss_pct": -2.08,
     "total_return_pct": -0.77
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.09,
-    "median_r": 0.09,
-    "win_rate": 1.0,
-    "avg_win_r": 0.09,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.09,
-    "best_r": 0.09,
-    "worst_r": 0.09,
-    "last_updated": "2026-07-13 15:20"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1854,15 +1845,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CRISIS",
-    "confidence": 0.65,
-    "sma_ratio": 0.3156,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.6988,
-      "132030": -1.0359
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -2124,21 +2108,21 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "RISK_ON",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
-    "allow_inverse": true,
-    "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.51,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 62% · 美 오버나이트 neutral(+0.3%) · 예산 25%·최대 1종목·허용 인버스",
+    "auto_stance": "RISK_ON",
+    "stance_kr": "공격",
+    "budget_pct": 1.0,
+    "max_new_positions": 3,
+    "allow_long": true,
+    "allow_inverse": false,
+    "allow_leverage": true,
+    "size_mult": 1.0,
+    "k_effective": 0.41,
+    "allow_summary": "롱/레버리지",
+    "briefing": "오늘 스탠스 공격(RISK_ON) · 레짐 BULL·신뢰도 62% · 美 오버나이트 neutral(+0.3%) · 예산 100%·최대 3종목·허용 롱/레버리지",
     "signals": {
-      "regime": "CRISIS",
+      "regime": "BULL",
       "confidence": 0.62,
       "direction": "neutral",
       "nasdaq_change": 0.29,
@@ -2150,11 +2134,11 @@
   "leverage": {
     "enabled": true,
     "dry_run": true,
-    "gate_allowed": false,
-    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
+    "gate_allowed": true,
+    "gate_reason": "강한 상승추세 확인(BULL+bull+확신+급락無) → 레버리지 진입 허용",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CRISIS",
+    "regime": "BULL",
     "hmm_state": "bull",
     "hmm_confidence": 0.767,
     "universe": [
