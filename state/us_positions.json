@@ -1,1 +1,10 @@
-{}
+{
+  "PSQ": {
+    "buy_price": 25.935,
+    "buy_time": "2026-07-17T00:00:59.735940+09:00",
+    "qty": 10,
+    "exchange": "AMEX",
+    "asset_type": "us_mom_inverse",
+    "peak_price": 26.22
+  }
+}
