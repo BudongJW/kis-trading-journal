@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T14:28:03.208736",
+  "updated_at": "2026-07-16T15:30:09.240362",
   "initial_capital": 500000,
   "cash": 871201,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -1.93,
     "total_return_pct": -0.66
   },
-  "r_summary": {
-    "total_trades": 2,
-    "avg_r": 0.03,
-    "median_r": 0.03,
-    "win_rate": 1.0,
-    "avg_win_r": 0.03,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.03,
-    "best_r": 0.03,
-    "worst_r": 0.03,
-    "last_updated": "2026-07-16 12:59"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1784,37 +1773,33 @@
       "net_deposit": 381542,
       "regime": "up",
       "hmm_state": "bear",
-      "confidence": 0.498,
-      "k_value": 0.53
+      "confidence": 0.311,
+      "k_value": 0.62
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bear",
-    "confidence": 0.498,
+    "confidence": 0.311,
     "volatility": "high",
-    "vol_percentile": 94.0,
+    "vol_percentile": 80.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.02,
+      "direction": "bullish",
+      "strength": 0.17,
       "action": "normal"
     },
     "strong_sectors": [
-      "반도체",
       "2차전지",
-      "자동차",
-      "IT",
-      "철강",
-      "KOSDAQ150"
+      "IT"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.53,
+      "k": 0.62,
       "trend_ma": 15
     },
-    "universe_count": 12,
+    "universe_count": 8,
     "universe": [
       {
         "symbol": "395160",
@@ -1841,28 +1826,12 @@
         "name": "HMM"
       },
       {
-        "symbol": "091160",
-        "name": "KODEX 반도체"
-      },
-      {
         "symbol": "305720",
         "name": "KODEX 2차전지"
       },
       {
-        "symbol": "091180",
-        "name": "KODEX 자동차"
-      },
-      {
         "symbol": "098560",
         "name": "KODEX IT"
-      },
-      {
-        "symbol": "117700",
-        "name": "KODEX 철강"
-      },
-      {
-        "symbol": "229200",
-        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -1877,8 +1846,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.2934,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.7204,
+      "132030": -1.61
+    }
   },
   "us_session": {
     "enabled": true,
@@ -1931,25 +1907,21 @@
     "market": {
       "trend": "up",
       "hmm_state": "bear",
-      "hmm_confidence": 60.0,
+      "hmm_confidence": 95.5,
       "volatility": "high",
-      "vol_percentile": 94.0,
-      "market_confidence": 0.498,
-      "analyzed_at": "2026-07-15 09:11"
+      "vol_percentile": 80.0,
+      "market_confidence": 0.311,
+      "analyzed_at": "2026-07-16 09:15"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": -0.23,
+      "direction": "bullish",
+      "nasdaq_change": 0.62,
       "sp500_change": 0.38,
       "recommended_action": "normal"
     },
     "strong_sectors": [
-      "반도체",
       "2차전지",
-      "자동차",
-      "IT",
-      "철강",
-      "KOSDAQ150"
+      "IT"
     ],
     "lgbm": {
       "accuracy": 80.6,
@@ -2000,27 +1972,27 @@
       ]
     },
     "strategy_params": {
-      "k": 0.53,
+      "k": 0.62,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
       "optimized_at": "2026-07-05"
     },
     "ta_weights": {
-      "rsi": 0.048,
-      "macd": 0.198,
-      "bb": 0.056,
-      "stoch": 0.085,
-      "adx": 0.056,
-      "ma": 0.198,
-      "obv": 0.198,
-      "mfi": 0.048,
-      "atr": 0.113
+      "rsi": 0.049,
+      "macd": 0.18,
+      "bb": 0.078,
+      "stoch": 0.103,
+      "adx": 0.078,
+      "ma": 0.18,
+      "obv": 0.18,
+      "mfi": 0.051,
+      "atr": 0.103
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.417,
-      "trades": 32
+      "win_rate": 0.447,
+      "trades": 34
     },
     "diary": [
       {
@@ -2140,26 +2112,26 @@
     }
   },
   "day_plan": {
-    "stance": "NEUTRAL",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "NEUTRAL",
-    "stance_kr": "중립",
-    "budget_pct": 0.7,
-    "max_new_positions": 2,
-    "allow_long": true,
-    "allow_inverse": false,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
+    "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.85,
-    "k_effective": 0.53,
-    "allow_summary": "롱",
-    "briefing": "오늘 스탠스 중립(NEUTRAL) · 레짐 BULL·신뢰도 50% · 美 오버나이트 neutral(-0.2%) · 고변동(94.0%ile) · 예산 70%·최대 2종목·허용 롱",
+    "size_mult": 0.4,
+    "k_effective": 0.72,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 31% · 美 오버나이트 bullish(+0.6%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.498,
-      "direction": "neutral",
-      "nasdaq_change": -0.23,
+      "regime": "BEAR",
+      "confidence": 0.311,
+      "direction": "bullish",
+      "nasdaq_change": 0.62,
       "high_vol": true,
-      "vol_percentile": 94.0,
+      "vol_percentile": 80.0,
       "rapid_level": "NONE"
     }
   },
@@ -2167,12 +2139,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "BEAR",
     "hmm_state": "bear",
-    "hmm_confidence": 0.6,
+    "hmm_confidence": 0.955,
     "universe": [
       {
         "symbol": "122630",
