@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T07:01:55.853581",
+  "updated_at": "2026-07-17T14:26:34.064353",
   "initial_capital": 500000,
   "cash": 459519,
   "holdings": [],
@@ -1775,20 +1775,20 @@
       "net_deposit": -30140,
       "regime": "up",
       "hmm_state": "bear",
-      "confidence": 0.311,
+      "confidence": 0.231,
       "k_value": 0.62
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bear",
-    "confidence": 0.311,
+    "confidence": 0.231,
     "volatility": "high",
     "vol_percentile": 80.0,
     "overnight_gap": {
-      "direction": "bullish",
-      "strength": 0.17,
-      "action": "normal"
+      "direction": "bearish",
+      "strength": 0.42,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "2차전지",
@@ -1848,24 +1848,21 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.2966,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.7204,
+      "132030": -1.5908
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 17.795527,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "PSQ",
-        "qty": 21,
-        "buy_price": 25.935,
-        "current_price": 26.14,
-        "pnl_pct": 0.79,
-        "exchange": "AMEX",
-        "asset_type": "us_mom_inverse"
-      }
-    ],
+    "cash_usd": 19.408248,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -1915,64 +1912,64 @@
       "hmm_confidence": 95.5,
       "volatility": "high",
       "vol_percentile": 80.0,
-      "market_confidence": 0.311,
+      "market_confidence": 0.231,
       "analyzed_at": "2026-07-16 09:15"
     },
     "overnight": {
-      "direction": "bullish",
-      "nasdaq_change": 0.62,
-      "sp500_change": 0.38,
-      "recommended_action": "normal"
+      "direction": "bearish",
+      "nasdaq_change": -1.86,
+      "sp500_change": -0.65,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "2차전지",
       "IT"
     ],
     "lgbm": {
-      "accuracy": 86.1,
-      "auc": 0.9288,
+      "accuracy": 88.9,
+      "auc": 0.935,
       "n_samples": 180,
-      "trained_at": "2026-07-16T18:22:08.390085",
+      "trained_at": "2026-07-17T07:28:23.196403",
       "top_features": [
         {
           "name": "momentum_accel_3d",
-          "importance": 300.4
+          "importance": 300.9
         },
         {
           "name": "body_ratio",
-          "importance": 179.1
+          "importance": 179.7
         },
         {
           "name": "upper_shadow",
-          "importance": 177.7
+          "importance": 178.8
+        },
+        {
+          "name": "obv_slope_10",
+          "importance": 170.6
         },
         {
           "name": "ma60_ratio",
           "importance": 168.2
         },
         {
-          "name": "obv_slope_10",
-          "importance": 167.6
-        },
-        {
           "name": "di_plus",
-          "importance": 141.6
-        },
-        {
-          "name": "momentum_accel",
-          "importance": 141.6
+          "importance": 143.9
         },
         {
           "name": "ret_3d",
-          "importance": 141.3
+          "importance": 143.0
+        },
+        {
+          "name": "momentum_accel",
+          "importance": 141.7
         },
         {
           "name": "vol_ma5_ratio",
-          "importance": 109.1
+          "importance": 109.4
         },
         {
           "name": "ret_5d",
-          "importance": 107.7
+          "importance": 108.3
         }
       ]
     },
@@ -2029,10 +2026,10 @@
     "game": {
       "level": 8,
       "title": "베테랑",
-      "xp": 20380,
-      "xp_in_level": 6074,
+      "xp": 20394,
+      "xp_in_level": 6088,
       "xp_for_next": 6321,
-      "progress_pct": 96.1,
+      "progress_pct": 96.3,
       "achievements": [
         {
           "icon": "🎯",
@@ -2087,9 +2084,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 86,
+          "value": 89,
           "suffix": "%",
-          "bar": 86
+          "bar": 89
         },
         {
           "label": "승률",
@@ -2117,24 +2114,24 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.67,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 31% · 美 오버나이트 bullish(+0.6%) · 고변동(80.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.72,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 23% · 美 오버나이트 bearish(-1.9%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.311,
-      "direction": "bullish",
-      "nasdaq_change": 0.62,
+      "regime": "BEAR",
+      "confidence": 0.231,
+      "direction": "bearish",
+      "nasdaq_change": -1.86,
       "high_vol": true,
       "vol_percentile": 80.0,
       "rapid_level": "NONE"
@@ -2144,10 +2141,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "BEAR",
     "hmm_state": "bear",
     "hmm_confidence": 0.955,
     "universe": [
