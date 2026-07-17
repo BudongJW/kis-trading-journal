@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T14:26:34.064353",
+  "updated_at": "2026-07-17T15:30:04.809198",
   "initial_capital": 500000,
   "cash": 459519,
   "holdings": [],
@@ -1775,33 +1775,32 @@
       "net_deposit": -30140,
       "regime": "up",
       "hmm_state": "bear",
-      "confidence": 0.231,
-      "k_value": 0.62
+      "confidence": 0.227,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "up",
     "hmm_state": "bear",
-    "confidence": 0.231,
+    "confidence": 0.227,
     "volatility": "high",
-    "vol_percentile": 80.0,
+    "vol_percentile": 82.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.42,
+      "strength": 0.36,
       "action": "reduce_size"
     },
     "strong_sectors": [
-      "2차전지",
       "IT"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.62,
+      "k": 0.7,
       "trend_ma": 15
     },
-    "universe_count": 8,
+    "universe_count": 7,
     "universe": [
       {
         "symbol": "395160",
@@ -1826,10 +1825,6 @@
       {
         "symbol": "011200",
         "name": "HMM"
-      },
-      {
-        "symbol": "305720",
-        "name": "KODEX 2차전지"
       },
       {
         "symbol": "098560",
@@ -1909,20 +1904,19 @@
     "market": {
       "trend": "up",
       "hmm_state": "bear",
-      "hmm_confidence": 95.5,
+      "hmm_confidence": 99.1,
       "volatility": "high",
-      "vol_percentile": 80.0,
-      "market_confidence": 0.231,
-      "analyzed_at": "2026-07-16 09:15"
+      "vol_percentile": 82.0,
+      "market_confidence": 0.227,
+      "analyzed_at": "2026-07-17 09:57"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.86,
-      "sp500_change": -0.65,
+      "nasdaq_change": -1.47,
+      "sp500_change": -0.51,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
-      "2차전지",
       "IT"
     ],
     "lgbm": {
@@ -1974,7 +1968,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.62,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -1982,19 +1976,19 @@
     },
     "ta_weights": {
       "rsi": 0.049,
-      "macd": 0.18,
-      "bb": 0.078,
-      "stoch": 0.103,
-      "adx": 0.078,
-      "ma": 0.18,
-      "obv": 0.18,
-      "mfi": 0.051,
-      "atr": 0.103
+      "macd": 0.19,
+      "bb": 0.071,
+      "stoch": 0.095,
+      "adx": 0.071,
+      "ma": 0.19,
+      "obv": 0.19,
+      "mfi": 0.049,
+      "atr": 0.095
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.447,
-      "trades": 34
+      "win_rate": 0.488,
+      "trades": 37
     },
     "diary": [
       {
@@ -2124,16 +2118,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.4,
-    "k_effective": 0.72,
+    "k_effective": 0.8,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 23% · 美 오버나이트 bearish(-1.9%) · 고변동(80.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 23% · 美 오버나이트 bearish(-1.5%) · 고변동(82.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "BEAR",
-      "confidence": 0.231,
+      "confidence": 0.227,
       "direction": "bearish",
-      "nasdaq_change": -1.86,
+      "nasdaq_change": -1.47,
       "high_vol": true,
-      "vol_percentile": 80.0,
+      "vol_percentile": 82.0,
       "rapid_level": "NONE"
     }
   },
@@ -2146,7 +2140,7 @@
     "max_weight": 0.15,
     "regime": "BEAR",
     "hmm_state": "bear",
-    "hmm_confidence": 0.955,
+    "hmm_confidence": 0.991,
     "universe": [
       {
         "symbol": "122630",
