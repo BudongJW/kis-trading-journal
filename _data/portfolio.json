@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T14:25:33.298068",
+  "updated_at": "2026-07-20T15:30:26.664637",
   "initial_capital": 500000,
   "cash": 450500,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -1.88,
     "total_return_pct": -0.67
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.03,
-    "median_r": 0.03,
-    "win_rate": 1.0,
-    "avg_win_r": 0.03,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.03,
-    "best_r": 0.03,
-    "worst_r": 0.03,
-    "last_updated": "2026-07-20 13:27"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1822,30 +1811,31 @@
       "unrealized_pnl": 0,
       "net_deposit": -44019,
       "regime": "up",
-      "hmm_state": "bear",
-      "confidence": 0.147,
-      "k_value": 0.7
+      "hmm_state": "sideways",
+      "confidence": 0.39,
+      "k_value": 0.65
     }
   ],
   "market": {
     "regime": "up",
-    "hmm_state": "bear",
-    "confidence": 0.147,
-    "volatility": "high",
-    "vol_percentile": 82.0,
+    "hmm_state": "sideways",
+    "confidence": 0.39,
+    "volatility": "normal",
+    "vol_percentile": 56.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.43,
+      "strength": 0.41,
       "action": "reduce_size"
     },
     "strong_sectors": [
-      "IT"
+      "IT",
+      "미국나스닥"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 15
     },
     "universe_count": 7,
@@ -1891,8 +1881,15 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.2345,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.359,
+      "132030": -1.7075
+    }
   },
   "us_session": {
     "enabled": true,
@@ -1944,21 +1941,22 @@
   "learning": {
     "market": {
       "trend": "up",
-      "hmm_state": "bear",
-      "hmm_confidence": 99.1,
-      "volatility": "high",
-      "vol_percentile": 82.0,
-      "market_confidence": 0.147,
-      "analyzed_at": "2026-07-17 09:57"
+      "hmm_state": "sideways",
+      "hmm_confidence": 70.5,
+      "volatility": "normal",
+      "vol_percentile": 56.0,
+      "market_confidence": 0.39,
+      "analyzed_at": "2026-07-20 10:00"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.59,
-      "sp500_change": -1.0,
+      "nasdaq_change": -1.4,
+      "sp500_change": -1.01,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
-      "IT"
+      "IT",
+      "미국나스닥"
     ],
     "lgbm": {
       "accuracy": 83.3,
@@ -2009,7 +2007,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.65,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2149,26 +2147,26 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.8,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BULL·신뢰도 15% · 美 오버나이트 bearish(-1.6%) · 고변동(82.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.7,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 39% · 美 오버나이트 bearish(-1.4%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BULL",
-      "confidence": 0.147,
+      "regime": "CAUTION",
+      "confidence": 0.39,
       "direction": "bearish",
-      "nasdaq_change": -1.59,
-      "high_vol": true,
-      "vol_percentile": 82.0,
+      "nasdaq_change": -1.4,
+      "high_vol": false,
+      "vol_percentile": 56.0,
       "rapid_level": "NONE"
     }
   },
@@ -2176,12 +2174,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM bear(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.991,
+    "regime": "CAUTION",
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.705,
     "universe": [
       {
         "symbol": "122630",
