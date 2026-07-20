@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T05:15:23.200275",
+  "updated_at": "2026-07-21T06:37:10.359348",
   "initial_capital": 500000,
   "cash": 65853,
   "holdings": [],
@@ -1905,8 +1905,8 @@
         "symbol": "QQQM",
         "qty": 2,
         "buy_price": 289.0,
-        "current_price": 286.54,
-        "pnl_pct": -0.85,
+        "current_price": 286.58,
+        "pnl_pct": -0.84,
         "exchange": "NASD",
         "asset_type": "us_long"
       }
