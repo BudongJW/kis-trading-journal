@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T14:26:10.013297",
+  "updated_at": "2026-07-21T15:30:33.565330",
   "initial_capital": 500000,
   "cash": 65853,
   "holdings": [],
@@ -1822,32 +1822,31 @@
       "realized_pnl": -3755,
       "unrealized_pnl": 0,
       "net_deposit": -431843,
-      "regime": "up",
+      "regime": "sideways",
       "hmm_state": "sideways",
-      "confidence": 0.39,
-      "k_value": 0.65
+      "confidence": 0.27,
+      "k_value": 0.6
     }
   ],
   "market": {
-    "regime": "up",
+    "regime": "sideways",
     "hmm_state": "sideways",
-    "confidence": 0.39,
+    "confidence": 0.27,
     "volatility": "normal",
-    "vol_percentile": 56.0,
+    "vol_percentile": 66.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.07,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "IT",
-      "미국나스닥"
+      "IT"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.65,
+      "k": 0.6,
       "trend_ma": 15
     },
     "universe_count": 7,
@@ -1894,13 +1893,13 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.2674,
+    "sma_ratio": 0.2797,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.4272,
-      "132030": -1.1191
+      "195930": 0.406,
+      "132030": -1.017
     }
   },
   "us_session": {
@@ -1952,23 +1951,22 @@
   "decisions": [],
   "learning": {
     "market": {
-      "trend": "up",
+      "trend": "sideways",
       "hmm_state": "sideways",
-      "hmm_confidence": 70.5,
+      "hmm_confidence": 90.7,
       "volatility": "normal",
-      "vol_percentile": 56.0,
-      "market_confidence": 0.39,
-      "analyzed_at": "2026-07-20 10:00"
+      "vol_percentile": 66.0,
+      "market_confidence": 0.27,
+      "analyzed_at": "2026-07-21 09:56"
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -0.13,
-      "sp500_change": -0.28,
+      "nasdaq_change": -0.05,
+      "sp500_change": -0.19,
       "recommended_action": "normal"
     },
     "strong_sectors": [
-      "IT",
-      "미국나스닥"
+      "IT"
     ],
     "lgbm": {
       "accuracy": 86.1,
@@ -2019,7 +2017,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.65,
+      "k": 0.6,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2027,19 +2025,19 @@
     },
     "ta_weights": {
       "rsi": 0.049,
-      "macd": 0.19,
-      "bb": 0.071,
-      "stoch": 0.095,
-      "adx": 0.071,
-      "ma": 0.19,
-      "obv": 0.19,
+      "macd": 0.193,
+      "bb": 0.064,
+      "stoch": 0.107,
+      "adx": 0.064,
+      "ma": 0.193,
+      "obv": 0.193,
       "mfi": 0.049,
-      "atr": 0.095
+      "atr": 0.086
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.488,
-      "trades": 37
+      "win_rate": 0.477,
+      "trades": 40
     },
     "diary": [
       {
@@ -2159,26 +2157,26 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.75,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 39% · 美 오버나이트 neutral(-0.1%) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.65,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 27% · 美 오버나이트 neutral(-0.1%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "BEAR",
-      "confidence": 0.39,
+      "regime": "CAUTION",
+      "confidence": 0.27,
       "direction": "neutral",
-      "nasdaq_change": -0.13,
+      "nasdaq_change": -0.05,
       "high_vol": false,
-      "vol_percentile": 56.0,
+      "vol_percentile": 66.0,
       "rapid_level": "NONE"
     }
   },
@@ -2186,12 +2184,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "hmm_state": "sideways",
-    "hmm_confidence": 0.705,
+    "hmm_confidence": 0.907,
     "universe": [
       {
         "symbol": "122630",
