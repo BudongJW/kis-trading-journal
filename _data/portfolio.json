@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T06:58:51.107929",
+  "updated_at": "2026-07-21T14:26:10.013297",
   "initial_capital": 500000,
   "cash": 65853,
   "holdings": [],
@@ -1835,9 +1835,9 @@
     "volatility": "normal",
     "vol_percentile": 56.0,
     "overnight_gap": {
-      "direction": "bearish",
-      "strength": 0.41,
-      "action": "reduce_size"
+      "direction": "neutral",
+      "strength": 0.07,
+      "action": "normal"
     },
     "strong_sectors": [
       "IT",
@@ -1893,24 +1893,21 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.2674,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.4272,
+      "132030": -1.1191
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 9.017207,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "QQQM",
-        "qty": 2,
-        "buy_price": 289.0,
-        "current_price": 286.58,
-        "pnl_pct": -0.84,
-        "exchange": "NASD",
-        "asset_type": "us_long"
-      }
-    ],
+    "cash_usd": 11.640911,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -1964,24 +1961,24 @@
       "analyzed_at": "2026-07-20 10:00"
     },
     "overnight": {
-      "direction": "bearish",
-      "nasdaq_change": -1.4,
-      "sp500_change": -1.01,
-      "recommended_action": "reduce_size"
+      "direction": "neutral",
+      "nasdaq_change": -0.13,
+      "sp500_change": -0.28,
+      "recommended_action": "normal"
     },
     "strong_sectors": [
       "IT",
       "미국나스닥"
     ],
     "lgbm": {
-      "accuracy": 83.3,
-      "auc": 0.9167,
-      "n_samples": 180,
-      "trained_at": "2026-07-20T19:19:26.013144",
+      "accuracy": 86.1,
+      "auc": 0.9259,
+      "n_samples": 177,
+      "trained_at": "2026-07-21T07:29:53.629967",
       "top_features": [
         {
           "name": "momentum_accel_3d",
-          "importance": 305.0
+          "importance": 306.9
         },
         {
           "name": "body_ratio",
@@ -1993,11 +1990,11 @@
         },
         {
           "name": "ma60_ratio",
-          "importance": 177.8
+          "importance": 179.6
         },
         {
           "name": "obv_slope_10",
-          "importance": 171.8
+          "importance": 174.5
         },
         {
           "name": "ret_3d",
@@ -2009,15 +2006,15 @@
         },
         {
           "name": "momentum_accel",
-          "importance": 145.7
-        },
-        {
-          "name": "ret_10d",
-          "importance": 111.0
+          "importance": 145.9
         },
         {
           "name": "vol_ma5_ratio",
-          "importance": 110.6
+          "importance": 113.5
+        },
+        {
+          "name": "ret_5d",
+          "importance": 111.5
         }
       ]
     },
@@ -2074,8 +2071,8 @@
     "game": {
       "level": 9,
       "title": "베테랑",
-      "xp": 22816,
-      "xp_in_level": 2189,
+      "xp": 22815,
+      "xp_in_level": 2188,
       "xp_for_next": 8849,
       "progress_pct": 24.7,
       "achievements": [
@@ -2132,9 +2129,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 83,
+          "value": 86,
           "suffix": "%",
-          "bar": 83
+          "bar": 86
         },
         {
           "label": "승률",
@@ -2153,7 +2150,7 @@
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -2162,24 +2159,24 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.7,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 BULL·신뢰도 39% · 美 오버나이트 bearish(-1.4%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.75,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 39% · 美 오버나이트 neutral(-0.1%) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BULL",
+      "regime": "BEAR",
       "confidence": 0.39,
-      "direction": "bearish",
-      "nasdaq_change": -1.4,
+      "direction": "neutral",
+      "nasdaq_change": -0.13,
       "high_vol": false,
       "vol_percentile": 56.0,
       "rapid_level": "NONE"
@@ -2189,10 +2186,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "HMM sideways(bull 아님/횡보) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BULL",
+    "regime": "BEAR",
     "hmm_state": "sideways",
     "hmm_confidence": 0.705,
     "universe": [
