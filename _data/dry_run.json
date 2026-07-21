@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-21T10:11:56",
+  "generated_at": "2026-07-22T00:18:56",
   "mode": "DRY-RUN (읽기 전용, 주문 없음)",
   "market": {
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "regime_blind": false,
-    "regime_detail": "카나리아 1/2 음전환 | ⚡급락 트리거 BEAR → CAUTION에서 BEAR 격상 (3일 지속 급락 BEAR (3일 -8.7%))",
-    "day_stance": "DEFENSIVE",
+    "regime_detail": "카나리아 1/2 음전환",
+    "day_stance": "CAUTIOUS",
     "day_stance_forced": false,
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 27% · 美 오버나이트 neutral(-0.1%) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 27% · 美 오버나이트 neutral(-0.1%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "blocks_new_buys": false
   },
   "gates": {
     "leverage_dry_run": true,
     "leverage_gate_allowed": false,
-    "leverage_gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지"
+    "leverage_gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지"
   },
   "account": {
     "cash": 65853,
@@ -26,8 +26,8 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -12.8,
-      "atr_pct": 10.11,
+      "ta": -13.0,
+      "atr_pct": 10.07,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-13)"
     },
@@ -36,10 +36,10 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -15.6,
-      "atr_pct": 8.65,
+      "ta": -16.9,
+      "atr_pct": 8.73,
       "fee_gate_ok": true,
-      "why_skip": "미돌파 · TA부족(-16)"
+      "why_skip": "미돌파 · TA부족(-17)"
     },
     {
       "symbol": "000660",
@@ -47,7 +47,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": -13.9,
-      "atr_pct": 11.53,
+      "atr_pct": 11.64,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-14)"
     },
@@ -56,8 +56,8 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": -8.5,
-      "atr_pct": 6.77,
+      "ta": -8.1,
+      "atr_pct": 6.83,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(-8)"
     },
@@ -66,8 +66,8 @@
       "type": "롱",
       "decision": "스킵",
       "breakout": false,
-      "ta": 11.5,
-      "atr_pct": 6.4,
+      "ta": 11.0,
+      "atr_pct": 6.43,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -77,7 +77,7 @@
       "decision": "스킵",
       "breakout": false,
       "ta": 17.8,
-      "atr_pct": 3.77,
+      "atr_pct": 3.85,
       "fee_gate_ok": true,
       "why_skip": "미돌파"
     },
@@ -93,15 +93,15 @@
       "entry_via": "-",
       "decision": "스킵",
       "breakout": false,
-      "ta": 15.1,
-      "atr_pct": 5.99,
+      "ta": 15.2,
+      "atr_pct": 6.29,
       "fee_gate_ok": true,
       "why_skip": "미돌파 · TA부족(+15<20)"
     }
   ],
   "gap_recovery": {
     "enabled_live": true,
-    "now_kst": "10:12",
+    "now_kst": "00:19",
     "window": "09:00~09:20",
     "candidates": [
       {
@@ -109,7 +109,7 @@
         "name": "KODEX 미국나스닥100TR",
         "decision": "스킵",
         "gap_open_pct": 0.08,
-        "intraday_pct": 1.92,
+        "intraday_pct": 4.53,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -118,7 +118,7 @@
         "name": "삼성전자",
         "decision": "스킵",
         "gap_open_pct": 1.23,
-        "intraday_pct": 2.94,
+        "intraday_pct": 4.86,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -127,7 +127,7 @@
         "name": "SK하이닉스",
         "decision": "스킵",
         "gap_open_pct": 0.62,
-        "intraday_pct": 2.2,
+        "intraday_pct": 3.44,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -136,7 +136,7 @@
         "name": "LG디스플레이",
         "decision": "스킵",
         "gap_open_pct": -1.82,
-        "intraday_pct": 1.55,
+        "intraday_pct": 0.52,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -145,7 +145,7 @@
         "name": "삼성중공업",
         "decision": "스킵",
         "gap_open_pct": -0.95,
-        "intraday_pct": 1.69,
+        "intraday_pct": 2.41,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -154,7 +154,7 @@
         "name": "HMM",
         "decision": "스킵",
         "gap_open_pct": -0.74,
-        "intraday_pct": 1.38,
+        "intraday_pct": 0.5,
         "in_window": false,
         "reason": "촉발 없음(오버나이트=normal≠aggressive_buy)"
       },
@@ -171,17 +171,17 @@
   },
   "morning_momentum": {
     "enabled_live": true,
-    "now_kst": "10:12",
+    "now_kst": "00:19",
     "window": "09:00~14:00",
     "up_th": 0.6,
     "down_th": 0.6,
     "benchmark": "069500",
-    "direction": "long",
-    "in_window": true,
-    "move_pct": 2.36,
-    "intraday_pct": 2.64,
-    "would_enter": true,
-    "reason": "상승 아침추세 (전일대비 +2.36%, 시가대비 +2.64%)"
+    "direction": "none",
+    "in_window": false,
+    "move_pct": 3.89,
+    "intraday_pct": 4.18,
+    "would_enter": false,
+    "reason": "윈도 밖(00:19∉09:00~14:00)"
   },
   "us_entry_candidates": [
     {
@@ -198,27 +198,27 @@
       "type": "long",
       "decision": "스킵",
       "breakout": false,
-      "ta": 11.9,
-      "atr_pct": 1.15,
-      "why_skip": "미돌파 · TA부족(+12)"
+      "ta": -9.9,
+      "atr_pct": 1.09,
+      "why_skip": "미돌파 · TA부족(-10)"
     },
     {
       "symbol": "XLF",
       "type": "long",
       "decision": "스킵",
       "breakout": false,
-      "ta": 7.7,
-      "atr_pct": 1.23,
-      "why_skip": "미돌파 · TA부족(+8)"
+      "ta": -6.2,
+      "atr_pct": 1.24,
+      "why_skip": "미돌파 · TA부족(-6)"
     },
     {
       "symbol": "SH",
       "type": "inverse",
-      "decision": "진입가능",
-      "breakout": true,
-      "ta": 20.2,
-      "atr_pct": 0.89,
-      "why_skip": "-"
+      "decision": "스킵",
+      "breakout": false,
+      "ta": 21.0,
+      "atr_pct": 0.84,
+      "why_skip": "미돌파"
     },
     {
       "symbol": "PSQ",
@@ -231,9 +231,9 @@
       "type": "defensive",
       "decision": "스킵",
       "breakout": false,
-      "ta": 6.8,
-      "atr_pct": 0.5,
-      "why_skip": "미돌파 · TA부족(+7) · 수수료게이트"
+      "ta": -3.8,
+      "atr_pct": 0.51,
+      "why_skip": "미돌파 · TA부족(-4) · 수수료게이트"
     },
     {
       "symbol": "SHY",
@@ -246,9 +246,7 @@
     }
   ],
   "us_summary": {
-    "would_buy": [
-      "SH"
-    ]
+    "would_buy": []
   },
   "summary": {
     "would_buy": [],
