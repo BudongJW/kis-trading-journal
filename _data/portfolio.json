@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-22T07:03:06.206688",
+  "updated_at": "2026-07-22T14:26:03.080364",
   "initial_capital": 500000,
-  "cash": 64402,
+  "cash": 22457,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 64402,
+  "total_value": 22457,
   "total_pnl": -3755,
-  "total_pnl_pct": -5.51,
+  "total_pnl_pct": -14.33,
   "realized_pnl": -3755,
   "unrealized_pnl": 0,
   "total_trades": 138,
@@ -1816,29 +1816,29 @@
     },
     {
       "date": "2026-07-22",
-      "total_value": 64402,
-      "cash": 64402,
+      "total_value": 22457,
+      "cash": 22457,
       "holdings_value": 0,
       "day_pnl": 0,
       "cumul_pnl": -3755,
       "realized_pnl": -3755,
       "unrealized_pnl": 0,
-      "net_deposit": -431843,
+      "net_deposit": -473788,
       "regime": "sideways",
       "hmm_state": "sideways",
-      "confidence": 0.27,
+      "confidence": 0.32,
       "k_value": 0.6
     }
   ],
   "market": {
     "regime": "sideways",
     "hmm_state": "sideways",
-    "confidence": 0.27,
+    "confidence": 0.32,
     "volatility": "normal",
     "vol_percentile": 66.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.1,
+      "direction": "bullish",
+      "strength": 0.42,
       "action": "normal"
     },
     "strong_sectors": [
@@ -1894,24 +1894,21 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.3015,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.6563,
+      "132030": -0.9124
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 12.947031,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "QQQM",
-        "qty": 2,
-        "buy_price": 289.0,
-        "current_price": 291.9,
-        "pnl_pct": 1.0,
-        "exchange": "NASD",
-        "asset_type": "us_long"
-      }
-    ],
+    "cash_usd": 14.307326,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -1961,23 +1958,23 @@
       "hmm_confidence": 90.7,
       "volatility": "normal",
       "vol_percentile": 66.0,
-      "market_confidence": 0.27,
+      "market_confidence": 0.32,
       "analyzed_at": "2026-07-21 09:56"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": -0.05,
-      "sp500_change": -0.19,
+      "direction": "bullish",
+      "nasdaq_change": 1.72,
+      "sp500_change": 0.79,
       "recommended_action": "normal"
     },
     "strong_sectors": [
       "IT"
     ],
     "lgbm": {
-      "accuracy": 86.1,
-      "auc": 0.9352,
-      "n_samples": 180,
-      "trained_at": "2026-07-21T18:33:11.565917",
+      "accuracy": 83.3,
+      "auc": 0.9383,
+      "n_samples": 177,
+      "trained_at": "2026-07-22T07:26:36.406272",
       "top_features": [
         {
           "name": "momentum_accel_3d",
@@ -1988,12 +1985,12 @@
           "importance": 182.1
         },
         {
-          "name": "ma60_ratio",
-          "importance": 180.3
+          "name": "upper_shadow",
+          "importance": 180.7
         },
         {
-          "name": "upper_shadow",
-          "importance": 179.7
+          "name": "ma60_ratio",
+          "importance": 180.3
         },
         {
           "name": "obv_slope_10",
@@ -2001,7 +1998,7 @@
         },
         {
           "name": "ret_3d",
-          "importance": 155.7
+          "importance": 156.8
         },
         {
           "name": "di_plus",
@@ -2074,10 +2071,10 @@
     "game": {
       "level": 9,
       "title": "베테랑",
-      "xp": 22830,
-      "xp_in_level": 2203,
+      "xp": 22801,
+      "xp_in_level": 2174,
       "xp_for_next": 8849,
-      "progress_pct": 24.9,
+      "progress_pct": 24.6,
       "achievements": [
         {
           "icon": "🎯",
@@ -2132,9 +2129,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 86,
+          "value": 83,
           "suffix": "%",
-          "bar": 86
+          "bar": 83
         },
         {
           "label": "승률",
@@ -2153,7 +2150,7 @@
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -2174,12 +2171,12 @@
     "size_mult": 0.6,
     "k_effective": 0.65,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 27% · 美 오버나이트 neutral(-0.1%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 32% · 美 오버나이트 bullish(+1.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.27,
-      "direction": "neutral",
-      "nasdaq_change": -0.05,
+      "confidence": 0.32,
+      "direction": "bullish",
+      "nasdaq_change": 1.72,
       "high_vol": false,
       "vol_percentile": 66.0,
       "rapid_level": "NONE"
