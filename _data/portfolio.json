@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T14:27:35.011275",
+  "updated_at": "2026-07-24T15:30:12.320657",
   "initial_capital": 500000,
   "cash": 441779,
   "holdings": [],
@@ -1860,38 +1860,41 @@
       "net_deposit": -54844,
       "regime": "sideways",
       "hmm_state": "bear",
-      "confidence": 0.41,
-      "k_value": 0.6
+      "confidence": 0.423,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "sideways",
     "hmm_state": "bear",
-    "confidence": 0.41,
-    "volatility": "normal",
-    "vol_percentile": 68.0,
+    "confidence": 0.423,
+    "volatility": "high",
+    "vol_percentile": 78.0,
     "overnight_gap": {
       "direction": "bearish",
-      "strength": 0.47,
+      "strength": 0.43,
       "action": "reduce_size"
     },
     "strong_sectors": [
       "반도체",
+      "2차전지",
+      "바이오",
       "자동차",
       "금융",
       "IT",
       "철강",
       "KOSPI200",
+      "KOSDAQ150",
       "미국나스닥"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.6,
+      "k": 0.7,
       "trend_ma": 15
     },
-    "universe_count": 12,
+    "universe_count": 15,
     "universe": [
       {
         "symbol": "395160",
@@ -1922,6 +1925,14 @@
         "name": "KODEX 반도체"
       },
       {
+        "symbol": "305720",
+        "name": "KODEX 2차전지"
+      },
+      {
+        "symbol": "244580",
+        "name": "KODEX 바이오"
+      },
+      {
         "symbol": "091180",
         "name": "KODEX 자동차"
       },
@@ -1940,6 +1951,10 @@
       {
         "symbol": "069500",
         "name": "KODEX KOSPI200"
+      },
+      {
+        "symbol": "229200",
+        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -2008,25 +2023,28 @@
     "market": {
       "trend": "sideways",
       "hmm_state": "bear",
-      "hmm_confidence": 60.0,
-      "volatility": "normal",
-      "vol_percentile": 68.0,
-      "market_confidence": 0.41,
-      "analyzed_at": "2026-07-23 09:58"
+      "hmm_confidence": 56.0,
+      "volatility": "high",
+      "vol_percentile": 78.0,
+      "market_confidence": 0.423,
+      "analyzed_at": "2026-07-24 09:16"
     },
     "overnight": {
       "direction": "bearish",
-      "nasdaq_change": -1.68,
-      "sp500_change": -1.16,
+      "nasdaq_change": -2.15,
+      "sp500_change": 0,
       "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "반도체",
+      "2차전지",
+      "바이오",
       "자동차",
       "금융",
       "IT",
       "철강",
       "KOSPI200",
+      "KOSDAQ150",
       "미국나스닥"
     ],
     "lgbm": {
@@ -2078,7 +2096,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.6,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2218,26 +2236,26 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.65,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 41% · 美 오버나이트 bearish(-1.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CAUTION·신뢰도 42% · 美 오버나이트 bearish(-2.1%) · 고변동(78.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.41,
+      "confidence": 0.423,
       "direction": "bearish",
-      "nasdaq_change": -1.68,
-      "high_vol": false,
-      "vol_percentile": 68.0,
+      "nasdaq_change": -2.15,
+      "high_vol": true,
+      "vol_percentile": 78.0,
       "rapid_level": "NONE"
     }
   },
@@ -2250,7 +2268,7 @@
     "max_weight": 0.15,
     "regime": "CAUTION",
     "hmm_state": "bear",
-    "hmm_confidence": 0.6,
+    "hmm_confidence": 0.56,
     "universe": [
       {
         "symbol": "122630",
