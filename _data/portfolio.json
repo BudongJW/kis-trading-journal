@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T14:31:07.564110",
+  "updated_at": "2026-07-27T15:30:03.417628",
   "initial_capital": 500000,
   "cash": 440367,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -1.71,
     "total_return_pct": -0.57
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": -0.03,
-    "median_r": -0.03,
-    "win_rate": 0.0,
-    "avg_win_r": 0,
-    "avg_loss_r": -0.03,
-    "expectancy_r": -0.03,
-    "best_r": -0.03,
-    "worst_r": -0.03,
-    "last_updated": "2026-07-27 10:39"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1897,42 +1886,37 @@
       "unrealized_pnl": 0,
       "net_deposit": -56622,
       "regime": "sideways",
-      "hmm_state": "bear",
-      "confidence": 0.423,
-      "k_value": 0.7
+      "hmm_state": "sideways",
+      "confidence": 0.3,
+      "k_value": 0.66
     }
   ],
   "market": {
     "regime": "sideways",
-    "hmm_state": "bear",
-    "confidence": 0.423,
+    "hmm_state": "sideways",
+    "confidence": 0.3,
     "volatility": "high",
     "vol_percentile": 78.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.16,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "반도체",
       "2차전지",
       "바이오",
-      "자동차",
-      "금융",
       "IT",
       "철강",
-      "KOSPI200",
-      "KOSDAQ150",
-      "미국나스닥"
+      "KOSDAQ150"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.66,
       "trend_ma": 15
     },
-    "universe_count": 15,
+    "universe_count": 11,
     "universe": [
       {
         "symbol": "395160",
@@ -1959,10 +1943,6 @@
         "name": "HMM"
       },
       {
-        "symbol": "091160",
-        "name": "KODEX 반도체"
-      },
-      {
         "symbol": "305720",
         "name": "KODEX 2차전지"
       },
@@ -1971,24 +1951,12 @@
         "name": "KODEX 바이오"
       },
       {
-        "symbol": "091180",
-        "name": "KODEX 자동차"
-      },
-      {
-        "symbol": "102110",
-        "name": "KODEX 금융"
-      },
-      {
         "symbol": "098560",
         "name": "KODEX IT"
       },
       {
         "symbol": "117700",
         "name": "KODEX 철강"
-      },
-      {
-        "symbol": "069500",
-        "name": "KODEX KOSPI200"
       },
       {
         "symbol": "229200",
@@ -2010,11 +1978,11 @@
     "enabled": true,
     "regime": "CAUTION",
     "confidence": 0.65,
-    "sma_ratio": 0.2428,
+    "sma_ratio": 0.2529,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.6918,
-      "132030": -0.3513
+      "195930": 0.8795,
+      "132030": -0.4118
     }
   },
   "us_session": {
@@ -2067,30 +2035,25 @@
   "learning": {
     "market": {
       "trend": "sideways",
-      "hmm_state": "bear",
-      "hmm_confidence": 56.0,
+      "hmm_state": "sideways",
+      "hmm_confidence": 69.0,
       "volatility": "high",
       "vol_percentile": 78.0,
-      "market_confidence": 0.423,
-      "analyzed_at": "2026-07-24 09:16"
+      "market_confidence": 0.3,
+      "analyzed_at": "2026-07-27 10:04"
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -1.05,
-      "sp500_change": 0.12,
+      "nasdaq_change": -0.64,
+      "sp500_change": 0.05,
       "recommended_action": "normal"
     },
     "strong_sectors": [
-      "반도체",
       "2차전지",
       "바이오",
-      "자동차",
-      "금융",
       "IT",
       "철강",
-      "KOSPI200",
-      "KOSDAQ150",
-      "미국나스닥"
+      "KOSDAQ150"
     ],
     "lgbm": {
       "accuracy": 75.0,
@@ -2141,7 +2104,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.66,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2149,19 +2112,19 @@
     },
     "ta_weights": {
       "rsi": 0.049,
-      "macd": 0.193,
-      "bb": 0.064,
-      "stoch": 0.107,
-      "adx": 0.064,
-      "ma": 0.193,
-      "obv": 0.193,
-      "mfi": 0.049,
-      "atr": 0.086
+      "macd": 0.178,
+      "bb": 0.079,
+      "stoch": 0.119,
+      "adx": 0.079,
+      "ma": 0.178,
+      "obv": 0.178,
+      "mfi": 0.06,
+      "atr": 0.079
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.477,
-      "trades": 40
+      "win_rate": 0.5,
+      "trades": 44
     },
     "diary": [
       {
@@ -2291,14 +2254,14 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.6,
-    "k_effective": 0.75,
+    "k_effective": 0.71,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 42% · 美 오버나이트 neutral(-1.1%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 30% · 美 오버나이트 neutral(-0.6%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.423,
+      "confidence": 0.3,
       "direction": "neutral",
-      "nasdaq_change": -1.05,
+      "nasdaq_change": -0.64,
       "high_vol": true,
       "vol_percentile": 78.0,
       "rapid_level": "NONE"
@@ -2312,8 +2275,8 @@
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
     "regime": "CAUTION",
-    "hmm_state": "bear",
-    "hmm_confidence": 0.56,
+    "hmm_state": "sideways",
+    "hmm_confidence": 0.69,
     "universe": [
       {
         "symbol": "122630",
