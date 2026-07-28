@@ -1,1 +1,11 @@
-{}
+{
+  "PSQ": {
+    "buy_price": 27.1876,
+    "buy_time": "2026-07-29T05:02:12",
+    "qty": 11,
+    "exchange": "AMEX",
+    "asset_type": "us_long",
+    "peak_price": 27.33,
+    "adopted": true
+  }
+}

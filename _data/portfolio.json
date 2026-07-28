@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-29T05:00:48.095492+09:00",
+  "updated_at": "2026-07-29T05:02:14.967575+09:00",
   "initial_capital": 500000,
-  "cash": 430887,
+  "cash": 871430,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 431527,
+  "total_value": 872070,
   "total_pnl": -1789,
-  "total_pnl_pct": -0.41,
+  "total_pnl_pct": -0.2,
   "realized_pnl": -1789,
   "unrealized_pnl": 0,
   "total_trades": 168,
@@ -1901,14 +1901,14 @@
     },
     {
       "date": "2026-07-29",
-      "total_value": 431527,
-      "cash": 430887,
+      "total_value": 872070,
+      "cash": 871430,
       "holdings_value": 0,
       "day_pnl": 131,
       "cumul_pnl": -1789,
       "realized_pnl": -1789,
       "unrealized_pnl": 0,
-      "net_deposit": -66684,
+      "net_deposit": 373859,
       "regime": "sideways",
       "hmm_state": "bear",
       "confidence": 0.31,
@@ -1995,8 +1995,18 @@
   "us_session": {
     "enabled": true,
     "cash_usd": 293.046322,
-    "positions": 0,
-    "holdings": [],
+    "positions": 1,
+    "holdings": [
+      {
+        "symbol": "PSQ",
+        "qty": 11,
+        "buy_price": 27.1876,
+        "current_price": 27.33,
+        "pnl_pct": 0.52,
+        "exchange": "AMEX",
+        "asset_type": "us_long"
+      }
+    ],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
