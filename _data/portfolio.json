@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T14:33:14.809944",
+  "updated_at": "2026-07-28T15:30:07.926936",
   "initial_capital": 500000,
   "cash": 437491,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -1.71,
     "total_return_pct": -0.4
   },
-  "r_summary": {
-    "total_trades": 2,
-    "avg_r": 0.01,
-    "median_r": 0.03,
-    "win_rate": 0.5,
-    "avg_win_r": 0.03,
-    "avg_loss_r": 0.0,
-    "expectancy_r": 0.01,
-    "best_r": 0.03,
-    "worst_r": 0.0,
-    "last_updated": "2026-07-28 13:56"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1909,37 +1898,35 @@
       "unrealized_pnl": 0,
       "net_deposit": -60403,
       "regime": "sideways",
-      "hmm_state": "sideways",
-      "confidence": 0.3,
-      "k_value": 0.66
+      "hmm_state": "bear",
+      "confidence": 0.31,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "sideways",
-    "hmm_state": "sideways",
-    "confidence": 0.3,
-    "volatility": "high",
-    "vol_percentile": 78.0,
+    "hmm_state": "bear",
+    "confidence": 0.31,
+    "volatility": "normal",
+    "vol_percentile": 56.0,
     "overnight_gap": {
       "direction": "neutral",
-      "strength": 0.08,
+      "strength": 0.1,
       "action": "normal"
     },
     "strong_sectors": [
-      "2차전지",
       "바이오",
       "IT",
-      "철강",
-      "KOSDAQ150"
+      "철강"
     ]
   },
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.66,
+      "k": 0.7,
       "trend_ma": 15
     },
-    "universe_count": 11,
+    "universe_count": 9,
     "universe": [
       {
         "symbol": "395160",
@@ -1966,10 +1953,6 @@
         "name": "HMM"
       },
       {
-        "symbol": "305720",
-        "name": "KODEX 2차전지"
-      },
-      {
         "symbol": "244580",
         "name": "KODEX 바이오"
       },
@@ -1980,10 +1963,6 @@
       {
         "symbol": "117700",
         "name": "KODEX 철강"
-      },
-      {
-        "symbol": "229200",
-        "name": "KODEX KOSDAQ150"
       }
     ]
   },
@@ -2051,25 +2030,23 @@
   "learning": {
     "market": {
       "trend": "sideways",
-      "hmm_state": "sideways",
-      "hmm_confidence": 69.0,
-      "volatility": "high",
-      "vol_percentile": 78.0,
-      "market_confidence": 0.3,
-      "analyzed_at": "2026-07-27 10:04"
+      "hmm_state": "bear",
+      "hmm_confidence": 59.9,
+      "volatility": "normal",
+      "vol_percentile": 56.0,
+      "market_confidence": 0.31,
+      "analyzed_at": "2026-07-28 09:15"
     },
     "overnight": {
       "direction": "neutral",
-      "nasdaq_change": -0.48,
-      "sp500_change": 0.0,
+      "nasdaq_change": -0.18,
+      "sp500_change": 0.02,
       "recommended_action": "normal"
     },
     "strong_sectors": [
-      "2차전지",
       "바이오",
       "IT",
-      "철강",
-      "KOSDAQ150"
+      "철강"
     ],
     "lgbm": {
       "accuracy": 80.6,
@@ -2120,7 +2097,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.66,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2128,19 +2105,19 @@
     },
     "ta_weights": {
       "rsi": 0.049,
-      "macd": 0.178,
-      "bb": 0.079,
-      "stoch": 0.119,
-      "adx": 0.079,
-      "ma": 0.178,
-      "obv": 0.178,
-      "mfi": 0.06,
-      "atr": 0.079
+      "macd": 0.162,
+      "bb": 0.09,
+      "stoch": 0.125,
+      "adx": 0.09,
+      "ma": 0.162,
+      "obv": 0.179,
+      "mfi": 0.071,
+      "atr": 0.071
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.5,
-      "trades": 44
+      "win_rate": 0.471,
+      "trades": 47
     },
     "diary": [
       {
@@ -2270,16 +2247,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.6,
-    "k_effective": 0.71,
+    "k_effective": 0.75,
     "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 30% · 美 오버나이트 neutral(-0.5%) · 고변동(78.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 31% · 美 오버나이트 neutral(-0.2%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.3,
+      "confidence": 0.31,
       "direction": "neutral",
-      "nasdaq_change": -0.48,
-      "high_vol": true,
-      "vol_percentile": 78.0,
+      "nasdaq_change": -0.18,
+      "high_vol": false,
+      "vol_percentile": 56.0,
       "rapid_level": "NONE"
     }
   },
@@ -2291,8 +2268,8 @@
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
     "regime": "CAUTION",
-    "hmm_state": "sideways",
-    "hmm_confidence": 0.69,
+    "hmm_state": "bear",
+    "hmm_confidence": 0.599,
     "universe": [
       {
         "symbol": "122630",
