@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-30T06:47:12.916690+09:00",
+  "updated_at": "2026-07-30T14:40:04.907917+09:00",
   "initial_capital": 500000,
-  "cash": 869250,
+  "cash": 823055,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,89 +17,17 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 870034,
-  "total_pnl": -317,
-  "total_pnl_pct": -0.04,
-  "realized_pnl": -317,
+  "total_value": 823455,
+  "total_pnl": -621,
+  "total_pnl_pct": -0.08,
+  "realized_pnl": -621,
   "unrealized_pnl": 0,
-  "total_trades": 178,
-  "completed_trades": 98,
+  "total_trades": 184,
+  "completed_trades": 101,
   "winning_trades": 59,
-  "losing_trades": 37,
-  "win_rate": 60.2,
+  "losing_trades": 38,
+  "win_rate": 58.4,
   "trades": [
-    {
-      "timestamp": "2026-07-20T09:00:33",
-      "date": "2026-07-20",
-      "time": "09:00:33",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 50,
-      "price": 1161,
-      "amount": 58050,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -4.78%, 시가대비 -0.45%)"
-    },
-    {
-      "timestamp": "2026-07-20T09:04:34",
-      "date": "2026-07-20",
-      "time": "09:04:34",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "sell",
-      "qty": 50,
-      "price": 1147,
-      "amount": 57350,
-      "reason": "조간 청산: 손절 -1.21% (<= -1.0%)"
-    },
-    {
-      "timestamp": "2026-07-20T10:53:38",
-      "date": "2026-07-20",
-      "time": "10:53:38",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 51,
-      "price": 1157,
-      "amount": 59007,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -4.42%, 시가대비 -0.06%)"
-    },
-    {
-      "timestamp": "2026-07-20T11:01:04",
-      "date": "2026-07-20",
-      "time": "11:01:04",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "sell",
-      "qty": 51,
-      "price": 1145,
-      "amount": 58395,
-      "reason": "조간 청산: 손절 -1.04% (<= -1.0%)"
-    },
-    {
-      "timestamp": "2026-07-20T12:05:08",
-      "date": "2026-07-20",
-      "time": "12:05:08",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 51,
-      "price": 1157,
-      "amount": 59007,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -4.40%, 시가대비 -0.05%)"
-    },
-    {
-      "timestamp": "2026-07-20T13:27:32",
-      "date": "2026-07-20",
-      "time": "13:27:32",
-      "symbol": "114800",
-      "name": "급등주",
-      "side": "sell",
-      "qty": 51,
-      "price": 1158,
-      "amount": 59058,
-      "reason": "매도: 본전이익 보존 (고점 +1.0%였다가 반전 → +0.1%, 손절 전 이익권 청산)"
-    },
     {
       "timestamp": "2026-07-20T23:39:22",
       "date": "2026-07-20",
@@ -627,51 +555,81 @@
       "price": 2759,
       "amount": 27590,
       "reason": "US모멘텀 청산: 본전이익 보존 (고점 +1.46%였다가 반전 → +0.55%에서 청산, 손절 전 이익권 확보)"
+    },
+    {
+      "timestamp": "2026-07-30T09:02:35",
+      "date": "2026-07-30",
+      "time": "09:02:35",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 16,
+      "price": 1338,
+      "amount": 21408,
+      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -1.45%, 시가대비 -1.34%)"
+    },
+    {
+      "timestamp": "2026-07-30T09:08:04",
+      "date": "2026-07-30",
+      "time": "09:08:04",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "sell",
+      "qty": 16,
+      "price": 1319,
+      "amount": 21104,
+      "reason": "조간 청산: 손절 -1.42% (<= -1.0%)"
+    },
+    {
+      "timestamp": "2026-07-30T09:38:05",
+      "date": "2026-07-30",
+      "time": "09:38:05",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 16,
+      "price": 1342,
+      "amount": 21472,
+      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -1.83%, 시가대비 -1.72%)"
+    },
+    {
+      "timestamp": "2026-07-30T09:47:34",
+      "date": "2026-07-30",
+      "time": "09:47:34",
+      "symbol": "114800",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 16,
+      "price": 1342,
+      "amount": 21472,
+      "reason": "매도: 본전이익 보존 (고점 +0.9%였다가 반전 → +0.0%, 손절 전 이익권 청산)"
+    },
+    {
+      "timestamp": "2026-07-30T11:59:07",
+      "date": "2026-07-30",
+      "time": "11:59:07",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 16,
+      "price": 1324,
+      "amount": 21184,
+      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -0.64%, 시가대비 -0.53%)"
+    },
+    {
+      "timestamp": "2026-07-30T12:33:34",
+      "date": "2026-07-30",
+      "time": "12:33:34",
+      "symbol": "114800",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 16,
+      "price": 1324,
+      "amount": 21184,
+      "reason": "매도: 본전이익 보존 (고점 +1.4%였다가 반전 → +0.0%, 손절 전 이익권 청산)"
     }
   ],
   "realized": [
-    {
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "buy_date": "2026-07-20",
-      "buy_time": "10:53:38",
-      "buy_price": 1157,
-      "sell_date": "2026-07-20",
-      "sell_time": "11:01:04",
-      "sell_price": 1145,
-      "qty": 51,
-      "pnl": -612,
-      "pnl_pct": -1.04,
-      "hold_days": 0
-    },
-    {
-      "symbol": "114800",
-      "name": "급등주",
-      "buy_date": "2026-07-20",
-      "buy_time": "12:05:08",
-      "buy_price": 1157,
-      "sell_date": "2026-07-20",
-      "sell_time": "13:27:32",
-      "sell_price": 1158,
-      "qty": 51,
-      "pnl": 51,
-      "pnl_pct": 0.09,
-      "hold_days": 0
-    },
-    {
-      "symbol": "PSQ",
-      "name": "US_PSQ",
-      "buy_date": "2026-07-17",
-      "buy_time": "00:00:59",
-      "buy_price": 2593,
-      "sell_date": "2026-07-21",
-      "sell_time": "01:01:18",
-      "sell_price": 2627,
-      "qty": 1,
-      "pnl": 34,
-      "pnl_pct": 1.31,
-      "hold_days": 4
-    },
     {
       "symbol": "PSQ",
       "name": "US_PSQ",
@@ -1049,21 +1007,63 @@
       "pnl": 144,
       "pnl_pct": 0.58,
       "hold_days": 0
+    },
+    {
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "buy_date": "2026-07-30",
+      "buy_time": "09:02:35",
+      "buy_price": 1338,
+      "sell_date": "2026-07-30",
+      "sell_time": "09:08:04",
+      "sell_price": 1319,
+      "qty": 16,
+      "pnl": -304,
+      "pnl_pct": -1.42,
+      "hold_days": 0
+    },
+    {
+      "symbol": "114800",
+      "name": "급등주",
+      "buy_date": "2026-07-30",
+      "buy_time": "09:38:05",
+      "buy_price": 1342,
+      "sell_date": "2026-07-30",
+      "sell_time": "09:47:34",
+      "sell_price": 1342,
+      "qty": 16,
+      "pnl": 0,
+      "pnl_pct": 0.0,
+      "hold_days": 0
+    },
+    {
+      "symbol": "114800",
+      "name": "급등주",
+      "buy_date": "2026-07-30",
+      "buy_time": "11:59:07",
+      "buy_price": 1324,
+      "sell_date": "2026-07-30",
+      "sell_time": "12:33:34",
+      "sell_price": 1324,
+      "qty": 16,
+      "pnl": 0,
+      "pnl_pct": 0.0,
+      "hold_days": 0
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-07-30",
-    "buys": 0,
-    "sells": 2,
-    "completed_round_trips": 4,
-    "buy_notional": 0,
-    "sell_notional": 55200,
-    "fees": 138,
-    "taxes": 0,
-    "total_cost": 138,
-    "realized_pnl_gross": 615,
-    "realized_pnl_net": 477,
+    "buys": 3,
+    "sells": 5,
+    "completed_round_trips": 7,
+    "buy_notional": 64064,
+    "sell_notional": 118960,
+    "fees": 156,
+    "taxes": 147,
+    "total_cost": 303,
+    "realized_pnl_gross": 311,
+    "realized_pnl_net": 8,
     "best_trade": {
       "symbol": "PSQ",
       "name": "US_PSQ",
@@ -1071,29 +1071,40 @@
       "pnl_pct": 1.58
     },
     "worst_trade": {
-      "symbol": "PSQ",
-      "name": "US_PSQ",
-      "pnl": 41,
-      "pnl_pct": 1.51
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "pnl": -304,
+      "pnl_pct": -1.42
     }
   },
   "costs": {
-    "total_fees": 6233,
-    "total_taxes": 22480,
-    "total_cost": 28713,
-    "realized_pnl_gross": -317,
-    "realized_pnl_net": -29030,
+    "total_fees": 6251,
+    "total_taxes": 22627,
+    "total_cost": 28878,
+    "realized_pnl_gross": -621,
+    "realized_pnl_net": -29499,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
     "sharpe_ratio": -0.0,
     "max_drawdown_pct": -100.0,
-    "profit_factor": 1.0,
+    "profit_factor": 0.99,
     "avg_win_pct": 1.61,
-    "avg_loss_pct": -1.71,
-    "total_return_pct": -0.06
+    "avg_loss_pct": -1.7,
+    "total_return_pct": -0.12
   },
-  "r_summary": {},
+  "r_summary": {
+    "total_trades": 2,
+    "avg_r": 0.0,
+    "median_r": 0.0,
+    "win_rate": 0.0,
+    "avg_win_r": 0,
+    "avg_loss_r": 0.0,
+    "expectancy_r": 0.0,
+    "best_r": 0.0,
+    "worst_r": 0.0,
+    "last_updated": "2026-07-30 12:33"
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1913,30 +1924,30 @@
     },
     {
       "date": "2026-07-30",
-      "total_value": 870034,
-      "cash": 869250,
+      "total_value": 823455,
+      "cash": 823055,
       "holdings_value": 0,
-      "day_pnl": 477,
-      "cumul_pnl": -317,
-      "realized_pnl": -317,
+      "day_pnl": 8,
+      "cumul_pnl": -621,
+      "realized_pnl": -621,
       "unrealized_pnl": 0,
-      "net_deposit": 370351,
+      "net_deposit": 324076,
       "regime": "sideways",
       "hmm_state": "bull",
-      "confidence": 0.12,
+      "confidence": 0.1,
       "k_value": 0.59
     }
   ],
   "market": {
     "regime": "sideways",
     "hmm_state": "bull",
-    "confidence": 0.12,
+    "confidence": 0.1,
     "volatility": "high",
     "vol_percentile": 98.0,
     "overnight_gap": {
-      "direction": "neutral",
-      "strength": 0.1,
-      "action": "normal"
+      "direction": "bearish",
+      "strength": 0.5,
+      "action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
@@ -1981,9 +1992,9 @@
     ]
   },
   "risk": {
-    "kelly_f": 0.1485,
-    "drawdown_scale": 1.2,
-    "drawdown_reason": "3연속 수익 → 120% 확대",
+    "kelly_f": 0.1406,
+    "drawdown_scale": 0.5,
+    "drawdown_reason": "3연속 손실 → 50% 축소",
     "stop_type": "ATR×1.5 동적",
     "trailing_type": "ATR×2.0 활성 → ATR×1.0 이탈"
   },
@@ -1996,19 +2007,9 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 564.023482,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "PSQ",
-        "qty": 1,
-        "buy_price": 27.4387,
-        "current_price": 27.91,
-        "pnl_pct": 1.72,
-        "exchange": "AMEX",
-        "asset_type": "us_long"
-      }
-    ],
+    "cash_usd": 565.899476,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -2058,31 +2059,31 @@
       "hmm_confidence": 99.9,
       "volatility": "high",
       "vol_percentile": 98.0,
-      "market_confidence": 0.12,
+      "market_confidence": 0.1,
       "analyzed_at": "2026-07-29 09:15"
     },
     "overnight": {
-      "direction": "neutral",
-      "nasdaq_change": -0.22,
-      "sp500_change": 0.21,
-      "recommended_action": "normal"
+      "direction": "bearish",
+      "nasdaq_change": -1.75,
+      "sp500_change": -1.26,
+      "recommended_action": "reduce_size"
     },
     "strong_sectors": [
       "IT"
     ],
     "lgbm": {
       "accuracy": 77.8,
-      "auc": 0.9136,
-      "n_samples": 180,
-      "trained_at": "2026-07-29T18:44:57.169247",
+      "auc": 0.9043,
+      "n_samples": 177,
+      "trained_at": "2026-07-30T07:28:05.327312",
       "top_features": [
         {
           "name": "momentum_accel_3d",
-          "importance": 349.2
+          "importance": 349.6
         },
         {
           "name": "ma60_ratio",
-          "importance": 275.8
+          "importance": 277.2
         },
         {
           "name": "body_ratio",
@@ -2171,10 +2172,10 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 29789,
-      "xp_in_level": 313,
+      "xp": 30674,
+      "xp_in_level": 1198,
       "xp_for_next": 12388,
-      "progress_pct": 2.5,
+      "progress_pct": 9.7,
       "achievements": [
         {
           "icon": "🎯",
@@ -2236,21 +2237,21 @@
         {
           "label": "승률",
           "icon": "📈",
-          "value": 60,
+          "value": 58,
           "suffix": "%",
-          "bar": 60
+          "bar": 58
         },
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 178,
+          "value": 184,
           "suffix": "건",
           "bar": null
         },
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -2259,24 +2260,24 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.64,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 12% · 美 오버나이트 neutral(-0.2%) · 고변동(98.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.69,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CAUTION·신뢰도 10% · 美 오버나이트 bearish(-1.8%) · 고변동(98.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "CAUTION",
-      "confidence": 0.12,
-      "direction": "neutral",
-      "nasdaq_change": -0.22,
+      "confidence": 0.1,
+      "direction": "bearish",
+      "nasdaq_change": -1.75,
       "high_vol": true,
       "vol_percentile": 98.0,
       "rapid_level": "NONE"
