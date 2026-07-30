@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T15:30:09.441525+09:00",
+  "updated_at": "2026-07-30T16:56:09.722815+09:00",
   "initial_capital": 500000,
   "cash": 823055,
   "holdings": [],
@@ -1991,15 +1991,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CRISIS",
-    "confidence": 0.6,
-    "sma_ratio": 0.0118,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.723,
-      "132030": -0.7785
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -2256,21 +2249,21 @@
     }
   },
   "day_plan": {
-    "stance": "DEFENSIVE",
+    "stance": "CAUTIOUS",
     "forced": false,
-    "auto_stance": "DEFENSIVE",
-    "stance_kr": "방어",
-    "budget_pct": 0.25,
-    "max_new_positions": 1,
-    "allow_long": false,
+    "auto_stance": "CAUTIOUS",
+    "stance_kr": "신중",
+    "budget_pct": 0.4,
+    "max_new_positions": 2,
+    "allow_long": true,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.4,
-    "k_effective": 0.8,
-    "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 17% · 美 오버나이트 bearish(-1.7%) · 예산 25%·최대 1종목·허용 인버스",
+    "size_mult": 0.6,
+    "k_effective": 0.75,
+    "allow_summary": "롱/인버스",
+    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 17% · 美 오버나이트 bearish(-1.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
     "signals": {
-      "regime": "CRISIS",
+      "regime": "CAUTION",
       "confidence": 0.171,
       "direction": "bearish",
       "nasdaq_change": -1.74,
@@ -2283,10 +2276,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CRISIS",
+    "regime": "CAUTION",
     "hmm_state": "bear",
     "hmm_confidence": 0.732,
     "universe": [
