@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-31T06:58:49.380729+09:00",
+  "updated_at": "2026-07-31T14:40:31.457664+09:00",
   "initial_capital": 500000,
-  "cash": 858656,
+  "cash": 504398,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,29 +17,17 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 858272,
+  "total_value": 509599,
   "total_pnl": -620,
-  "total_pnl_pct": -0.07,
+  "total_pnl_pct": -0.12,
   "realized_pnl": -620,
   "unrealized_pnl": 0,
-  "total_trades": 187,
+  "total_trades": 188,
   "completed_trades": 103,
   "winning_trades": 60,
   "losing_trades": 39,
   "win_rate": 58.3,
   "trades": [
-    {
-      "timestamp": "2026-07-21T04:45:19",
-      "date": "2026-07-21",
-      "time": "04:45:19",
-      "symbol": "QQQM",
-      "name": "US_QQQM",
-      "side": "sell",
-      "qty": 1,
-      "price": 28746,
-      "amount": 28746,
-      "reason": "매도: 미국장 마감 청산"
-    },
     {
       "timestamp": "2026-07-23T04:45:01",
       "date": "2026-07-23",
@@ -627,6 +615,18 @@
       "price": 28160,
       "amount": 28160,
       "reason": "매도: 미국장 마감 청산"
+    },
+    {
+      "timestamp": "2026-07-31T09:46:30",
+      "date": "2026-07-31",
+      "time": "09:46:30",
+      "symbol": "069500",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 5,
+      "price": 101180,
+      "amount": 505900,
+      "reason": "매도: 추적 손절 (고점 102,435원에서 -1.2% 하락, 수익 +1.2%)"
     }
   ],
   "realized": [
@@ -1055,15 +1055,15 @@
   "today_summary": {
     "date": "2026-07-31",
     "buys": 0,
-    "sells": 1,
+    "sells": 2,
     "completed_round_trips": 1,
     "buy_notional": 0,
-    "sell_notional": 28160,
-    "fees": 70,
-    "taxes": 0,
-    "total_cost": 70,
+    "sell_notional": 534060,
+    "fees": 146,
+    "taxes": 1164,
+    "total_cost": 1310,
     "realized_pnl_gross": 44,
-    "realized_pnl_net": -26,
+    "realized_pnl_net": -1266,
     "best_trade": {
       "symbol": "QQQM",
       "name": "US_QQQM",
@@ -1078,11 +1078,11 @@
     }
   },
   "costs": {
-    "total_fees": 6398,
-    "total_taxes": 22627,
-    "total_cost": 29025,
+    "total_fees": 6474,
+    "total_taxes": 23791,
+    "total_cost": 30265,
     "realized_pnl_gross": -620,
-    "realized_pnl_net": -29645,
+    "realized_pnl_net": -30885,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
@@ -1093,7 +1093,18 @@
     "avg_loss_pct": -1.7,
     "total_return_pct": -0.12
   },
-  "r_summary": {},
+  "r_summary": {
+    "total_trades": 1,
+    "avg_r": 0.39,
+    "median_r": 0.39,
+    "win_rate": 1.0,
+    "avg_win_r": 0.39,
+    "avg_loss_r": 0,
+    "expectancy_r": 0.39,
+    "best_r": 0.39,
+    "worst_r": 0.39,
+    "last_updated": "2026-07-31 09:46"
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1925,30 +1936,30 @@
     },
     {
       "date": "2026-07-31",
-      "total_value": 858272,
-      "cash": 858656,
+      "total_value": 509599,
+      "cash": 504398,
       "holdings_value": 0,
-      "day_pnl": -26,
+      "day_pnl": -1266,
       "cumul_pnl": -620,
       "realized_pnl": -620,
       "unrealized_pnl": 0,
-      "net_deposit": 358892,
+      "net_deposit": 10219,
       "regime": "sideways",
       "hmm_state": "bear",
-      "confidence": 0.171,
+      "confidence": 0.271,
       "k_value": 0.7
     }
   ],
   "market": {
     "regime": "sideways",
     "hmm_state": "bear",
-    "confidence": 0.171,
+    "confidence": 0.271,
     "volatility": "normal",
     "vol_percentile": 60.0,
     "overnight_gap": {
-      "direction": "bearish",
-      "strength": 0.55,
-      "action": "reduce_size"
+      "direction": "bullish",
+      "strength": 0.92,
+      "action": "aggressive_buy"
     },
     "strong_sectors": [
       "IT"
@@ -2003,12 +2014,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "BEAR",
+    "confidence": 0.65,
+    "sma_ratio": 0.2041,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 0.8112,
+      "132030": -0.4169
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 590.408137,
+    "cash_usd": 391.573048,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -2060,63 +2078,63 @@
       "hmm_confidence": 73.2,
       "volatility": "normal",
       "vol_percentile": 60.0,
-      "market_confidence": 0.171,
+      "market_confidence": 0.271,
       "analyzed_at": "2026-07-30 09:52"
     },
     "overnight": {
-      "direction": "bearish",
-      "nasdaq_change": -1.74,
-      "sp500_change": -1.52,
-      "recommended_action": "reduce_size"
+      "direction": "bullish",
+      "nasdaq_change": 3.78,
+      "sp500_change": 1.75,
+      "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
       "IT"
     ],
     "lgbm": {
-      "accuracy": 80.6,
-      "auc": 0.9352,
-      "n_samples": 180,
-      "trained_at": "2026-07-30T18:36:17.594727",
+      "accuracy": 86.1,
+      "auc": 0.9506,
+      "n_samples": 177,
+      "trained_at": "2026-07-31T07:35:31.960305",
       "top_features": [
         {
           "name": "momentum_accel_3d",
-          "importance": 354.6
+          "importance": 358.6
         },
         {
           "name": "ma60_ratio",
-          "importance": 290.7
+          "importance": 299.1
         },
         {
           "name": "body_ratio",
-          "importance": 232.8
-        },
-        {
-          "name": "ret_3d",
-          "importance": 210.7
-        },
-        {
-          "name": "upper_shadow",
-          "importance": 198.6
-        },
-        {
-          "name": "obv_slope_10",
-          "importance": 197.2
+          "importance": 239.5
         },
         {
           "name": "rsi_14",
-          "importance": 186.1
+          "importance": 219.2
+        },
+        {
+          "name": "ret_3d",
+          "importance": 216.0
+        },
+        {
+          "name": "obv_slope_10",
+          "importance": 201.9
+        },
+        {
+          "name": "upper_shadow",
+          "importance": 200.6
         },
         {
           "name": "momentum_accel",
-          "importance": 176.2
+          "importance": 178.5
         },
         {
           "name": "di_plus",
-          "importance": 162.8
+          "importance": 166.8
         },
         {
           "name": "ret_10d",
-          "importance": 145.2
+          "importance": 149.7
         }
       ]
     },
@@ -2173,10 +2191,10 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 31253,
-      "xp_in_level": 1777,
+      "xp": 31315,
+      "xp_in_level": 1839,
       "xp_for_next": 12388,
-      "progress_pct": 14.3,
+      "progress_pct": 14.8,
       "achievements": [
         {
           "icon": "🎯",
@@ -2231,9 +2249,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 81,
+          "value": 86,
           "suffix": "%",
-          "bar": 81
+          "bar": 86
         },
         {
           "label": "승률",
@@ -2245,14 +2263,14 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 187,
+          "value": 188,
           "suffix": "건",
           "bar": null
         },
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -2261,24 +2279,24 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.75,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 17% · 美 오버나이트 bearish(-1.7%) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 27% · 美 오버나이트 bullish(+3.8%) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CAUTION",
-      "confidence": 0.171,
-      "direction": "bearish",
-      "nasdaq_change": -1.74,
+      "regime": "BEAR",
+      "confidence": 0.271,
+      "direction": "bullish",
+      "nasdaq_change": 3.78,
       "high_vol": false,
       "vol_percentile": 60.0,
       "rapid_level": "NONE"
@@ -2288,10 +2306,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
+    "regime": "BEAR",
     "hmm_state": "bear",
     "hmm_confidence": 0.732,
     "universe": [
