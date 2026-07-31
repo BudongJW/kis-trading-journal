@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-31T15:31:53.711584+09:00",
+  "updated_at": "2026-07-31T18:11:40.010219+09:00",
   "initial_capital": 500000,
-  "cash": 504398,
+  "cash": 856012,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 509599,
+  "total_value": 861213,
   "total_pnl": -620,
-  "total_pnl_pct": -0.12,
+  "total_pnl_pct": -0.07,
   "realized_pnl": -620,
   "unrealized_pnl": 0,
   "total_trades": 188,
@@ -1925,14 +1925,14 @@
     },
     {
       "date": "2026-07-31",
-      "total_value": 509599,
-      "cash": 504398,
+      "total_value": 861213,
+      "cash": 856012,
       "holdings_value": 0,
       "day_pnl": -1266,
       "cumul_pnl": -620,
       "realized_pnl": -620,
       "unrealized_pnl": 0,
-      "net_deposit": 10219,
+      "net_deposit": 361833,
       "regime": "sideways",
       "hmm_state": "sideways",
       "confidence": 0.26,
@@ -2008,7 +2008,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 391.573048,
+    "cash_usd": 592.054944,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
