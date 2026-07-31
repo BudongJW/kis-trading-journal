@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T15:30:21.483767+09:00",
+  "updated_at": "2026-07-31T15:31:53.711584+09:00",
   "initial_capital": 500000,
   "cash": 504398,
   "holdings": [],
@@ -2003,15 +2003,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CAUTION",
-    "confidence": 0.65,
-    "sma_ratio": 0.2543,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 0.9172,
-      "132030": -0.3845
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
