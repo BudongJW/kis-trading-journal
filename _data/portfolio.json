@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T15:30:32.859642+09:00",
+  "updated_at": "2026-08-03T15:32:18.601032+09:00",
   "initial_capital": 500000,
   "cash": 851298,
   "holdings": [
@@ -12,7 +12,9 @@
       "buy_price": 1147,
       "pnl": -19,
       "pnl_pct": -0.08,
-      "manual": true,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 1147,
       "stop_price": 1113
     }
   ],
@@ -1106,18 +1108,7 @@
     "avg_loss_pct": -1.68,
     "total_return_pct": -0.21
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.12,
-    "median_r": 0.12,
-    "win_rate": 1.0,
-    "avg_win_r": 0.12,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.12,
-    "best_r": 0.12,
-    "worst_r": 0.12,
-    "last_updated": "2026-08-03 15:20"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1985,14 +1976,14 @@
       "unrealized_pnl": -19,
       "net_deposit": 357360,
       "regime": "down",
-      "hmm_state": "sideways",
+      "hmm_state": "unknown",
       "confidence": 0.435,
       "k_value": 0.65
     }
   ],
   "market": {
     "regime": "down",
-    "hmm_state": "sideways",
+    "hmm_state": "unknown",
     "confidence": 0.435,
     "volatility": "high",
     "vol_percentile": 98.0,
@@ -2095,15 +2086,8 @@
     "trained": false
   },
   "bear_strategy": {
-    "enabled": true,
-    "regime": "CRISIS",
-    "confidence": 0.65,
-    "sma_ratio": 0.1405,
-    "canary_bad": 1,
-    "canary_scores": {
-      "195930": 1.0785,
-      "132030": -0.8529
-    }
+    "regime": "BULL",
+    "enabled": false
   },
   "us_session": {
     "enabled": true,
@@ -2155,12 +2139,12 @@
   "learning": {
     "market": {
       "trend": "down",
-      "hmm_state": "sideways",
-      "hmm_confidence": 100.0,
+      "hmm_state": null,
+      "hmm_confidence": 0,
       "volatility": "high",
       "vol_percentile": 98.0,
       "market_confidence": 0.435,
-      "analyzed_at": "2026-08-03 10:01"
+      "analyzed_at": "2026-08-03 13:35"
     },
     "overnight": {
       "direction": "bullish",
@@ -2181,50 +2165,50 @@
       "미국나스닥"
     ],
     "lgbm": {
-      "accuracy": 86.1,
-      "auc": 0.9475,
+      "accuracy": 39.4,
+      "auc": 0.3692,
       "n_samples": 180,
-      "trained_at": "2026-08-01T07:33:25.809712",
+      "trained_at": "2026-08-03T13:39:36.581619",
       "top_features": [
         {
-          "name": "momentum_accel_3d",
-          "importance": 378.2
-        },
-        {
-          "name": "ma60_ratio",
-          "importance": 302.3
-        },
-        {
-          "name": "body_ratio",
-          "importance": 242.5
-        },
-        {
-          "name": "rsi_14",
-          "importance": 220.0
+          "name": "ret_10d",
+          "importance": 166.7
         },
         {
           "name": "ret_3d",
-          "importance": 219.3
+          "importance": 139.3
         },
         {
-          "name": "upper_shadow",
-          "importance": 211.1
+          "name": "vol_ma5_ratio",
+          "importance": 93.8
         },
         {
           "name": "obv_slope_10",
-          "importance": 203.3
+          "importance": 82.7
         },
         {
-          "name": "momentum_accel",
-          "importance": 203.3
-        },
-        {
-          "name": "ret_10d",
-          "importance": 171.1
+          "name": "vol_ma20_ratio",
+          "importance": 80.0
         },
         {
           "name": "di_plus",
-          "importance": 167.2
+          "importance": 67.6
+        },
+        {
+          "name": "ma60_ratio",
+          "importance": 65.5
+        },
+        {
+          "name": "upper_shadow",
+          "importance": 63.3
+        },
+        {
+          "name": "ret_5d",
+          "importance": 35.0
+        },
+        {
+          "name": "body_ratio",
+          "importance": 34.8
         }
       ]
     },
@@ -2281,10 +2265,10 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 32530,
-      "xp_in_level": 3054,
+      "xp": 32297,
+      "xp_in_level": 2821,
       "xp_for_next": 12388,
-      "progress_pct": 24.7,
+      "progress_pct": 22.8,
       "achievements": [
         {
           "icon": "🎯",
@@ -2308,7 +2292,7 @@
           "icon": "🎓",
           "name": "예측력 65%",
           "desc": "LGBM 정확도 65%+",
-          "done": true
+          "done": false
         },
         {
           "icon": "💰",
@@ -2339,9 +2323,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 86,
+          "value": 39,
           "suffix": "%",
-          "bar": 86
+          "bar": 39
         },
         {
           "label": "승률",
@@ -2365,7 +2349,7 @@
           "bar": null
         }
       ],
-      "unlocked_count": 7
+      "unlocked_count": 6
     }
   },
   "day_plan": {
@@ -2381,9 +2365,9 @@
     "size_mult": 0.4,
     "k_effective": 0.75,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CRISIS·신뢰도 44% · 美 오버나이트 bullish(+1.0%) · 고변동(98.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 44% · 美 오버나이트 bullish(+1.0%) · 고변동(98.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CRISIS",
+      "regime": "BEAR",
       "confidence": 0.435,
       "direction": "bullish",
       "nasdaq_change": 1.0,
@@ -2396,12 +2380,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CRISIS(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CRISIS",
-    "hmm_state": "sideways",
-    "hmm_confidence": 1.0,
+    "regime": "BEAR",
+    "hmm_state": "unknown",
+    "hmm_confidence": 0.5,
     "universe": [
       {
         "symbol": "122630",
