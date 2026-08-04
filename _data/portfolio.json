@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T14:40:06.743839+09:00",
+  "updated_at": "2026-08-04T15:30:28.556446+09:00",
   "initial_capital": 500000,
   "cash": 854775,
   "holdings": [],
@@ -1093,18 +1093,7 @@
     "avg_loss_pct": -1.69,
     "total_return_pct": -0.16
   },
-  "r_summary": {
-    "total_trades": 2,
-    "avg_r": -0.34,
-    "median_r": 0.26,
-    "win_rate": 0.5,
-    "avg_win_r": 0.26,
-    "avg_loss_r": -0.93,
-    "expectancy_r": -0.34,
-    "best_r": 0.26,
-    "worst_r": -0.93,
-    "last_updated": "2026-08-04 13:19"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -1984,21 +1973,21 @@
       "unrealized_pnl": 0,
       "net_deposit": 354507,
       "regime": "down",
-      "hmm_state": "unknown",
-      "confidence": 0.485,
-      "k_value": 0.65
+      "hmm_state": "bear",
+      "confidence": 0.412,
+      "k_value": 0.7
     }
   ],
   "market": {
     "regime": "down",
-    "hmm_state": "unknown",
-    "confidence": 0.485,
+    "hmm_state": "bear",
+    "confidence": 0.412,
     "volatility": "high",
-    "vol_percentile": 98.0,
+    "vol_percentile": 96.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.56,
-      "action": "normal"
+      "strength": 0.62,
+      "action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
@@ -2016,7 +2005,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.65,
+      "k": 0.7,
       "trend_ma": 15
     },
     "universe_count": 15,
@@ -2095,13 +2084,13 @@
   },
   "bear_strategy": {
     "enabled": true,
-    "regime": "CAUTION",
+    "regime": "BEAR",
     "confidence": 0.65,
-    "sma_ratio": 0.1298,
+    "sma_ratio": 0.1509,
     "canary_bad": 1,
     "canary_scores": {
-      "195930": 0.9716,
-      "132030": -1.106
+      "195930": 1.0053,
+      "132030": -1.0825
     }
   },
   "us_session": {
@@ -2154,18 +2143,18 @@
   "learning": {
     "market": {
       "trend": "down",
-      "hmm_state": null,
-      "hmm_confidence": 0,
+      "hmm_state": "bear",
+      "hmm_confidence": 100.0,
       "volatility": "high",
-      "vol_percentile": 98.0,
-      "market_confidence": 0.485,
-      "analyzed_at": "2026-08-03 13:35"
+      "vol_percentile": 96.0,
+      "market_confidence": 0.412,
+      "analyzed_at": "2026-08-04 09:58"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 1.89,
-      "sp500_change": 1.5,
-      "recommended_action": "normal"
+      "nasdaq_change": 2.13,
+      "sp500_change": 1.48,
+      "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
       "반도체",
@@ -2228,7 +2217,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.65,
+      "k": 0.7,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2236,19 +2225,19 @@
     },
     "ta_weights": {
       "rsi": 0.049,
-      "macd": 0.166,
-      "bb": 0.09,
-      "stoch": 0.121,
-      "adx": 0.09,
-      "ma": 0.166,
-      "obv": 0.166,
-      "mfi": 0.076,
-      "atr": 0.076
+      "macd": 0.171,
+      "bb": 0.085,
+      "stoch": 0.114,
+      "adx": 0.099,
+      "ma": 0.171,
+      "obv": 0.171,
+      "mfi": 0.071,
+      "atr": 0.071
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.5,
-      "trades": 58
+      "win_rate": 0.492,
+      "trades": 61
     },
     "diary": [
       {
@@ -2368,26 +2357,26 @@
     }
   },
   "day_plan": {
-    "stance": "CAUTIOUS",
+    "stance": "DEFENSIVE",
     "forced": false,
-    "auto_stance": "CAUTIOUS",
-    "stance_kr": "신중",
-    "budget_pct": 0.4,
-    "max_new_positions": 2,
-    "allow_long": true,
+    "auto_stance": "DEFENSIVE",
+    "stance_kr": "방어",
+    "budget_pct": 0.25,
+    "max_new_positions": 1,
+    "allow_long": false,
     "allow_inverse": true,
     "allow_leverage": false,
-    "size_mult": 0.6,
-    "k_effective": 0.7,
-    "allow_summary": "롱/인버스",
-    "briefing": "오늘 스탠스 신중(CAUTIOUS) · 레짐 CAUTION·신뢰도 48% · 美 오버나이트 bullish(+1.9%) · 고변동(98.0%ile) · 예산 40%·최대 2종목·허용 롱/인버스",
+    "size_mult": 0.4,
+    "k_effective": 0.8,
+    "allow_summary": "인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 41% · 美 오버나이트 bullish(+2.1%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "CAUTION",
-      "confidence": 0.485,
+      "regime": "BEAR",
+      "confidence": 0.412,
       "direction": "bullish",
-      "nasdaq_change": 1.89,
+      "nasdaq_change": 2.13,
       "high_vol": true,
-      "vol_percentile": 98.0,
+      "vol_percentile": 96.0,
       "rapid_level": "NONE"
     }
   },
@@ -2395,12 +2384,12 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "CAUTION",
-    "hmm_state": "unknown",
-    "hmm_confidence": 0.5,
+    "regime": "BEAR",
+    "hmm_state": "bear",
+    "hmm_confidence": 1.0,
     "universe": [
       {
         "symbol": "122630",
