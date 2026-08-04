@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-05T05:02:56.342231+09:00",
+  "updated_at": "2026-08-05T05:39:03.061685+09:00",
   "initial_capital": 500000,
-  "cash": 836797,
+  "cash": 836883,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,7 +17,7 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 858063,
+  "total_value": 858149,
   "total_pnl": -820,
   "total_pnl_pct": -0.1,
   "realized_pnl": -820,
@@ -1966,14 +1966,14 @@
     },
     {
       "date": "2026-08-05",
-      "total_value": 858063,
-      "cash": 836797,
+      "total_value": 858149,
+      "cash": 836883,
       "holdings_value": 0,
       "day_pnl": -74,
       "cumul_pnl": -820,
       "realized_pnl": -820,
       "unrealized_pnl": 0,
-      "net_deposit": 358883,
+      "net_deposit": 358969,
       "regime": "down",
       "hmm_state": "bear",
       "confidence": 0.412,
@@ -2097,8 +2097,8 @@
         "symbol": "QQQM",
         "qty": 1,
         "buy_price": 294.92,
-        "current_price": 297.97,
-        "pnl_pct": 1.03,
+        "current_price": 298.03,
+        "pnl_pct": 1.05,
         "exchange": "NASD",
         "asset_type": "us_mom_long"
       }
