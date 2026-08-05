@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-05T14:41:07.879900+09:00",
+  "updated_at": "2026-08-05T15:30:24.549295+09:00",
   "initial_capital": 500000,
-  "cash": 836883,
+  "cash": 411506,
   "holdings": [],
   "reconcile": {
     "matched": 0,
@@ -17,9 +17,9 @@
     "set_by": ""
   },
   "holdings_value": 0,
-  "total_value": 858149,
+  "total_value": 432772,
   "total_pnl": -820,
-  "total_pnl_pct": -0.1,
+  "total_pnl_pct": -0.19,
   "realized_pnl": -820,
   "unrealized_pnl": 0,
   "total_trades": 206,
@@ -1966,29 +1966,29 @@
     },
     {
       "date": "2026-08-05",
-      "total_value": 858149,
-      "cash": 836883,
+      "total_value": 432772,
+      "cash": 411506,
       "holdings_value": 0,
       "day_pnl": -74,
       "cumul_pnl": -820,
       "realized_pnl": -820,
       "unrealized_pnl": 0,
-      "net_deposit": 358969,
+      "net_deposit": -66408,
       "regime": "down",
-      "hmm_state": "bear",
-      "confidence": 0.512,
-      "k_value": 0.7
+      "hmm_state": "sideways",
+      "confidence": 0.436,
+      "k_value": 0.66
     }
   ],
   "market": {
     "regime": "down",
-    "hmm_state": "bear",
-    "confidence": 0.512,
+    "hmm_state": "sideways",
+    "confidence": 0.436,
     "volatility": "high",
-    "vol_percentile": 96.0,
+    "vol_percentile": 98.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.88,
+      "strength": 0.76,
       "action": "aggressive_buy"
     },
     "strong_sectors": [
@@ -2007,7 +2007,7 @@
   "strategy": {
     "name": "ETF 변동성 돌파 + 신호 융합",
     "params": {
-      "k": 0.7,
+      "k": 0.66,
       "trend_ma": 15
     },
     "universe_count": 15,
@@ -2090,7 +2090,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 0.0,
+    "cash_usd": 301.112722,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -2138,17 +2138,17 @@
   "learning": {
     "market": {
       "trend": "down",
-      "hmm_state": "bear",
+      "hmm_state": "sideways",
       "hmm_confidence": 100.0,
       "volatility": "high",
-      "vol_percentile": 96.0,
-      "market_confidence": 0.512,
-      "analyzed_at": "2026-08-04 09:58"
+      "vol_percentile": 98.0,
+      "market_confidence": 0.436,
+      "analyzed_at": "2026-08-05 09:52"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 3.25,
-      "sp500_change": 2.02,
+      "nasdaq_change": 2.59,
+      "sp500_change": 1.79,
       "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
@@ -2212,7 +2212,7 @@
       ]
     },
     "strategy_params": {
-      "k": 0.7,
+      "k": 0.66,
       "trend_ma": 15,
       "train_sharpe": 1.56,
       "val_sharpe": 6.99,
@@ -2221,18 +2221,18 @@
     "ta_weights": {
       "rsi": 0.049,
       "macd": 0.171,
-      "bb": 0.085,
-      "stoch": 0.114,
-      "adx": 0.099,
-      "ma": 0.171,
-      "obv": 0.171,
-      "mfi": 0.071,
-      "atr": 0.071
+      "bb": 0.079,
+      "stoch": 0.119,
+      "adx": 0.106,
+      "ma": 0.159,
+      "obv": 0.159,
+      "mfi": 0.079,
+      "atr": 0.079
     },
     "adaptive": {
       "etf": 1.0,
-      "win_rate": 0.492,
-      "trades": 61
+      "win_rate": 0.5,
+      "trades": 64
     },
     "diary": [
       {
@@ -2362,16 +2362,16 @@
     "allow_inverse": true,
     "allow_leverage": false,
     "size_mult": 0.4,
-    "k_effective": 0.8,
+    "k_effective": 0.76,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 51% · 美 오버나이트 bullish(+3.2%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 44% · 美 오버나이트 bullish(+2.6%) · 고변동(98.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "BEAR",
-      "confidence": 0.512,
+      "confidence": 0.436,
       "direction": "bullish",
-      "nasdaq_change": 3.25,
+      "nasdaq_change": 2.59,
       "high_vol": true,
-      "vol_percentile": 96.0,
+      "vol_percentile": 98.0,
       "rapid_level": "NONE"
     }
   },
@@ -2383,7 +2383,7 @@
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
     "regime": "BEAR",
-    "hmm_state": "bear",
+    "hmm_state": "sideways",
     "hmm_confidence": 1.0,
     "universe": [
       {
