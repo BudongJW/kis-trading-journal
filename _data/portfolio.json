@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05T07:03:23.455840+09:00",
+  "updated_at": "2026-08-05T14:41:07.879900+09:00",
   "initial_capital": 500000,
   "cash": 836883,
   "holdings": [],
@@ -1976,19 +1976,19 @@
       "net_deposit": 358969,
       "regime": "down",
       "hmm_state": "bear",
-      "confidence": 0.412,
+      "confidence": 0.512,
       "k_value": 0.7
     }
   ],
   "market": {
     "regime": "down",
     "hmm_state": "bear",
-    "confidence": 0.412,
+    "confidence": 0.512,
     "volatility": "high",
     "vol_percentile": 96.0,
     "overnight_gap": {
       "direction": "bullish",
-      "strength": 0.62,
+      "strength": 0.88,
       "action": "aggressive_buy"
     },
     "strong_sectors": [
@@ -2090,19 +2090,9 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 300.206434,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "QQQM",
-        "qty": 1,
-        "buy_price": 294.92,
-        "current_price": 298.03,
-        "pnl_pct": 1.05,
-        "exchange": "NASD",
-        "asset_type": "us_mom_long"
-      }
-    ],
+    "cash_usd": 0.0,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -2152,13 +2142,13 @@
       "hmm_confidence": 100.0,
       "volatility": "high",
       "vol_percentile": 96.0,
-      "market_confidence": 0.412,
+      "market_confidence": 0.512,
       "analyzed_at": "2026-08-04 09:58"
     },
     "overnight": {
       "direction": "bullish",
-      "nasdaq_change": 2.13,
-      "sp500_change": 1.48,
+      "nasdaq_change": 3.25,
+      "sp500_change": 2.02,
       "recommended_action": "aggressive_buy"
     },
     "strong_sectors": [
@@ -2174,50 +2164,50 @@
       "미국나스닥"
     ],
     "lgbm": {
-      "accuracy": 33.3,
-      "auc": 0.4784,
-      "n_samples": 180,
-      "trained_at": "2026-08-04T18:44:39.213743",
+      "accuracy": 37.0,
+      "auc": 0.7654,
+      "n_samples": 177,
+      "trained_at": "2026-08-05T07:35:07.558680",
       "top_features": [
         {
           "name": "ret_10d",
-          "importance": 108.8
+          "importance": 89.4
         },
         {
           "name": "ret_3d",
-          "importance": 55.1
+          "importance": 55.3
         },
         {
-          "name": "vol_ma5_ratio",
-          "importance": 33.7
-        },
-        {
-          "name": "body_ratio",
-          "importance": 20.6
-        },
-        {
-          "name": "vol_ma20_ratio",
-          "importance": 13.3
-        },
-        {
-          "name": "price_position_20d",
-          "importance": 10.4
-        },
-        {
-          "name": "adx",
-          "importance": 10.0
+          "name": "di_plus",
+          "importance": 50.2
         },
         {
           "name": "momentum_accel_3d",
-          "importance": 9.1
+          "importance": 16.3
         },
         {
-          "name": "ret_1d",
-          "importance": 8.7
+          "name": "ma60_ratio",
+          "importance": 13.7
         },
         {
-          "name": "vol_trend_5d",
-          "importance": 8.0
+          "name": "vol_ratio",
+          "importance": 13.6
+        },
+        {
+          "name": "vol_5d",
+          "importance": 13.5
+        },
+        {
+          "name": "vol_ma20_ratio",
+          "importance": 11.7
+        },
+        {
+          "name": "vol_cycle_pos",
+          "importance": 11.4
+        },
+        {
+          "name": "upper_shadow",
+          "importance": 10.7
         }
       ]
     },
@@ -2274,8 +2264,8 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 33566,
-      "xp_in_level": 4090,
+      "xp": 33570,
+      "xp_in_level": 4094,
       "xp_for_next": 12388,
       "progress_pct": 33.0,
       "achievements": [
@@ -2332,9 +2322,9 @@
         {
           "label": "예측력",
           "icon": "🎯",
-          "value": 33,
+          "value": 37,
           "suffix": "%",
-          "bar": 33
+          "bar": 37
         },
         {
           "label": "승률",
@@ -2353,7 +2343,7 @@
         {
           "label": "학습데이터",
           "icon": "📚",
-          "value": 180,
+          "value": 177,
           "suffix": "샘플",
           "bar": null
         }
@@ -2374,12 +2364,12 @@
     "size_mult": 0.4,
     "k_effective": 0.8,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 41% · 美 오버나이트 bullish(+2.1%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 51% · 美 오버나이트 bullish(+3.2%) · 고변동(96.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
       "regime": "BEAR",
-      "confidence": 0.412,
+      "confidence": 0.512,
       "direction": "bullish",
-      "nasdaq_change": 2.13,
+      "nasdaq_change": 3.25,
       "high_vol": true,
       "vol_percentile": 96.0,
       "rapid_level": "NONE"
