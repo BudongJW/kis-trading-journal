@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T15:30:19.548085+09:00",
+  "updated_at": "2026-08-06T17:06:23.576244+09:00",
   "initial_capital": 500000,
   "cash": 850558,
   "holdings": [
@@ -7,12 +7,14 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 23,
-      "current_price": 1134,
-      "value": 26082,
+      "current_price": 1129,
+      "value": 25967,
       "buy_price": 1133,
-      "pnl": 23,
-      "pnl_pct": 0.08,
-      "manual": true,
+      "pnl": -92,
+      "pnl_pct": -0.35,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 1133,
       "stop_price": 1099
     }
   ],
@@ -29,12 +31,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 26082,
-  "total_value": 851301,
-  "total_pnl": 103,
-  "total_pnl_pct": 0.01,
+  "holdings_value": 25967,
+  "total_value": 851186,
+  "total_pnl": -12,
+  "total_pnl_pct": -0.0,
   "realized_pnl": 80,
-  "unrealized_pnl": 23,
+  "unrealized_pnl": -92,
   "total_trades": 212,
   "completed_trades": 115,
   "winning_trades": 69,
@@ -1099,25 +1101,14 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.0,
+    "sharpe_ratio": -0.0,
     "max_drawdown_pct": -100.0,
     "profit_factor": 1.0,
     "avg_win_pct": 1.52,
     "avg_loss_pct": -1.69,
-    "total_return_pct": 0.02
+    "total_return_pct": -0.0
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.03,
-    "median_r": 0.03,
-    "win_rate": 1.0,
-    "avg_win_r": 0.03,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.03,
-    "best_r": 0.03,
-    "worst_r": 0.03,
-    "last_updated": "2026-08-06 15:20"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -2012,13 +2003,13 @@
     },
     {
       "date": "2026-08-06",
-      "total_value": 851301,
+      "total_value": 851186,
       "cash": 850558,
-      "holdings_value": 26082,
-      "day_pnl": 711,
-      "cumul_pnl": 103,
+      "holdings_value": 25967,
+      "day_pnl": 596,
+      "cumul_pnl": -12,
       "realized_pnl": 80,
-      "unrealized_pnl": 23,
+      "unrealized_pnl": -92,
       "net_deposit": 351198,
       "regime": "down",
       "hmm_state": "sideways",
@@ -2323,7 +2314,7 @@
           "icon": "💰",
           "name": "수익 전환",
           "desc": "누적 손익 플러스",
-          "done": true
+          "done": false
         },
         {
           "icon": "📊",
@@ -2374,7 +2365,7 @@
           "bar": null
         }
       ],
-      "unlocked_count": 7
+      "unlocked_count": 6
     }
   },
   "day_plan": {
