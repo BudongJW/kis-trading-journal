@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-08T04:30:13.596462+09:00",
+  "updated_at": "2026-08-08T05:00:56.240687+09:00",
   "initial_capital": 500000,
-  "cash": 847335,
+  "cash": 842582,
   "holdings": [
     {
       "symbol": "114800",
@@ -30,29 +30,17 @@
     "set_by": ""
   },
   "holdings_value": 26151,
-  "total_value": 847871,
-  "total_pnl": 264,
+  "total_value": 843118,
+  "total_pnl": 271,
   "total_pnl_pct": 0.03,
-  "realized_pnl": 310,
+  "realized_pnl": 317,
   "unrealized_pnl": -46,
-  "total_trades": 218,
-  "completed_trades": 117,
-  "winning_trades": 71,
+  "total_trades": 219,
+  "completed_trades": 118,
+  "winning_trades": 72,
   "losing_trades": 42,
-  "win_rate": 60.7,
+  "win_rate": 61.0,
   "trades": [
-    {
-      "timestamp": "2026-07-29T10:14:20",
-      "date": "2026-07-29",
-      "time": "10:14:20",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 17,
-      "price": 1249,
-      "amount": 21233,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -0.78%, 시가대비 -1.75%)"
-    },
     {
       "timestamp": "2026-07-29T10:20:17",
       "date": "2026-07-29",
@@ -640,23 +628,21 @@
       "price": 29711,
       "amount": 29711,
       "reason": "US모멘텀 long: 상승 아침추세 (전일대비 +0.94%, 시가대비 +0.00%)"
+    },
+    {
+      "timestamp": "2026-08-08T04:45:53",
+      "date": "2026-08-08",
+      "time": "04:45:53",
+      "symbol": "QQQM",
+      "name": "US_QQQM",
+      "side": "sell",
+      "qty": 1,
+      "price": 29718,
+      "amount": 29718,
+      "reason": "매도: 미국장 마감 청산"
     }
   ],
   "realized": [
-    {
-      "symbol": "114800",
-      "name": "급등주",
-      "buy_date": "2026-07-28",
-      "buy_time": "12:51:16",
-      "buy_price": 1227,
-      "sell_date": "2026-07-28",
-      "sell_time": "13:56:44",
-      "sell_price": 1228,
-      "qty": 17,
-      "pnl": 17,
-      "pnl_pct": 0.08,
-      "hold_days": 0
-    },
     {
       "symbol": "PSQ",
       "name": "US_PSQ",
@@ -1062,37 +1048,61 @@
       "pnl": 23,
       "pnl_pct": 0.09,
       "hold_days": 0
+    },
+    {
+      "symbol": "QQQM",
+      "name": "US_QQQM",
+      "buy_date": "2026-08-07",
+      "buy_time": "22:50:19",
+      "buy_price": 29711,
+      "sell_date": "2026-08-08",
+      "sell_time": "04:45:53",
+      "sell_price": 29718,
+      "qty": 1,
+      "pnl": 7,
+      "pnl_pct": 0.02,
+      "hold_days": 0
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-08-08",
     "buys": 0,
-    "sells": 0,
-    "completed_round_trips": 0,
+    "sells": 1,
+    "completed_round_trips": 1,
     "buy_notional": 0,
-    "sell_notional": 0,
-    "fees": 0,
+    "sell_notional": 29718,
+    "fees": 74,
     "taxes": 0,
-    "total_cost": 0,
-    "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
-    "best_trade": null,
-    "worst_trade": null
+    "total_cost": 74,
+    "realized_pnl_gross": 7,
+    "realized_pnl_net": -67,
+    "best_trade": {
+      "symbol": "QQQM",
+      "name": "US_QQQM",
+      "pnl": 7,
+      "pnl_pct": 0.02
+    },
+    "worst_trade": {
+      "symbol": "QQQM",
+      "name": "US_QQQM",
+      "pnl": 7,
+      "pnl_pct": 0.02
+    }
   },
   "costs": {
-    "total_fees": 6927,
+    "total_fees": 7001,
     "total_taxes": 24531,
-    "total_cost": 31458,
-    "realized_pnl_gross": 310,
-    "realized_pnl_net": -31148,
+    "total_cost": 31532,
+    "realized_pnl_gross": 317,
+    "realized_pnl_net": -31215,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
     "sharpe_ratio": 0.0,
     "max_drawdown_pct": -100.0,
     "profit_factor": 1.0,
-    "avg_win_pct": 1.49,
+    "avg_win_pct": 1.47,
     "avg_loss_pct": -1.69,
     "total_return_pct": 0.05
   },
@@ -2015,14 +2025,14 @@
     },
     {
       "date": "2026-08-08",
-      "total_value": 847871,
-      "cash": 847335,
+      "total_value": 843118,
+      "cash": 842582,
       "holdings_value": 26151,
-      "day_pnl": -46,
-      "cumul_pnl": 264,
-      "realized_pnl": 310,
+      "day_pnl": -113,
+      "cumul_pnl": 271,
+      "realized_pnl": 317,
       "unrealized_pnl": -46,
-      "net_deposit": 347607,
+      "net_deposit": 342847,
       "regime": "down",
       "hmm_state": "sideways",
       "confidence": 0.12,
@@ -2108,7 +2118,7 @@
     ]
   },
   "risk": {
-    "kelly_f": 0.1474,
+    "kelly_f": 0.1484,
     "drawdown_scale": 1.2,
     "drawdown_reason": "3연속 수익 → 120% 확대",
     "stop_type": "ATR×1.5 동적",
@@ -2123,19 +2133,9 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 281.071497,
-    "positions": 1,
-    "holdings": [
-      {
-        "symbol": "QQQM",
-        "qty": 1,
-        "buy_price": 297.11,
-        "current_price": 297.23,
-        "pnl_pct": 0.04,
-        "exchange": "NASD",
-        "asset_type": "us_mom_long"
-      }
-    ],
+    "cash_usd": 575.004863,
+    "positions": 0,
+    "holdings": [],
     "max_positions": 3,
     "budget_pct": 0.4,
     "regime_linked": true,
@@ -2303,10 +2303,10 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 35366,
-      "xp_in_level": 5890,
+      "xp": 35616,
+      "xp_in_level": 6140,
       "xp_for_next": 12388,
-      "progress_pct": 47.5,
+      "progress_pct": 49.6,
       "achievements": [
         {
           "icon": "🎯",
@@ -2375,7 +2375,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 218,
+          "value": 219,
           "suffix": "건",
           "bar": null
         },
