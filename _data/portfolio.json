@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T10:00:29.006985+09:00",
+  "updated_at": "2026-08-07T14:41:45.956455+09:00",
   "initial_capital": 500000,
   "cash": 847094,
   "holdings": [
@@ -7,12 +7,14 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 23,
-      "current_price": 1122,
-      "value": 25806,
-      "buy_price": 1138,
-      "pnl": -368,
-      "pnl_pct": -1.4,
-      "manual": true,
+      "current_price": 1142,
+      "value": 26266,
+      "buy_price": 1139,
+      "pnl": 69,
+      "pnl_pct": 0.26,
+      "atr_at_buy": 0.0,
+      "hold_days": 0,
+      "peak_price": 1151,
       "stop_price": 1104
     }
   ],
@@ -29,66 +31,18 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 25806,
-  "total_value": 847101,
-  "total_pnl": -288,
-  "total_pnl_pct": -0.03,
-  "realized_pnl": 80,
-  "unrealized_pnl": -368,
-  "total_trades": 212,
-  "completed_trades": 115,
-  "winning_trades": 69,
+  "holdings_value": 26266,
+  "total_value": 847745,
+  "total_pnl": 356,
+  "total_pnl_pct": 0.04,
+  "realized_pnl": 287,
+  "unrealized_pnl": 69,
+  "total_trades": 216,
+  "completed_trades": 116,
+  "winning_trades": 70,
   "losing_trades": 42,
-  "win_rate": 60.0,
+  "win_rate": 60.3,
   "trades": [
-    {
-      "timestamp": "2026-07-28T11:42:16",
-      "date": "2026-07-28",
-      "time": "11:42:16",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 17,
-      "price": 1227,
-      "amount": 20859,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -10.05%, 시가대비 -4.58%)"
-    },
-    {
-      "timestamp": "2026-07-28T12:21:14",
-      "date": "2026-07-28",
-      "time": "12:21:14",
-      "symbol": "114800",
-      "name": "급등주",
-      "side": "sell",
-      "qty": 17,
-      "price": 1227,
-      "amount": 20859,
-      "reason": "매도: 본전이익 보존 (고점 +1.1%였다가 반전 → +0.0%, 손절 전 이익권 청산)"
-    },
-    {
-      "timestamp": "2026-07-28T12:51:16",
-      "date": "2026-07-28",
-      "time": "12:51:16",
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "side": "buy",
-      "qty": 17,
-      "price": 1227,
-      "amount": 20859,
-      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -10.15%, 시가대비 -4.68%)"
-    },
-    {
-      "timestamp": "2026-07-28T13:56:44",
-      "date": "2026-07-28",
-      "time": "13:56:44",
-      "symbol": "114800",
-      "name": "급등주",
-      "side": "sell",
-      "qty": 17,
-      "price": 1228,
-      "amount": 20876,
-      "reason": "매도: 본전이익 보존 (고점 +1.1%였다가 반전 → +0.1%, 손절 전 이익권 청산)"
-    },
     {
       "timestamp": "2026-07-28T23:59:56",
       "date": "2026-07-28",
@@ -640,23 +594,57 @@
       "price": 1134,
       "amount": 26082,
       "reason": "매도: 장마감청산"
+    },
+    {
+      "timestamp": "2026-08-07T09:01:40",
+      "date": "2026-08-07",
+      "time": "09:01:40",
+      "symbol": "114800",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 23,
+      "price": 1119,
+      "amount": 25737,
+      "reason": "매도: 시가매도"
+    },
+    {
+      "timestamp": "2026-08-07T09:41:18",
+      "date": "2026-08-07",
+      "time": "09:41:18",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 23,
+      "price": 1138,
+      "amount": 26174,
+      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -0.61%, 시가대비 -1.50%)"
+    },
+    {
+      "timestamp": "2026-08-07T10:46:45",
+      "date": "2026-08-07",
+      "time": "10:46:45",
+      "symbol": "114800",
+      "name": "급등주",
+      "side": "sell",
+      "qty": 23,
+      "price": 1147,
+      "amount": 26381,
+      "reason": "매도: 이익권 청산 (고점 +1.7% 중 절반 반납 → +0.8%, 비용 위에서 확보)"
+    },
+    {
+      "timestamp": "2026-08-07T11:16:18",
+      "date": "2026-08-07",
+      "time": "11:16:18",
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "side": "buy",
+      "qty": 23,
+      "price": 1138,
+      "amount": 26174,
+      "reason": "조간 모멘텀 inverse: 하락 아침추세 (전일대비 -0.66%, 시가대비 -1.56%)"
     }
   ],
   "realized": [
-    {
-      "symbol": "114800",
-      "name": "KODEX 인버스",
-      "buy_date": "2026-07-28",
-      "buy_time": "09:00:39",
-      "buy_price": 1179,
-      "sell_date": "2026-07-28",
-      "sell_time": "11:12:45",
-      "sell_price": 1218,
-      "qty": 9,
-      "pnl": 351,
-      "pnl_pct": 3.31,
-      "hold_days": 0
-    },
     {
       "symbol": "114800",
       "name": "급등주",
@@ -1062,41 +1050,76 @@
       "pnl": 23,
       "pnl_pct": 0.09,
       "hold_days": 0
+    },
+    {
+      "symbol": "114800",
+      "name": "급등주",
+      "buy_date": "2026-08-07",
+      "buy_time": "09:41:18",
+      "buy_price": 1138,
+      "sell_date": "2026-08-07",
+      "sell_time": "10:46:45",
+      "sell_price": 1147,
+      "qty": 23,
+      "pnl": 207,
+      "pnl_pct": 0.79,
+      "hold_days": 0
     }
   ],
   "rejected_orders": [],
   "today_summary": {
     "date": "2026-08-07",
-    "buys": 0,
-    "sells": 0,
-    "completed_round_trips": 0,
-    "buy_notional": 0,
-    "sell_notional": 0,
-    "fees": 0,
-    "taxes": 0,
-    "total_cost": 0,
-    "realized_pnl_gross": 0,
-    "realized_pnl_net": 0,
-    "best_trade": null,
-    "worst_trade": null
+    "buys": 2,
+    "sells": 2,
+    "completed_round_trips": 1,
+    "buy_notional": 52348,
+    "sell_notional": 52118,
+    "fees": 16,
+    "taxes": 120,
+    "total_cost": 136,
+    "realized_pnl_gross": 207,
+    "realized_pnl_net": 71,
+    "best_trade": {
+      "symbol": "114800",
+      "name": "급등주",
+      "pnl": 207,
+      "pnl_pct": 0.79
+    },
+    "worst_trade": {
+      "symbol": "114800",
+      "name": "급등주",
+      "pnl": 207,
+      "pnl_pct": 0.79
+    }
   },
   "costs": {
-    "total_fees": 6833,
-    "total_taxes": 24351,
-    "total_cost": 31184,
-    "realized_pnl_gross": 80,
-    "realized_pnl_net": -31104,
+    "total_fees": 6849,
+    "total_taxes": 24471,
+    "total_cost": 31320,
+    "realized_pnl_gross": 287,
+    "realized_pnl_net": -31033,
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": -0.0,
+    "sharpe_ratio": 0.0,
     "max_drawdown_pct": -100.0,
     "profit_factor": 1.0,
-    "avg_win_pct": 1.52,
+    "avg_win_pct": 1.51,
     "avg_loss_pct": -1.69,
-    "total_return_pct": -0.06
+    "total_return_pct": 0.07
   },
-  "r_summary": {},
+  "r_summary": {
+    "total_trades": 2,
+    "avg_r": -0.07,
+    "median_r": 0.26,
+    "win_rate": 0.5,
+    "avg_win_r": 0.26,
+    "avg_loss_r": -0.41,
+    "expectancy_r": -0.07,
+    "best_r": 0.26,
+    "worst_r": -0.41,
+    "last_updated": "2026-08-07 10:46"
+  },
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -2003,13 +2026,13 @@
     },
     {
       "date": "2026-08-07",
-      "total_value": 847101,
+      "total_value": 847745,
       "cash": 847094,
-      "holdings_value": 25806,
-      "day_pnl": -368,
-      "cumul_pnl": -288,
-      "realized_pnl": 80,
-      "unrealized_pnl": -368,
+      "holdings_value": 26266,
+      "day_pnl": 140,
+      "cumul_pnl": 356,
+      "realized_pnl": 287,
+      "unrealized_pnl": 69,
       "net_deposit": 347389,
       "regime": "down",
       "hmm_state": "sideways",
@@ -2096,7 +2119,7 @@
     ]
   },
   "risk": {
-    "kelly_f": 0.1444,
+    "kelly_f": 0.1463,
     "drawdown_scale": 1.2,
     "drawdown_reason": "3연속 수익 → 120% 확대",
     "stop_type": "ATR×1.5 동적",
@@ -2106,12 +2129,19 @@
     "trained": false
   },
   "bear_strategy": {
-    "regime": "BULL",
-    "enabled": false
+    "enabled": true,
+    "regime": "CAUTION",
+    "confidence": 0.65,
+    "sma_ratio": 0.1214,
+    "canary_bad": 1,
+    "canary_scores": {
+      "195930": 1.2814,
+      "132030": -0.3246
+    }
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 578.262891,
+    "cash_usd": 578.17741,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -2281,10 +2311,10 @@
     "game": {
       "level": 10,
       "title": "베테랑",
-      "xp": 34666,
-      "xp_in_level": 5190,
+      "xp": 35066,
+      "xp_in_level": 5590,
       "xp_for_next": 12388,
-      "progress_pct": 41.9,
+      "progress_pct": 45.1,
       "achievements": [
         {
           "icon": "🎯",
@@ -2314,7 +2344,7 @@
           "icon": "💰",
           "name": "수익 전환",
           "desc": "누적 손익 플러스",
-          "done": false
+          "done": true
         },
         {
           "icon": "📊",
@@ -2353,7 +2383,7 @@
         {
           "label": "거래경험",
           "icon": "💼",
-          "value": 212,
+          "value": 216,
           "suffix": "건",
           "bar": null
         },
@@ -2365,7 +2395,7 @@
           "bar": null
         }
       ],
-      "unlocked_count": 6
+      "unlocked_count": 7
     }
   },
   "day_plan": {
@@ -2381,9 +2411,9 @@
     "size_mult": 0.4,
     "k_effective": 0.75,
     "allow_summary": "인버스",
-    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 BEAR·신뢰도 10% · 美 오버나이트 bearish(-0.8%) · 고변동(94.0%ile) · 예산 25%·최대 1종목·허용 인버스",
+    "briefing": "오늘 스탠스 방어(DEFENSIVE) · 레짐 CAUTION·신뢰도 10% · 美 오버나이트 bearish(-0.8%) · 고변동(94.0%ile) · 예산 25%·최대 1종목·허용 인버스",
     "signals": {
-      "regime": "BEAR",
+      "regime": "CAUTION",
       "confidence": 0.097,
       "direction": "bearish",
       "nasdaq_change": -0.83,
@@ -2396,10 +2426,10 @@
     "enabled": true,
     "dry_run": true,
     "gate_allowed": false,
-    "gate_reason": "레짐 BEAR(BULL 아님) → 레버리지 금지",
+    "gate_reason": "레짐 CAUTION(BULL 아님) → 레버리지 금지",
     "hard_stop_pct": 0.04,
     "max_weight": 0.15,
-    "regime": "BEAR",
+    "regime": "CAUTION",
     "hmm_state": "sideways",
     "hmm_confidence": 0.876,
     "universe": [
