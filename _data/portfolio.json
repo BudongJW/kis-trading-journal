@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T15:30:18.889409+09:00",
+  "updated_at": "2026-08-07T15:31:55.777803+09:00",
   "initial_capital": 500000,
   "cash": 847094,
   "holdings": [
@@ -7,12 +7,14 @@
       "symbol": "114800",
       "name": "KODEX 인버스",
       "qty": 23,
-      "current_price": 1139,
-      "value": 26197,
+      "current_price": 1137,
+      "value": 26151,
       "buy_price": 1139,
-      "pnl": 0,
-      "pnl_pct": 0.0,
-      "manual": true,
+      "pnl": -46,
+      "pnl_pct": -0.17,
+      "atr_at_buy": 0.0,
+      "hold_days": 1,
+      "peak_price": 1139,
       "stop_price": 1105
     }
   ],
@@ -29,12 +31,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 26197,
-  "total_value": 847676,
-  "total_pnl": 310,
-  "total_pnl_pct": 0.04,
+  "holdings_value": 26151,
+  "total_value": 847630,
+  "total_pnl": 264,
+  "total_pnl_pct": 0.03,
   "realized_pnl": 310,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": -46,
   "total_trades": 217,
   "completed_trades": 117,
   "winning_trades": 71,
@@ -1104,20 +1106,9 @@
     "profit_factor": 1.0,
     "avg_win_pct": 1.49,
     "avg_loss_pct": -1.69,
-    "total_return_pct": 0.06
+    "total_return_pct": 0.05
   },
-  "r_summary": {
-    "total_trades": 1,
-    "avg_r": 0.03,
-    "median_r": 0.03,
-    "win_rate": 1.0,
-    "avg_win_r": 0.03,
-    "avg_loss_r": 0,
-    "expectancy_r": 0.03,
-    "best_r": 0.03,
-    "worst_r": 0.03,
-    "last_updated": "2026-08-07 15:20"
-  },
+  "r_summary": {},
   "daily_history": [
     {
       "date": "2026-05-12",
@@ -2024,13 +2015,13 @@
     },
     {
       "date": "2026-08-07",
-      "total_value": 847676,
+      "total_value": 847630,
       "cash": 847094,
-      "holdings_value": 26197,
-      "day_pnl": 30,
-      "cumul_pnl": 310,
+      "holdings_value": 26151,
+      "day_pnl": -16,
+      "cumul_pnl": 264,
       "realized_pnl": 310,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": -46,
       "net_deposit": 347366,
       "regime": "down",
       "hmm_state": "sideways",
