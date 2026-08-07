@@ -1,10 +1,23 @@
 {
-  "updated_at": "2026-08-07T09:32:10.024703+09:00",
+  "updated_at": "2026-08-07T10:00:29.006985+09:00",
   "initial_capital": 500000,
   "cash": 847094,
-  "holdings": [],
+  "holdings": [
+    {
+      "symbol": "114800",
+      "name": "KODEX 인버스",
+      "qty": 23,
+      "current_price": 1122,
+      "value": 25806,
+      "buy_price": 1138,
+      "pnl": -368,
+      "pnl_pct": -1.4,
+      "manual": true,
+      "stop_price": 1104
+    }
+  ],
   "reconcile": {
-    "matched": 0,
+    "matched": 1,
     "broker_only": 0,
     "ledger_only": 0,
     "qty_mismatch": 0
@@ -16,12 +29,12 @@
     "set_at": "",
     "set_by": ""
   },
-  "holdings_value": 0,
-  "total_value": 847469,
-  "total_pnl": 80,
-  "total_pnl_pct": 0.01,
+  "holdings_value": 25806,
+  "total_value": 847101,
+  "total_pnl": -288,
+  "total_pnl_pct": -0.03,
   "realized_pnl": 80,
-  "unrealized_pnl": 0,
+  "unrealized_pnl": -368,
   "total_trades": 212,
   "completed_trades": 115,
   "winning_trades": 69,
@@ -1076,12 +1089,12 @@
     "tax_exemption_remaining_krw": 2500000
   },
   "performance": {
-    "sharpe_ratio": 0.0,
+    "sharpe_ratio": -0.0,
     "max_drawdown_pct": -100.0,
     "profit_factor": 1.0,
     "avg_win_pct": 1.52,
     "avg_loss_pct": -1.69,
-    "total_return_pct": 0.02
+    "total_return_pct": -0.06
   },
   "r_summary": {},
   "daily_history": [
@@ -1990,13 +2003,13 @@
     },
     {
       "date": "2026-08-07",
-      "total_value": 847469,
+      "total_value": 847101,
       "cash": 847094,
-      "holdings_value": 0,
-      "day_pnl": 0,
-      "cumul_pnl": 80,
+      "holdings_value": 25806,
+      "day_pnl": -368,
+      "cumul_pnl": -288,
       "realized_pnl": 80,
-      "unrealized_pnl": 0,
+      "unrealized_pnl": -368,
       "net_deposit": 347389,
       "regime": "down",
       "hmm_state": "sideways",
@@ -2098,7 +2111,7 @@
   },
   "us_session": {
     "enabled": true,
-    "cash_usd": 595.692036,
+    "cash_usd": 578.262891,
     "positions": 0,
     "holdings": [],
     "max_positions": 3,
@@ -2301,7 +2314,7 @@
           "icon": "💰",
           "name": "수익 전환",
           "desc": "누적 손익 플러스",
-          "done": true
+          "done": false
         },
         {
           "icon": "📊",
@@ -2352,7 +2365,7 @@
           "bar": null
         }
       ],
-      "unlocked_count": 7
+      "unlocked_count": 6
     }
   },
   "day_plan": {
